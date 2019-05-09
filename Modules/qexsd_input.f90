@@ -117,7 +117,7 @@ MODULE qexsd_input
      SELECT CASE (TRIM  (smearing))
        CASE ("gaussian", "gauss")
            smearing_local="gaussian"
-       CASE ('methfessel-paxton', 'm-p', 'mp')
+       CASE ('methfessel-paxton', 'm-p', 'mp', 'Methfessel-Paxton')
            smearing_local="mp"
        CASE ( 'marzari-vanderbilt', 'cold', 'm-v', 'mv','Marzari-Vanderbilt') 
            smearing_local="mv"
