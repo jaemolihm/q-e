@@ -421,6 +421,9 @@ PROGRAM pw2wannier90
      IF(write_amn  )  CALL print_clock( 'compute_amn'  )
      IF(write_amn  )  CALL print_clock( 'scdm_amn_old'  ) ! JML DEBUG
      IF(write_amn  )  CALL print_clock( 'scdm_amn_new'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'scdm_svd'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'scdm_matmul'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'scdm_write'  ) ! JML DEBUG
      IF(write_mmn  )  CALL print_clock( 'compute_mmn'  )
      IF(write_unk  )  CALL print_clock( 'write_unk'    )
      IF(write_unkg )  CALL print_clock( 'write_parity' )
@@ -3497,7 +3500,8 @@ SUBROUTINE compute_amn_with_scdm
       cpos(iw,:) = cpos(iw,:) - ANINT(cpos(iw,:))
    ENDDO
 
-   DO ik=1,iknum
+   ! DO ik=1,iknum
+   DO ik = 1, 10 ! DEBUG
       WRITE (stdout,'(i8)',advance='no') ik
       IF( MOD(ik,10) == 0 ) WRITE (stdout,*)
       FLUSH(stdout)
@@ -3569,6 +3573,7 @@ SUBROUTINE compute_amn_with_scdm
       ! jml: direct evaluation of nowfc without FFT
       locibnd = 0
       npw = ngk(ik)
+      ! jml: calculae phase factor before the loop over bands
       ALLOCATE(phase_g(npw, n_wannier))
       DO iw = 1, n_wannier
         phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
@@ -3584,6 +3589,7 @@ SUBROUTINE compute_amn_with_scdm
           phase_g(ig_local, iw) = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
         END DO
       END DO
+
       DO ibnd=1,nbtot
          IF (excluded_band(ibnd)) CYCLE
          locibnd = locibnd + 1
@@ -3625,6 +3631,7 @@ SUBROUTINE compute_amn_with_scdm
          ! calculate exp(i G * r), for r(1:3) = cpos(iw,1:3)
          DO iw = 1,n_wannier
            nowfc_debug = sum( evc(:, ibnd) * phase_g(:, iw) )
+
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
            ! DEBUG: test error btw old and new
            if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
@@ -3639,6 +3646,7 @@ SUBROUTINE compute_amn_with_scdm
        CALL stop_clock( 'scdm_amn_new' )
       ! =================================END=====================================
 
+      CALL start_clock( 'scdm_svd' )
       CALL ZGESVD('S','S',numbands,n_wannier,TRANSPOSE(CONJG(nowfc)),numbands,&
            &singval,Umat,numbands,VTmat,n_wannier,tmp_cwork,-1,rwork2,info)
       lcwork = AINT(REAL(tmp_cwork(1)))
@@ -3660,8 +3668,12 @@ SUBROUTINE compute_amn_with_scdm
       IF(info/=0) CALL errore('compute_amn','Error in computing the SVD of the PSI matrix in the SCDM method',1)
 #endif
       DEALLOCATE(cwork)
+      CALL stop_clock( 'scdm_svd' )
 
+      CALL start_clock( 'scdm_matmul' )
       Amat = MATMUL(Umat,VTmat)
+      CALL stop_clock( 'scdm_matmul' )
+      CALL start_clock( 'scdm_write' )
       DO iw = 1,n_wannier
          locibnd = 0
          DO ibnd = 1,nbtot
@@ -3670,6 +3682,7 @@ SUBROUTINE compute_amn_with_scdm
             IF (ionode) WRITE(iun_amn,'(3i5,2f18.12)') locibnd, iw, ik, REAL(Amat(locibnd,iw)), AIMAG(Amat(locibnd,iw))
          ENDDO
       ENDDO
+      CALL start_clock( 'scdm_write' )
    ENDDO  ! k-points
 
    ! vv: Deallocate all the variables for the SCDM method
