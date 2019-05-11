@@ -419,6 +419,8 @@ PROGRAM pw2wannier90
      CALL print_clock( 'init_pw2wan' )
      if(write_dmn  )  CALL print_clock( 'compute_dmn'  )!YN:
      IF(write_amn  )  CALL print_clock( 'compute_amn'  )
+     IF(write_amn  )  CALL print_clock( 'scdm_amn_old'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'scdm_amn_new'  ) ! JML DEBUG
      IF(write_mmn  )  CALL print_clock( 'compute_mmn'  )
      IF(write_unk  )  CALL print_clock( 'write_unk'    )
      IF(write_unkg )  CALL print_clock( 'write_parity' )
@@ -3276,13 +3278,14 @@ SUBROUTINE compute_amn_with_scdm
    USE io_files,        ONLY : nwordwfc, iunwfc
    USE wannier
    USE klist,           ONLY : nkstot, xk, ngk, igk_k
-   USE gvect,           ONLY : g, ngm
+   USE gvect,           ONLY : g, ngm, mill
    USE fft_base,        ONLY : dffts !vv: unk for the SCDM-k algorithm
    USE scatter_mod,     ONLY : gather_grid
    USE fft_interfaces,  ONLY : invfft !vv: inverse fft transform for computing the unk's on a grid
    USE noncollin_module,ONLY : noncolin, npol
-   USE mp,              ONLY : mp_bcast, mp_barrier
+   USE mp,              ONLY : mp_bcast, mp_barrier, mp_sum
    USE mp_world,        ONLY : world_comm
+   USE mp_pools,        ONLY : intra_pool_comm, me_pool
    USE cell_base,       ONLY : at
    USE ions_base,       ONLY : ntyp => nsp, tau
    USE uspp_param,      ONLY : upf
@@ -3295,9 +3298,12 @@ SUBROUTINE compute_amn_with_scdm
    REAL(DP), ALLOCATABLE :: focc(:), rwork(:), rwork2(:), singval(:), rpos(:,:), cpos(:,:) ! vv: Real array for the QR factorization and SVD
    INTEGER, ALLOCATABLE :: piv(:) ! vv: Pivot array in the QR factorization 
    COMPLEX(DP) :: tmp_cwork(2)  
-   REAL(DP):: ddot, sumk, norm_psi, f_gamma
+   REAL(DP):: ddot, sumk, norm_psi, f_gamma, tpi_r_dot_g
+   REAL(DP) :: norm_psi_debug
+   COMPLEX(DP) :: phase_g, nowfc_debug
    INTEGER :: ik, npw, ibnd, iw, ikevc, nrtot, ipt, info, lcwork, locibnd, &
-              jpt,kpt,lpt, ib, istart, gamma_idx, minmn, minmn2, maxmn2, numbands, nbtot
+              jpt,kpt,lpt, ib, istart, gamma_idx, minmn, minmn2, maxmn2, numbands, nbtot, &
+              ig, ig_local
    CHARACTER (len=9)  :: cdate,ctime
    CHARACTER (len=60) :: header
    LOGICAL            :: any_uspp, found_gamma
@@ -3479,9 +3485,9 @@ SUBROUTINE compute_amn_with_scdm
       DO jpt = 0,dffts%nr2-1 
          DO ipt = 0,dffts%nr1-1
             lpt = lpt + 1
-            rpos(lpt,1) = REAL(ipt)/dffts%nr1 
-            rpos(lpt,2) = REAL(jpt)/dffts%nr2 
-            rpos(lpt,3) = REAL(kpt)/dffts%nr3 
+            rpos(lpt,1) = REAL(ipt, DP)/ REAL(dffts%nr1, DP)
+            rpos(lpt,2) = REAL(jpt, DP)/ REAL(dffts%nr2, DP)
+            rpos(lpt,3) = REAL(kpt, DP)/ REAL(dffts%nr3, DP)
          ENDDO
       ENDDO
    ENDDO
@@ -3509,6 +3515,8 @@ SUBROUTINE compute_amn_with_scdm
       Amat(:,:) = (0.0_DP,0.0_DP)
       singval(:) = 0.0_DP
       rwork2(:) = 0.0_DP
+      ! =============================OLD version=================================
+      CALL start_clock( 'scdm_amn_old' )
       locibnd = 0
       ! vv: Generate the occupation numbers matrix according to scdm_entanglement
       DO ibnd=1,nbtot
@@ -3553,6 +3561,89 @@ SUBROUTINE compute_amn_with_scdm
          ENDDO
 #endif
       ENDDO
+      CALL stop_clock( 'scdm_amn_old' )
+
+      ! =============================NEW version=================================
+      CALL start_clock( 'scdm_amn_new' )
+      ! jml: direct evaluation of nowfc without FFT
+      locibnd = 0
+      DO ibnd=1,nbtot
+         IF (excluded_band(ibnd)) CYCLE
+         locibnd = locibnd + 1
+         ! vv: Define the occupation numbers matrix according to scdm_entanglement
+         IF(TRIM(scdm_entanglement) == 'isolated') THEN
+            focc(locibnd) = 1.0_DP
+         ELSEIF (TRIM(scdm_entanglement) == 'erfc') THEN
+            focc(locibnd) = 0.5_DP*ERFC((et(ibnd,ik)*rytoev - scdm_mu)/scdm_sigma)
+         ELSEIF (TRIM(scdm_entanglement) == 'gaussian') THEN
+            focc(locibnd) = EXP(-1.0_DP*((et(ibnd,ik)*rytoev - scdm_mu)**2)/(scdm_sigma**2))
+         ELSE
+            call errore('compute_amn','scdm_entanglement value not recognized.',1)
+         END IF
+         CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
+         npw = ngk(ik)
+#if defined(__MPI)
+         norm_psi_debug = real(sum( evc(1:npw,ibnd) * conjg(evc(1:npw,ibnd)) ))
+         CALL mp_sum(norm_psi_debug, intra_pool_comm)
+         norm_psi_debug = sqrt(norm_psi_debug)
+
+         ! calculate exp(i G * r), for r(1:3) = cpos(iw,1:3)
+         DO iw = 1,n_wannier
+           phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+           nowfc_debug = (0.D0, 0.D0)
+           DO ig_local = 1, npw
+             ig = igk_k(ig_local,ik)
+             tpi_r_dot_g = 2.0_DP * pi * ( cpos(iw,1)*REAL(mill(1,ig), DP) & 
+                                       & + cpos(iw,2)*REAL(mill(2,ig), DP) &
+                                       & + cpos(iw,3)*REAL(mill(3,ig), DP) )
+             phase_g = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
+             nowfc_debug = nowfc_debug + evc(ig_local, ibnd) * phase_g 
+           END DO ! ig_local
+           CALL mp_sum(nowfc_debug, intra_pool_comm)
+           nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
+           if (me_pool == 0) then
+             ! DEBUG: test error btw old and new
+             if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
+               print*, '==================WARNING=================='
+               print*, 'ik, locibnd, iw', ik, locibnd, iw
+               print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
+             end if
+           end if
+         END DO ! iw
+#else
+         norm_psi_debug = real(sum( evc(1:npw,ibnd) * conjg(evc(1:npw,ibnd)) ))
+         norm_psi_debug = sqrt(norm_psi_debug)
+
+         ! calculate exp(i G * r), for r(1:3) = cpos(iw,1:3)
+         DO iw = 1,n_wannier
+           phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+           nowfc_debug = (0.D0, 0.D0)
+           DO ig_local = 1, npw
+             ig = igk_k(ig_local,ik)
+             tpi_r_dot_g = 2.0_DP * pi * ( cpos(iw,1)*REAL(mill(1,ig), DP) & 
+                                       & + cpos(iw,2)*REAL(mill(2,ig), DP) &
+                                       & + cpos(iw,3)*REAL(mill(3,ig), DP) )
+             phase_g = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
+             nowfc_debug = nowfc_debug + evc(ig_local, ibnd) * phase_g 
+           END DO ! ig_local
+           nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
+           ! DEBUG: test error btw old and new
+           if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
+             print*, '==================WARNING=================='
+             print*, 'ik, locibnd, iw', ik, locibnd, iw
+             print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
+           end if
+         END DO ! iw
+#endif
+       END DO ! ibnd
+       CALL stop_clock( 'scdm_amn_new' )
+      ! =================================END=====================================
 
       CALL ZGESVD('S','S',numbands,n_wannier,TRANSPOSE(CONJG(nowfc)),numbands,&
            &singval,Umat,numbands,VTmat,n_wannier,tmp_cwork,-1,rwork2,info)
