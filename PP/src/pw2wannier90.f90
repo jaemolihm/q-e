@@ -3295,12 +3295,13 @@ SUBROUTINE compute_amn_with_scdm
    INTEGER, EXTERNAL :: find_free_unit
    COMPLEX(DP), ALLOCATABLE :: phase(:), nowfc1(:,:), nowfc(:,:), psi_gamma(:,:), &  
        qr_tau(:), cwork(:), cwork2(:), Umat(:,:), VTmat(:,:), Amat(:,:) ! vv: complex arrays for the SVD factorization
+   COMPLEX(DP), ALLOCATABLE :: phase_g(:,:) ! jml
    REAL(DP), ALLOCATABLE :: focc(:), rwork(:), rwork2(:), singval(:), rpos(:,:), cpos(:,:) ! vv: Real array for the QR factorization and SVD
    INTEGER, ALLOCATABLE :: piv(:) ! vv: Pivot array in the QR factorization 
    COMPLEX(DP) :: tmp_cwork(2)  
    REAL(DP):: ddot, sumk, norm_psi, f_gamma, tpi_r_dot_g
    REAL(DP) :: norm_psi_debug
-   COMPLEX(DP) :: phase_g, nowfc_debug
+   COMPLEX(DP) :: nowfc_debug
    INTEGER :: ik, npw, ibnd, iw, ikevc, nrtot, ipt, info, lcwork, locibnd, &
               jpt,kpt,lpt, ib, istart, gamma_idx, minmn, minmn2, maxmn2, numbands, nbtot, &
               ig, ig_local
@@ -3567,6 +3568,22 @@ SUBROUTINE compute_amn_with_scdm
       CALL start_clock( 'scdm_amn_new' )
       ! jml: direct evaluation of nowfc without FFT
       locibnd = 0
+      npw = ngk(ik)
+      ALLOCATE(phase_g(npw, n_wannier))
+      DO iw = 1, n_wannier
+        phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+
+        DO ig_local = 1, npw
+          ig = igk_k(ig_local,ik)
+          tpi_r_dot_g = 2.0_DP * pi * ( cpos(iw,1)*REAL(mill(1,ig), DP) & 
+                                    & + cpos(iw,2)*REAL(mill(2,ig), DP) &
+                                    & + cpos(iw,3)*REAL(mill(3,ig), DP) )
+          phase_g(ig_local, iw) = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
+        END DO
+      END DO
       DO ibnd=1,nbtot
          IF (excluded_band(ibnd)) CYCLE
          locibnd = locibnd + 1
@@ -3581,7 +3598,6 @@ SUBROUTINE compute_amn_with_scdm
             call errore('compute_amn','scdm_entanglement value not recognized.',1)
          END IF
          CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
-         npw = ngk(ik)
 #if defined(__MPI)
          norm_psi_debug = real(sum( evc(1:npw,ibnd) * conjg(evc(1:npw,ibnd)) ))
          CALL mp_sum(norm_psi_debug, intra_pool_comm)
@@ -3589,20 +3605,9 @@ SUBROUTINE compute_amn_with_scdm
 
          ! calculate exp(i G * r), for r(1:3) = cpos(iw,1:3)
          DO iw = 1,n_wannier
-           phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-           nowfc_debug = (0.D0, 0.D0)
-           DO ig_local = 1, npw
-             ig = igk_k(ig_local,ik)
-             tpi_r_dot_g = 2.0_DP * pi * ( cpos(iw,1)*REAL(mill(1,ig), DP) & 
-                                       & + cpos(iw,2)*REAL(mill(2,ig), DP) &
-                                       & + cpos(iw,3)*REAL(mill(3,ig), DP) )
-             phase_g = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
-             nowfc_debug = nowfc_debug + evc(ig_local, ibnd) * phase_g 
-           END DO ! ig_local
+           nowfc_debug = sum( evc(:, ibnd) * phase_g(:, iw) )
            CALL mp_sum(nowfc_debug, intra_pool_comm)
+
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
            if (me_pool == 0) then
              ! DEBUG: test error btw old and new
@@ -3619,19 +3624,7 @@ SUBROUTINE compute_amn_with_scdm
 
          ! calculate exp(i G * r), for r(1:3) = cpos(iw,1:3)
          DO iw = 1,n_wannier
-           phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-           nowfc_debug = (0.D0, 0.D0)
-           DO ig_local = 1, npw
-             ig = igk_k(ig_local,ik)
-             tpi_r_dot_g = 2.0_DP * pi * ( cpos(iw,1)*REAL(mill(1,ig), DP) & 
-                                       & + cpos(iw,2)*REAL(mill(2,ig), DP) &
-                                       & + cpos(iw,3)*REAL(mill(3,ig), DP) )
-             phase_g = cmplx(COS(tpi_r_dot_g), SIN(tpi_r_dot_g), kind=DP)
-             nowfc_debug = nowfc_debug + evc(ig_local, ibnd) * phase_g 
-           END DO ! ig_local
+           nowfc_debug = sum( evc(:, ibnd) * phase_g(:, iw) )
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
            ! DEBUG: test error btw old and new
            if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
@@ -3642,6 +3635,7 @@ SUBROUTINE compute_amn_with_scdm
          END DO ! iw
 #endif
        END DO ! ibnd
+       DEALLOCATE(phase_g)
        CALL stop_clock( 'scdm_amn_new' )
       ! =================================END=====================================
 
