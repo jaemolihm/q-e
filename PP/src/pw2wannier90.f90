@@ -5512,32 +5512,32 @@ WRITE(stdout, *) "Run over ik"
       CALL start_clock( 'scdm_write' )
    ENDDO  ! k-points
 
-!    ! vv: Deallocate all the variables for the SCDM method
-!    DEALLOCATE(kpt_latt)
-!    DEALLOCATE(psi_gamma)
-!    DEALLOCATE(nowfc)
-!    DEALLOCATE(nowfc1)
-!    DEALLOCATE(focc)
-!    DEALLOCATE(piv)
-!    DEALLOCATE(qr_tau)
-!    DEALLOCATE(rwork)
-!    DEALLOCATE(rwork2)
-!    DEALLOCATE(rpos)
-!    DEALLOCATE(cpos)
-!    DEALLOCATE(Umat)
-!    DEALLOCATE(VTmat)
-!    DEALLOCATE(Amat)
-!    DEALLOCATE(singval)
+   ! vv: Deallocate all the variables for the SCDM method
+   DEALLOCATE(kpt_latt)
+   DEALLOCATE(psi_gamma)
+   DEALLOCATE(nowfc)
+   DEALLOCATE(nowfc1)
+   DEALLOCATE(focc)
+   DEALLOCATE(piv)
+   DEALLOCATE(qr_tau)
+   DEALLOCATE(rwork)
+   DEALLOCATE(rwork2)
+   DEALLOCATE(rpos)
+   DEALLOCATE(cpos)
+   DEALLOCATE(Umat)
+   DEALLOCATE(VTmat)
+   DEALLOCATE(Amat)
+   DEALLOCATE(singval)
 
-! #if defined(__MPI)
-!    DEALLOCATE( psic_all )
-! #endif
+#if defined(__MPI)
+   DEALLOCATE( psic_all )
+#endif
 
-!    IF (ionode .and. wan_mode=='standalone') CLOSE (iun_amn)
-!    WRITE(stdout,'(/)')
-!    WRITE(stdout,*) ' AMN calculated'
-!    CALL stop_clock( 'compute_amn' )
+   IF (ionode .and. wan_mode=='standalone') CLOSE (iun_amn)
+   WRITE(stdout,'(/)')
+   WRITE(stdout,*) ' AMN calculated'
+   CALL stop_clock( 'compute_amn' )
 
-!    RETURN
+   RETURN
 END SUBROUTINE compute_amn_with_scdm_spinor
 
