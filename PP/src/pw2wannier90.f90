@@ -3681,7 +3681,7 @@ SUBROUTINE compute_amn_with_scdm
             IF (ionode) WRITE(iun_amn,'(3i5,2f18.12)') locibnd, iw, ik, REAL(Amat(locibnd,iw)), AIMAG(Amat(locibnd,iw))
          ENDDO
       ENDDO
-      CALL start_clock( 'scdm_write' )
+      CALL stop_clock( 'scdm_write' )
    ENDDO  ! k-points
 
    ! vv: Deallocate all the variables for the SCDM method
@@ -5509,7 +5509,7 @@ WRITE(stdout, *) "Run over ik"
             IF (ionode) WRITE(iun_amn,'(3i5,2f18.12)') locibnd, iw, ik, REAL(Amat(locibnd,iw)), AIMAG(Amat(locibnd,iw))
          ENDDO
       ENDDO
-      CALL start_clock( 'scdm_write' )
+      CALL stop_clock( 'scdm_write' )
    ENDDO  ! k-points
 
    ! vv: Deallocate all the variables for the SCDM method
