@@ -5290,7 +5290,7 @@ WRITE(stdout, *) "Calculate position and spin part of piv"
        piv_pos(iw) = piv(iw) - nrtot
        piv_spin(iw) = 2
      end if
-print*, 'iw', iw, piv(iw), piv_spin(iw)
+     WRITE(stdout, '(a,I5,I10,I2)'), 'pivot(iw):', iw, piv(iw), piv_spin(iw)
    END DO
    WRITE(stdout, '(a,I5)') "Number of pivot points with spin up  : ", count_piv_spin
    WRITE(stdout, '(a,I5)') "Number of pivot points with spin down: ", n_wannier - count_piv_spin
