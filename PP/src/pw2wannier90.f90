@@ -5094,7 +5094,7 @@ SUBROUTINE compute_amn_with_scdm_spinor
    COMPLEX(DP) :: nowfc_debug
    INTEGER :: ik, npw, ibnd, iw, ikevc, nrtot, ipt, info, lcwork, locibnd, &
               jpt,kpt,lpt, ib, istart, gamma_idx, minmn, minmn2, maxmn2, numbands, nbtot, &
-              ig, ig_local
+              ig, ig_local, count_piv_spin
    INTEGER :: ispin
    CHARACTER (len=9)  :: cdate,ctime
    CHARACTER (len=60) :: header
@@ -5153,8 +5153,8 @@ SUBROUTINE compute_amn_with_scdm_spinor
    minmn = MIN(numbands,nrtot*2) ! spinor
    ALLOCATE(qr_tau(2*minmn))
    ALLOCATE(piv(nrtot*2)) ! spinor
-   ALLOCATE(piv_pos(nrtot*2)) ! spinor
-   ALLOCATE(piv_spin(nrtot*2)) ! spinor
+   ALLOCATE(piv_pos(n_wannier)) ! spinor
+   ALLOCATE(piv_spin(n_wannier)) ! spinor
    piv(:) = 0
    ALLOCATE(rwork(2*nrtot*2)) ! spinor
    rwork(:) = 0.0_DP
@@ -5280,15 +5280,20 @@ WRITE(stdout, *) "Perform QR factorizatoin"
    tmp_cwork(:) = (0.0_DP,0.0_DP)
 WRITE(stdout, *) "Calculate position and spin part of piv"
    ! jml: calculate position and spin part of piv
+   count_piv_spin = 0
    DO iw=1,n_wannier
      IF (piv(iw) .le. nrtot) then
        piv_pos(iw) = piv(iw)
        piv_spin(iw) = 1
+       count_piv_spin = count_piv_spin + 1
      else
        piv_pos(iw) = piv(iw) - nrtot
        piv_spin(iw) = 2
      end if
+print*, 'iw', iw, piv(iw), piv_spin(iw)
    END DO
+   WRITE(stdout, '(a,I5)') "Number of pivot points with spin up  : ", count_piv_spin
+   WRITE(stdout, '(a,I5)') "Number of pivot points with spin down: ", n_wannier - count_piv_spin
 
    ! vv: Compute the points
    lpt = 0
@@ -5324,58 +5329,58 @@ WRITE(stdout, *) "Run over ik"
       Amat(:,:) = (0.0_DP,0.0_DP)
       singval(:) = 0.0_DP
       rwork2(:) = 0.0_DP
-      ! =============================OLD version=================================
-      CALL start_clock( 'scdm_amn_old' )
-      locibnd = 0
-      ! vv: Generate the occupation numbers matrix according to scdm_entanglement
-      DO ibnd=1,nbtot
-         IF (excluded_band(ibnd)) CYCLE
-         locibnd = locibnd + 1
-         ! vv: Define the occupation numbers matrix according to scdm_entanglement
-         IF(TRIM(scdm_entanglement) == 'isolated') THEN
-            focc(locibnd) = 1.0_DP
-         ELSEIF (TRIM(scdm_entanglement) == 'erfc') THEN
-            focc(locibnd) = 0.5_DP*ERFC((et(ibnd,ik)*rytoev - scdm_mu)/scdm_sigma)
-         ELSEIF (TRIM(scdm_entanglement) == 'gaussian') THEN
-            focc(locibnd) = EXP(-1.0_DP*((et(ibnd,ik)*rytoev - scdm_mu)**2)/(scdm_sigma**2))
-         ELSE
-            call errore('compute_amn','scdm_entanglement value not recognized.',1)
-         END IF
-         CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
-         npw = ngk(ik)
-         psic_nc(:,:) = (0.D0,0.D0)
-         psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1:npw,ibnd)
-         psic_nc(dffts%nl (igk_k (1:npw,ik) ), 2) = evc (1+npwx:npw+npwx,ibnd)
-         CALL invfft ('Wave', psic_nc(:,1), dffts)
-         CALL invfft ('Wave', psic_nc(:,2), dffts)
+!       ! =============================OLD version=================================
+!       CALL start_clock( 'scdm_amn_old' )
+!       locibnd = 0
+!       ! vv: Generate the occupation numbers matrix according to scdm_entanglement
+!       DO ibnd=1,nbtot
+!          IF (excluded_band(ibnd)) CYCLE
+!          locibnd = locibnd + 1
+!          ! vv: Define the occupation numbers matrix according to scdm_entanglement
+!          IF(TRIM(scdm_entanglement) == 'isolated') THEN
+!             focc(locibnd) = 1.0_DP
+!          ELSEIF (TRIM(scdm_entanglement) == 'erfc') THEN
+!             focc(locibnd) = 0.5_DP*ERFC((et(ibnd,ik)*rytoev - scdm_mu)/scdm_sigma)
+!          ELSEIF (TRIM(scdm_entanglement) == 'gaussian') THEN
+!             focc(locibnd) = EXP(-1.0_DP*((et(ibnd,ik)*rytoev - scdm_mu)**2)/(scdm_sigma**2))
+!          ELSE
+!             call errore('compute_amn','scdm_entanglement value not recognized.',1)
+!          END IF
+!          CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
+!          npw = ngk(ik)
+!          psic_nc(:,:) = (0.D0,0.D0)
+!          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1:npw,ibnd)
+!          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 2) = evc (1+npwx:npw+npwx,ibnd)
+!          CALL invfft ('Wave', psic_nc(:,1), dffts)
+!          CALL invfft ('Wave', psic_nc(:,2), dffts)
 
-#if defined(__MPI)
-         CALL gather_grid(dffts, psic_nc(:,1), psic_all(:,1))
-         CALL gather_grid(dffts, psic_nc(:,2), psic_all(:,2))
-         norm_psi = sqrt( real(sum(psic_all(1:nrtot, 1)*conjg(psic_all(1:nrtot, 1))),kind=DP) &
-                         +real(sum(psic_all(1:nrtot, 2)*conjg(psic_all(1:nrtot, 2))),kind=DP) )
-         psic_all(1:nrtot,:) = psic_all(1:nrtot,:) / norm_psi 
-         DO iw = 1,n_wannier
-            phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-                  &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-                  &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-                  &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-            nowfc(iw,locibnd) = phase(iw)*psic_all(piv_pos(iw), piv_spin(iw))*focc(locibnd)
-         ENDDO
-#else
-         norm_psi = sqrt( real(sum(psic_nc(1:nrtot, 1)*conjg(psic_nc(1:nrtot, 1))),kind=DP) &
-                         +real(sum(psic_nc(1:nrtot, 2)*conjg(psic_nc(1:nrtot, 2))),kind=DP) )
-         psic_nc(1:nrtot,:) = psic_nc(1:nrtot,:) / norm_psi
-         DO iw = 1,n_wannier
-            phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-                  &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-                  &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-                  &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-            nowfc(iw,locibnd) = phase(iw)*psic_nc(piv_pos(iw), piv_spin(iw))*focc(locibnd)
-         ENDDO
-#endif
-      ENDDO
-      CALL stop_clock( 'scdm_amn_old' )
+! #if defined(__MPI)
+!          CALL gather_grid(dffts, psic_nc(:,1), psic_all(:,1))
+!          CALL gather_grid(dffts, psic_nc(:,2), psic_all(:,2))
+!          norm_psi = sqrt( real(sum(psic_all(1:nrtot, 1)*conjg(psic_all(1:nrtot, 1))),kind=DP) &
+!                          +real(sum(psic_all(1:nrtot, 2)*conjg(psic_all(1:nrtot, 2))),kind=DP) )
+!          psic_all(1:nrtot,:) = psic_all(1:nrtot,:) / norm_psi 
+!          DO iw = 1,n_wannier
+!             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+!                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+!             nowfc(iw,locibnd) = phase(iw)*psic_all(piv_pos(iw), piv_spin(iw))*focc(locibnd)
+!          ENDDO
+! #else
+!          norm_psi = sqrt( real(sum(psic_nc(1:nrtot, 1)*conjg(psic_nc(1:nrtot, 1))),kind=DP) &
+!                          +real(sum(psic_nc(1:nrtot, 2)*conjg(psic_nc(1:nrtot, 2))),kind=DP) )
+!          psic_nc(1:nrtot,:) = psic_nc(1:nrtot,:) / norm_psi
+!          DO iw = 1,n_wannier
+!             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+!                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+!             nowfc(iw,locibnd) = phase(iw)*psic_nc(piv_pos(iw), piv_spin(iw))*focc(locibnd)
+!          ENDDO
+! #endif
+!       ENDDO
+!       CALL stop_clock( 'scdm_amn_old' )
 
       ! =============================NEW version=================================
       CALL start_clock( 'scdm_amn_new' )
@@ -5430,15 +5435,16 @@ WRITE(stdout, *) "Run over ik"
            CALL mp_sum(nowfc_debug, intra_pool_comm)
 
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
-           if (me_pool == 0) then
-             ! DEBUG: test error btw old and new
-             if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
-               print*, '==================WARNING=================='
-               print*, norm_psi_debug, norm_psi / sqrt(real(nrtot,dp))
-               print*, 'ik, locibnd, iw', ik, locibnd, iw
-               print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
-             end if
-           end if
+           nowfc(iw, locibnd) = nowfc_debug
+           ! if (me_pool == 0) then
+           !   ! DEBUG: test error btw old and new
+           !   if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
+           !     print*, '==================WARNING=================='
+           !     print*, norm_psi_debug, norm_psi / sqrt(real(nrtot,dp))
+           !     print*, 'ik, locibnd, iw', ik, locibnd, iw
+           !     print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
+           !   end if
+           ! end if
          END DO ! iw
 #else
          if (piv_spin(iw) == 1) then ! spin up
@@ -5457,12 +5463,13 @@ WRITE(stdout, *) "Run over ik"
            end if
 
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
-           ! DEBUG: test error btw old and new
-           if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
-             print*, '==================WARNING=================='
-             print*, 'ik, locibnd, iw', ik, locibnd, iw
-             print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
-           end if
+           nowfc(iw, locibnd) = nowfc_debug
+           ! ! DEBUG: test error btw old and new
+           ! if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
+           !   print*, '==================WARNING=================='
+           !   print*, 'ik, locibnd, iw', ik, locibnd, iw
+           !   print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
+           ! end if
          END DO ! iw
 #endif
        END DO ! ibnd
