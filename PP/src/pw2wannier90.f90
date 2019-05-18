@@ -5124,9 +5124,9 @@ SUBROUTINE compute_amn_with_scdm_spinor
    ! IF (noncolin) THEN
    !    call errore('pw2wannier90','The SCDM method is not compatible with non-collinear spin yet.',1)
    ! ENDIF
-   IF (noncolin .and. (MOD(n_wannier,2) .ne. 0)) THEN
-      call errore('pw2wannier90','For spinor SCDM, number of Wannier functions should be even',1)
-   ENDIF
+!   IF (noncolin .and. (MOD(n_wannier,2) .ne. 0)) THEN
+!      call errore('pw2wannier90','For spinor SCDM, number of Wannier functions should be even',1)
+!   ENDIF
 
    ! vv: Error for using SCDM with Ultrasoft pseudopotentials
    !IF (any_uspp) THEN
@@ -5234,7 +5234,7 @@ WRITE(stdout, *) "Calculate psic_gamma"
       ! vv: Compute unk's on a real grid (the fft grid)
       psic_nc(:,:) = (0.D0,0.D0)
       psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1:npw,ibnd)
-      psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1+npwx:npw+npwx,ibnd)
+      psic_nc(dffts%nl (igk_k (1:npw,ik) ), 2) = evc (1+npwx:npw+npwx,ibnd)
       CALL invfft ('Wave', psic_nc(:,1), dffts)
       CALL invfft ('Wave', psic_nc(:,2), dffts)
 
@@ -5290,7 +5290,7 @@ WRITE(stdout, *) "Calculate position and spin part of piv"
        piv_pos(iw) = piv(iw) - nrtot
        piv_spin(iw) = 2
      end if
-     WRITE(stdout, '(a,I5,I10,I2)'), 'pivot(iw):', iw, piv(iw), piv_spin(iw)
+     WRITE(stdout, '(a,I5,I10,I5)'), 'pivot(iw):', iw, piv(iw), piv_spin(iw)
    END DO
    WRITE(stdout, '(a,I5)') "Number of pivot points with spin up  : ", count_piv_spin
    WRITE(stdout, '(a,I5)') "Number of pivot points with spin down: ", n_wannier - count_piv_spin
