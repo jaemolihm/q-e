@@ -420,9 +420,9 @@ PROGRAM pw2wannier90
      if(write_dmn  )  CALL print_clock( 'compute_dmn'  )!YN:
      IF(write_amn  )  CALL print_clock( 'compute_amn'  )
      IF(write_amn  )  CALL print_clock( 'scdm_amn_old'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'old_invfft'  ) ! JML DEBUG
+     IF(write_amn  )  CALL print_clock( 'old_gather'  ) ! JML DEBUG
      IF(write_amn  )  CALL print_clock( 'scdm_amn_new'  ) ! JML DEBUG
-     IF(write_amn  )  CALL print_clock( 'scdm_svd'  ) ! JML DEBUG
-     IF(write_amn  )  CALL print_clock( 'scdm_matmul'  ) ! JML DEBUG
      IF(write_amn  )  CALL print_clock( 'scdm_write'  ) ! JML DEBUG
      IF(write_mmn  )  CALL print_clock( 'compute_mmn'  )
      IF(write_unk  )  CALL print_clock( 'write_unk'    )
@@ -3421,6 +3421,7 @@ SUBROUTINE compute_amn_with_scdm
    f_gamma = 0.0_DP
    ik = gamma_idx
    locibnd = 0
+   CALL davcio (evc, 2*nwordwfc, iunwfc, ik, -1 )
    DO ibnd=1,nbtot
       IF(excluded_band(ibnd)) CYCLE
       locibnd = locibnd + 1
@@ -3435,7 +3436,6 @@ SUBROUTINE compute_amn_with_scdm
       ELSE
          call errore('compute_amn','scdm_entanglement value not recognized.',1)
       END IF
-      CALL davcio (evc, 2*nwordwfc, iunwfc, ik, -1 )
       npw = ngk(ik)
       ! vv: Compute unk's on a real grid (the fft grid)
       psic(:) = (0.D0,0.D0)
@@ -3522,6 +3522,7 @@ SUBROUTINE compute_amn_with_scdm
       ! =============================OLD version=================================
       CALL start_clock( 'scdm_amn_old' )
       locibnd = 0
+      CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
       ! vv: Generate the occupation numbers matrix according to scdm_entanglement
       DO ibnd=1,nbtot
          IF (excluded_band(ibnd)) CYCLE
@@ -3536,13 +3537,16 @@ SUBROUTINE compute_amn_with_scdm
          ELSE
             call errore('compute_amn','scdm_entanglement value not recognized.',1)
          END IF
-         CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
          npw = ngk(ik)
          psic(:) = (0.D0,0.D0)
          psic(dffts%nl (igk_k (1:npw,ik) ) ) = evc (1:npw,ibnd)
+call start_clock('old_invfft')
          CALL invfft ('Wave', psic, dffts)
+call stop_clock('old_invfft')
 #if defined(__MPI)
+call start_clock('old_gather')
          CALL gather_grid(dffts,psic,psic_all)
+call stop_clock('old_gather')
          norm_psi = sqrt(real(sum(psic_all(1:nrtot)*conjg(psic_all(1:nrtot))),kind=DP))
          psic_all(1:nrtot) = psic_all(1:nrtot)/ norm_psi 
          DO iw = 1,n_wannier
@@ -3589,6 +3593,7 @@ SUBROUTINE compute_amn_with_scdm
         END DO
       END DO
 
+      CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
       DO ibnd=1,nbtot
          IF (excluded_band(ibnd)) CYCLE
          locibnd = locibnd + 1
@@ -3602,7 +3607,6 @@ SUBROUTINE compute_amn_with_scdm
          ELSE
             call errore('compute_amn','scdm_entanglement value not recognized.',1)
          END IF
-         CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
 #if defined(__MPI)
          norm_psi_debug = real(sum( evc(1:npw,ibnd) * conjg(evc(1:npw,ibnd)) ))
          CALL mp_sum(norm_psi_debug, intra_pool_comm)
@@ -5215,6 +5219,7 @@ WRITE(stdout, *) "Calculate psic_gamma"
    f_gamma = 0.0_DP
    ik = gamma_idx
    locibnd = 0
+   CALL davcio (evc, 2*nwordwfc, iunwfc, ik, -1 )
    DO ibnd=1,nbtot
       IF(excluded_band(ibnd)) CYCLE
       locibnd = locibnd + 1
@@ -5229,7 +5234,6 @@ WRITE(stdout, *) "Calculate psic_gamma"
       ELSE
          call errore('compute_amn','scdm_entanglement value not recognized.',1)
       END IF
-      CALL davcio (evc, 2*nwordwfc, iunwfc, ik, -1 )
       npw = ngk(ik)
       ! vv: Compute unk's on a real grid (the fft grid)
       psic_nc(:,:) = (0.D0,0.D0)
@@ -5329,58 +5333,61 @@ WRITE(stdout, *) "Run over ik"
       Amat(:,:) = (0.0_DP,0.0_DP)
       singval(:) = 0.0_DP
       rwork2(:) = 0.0_DP
-!       ! =============================OLD version=================================
-!       CALL start_clock( 'scdm_amn_old' )
-!       locibnd = 0
-!       ! vv: Generate the occupation numbers matrix according to scdm_entanglement
-!       DO ibnd=1,nbtot
-!          IF (excluded_band(ibnd)) CYCLE
-!          locibnd = locibnd + 1
-!          ! vv: Define the occupation numbers matrix according to scdm_entanglement
-!          IF(TRIM(scdm_entanglement) == 'isolated') THEN
-!             focc(locibnd) = 1.0_DP
-!          ELSEIF (TRIM(scdm_entanglement) == 'erfc') THEN
-!             focc(locibnd) = 0.5_DP*ERFC((et(ibnd,ik)*rytoev - scdm_mu)/scdm_sigma)
-!          ELSEIF (TRIM(scdm_entanglement) == 'gaussian') THEN
-!             focc(locibnd) = EXP(-1.0_DP*((et(ibnd,ik)*rytoev - scdm_mu)**2)/(scdm_sigma**2))
-!          ELSE
-!             call errore('compute_amn','scdm_entanglement value not recognized.',1)
-!          END IF
-!          CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
-!          npw = ngk(ik)
-!          psic_nc(:,:) = (0.D0,0.D0)
-!          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1:npw,ibnd)
-!          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 2) = evc (1+npwx:npw+npwx,ibnd)
-!          CALL invfft ('Wave', psic_nc(:,1), dffts)
-!          CALL invfft ('Wave', psic_nc(:,2), dffts)
+       ! =============================OLD version=================================
+       CALL start_clock( 'scdm_amn_old' )
+       locibnd = 0
+       CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
+       ! vv: Generate the occupation numbers matrix according to scdm_entanglement
+       DO ibnd=1,nbtot
+          IF (excluded_band(ibnd)) CYCLE
+          locibnd = locibnd + 1
+          ! vv: Define the occupation numbers matrix according to scdm_entanglement
+          IF(TRIM(scdm_entanglement) == 'isolated') THEN
+             focc(locibnd) = 1.0_DP
+          ELSEIF (TRIM(scdm_entanglement) == 'erfc') THEN
+             focc(locibnd) = 0.5_DP*ERFC((et(ibnd,ik)*rytoev - scdm_mu)/scdm_sigma)
+          ELSEIF (TRIM(scdm_entanglement) == 'gaussian') THEN
+             focc(locibnd) = EXP(-1.0_DP*((et(ibnd,ik)*rytoev - scdm_mu)**2)/(scdm_sigma**2))
+          ELSE
+             call errore('compute_amn','scdm_entanglement value not recognized.',1)
+          END IF
+          npw = ngk(ik)
+          psic_nc(:,:) = (0.D0,0.D0)
+          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 1) = evc (1:npw,ibnd)
+          psic_nc(dffts%nl (igk_k (1:npw,ik) ), 2) = evc (1+npwx:npw+npwx,ibnd)
+       CALL start_clock( 'old_invfft' )
+          CALL invfft ('Wave', psic_nc(:,1), dffts)
+          CALL invfft ('Wave', psic_nc(:,2), dffts)
+       CALL stop_clock( 'old_invfft' )
 
-! #if defined(__MPI)
-!          CALL gather_grid(dffts, psic_nc(:,1), psic_all(:,1))
-!          CALL gather_grid(dffts, psic_nc(:,2), psic_all(:,2))
-!          norm_psi = sqrt( real(sum(psic_all(1:nrtot, 1)*conjg(psic_all(1:nrtot, 1))),kind=DP) &
-!                          +real(sum(psic_all(1:nrtot, 2)*conjg(psic_all(1:nrtot, 2))),kind=DP) )
-!          psic_all(1:nrtot,:) = psic_all(1:nrtot,:) / norm_psi 
-!          DO iw = 1,n_wannier
-!             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-!                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-!             nowfc(iw,locibnd) = phase(iw)*psic_all(piv_pos(iw), piv_spin(iw))*focc(locibnd)
-!          ENDDO
-! #else
-!          norm_psi = sqrt( real(sum(psic_nc(1:nrtot, 1)*conjg(psic_nc(1:nrtot, 1))),kind=DP) &
-!                          +real(sum(psic_nc(1:nrtot, 2)*conjg(psic_nc(1:nrtot, 2))),kind=DP) )
-!          psic_nc(1:nrtot,:) = psic_nc(1:nrtot,:) / norm_psi
-!          DO iw = 1,n_wannier
-!             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
-!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
-!                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
-!                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
-!             nowfc(iw,locibnd) = phase(iw)*psic_nc(piv_pos(iw), piv_spin(iw))*focc(locibnd)
-!          ENDDO
-! #endif
-!       ENDDO
-!       CALL stop_clock( 'scdm_amn_old' )
+#if defined(__MPI)
+       CALL start_clock( 'old_gather' )
+          CALL gather_grid(dffts, psic_nc(:,1), psic_all(:,1))
+          CALL gather_grid(dffts, psic_nc(:,2), psic_all(:,2))
+       CALL stop_clock( 'old_gather' )
+          norm_psi = sqrt( real(sum(psic_all(1:nrtot, 1)*conjg(psic_all(1:nrtot, 1))),kind=DP) &
+                          +real(sum(psic_all(1:nrtot, 2)*conjg(psic_all(1:nrtot, 2))),kind=DP) )
+          DO iw = 1,n_wannier
+             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+             nowfc(iw,locibnd) = phase(iw)*psic_all(piv_pos(iw), piv_spin(iw))*focc(locibnd) / norm_psi 
+          ENDDO
+#else
+          norm_psi = sqrt( real(sum(psic_nc(1:nrtot, 1)*conjg(psic_nc(1:nrtot, 1))),kind=DP) &
+                          +real(sum(psic_nc(1:nrtot, 2)*conjg(psic_nc(1:nrtot, 2))),kind=DP) )
+          psic_nc(1:nrtot,:) = psic_nc(1:nrtot,:) / norm_psi
+          DO iw = 1,n_wannier
+             phase(iw) = cmplx(COS(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + & 
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))), &    !*ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)),& 
+                   &SIN(2.0_DP*pi*(cpos(iw,1)*kpt_latt(1,ik) + &
+                   &cpos(iw,2)*kpt_latt(2,ik) + cpos(iw,3)*kpt_latt(3,ik))),kind=DP) !ddot(3,cpos(iw,:),1,kpt_latt(:,ik),1)))
+             nowfc(iw,locibnd) = phase(iw)*psic_nc(piv_pos(iw), piv_spin(iw))*focc(locibnd)
+          ENDDO
+#endif
+       ENDDO
+       CALL stop_clock( 'scdm_amn_old' )
 
       ! =============================NEW version=================================
       CALL start_clock( 'scdm_amn_new' )
@@ -5404,6 +5411,7 @@ WRITE(stdout, *) "Run over ik"
         END DO
       END DO
 
+      CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
       DO ibnd=1,nbtot
          IF (excluded_band(ibnd)) CYCLE
          locibnd = locibnd + 1
@@ -5417,7 +5425,6 @@ WRITE(stdout, *) "Run over ik"
          ELSE
             call errore('compute_amn','scdm_entanglement value not recognized.',1)
          END IF
-         CALL davcio (evc, 2*nwordwfc, iunwfc, ikevc, -1 )
 #if defined(__MPI)
          
          norm_psi_debug = real(sum( evc(1:npw,ibnd) * conjg(evc(1:npw,ibnd)) )) &
@@ -5435,16 +5442,16 @@ WRITE(stdout, *) "Run over ik"
            CALL mp_sum(nowfc_debug, intra_pool_comm)
 
            nowfc_debug = nowfc_debug * phase(iw) * focc(locibnd) / norm_psi_debug
-           nowfc(iw, locibnd) = nowfc_debug
-           ! if (me_pool == 0) then
-           !   ! DEBUG: test error btw old and new
-           !   if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
-           !     print*, '==================WARNING=================='
-           !     print*, norm_psi_debug, norm_psi / sqrt(real(nrtot,dp))
-           !     print*, 'ik, locibnd, iw', ik, locibnd, iw
-           !     print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
-           !   end if
-           ! end if
+!           nowfc(iw, locibnd) = nowfc_debug
+            if (me_pool == 0) then
+              ! DEBUG: test error btw old and new
+              if ( abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp))) > 1.d-10) then
+                print*, '==================WARNING=================='
+                print*, norm_psi_debug, norm_psi / sqrt(real(nrtot,dp))
+                print*, 'ik, locibnd, iw', ik, locibnd, iw
+                print*, 'error is large: ', abs(nowfc_debug - nowfc(iw, locibnd)*sqrt(real(nrtot,dp)))
+              end if
+            end if
          END DO ! iw
 #else
          if (piv_spin(iw) == 1) then ! spin up
@@ -5477,7 +5484,6 @@ WRITE(stdout, *) "Run over ik"
        CALL stop_clock( 'scdm_amn_new' )
       ! =================================END=====================================
 
-      CALL start_clock( 'scdm_svd' )
 
       CALL ZGESVD('S','S',numbands,n_wannier,TRANSPOSE(CONJG(nowfc)),numbands,&
            &singval,Umat,numbands,VTmat,n_wannier,tmp_cwork,-1,rwork2,info)
@@ -5500,12 +5506,8 @@ WRITE(stdout, *) "Run over ik"
       IF(info/=0) CALL errore('compute_amn','Error in computing the SVD of the PSI matrix in the SCDM method',1)
 #endif
       DEALLOCATE(cwork)
-
-      CALL stop_clock( 'scdm_svd' )
       
-      CALL start_clock( 'scdm_matmul' )
       Amat = MATMUL(Umat,VTmat)
-      CALL stop_clock( 'scdm_matmul' )
 
       CALL start_clock( 'scdm_write' )
       DO iw = 1,n_wannier
