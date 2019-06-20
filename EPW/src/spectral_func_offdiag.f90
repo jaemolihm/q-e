@@ -7,8 +7,10 @@
   ! present distribution, or http://www.gnu.org/copyleft.gpl.txt .             
   !                                                                            
   !-----------------------------------------------------------------------
-  SUBROUTINE spectral_func_q (iqq, iq, totq)
+  SUBROUTINE spectral_func_q_offdiag (iqq, iq, totq, cufkk_all)
   !-----------------------------------------------------------------------
+  !!  jmlim: include the off-diagonal part of self-energy to calculate the
+  !!         spectral function
   !!
   !!  Compute the electron spectral function including the  electron-
   !!  phonon interaction in the Migdal approximation. 
@@ -34,8 +36,8 @@
   USE klist_epw,     ONLY : isk_dummy
   USE elph2,         ONLY : etf, ibndmin, ibndmax, nkqf, xqf, &
                             epf17, wkf, nkf, wf, wqf, xkf, nkqtotf,&
-                            esigmar_all, esigmai_all, a_all
-  USE constants_epw, ONLY : ryd2mev, one, ryd2ev, two, zero, pi, ci, eps8
+                            esigmar_all_offd, esigmai_all_offd, a_all_offd
+  USE constants_epw, ONLY : ryd2mev, one, ryd2ev, two, zero, pi, ci, eps8, czero, cone
   USE mp,            ONLY : mp_barrier, mp_sum
   USE mp_global,     ONLY : me_pool, inter_pool_comm
   USE division,      ONLY : fkbounds
@@ -48,6 +50,8 @@
   !! Current q-point index  
   INTEGER, INTENT (in) :: totq
   !! Total number of q-point in window
+  complex(DP) :: cufkk_all(nbndsub, nbndsub, nkf)
+  !! jmlim: electron eigenvector. To rotate self-energy to Wannier basis.
   ! 
   ! Local variables
   !
@@ -111,7 +115,21 @@
   ! variables for collecting data from all pools in parallel case 
   !
   real(kind=DP), allocatable :: xkf_all(:,:) , etf_all(:,:)
-  integer :: reclen ! jml: save binary file
+  ! begin jmlim off-diagonal
+  INTEGER :: ibnd2
+  complex(DP), allocatable :: mat_temp(:,:) ! for matrix inversion
+  complex(DP), allocatable :: mat_temp2(:,:) ! for unitary rotation
+  REAL(DP), allocatable :: evals_temp(:)
+  complex(DP), allocatable :: work(:)
+  integer :: lwork
+  integer, allocatable :: ipiv(:)
+  integer :: info, reclen
+  REAL(DP), allocatable :: a_all_offd_diag(:,:,:)
+  COMPLEX(DP), allocatable :: esigma_part(:,:,:,:)
+  COMPLEX(DP), allocatable :: cufkk_all_all(:,:,:)
+  COMPLEX(DP), allocatable :: ham_wannier(:,:)
+  COMPLEX(kind=DP) :: weight_complex
+  ! end jmlim off-diagonal
   ! 
   ! SP: Define the inverse so that we can efficiently multiply instead of
   ! dividing
@@ -172,8 +190,12 @@
   !
   ! loop over all k points of the fine mesh
   !
+  allocate(esigma_part(ibndmax-ibndmin+1, ibndmax-ibndmin+1, nkf, nw_specfun))
+  esigma_part = czero
+
   fermicount = 0 
   DO ik=1, nkf
+    ! write(stdout, *) 'ik, iq', ik, iq
     !
     ikk = 2 * ik - 1
     ikq = ikk + 1
@@ -202,6 +224,7 @@
         ENDIF           
         !
         DO ibnd = 1, ibndmax-ibndmin+1
+          DO ibnd2 = 1, ibndmax-ibndmin+1 ! off-diagonal
           !
           !  the energy of the electron at k (relative to Ef)
           ekk = etf (ibndmin-1+ibnd, ikk) - ef0
@@ -220,38 +243,37 @@
                .OR. abs(xqf (3, iq))> eps8 )) THEN
               ! SP: The abs has to be removed. Indeed the epf17 can be a pure imaginary 
               !     number, in which case its square will be a negative number. 
-              g2 = REAL( (epf17 (jbnd, ibnd, imode, ik)**two)*inv_wq*g2_tmp )
+              ! g2 = REAL( (epf17 (jbnd, ibnd, imode, ik)**two)*inv_wq*g2_tmp )
+              g2 = REAL(epf17 (jbnd, ibnd, imode, ik) * epf17 (jbnd, ibnd2, imode, ik), DP) * inv_wq * g2_tmp
+              ! jmlim: is this correct?
             ELSE
-              g2 = (abs(epf17 (jbnd, ibnd, imode, ik))**two)*inv_wq*g2_tmp
+              ! g2 = (abs(epf17 (jbnd, ibnd, imode, ik))**two)*inv_wq*g2_tmp
+              g2 = CONJG(epf17 (jbnd, ibnd, imode, ik)) * epf17 (jbnd, ibnd2, imode, ik) * inv_wq * g2_tmp
             ENDIF
             !
             DO iw = 1, nw_specfun
               !
               ww = wmin_specfun + dble (iw-1) * dw
               !
-              weight = wqf(iq) * real (                                            &
+              ! jml: real and imaginary done at once
+              weight_complex = wqf(iq) * (                                                 &
                 ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
                   ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
               !
-              esigmar_all(ibnd,ik+lower_bnd-1,iw) = esigmar_all(ibnd,ik+lower_bnd-1,iw) + g2 * weight 
+              esigma_part(ibnd,ibnd2,ik,iw) = esigma_part(ibnd,ibnd2,ik,iw) + g2 * weight_complex 
               ! 
 ! jml: ignore this correction (no Debye-Waller term in my model, anyway.)
 !              ! SP : Application of the sum rule
 !              esigmar0 =  g2 *  wqf(iq) * real (                                   &
 !                ( (       wgkq + wgq ) / ( -( ekq - wq ) - ci * degaussw )  +  &
 !                  ( one - wgkq + wgq ) / ( -( ekq + wq ) - ci * degaussw ) ) )
-!              esigmar_all(ibnd,ik+lower_bnd-1,iw)=esigmar_all(ibnd,ik+lower_bnd-1,iw)-esigmar0
-              !
-              weight = wqf(iq) * aimag (                                           &
-                ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
-                  ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
-              !
-              esigmai_all(ibnd,ik+lower_bnd-1,iw) = esigmai_all(ibnd,ik+lower_bnd-1,iw) + g2 * weight
+!              esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)=esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)-esigmar0
               !
             ENDDO
             !
           ENDDO !jbnd
           !
+          ENDDO ! ibnd2
         ENDDO !ibnd
         !
       ENDDO !imode
@@ -259,10 +281,40 @@
     ENDIF ! endif  fsthick
     !
   ENDDO ! end loop on k
+  ! jmlim: rotate self-energy from energy basis to Wannier basis
+  ! This is needed to add self-energy at different iq values
+  ! esigmar_all_offd(ibnd,ibnd2,ik+lower_bnd-1,iw) = esigmar_all_offd(ibnd,ibnd2,ik+lower_bnd-1,iw) + g2 * weight
+  if (ibndmax-ibndmin+1 /= nbndsub) &
+    CALL errore('It is assumed that ibndmin-ibndmin+1 == nbndsub ', ibndmax - ibndmin+ 1)
+  ALLOCATE(mat_temp(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+  ALLOCATE(mat_temp2(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+  DO ik = 1, nkf
+    DO iw = 1, nw_specfun
+      CALL ZGEMM('C', 'N', nbndsub, nbndsub, nbndsub, &
+          cone, cufkk_all(1,1,ik), nbndsub, esigma_part(1,1,ik,iw), nbndsub, &
+          czero, mat_temp, nbndsub)
+      CALL ZGEMM('N', 'N', nbndsub, nbndsub, nbndsub, &
+          cone, mat_temp, nbndsub, cufkk_all(1,1,ik), nbndsub, &
+          czero, mat_temp2, nbndsub)
+      esigmar_all_offd(:,:,ik+lower_bnd-1,iw) = esigmar_all_offd(:,:,ik+lower_bnd-1,iw) +  REAL( mat_temp2 )
+      esigmai_all_offd(:,:,ik+lower_bnd-1,iw) = esigmai_all_offd(:,:,ik+lower_bnd-1,iw) + AIMAG( mat_temp2 )
+    END DO ! iw
+  END DO ! ik
+  DEALLOCATE(mat_temp)
+  DEALLOCATE(mat_temp2)
+  deallocate(esigma_part)
   !
   ! The k points are distributed among pools: here we collect them
   !
   IF (iqq == totq) THEN
+    !
+    ! jmlim: gather electron wavefunction
+    allocate(cufkk_all_all(nbndsub, nbndsub, nksqtotf))
+    cufkk_all_all = czero
+    do ik = 1, nkf
+      cufkk_all_all(:,:,ik+lower_bnd-1) = cufkk_all(:,:,ik)
+    end do
+    !
     !
     ALLOCATE (xkf_all(3,       nkqtotf))
     ALLOCATE (etf_all(nbndsub, nkqtotf))
@@ -275,10 +327,11 @@
     !
     CALL poolgather2 ( 3,       nkqtotf, nkqf, xkf,    xkf_all  )
     CALL poolgather2 ( nbndsub, nkqtotf, nkqf, etf,    etf_all  )
-    CALL mp_sum( esigmar_all, inter_pool_comm )
-    CALL mp_sum( esigmai_all, inter_pool_comm )
+    CALL mp_sum( esigmar_all_offd, inter_pool_comm )
+    CALL mp_sum( esigmai_all_offd, inter_pool_comm )
     CALL mp_sum( fermicount, inter_pool_comm )
     CALL mp_barrier(inter_pool_comm)
+    call mp_sum( cufkk_all_all, inter_pool_comm ) ! jmlim
     !
 #else
     !
@@ -296,19 +349,26 @@
     ! and constant matrix elements for dipole transitions)
     !
 !     IF (me_pool == 0) then
-!       OPEN(UNIT=iospectral,FILE='specfun.elself') 
-!       OPEN(UNIT=iospectral_sup,FILE='specfun_sup.elself') 
+!       OPEN(UNIT=iospectral,FILE='specfun_offdiag.elself') 
+! !      OPEN(UNIT=iospectral_sup,FILE='specfun_sup.elself') 
 !     ENDIF
 !     IF (me_pool == 0) then
 !       WRITE(iospectral, '(/2x,a/)') '#Electronic spectral function (meV)'
-!       WRITE(iospectral_sup, '(/2x,a/)') '#KS eigenenergies + real and im part of electronic self-energy (meV)' 
+!       WRITE(iospectral, '(/2x,a/)') '# jmlim: Include off-diagonal part of the self-energy'
+! !      WRITE(iospectral_sup, '(/2x,a/)') '#KS eigenenergies + real and im part of electronic self-energy (meV)' 
 !     ENDIF
 !     IF (me_pool == 0) then
 !       WRITE(iospectral, '(/2x,a/)') '#K-point    Energy[meV]     A(k,w)[meV^-1]'
-!       WRITE(iospectral_sup, '(/2x,a/)') '#K-point    Band   e_nk[eV]   w[eV]   &
-! &         Real Sigma[meV]  Im Sigma[meV]'
+! !      WRITE(iospectral_sup, '(/2x,a/)') '#K-point    Band   e_nk[eV]   w[eV]   &
+! !&         Real Sigma[meV]  Im Sigma[meV]'
 !     ENDIF
     !
+    ALLOCATE(mat_temp(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+    ALLOCATE(evals_temp(ibndmax-ibndmin+1))
+    ALLOCATE(ipiv(ibndmax-ibndmin+1))
+    ALLOCATE(a_all_offd_diag(ibndmax-ibndmin+1, nw_specfun, nksqtotf))
+    ALLOCATE(ham_wannier(nbndsub, nbndsub))
+    a_all_offd_diag = 0.d0
     DO ik=1, nksqtotf
       !
       ikk = 2 * ik - 1
@@ -317,58 +377,119 @@
 ! jml: do not write in stdout
 !      WRITE(stdout,'(/5x,"ik = ",i5," coord.: ", 3f12.7)') ik, xkf_all (:,ikk)
 !      WRITE(stdout,'(5x,a)') repeat('-',67)
+      
+      ! ham_wannier = cufkk_all_all(:,:,ik).H @ diag(ekk) @ cufkk_all_all(:,:,ik)
+      ham_wannier = czero
+      do ibnd = 1, nbndsub
+        ham_wannier(ibnd, ibnd) = CMPLX(etf_all (ibnd, ikk) - ef0, zero)
+      end do
+      CALL ZGEMM('C', 'N', nbndsub, nbndsub, nbndsub, &
+          cone, cufkk_all_all(1,1,ik), nbndsub, ham_wannier, nbndsub, &
+          czero, mat_temp, nbndsub)
+      CALL ZGEMM('N', 'N', nbndsub, nbndsub, nbndsub, &
+          cone, mat_temp, nbndsub, cufkk_all_all(1,1,ik), nbndsub, &
+          czero, ham_wannier, nbndsub)
       !
       DO iw=1, nw_specfun
         !
         ww = wmin_specfun + dble (iw-1) * dw
         !
+        mat_temp = - ham_wannier
         DO ibnd=1, ibndmax-ibndmin+1
-          !
-          !  the energy of the electron at k
-          ekk = etf_all (ibndmin-1+ibnd, ikk) - ef0
-          !
-          a_all(iw,ik) = a_all(iw,ik) + abs( esigmai_all(ibnd,ik,iw) ) / pi / &
-             ( ( ww - ekk - esigmar_all(ibnd,ik,iw) )**two + (esigmai_all(ibnd,ik,iw) )**two )
-          !
+          mat_temp(ibnd, ibnd) = mat_temp(ibnd, ibnd) + ww
         ENDDO
+
+        ! jml: Note that esigma are in Wannier basis, not energy eigenbasis
+        
+        ! jml: does this work?
+        ! mat_temp(:,:) = mat_temp(:,:) - esigmar_all_offd(:,:,ik,iw) - ci * esigmai_all_offd(:,:,ik,iw)
+        
+
+        DO ibnd=1, ibndmax-ibndmin+1
+          DO ibnd2=1, ibndmax-ibndmin+1
+            ! if (iw == 1) then
+            !   write(stdout, *) ibnd, ibnd2, esigmar_all_offd(ibnd, ibnd2, ik, iw), esigmai_all_offd(ibnd, ibnd2, ik, iw)
+            ! end if
+
+            mat_temp(ibnd,ibnd2) = mat_temp(ibnd,ibnd2) - CMPLX(esigmar_all_offd(ibnd,ibnd2,ik,iw), esigmai_all_offd(ibnd,ibnd2,ik,iw))
+          ENDDO
+        ENDDO
+
+        CALL ZGETRF(ibndmax-ibndmin+1, ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, info)
+        allocate(work(1))
+        CALL ZGETRI(ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, work, -1, info)
+        lwork = int(work(1))
+        deallocate(work)
+        allocate(work(lwork))
+        CALL ZGETRI(ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, work, lwork, info)
+        deallocate(work)
+
+        DO ibnd=1, ibndmax-ibndmin+1
+          a_all_offd(iw,ik) = a_all_offd(iw,ik) + aimag(mat_temp(ibnd,ibnd)) / pi
+          a_all_offd_diag(ibnd,iw,ik) = aimag(mat_temp(ibnd,ibnd)) / pi
+        END DO
+
         !
 ! jml: do not write in stdout
-!        WRITE(stdout, 103) ik, ryd2ev * ww, a_all(iw,ik) / ryd2mev
+!        WRITE(stdout, 103) ik, ryd2ev * ww, a_all_offd(iw,ik) / ryd2mev
         !
-      ENDDO
+      ENDDO ! iw
       !
 ! jml: do not write in stdout
 !      WRITE(stdout,'(5x,a/)') repeat('-',67)
       !
-    ENDDO
-    !
-!     DO ik=1, nksqtotf
-!       !
-!       ! The spectral function should integrate to 1 for each k-point
-!       specfun_sum = 0.0
-!       ! 
-!       DO iw=1, nw_specfun
-!         !
-!         ww = wmin_specfun + dble (iw-1) * dw
-!         fermi(iw) = wgauss(-ww/eptemp, -99) 
-!         !WRITE(stdout,'(2x,i7,2x,f12.4,2x,e12.5)') ik, ryd2ev * ww, a_all(iw,ik) / ryd2mev
-!         !
-!         specfun_sum = specfun_sum + a_all(iw,ik)* fermi(iw) * dw !/ ryd2mev
-!         !
-!       IF (me_pool == 0) &
-!         WRITE(iospectral,'(2x,i7,2x,f10.5,2x,e12.5)') ik, ryd2ev * ww, a_all(iw,ik) / ryd2mev
-!         !
-!       ENDDO
-!       !
-!       IF (me_pool == 0) &
-!         WRITE(iospectral,'(a)') ' '
-!       IF (me_pool == 0) &
-!         WRITE(iospectral,'(2x,a,2x,e12.5)') '# Integrated spectral function ',specfun_sum
-!       !
-!     ENDDO
-!     !
-!     IF (me_pool == 0)  CLOSE(iospectral)
-!     !
+    ENDDO ! ik
+    DEALLOCATE(mat_temp)
+    DEALLOCATE(ham_wannier)
+    DEALLOCATE(cufkk_all_all)
+    ! !
+    ! DO ik=1, nksqtotf
+    !   !
+    !   ! The spectral function should integrate to 1 for each k-point
+    !   specfun_sum = 0.0
+    !   ! 
+    !   DO iw=1, nw_specfun
+    !     !
+    !     ww = wmin_specfun + dble (iw-1) * dw
+    !     fermi(iw) = wgauss(-ww/eptemp, -99) 
+    !     !WRITE(stdout,'(2x,i7,2x,f12.4,2x,e12.5)') ik, ryd2ev * ww, a_all_offd(iw,ik) / ryd2mev
+    !     !
+    !     specfun_sum = specfun_sum + a_all_offd(iw,ik)* fermi(iw) * dw !/ ryd2mev
+    !     !
+    !   IF (me_pool == 0) &
+    !     WRITE(iospectral,'(2x,i7,2x,f10.5,2x,e12.5)') ik, ryd2ev * ww, a_all_offd(iw,ik) / ryd2mev
+    !     !
+    !   ENDDO
+    !   !
+    !   IF (me_pool == 0) &
+    !     WRITE(iospectral,'(a)') ' '
+    !   IF (me_pool == 0) &
+    !     WRITE(iospectral,'(2x,a,2x,e12.5)') '# Integrated spectral function ',specfun_sum
+    !   !
+    ! ENDDO
+    ! !
+    ! IF (me_pool == 0)  CLOSE(iospectral)
+    ! !
+    if (me_pool == 0) then
+      inquire(iolength=reclen) a_all_offd(:,:)
+      open(UNIT=iospectral, FILE='specfun_offdiag.elself', form='unformatted', &
+           status='unknown', access='direct', recl=reclen)
+      write(iospectral, rec=1) a_all_offd / ryd2mev
+      close(iospectral)
+
+      inquire(iolength=reclen) a_all_offd_diag(:,:,:)
+      open(UNIT=iospectral, FILE='specfun_offdiag_diag.elself', form='unformatted', &
+           status='unknown', access='direct', recl=reclen)
+      write(iospectral, rec=1) a_all_offd_diag / ryd2mev
+      close(iospectral)
+
+      ! inquire(iolength=reclen) ryd2mev * (esigmar_all_offd + ci * esigmai_all_offd)
+      ! open(UNIT=iospectral, FILE='esigma.bin', form='unformatted', &
+      !      status='unknown', access='direct', recl=reclen)
+      ! write(iospectral, rec=1) ryd2mev * (esigmar_all_offd + ci * esigmai_all_offd)
+      ! close(iospectral)
+    END if
+
 !     DO ibnd=1, ibndmax-ibndmin+1
 !       !
 !       DO ik=1, nksqtotf
@@ -384,13 +505,13 @@
 !           ww = wmin_specfun + dble (iw-1) * dw
 ! ! jml: do not write in stdout
 ! !          WRITE(stdout,'(2i9,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4)') ik,&
-! !            ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all(ibnd,ik,iw),&
-! !            ryd2mev * esigmai_all(ibnd,ik,iw)
+! !            ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all_offd(ibnd,ik,iw),&
+! !            ryd2mev * esigmai_all_offd(ibnd,ik,iw)
 !           ! 
-!           IF (me_pool == 0) &
-!           WRITE(iospectral_sup,'(2i9,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4)') ik,&
-!             ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all(ibnd,ik,iw),&
-!             ryd2mev * esigmai_all(ibnd,ik,iw)
+! !          IF (me_pool == 0) &
+! !          WRITE(iospectral_sup,'(2i9,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4)') ik,&
+! !            ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all_offd(ibnd,ik,iw),&
+! !            ryd2mev * esigmai_all_offd(ibnd,ik,iw)
 !           !
 !         ENDDO
 !         !
@@ -399,13 +520,8 @@
 !       WRITE(stdout,*) ' '
 !       !
 !     ENDDO
-!     !
-!     IF (me_pool == 0)  CLOSE(iospectral_sup)
-    inquire(iolength=reclen) a_all(:,:)
-    open(UNIT=iospectral, FILE='specfun.elself', form='unformatted', &
-         status='unknown', access='direct', recl=reclen)
-    write(iospectral, rec=1) a_all / ryd2mev
-    close(iospectral)
+    !
+!    IF (me_pool == 0)  CLOSE(iospectral_sup)
     !
     DEALLOCATE (xkf_all)
     DEALLOCATE (etf_all)
@@ -417,5 +533,5 @@
   !
   RETURN
   !
-  END SUBROUTINE spectral_func_q
+  END SUBROUTINE spectral_func_q_offdiag
   !

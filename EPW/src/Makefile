@@ -97,7 +97,8 @@ wannierEPW.o \
 wannierize.o \
 pw2wan90epw.o \
 wan2bloch.o \
-system_mem_usage.o
+system_mem_usage.o \
+spectral_func_offdiag.o
 
 # setphases.o \ : SP: We keep it in case its usefull in the future but now depreciated.
 

@@ -1,0 +1,857 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+10	pw2wan90epw.f90	/^10 CONTINUE$/;"	l	subroutine:scan_file_to	file:
+100	epw_readin.f90	/^100 CALL errore('epw_readin','opening file '\/\/filkf,abs(ios))$/;"	l	subroutine:epw_readin	file:
+100	epw_summary.f90	/^100 format (\/,5x,a75,\/,\/,5x, &$/;"	l	subroutine:epw_summary	file:
+100	io_eliashberg.f90	/^100   CALL errore('read_a2f','opening file'\/\/fila2f,abs(ios))$/;"	l	subroutine:read_a2f	file:
+100	io_eliashberg.f90	/^100   CALL errore('read_eigenvalues','opening file '\/\/filegnv,abs(ios))$/;"	l	subroutine:read_eigenvalues	file:
+100	io_eliashberg.f90	/^100   CALL errore('read_frequencies','opening file '\/\/filfreq,abs(ios))$/;"	l	subroutine:read_frequencies	file:
+100	io_eliashberg.f90	/^100   CALL errore('read_kqmap','opening file '\/\/filikmap,abs(ios))$/;"	l	subroutine:read_kqmap	file:
+100	io_eliashberg.f90	/^100 CALL errore('eliashberg_read_aniso_iaxis','opening file '\/\/name1,abs(ios))$/;"	l	subroutine:eliashberg_read_aniso_iaxis	file:
+100	io_eliashberg.f90	/^100 CALL errore('read_ephmat','opening file '\/\/filephmat,abs(ios))$/;"	l	subroutine:read_ephmat	file:
+100	loadkmesh.f90	/^100   CALL errore('loadkmesh_para','opening file '\/\/filkf,abs(ios))$/;"	l	subroutine:loadkmesh_para	file:
+100	loadkmesh.f90	/^100   CALL errore('loadkmesh_serial','opening file '\/\/filkf,abs(ios))$/;"	l	subroutine:loadkmesh_serial	file:
+100	loadqmesh.f90	/^100    CALL errore('loadkmesh_para','opening file '\/\/filqf,abs(ios))$/;"	l	subroutine:loadqmesh_para	file:
+100	loadqmesh.f90	/^100    CALL errore('loadqmesh_serial','opening file '\/\/filqf,abs(ios))$/;"	l	subroutine:loadqmesh_serial	file:
+100	nesting_fn.f90	/^100 format(5x,'Gaussian Broadening: ',f7.3,' eV, ngauss=',i4)$/;"	l	subroutine:nesting_fn_q	file:
+100	selfen_elec.f90	/^  100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:selfen_elec_q	file:
+100	selfen_phon.f90	/^100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:selfen_phon_q	file:
+100	selfen_pl.f90	/^  100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:selfen_pl_q	file:
+100	spectral_func.f90	/^  100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:spectral_func_q	file:
+100	spectral_func_offdiag.f90	/^  100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:spectral_func_q_offdiag	file:
+100	spectral_func_ph.f90	/^100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:spectral_func_ph	file:
+100	spectral_func_pl.f90	/^  100 FORMAT(5x,'Gaussian Broadening: ',f10.6,' eV, ngauss=',i4)$/;"	l	subroutine:spectral_func_pl_q	file:
+101	epw_readin.f90	/^101 CALL errore('epw_readin','opening file '\/\/filqf,abs(ios))$/;"	l	subroutine:epw_readin	file:
+101	nesting_fn.f90	/^101 format(5x,'DOS =',f10.6,' states\/spin\/eV\/Unit Cell at Ef=',f10.6,' eV')$/;"	l	subroutine:nesting_fn_q	file:
+101	selfen_phon.f90	/^101 FORMAT(5x,'DOS =',f10.6,' states\/spin\/eV\/Unit Cell at Ef=',f10.6,' eV')$/;"	l	subroutine:selfen_phon_q	file:
+101	spectral_func_ph.f90	/^101 FORMAT(5x,'DOS =',f10.6,' states\/spin\/eV\/Unit Cell at Ef=',f10.6,' eV')$/;"	l	subroutine:spectral_func_ph	file:
+102	nesting_fn.f90	/^102 format(5x,' Nesting function (q)=',e15.6,' [Adimensional]')$/;"	l	subroutine:nesting_fn_q	file:
+102	selfen_elec.f90	/^  102 FORMAT(5x,'E( ',i3,' )=',f9.4,' eV   Re[Sigma]=',f15.6,' meV Im[Sigma]=',f15.6,' meV     Z=',f15.6,' lam=',f15.6)$/;"	l	subroutine:selfen_elec_q	file:
+102	selfen_phon.f90	/^102 FORMAT(5x,'lambda___( ',i3,' )=',f15.6,'   gamma___=',f15.6,' meV','   omega=',f12.4,' meV')$/;"	l	subroutine:selfen_phon_q	file:
+102	selfen_pl.f90	/^  102 FORMAT(5x,'E( ',i3,' )=',f9.4,' eV   Re[Sigma]=',f15.6,' meV Im[Sigma]=',f15.6,' meV     Z=',f15.6,' lam=',f15.6)$/;"	l	subroutine:selfen_pl_q	file:
+103	selfen_phon.f90	/^103 FORMAT(5x,'lambda___( tot )=',f15.6)$/;"	l	subroutine:selfen_phon_q	file:
+103	spectral_func.f90	/^  103 FORMAT(5x,'ik = ',i7,'  w = ',f9.4,' eV   A(k,w) = ',e12.5,' meV^-1')$/;"	l	subroutine:spectral_func_q	file:
+103	spectral_func_offdiag.f90	/^  103 FORMAT(5x,'ik = ',i7,'  w = ',f9.4,' eV   A(k,w) = ',e12.5,' meV^-1')$/;"	l	subroutine:spectral_func_q_offdiag	file:
+103	spectral_func_pl.f90	/^  103 FORMAT(5x,'ik = ',i7,'  w = ',f9.4,' eV   A(k,w) = ',e12.5,' meV^-1')$/;"	l	subroutine:spectral_func_pl_q	file:
+104	selfen_phon.f90	/^104 FORMAT(5x,'lambda_tr( ',i3,' )=',f15.6,'   gamma_tr=',f15.6,' meV','   omega=',f12.4,' meV')$/;"	l	subroutine:selfen_phon_q	file:
+105	selfen_phon.f90	/^105 FORMAT(5x,'lambda_tr( tot )=',f15.6)$/;"	l	subroutine:selfen_phon_q	file:
+105	spectral_func_ph.f90	/^105 FORMAT(5x,'Omega( ',i3,' )=',f9.4,' eV   Re[Pi]=',f15.6,' meV Im[Pi]=',f15.6,' meV')$/;"	l	subroutine:spectral_func_ph	file:
+120	system_mem_usage.f90	/^  120 continue$/;"	l	subroutine:system_mem_usage	file:
+20	pw2wan90epw.f90	/^20 found = .false.$/;"	l	subroutine:scan_file_to	file:
+200	epw_readin.f90	/^200 CALL errore ('epw_readin', 'reading input_epw namelist', abs (ios) )$/;"	l	subroutine:epw_readin	file:
+200	pw2wan90epw.f90	/^200 FORMAT ('UNK',i5.5,'.',i1)$/;"	l	subroutine:write_plot	file:
+201	pw2wan90epw.f90	/^201 FORMAT('UNK',i5.5,'.','NC')                                                          $/;"	l	subroutine:write_plot	file:
+400	epw_readin.f90	/^400 CONTINUE$/;"	l	subroutine:epw_readin	file:
+5	elphel2_shuffle.f90	/^5 FORMAT (5x,'Estimated size of gmap: ngxx =',i5)$/;"	l	subroutine:elphel2_shuffle	file:
+5	elphon_shuffle_wrap.f90	/^5 FORMAT (8x,"q(",i5," ) = (",3f12.7," )") $/;"	l	subroutine:elphon_shuffle_wrap	file:
+800	epw_readin.f90	/^800 CONTINUE$/;"	l	subroutine:epw_readin	file:
+ADelta	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: AZnorm(:,:,:), AZnormp(:,:,:), ADelta(/;"	v	module:eliashberg_common_aniso
+ADeltai	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: ADeltai(/;"	v	module:eliashberg_common_aniso
+ADeltaip	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: ADeltai(:,:,:), ADeltaip(/;"	v	module:eliashberg_common_aniso
+ADeltap	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: AZnorm(:,:,:), AZnormp(:,:,:), ADelta(:,:,:), ADeltap(/;"	v	module:eliashberg_common_aniso
+ADsumi	eliashbergcom.f90	/^                           AKeri(:,:,:,:,:), ADsumi(/;"	v	module:eliashberg_common_aniso
+AKeri	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: ADeltai(:,:,:), ADeltaip(:,:,:), AZnormi(:,:,:), NAZnormi(:,:,:), & $/;"	v	module:eliashberg_common_aniso
+AZnorm	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: AZnorm(/;"	v	module:eliashberg_common_aniso
+AZnormi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: ADeltai(:,:,:), ADeltaip(:,:,:), AZnormi(/;"	v	module:eliashberg_common_aniso
+AZnormp	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: AZnorm(:,:,:), AZnormp(/;"	v	module:eliashberg_common_aniso
+AZsumi	eliashbergcom.f90	/^                           AKeri(:,:,:,:,:), ADsumi(:,:,:), AZsumi(/;"	v	module:eliashberg_common_aniso
+Agap	eliashbergcom.f90	/^                           a2fij(:,:,:,:,:), w0g(:,:), Agap(/;"	v	module:eliashberg_common_aniso
+Delta	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(/;"	v	module:eliashberg_common_iso
+Deltai	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(/;"	v	module:eliashberg_common_iso
+Deltaip	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(/;"	v	module:eliashberg_common_iso
+Deltap	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(:), Deltap(/;"	v	module:eliashberg_common_iso
+Dsumi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(:), Znormi(:), NZnormi(:), Keri(:), Dsumi(/;"	v	module:eliashberg_common_iso
+EPWOBJS	Makefile	/^EPWOBJS = \\$/;"	m
+Fin_read	io_scattering.f90	/^    SUBROUTINE Fin_read(/;"	s	module:io_scattering
+Fin_write	io_scattering.f90	/^    SUBROUTINE Fin_write(/;"	s	module:io_scattering
+Gm	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Gp(:,:), Gm(/;"	v	module:eliashberg_common_iso
+Gp	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Gp(/;"	v	module:eliashberg_common_iso
+H_eps	rigid_epw.f90	/^  COMPLEX(DP) FUNCTION H_eps /;"	f
+Kappa	transportcom.f90	/^                           Kappae/;"	v	module:transport_common
+Kappael	transportcom.f90	/^                           SigmaS(:,:), SigmaS2(:,:), Seebeck(:,:), & $/;"	v	module:transport_common
+Keri	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(:), Znormi(:), NZnormi(:), Keri(/;"	v	module:eliashberg_common_iso
+Km	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(:), Deltap(:), Znorm(:), Znormp(:), Kp(:,:), Km(/;"	v	module:eliashberg_common_iso
+Kp	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(:), Deltap(:), Znorm(:), Znormp(:), Kp(/;"	v	module:eliashberg_common_iso
+LIBOBJS	Makefile	/^LIBOBJS =..\/..\/LAXlib\/libqela.a ..\/..\/UtilXlib\/libutil.a ..\/..\/clib\/clib.a ..\/..\/iotk\/src\/libiotk.a $/;"	m
+LRMODS	Makefile	/^LRMODS = ..\/..\/LR_Modules\/liblrmod.a$/;"	m
+MODFLAGS	Makefile	/^MODFLAGS= $(BASEMOD_FLAGS) \\$/;"	m
+NAZnormi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: ADeltai(:,:,:), ADeltaip(:,:,:), AZnormi(:,:,:), NAZnormi(/;"	v	module:eliashberg_common_aniso
+NZnormi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(:), Znormi(:), NZnormi(/;"	v	module:eliashberg_common_iso
+PHOBJS	Makefile	/^PHOBJS = ..\/..\/PHonon\/PH\/libph.a$/;"	m
+PWOBJS	Makefile	/^PWOBJS = ..\/..\/PW\/src\/libpw.a $/;"	m
+PWOBJS	Makefile	/^PWOBJS = ..\/..\/PW\/src\/libpw.a$/;"	m
+QEMODS	Makefile	/^QEMODS = ..\/..\/Modules\/libqemod.a ..\/..\/KS_Solvers\/libks_solvers.a \\$/;"	m
+Seebeck	transportcom.f90	/^                           SigmaS(:,:), SigmaS2(:,:), Seebeck(/;"	v	module:transport_common
+SigmaS	transportcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: transp_temp(:), & $/;"	v	module:transport_common
+SigmaS2	transportcom.f90	/^                           SigmaS(:,:), SigmaS2(/;"	v	module:transport_common
+TLDEPS	Makefile	/^TLDEPS= pw ph$/;"	m
+W90LIB	Makefile	/^W90LIB = ..\/..\/wannier90-3.0.0\/libwannier.a $/;"	m
+Znorm	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(:), Deltap(:), Znorm(/;"	v	module:eliashberg_common_iso
+Znormi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(:), Znormi(/;"	v	module:eliashberg_common_iso
+Znormp	eliashbergcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: Delta(:), Deltap(:), Znorm(:), Znormp(/;"	v	module:eliashberg_common_iso
+Zsumi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: Deltai(:), Deltaip(:), Znormi(:), NZnormi(:), Keri(:), Dsumi(:), Zsumi(/;"	v	module:eliashberg_common_iso
+a2f	epwcom.f90	/^  LOGICAL :: a2f$/;"	v	module:control_epw
+a2f_iso	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: a2f_iso(/;"	v	module:eliashberg_common_iso
+a2fij	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(:,:,:,:,:), ekfs(:,:), xkff(:,:), xkfs(:,:), wkfs(:), & $/;"	v	module:eliashberg_common_aniso
+a_all	elph2.f90	/^  REAL(KIND=DP), ALLOCATABLE ::&$/;"	v	module:elph2
+a_all_offd	elph2.f90	/^    esigmai_all_offd(:,:,:,:),     &! jmlim: off-diag$/;"	v	module:elph2
+a_all_ph	elph2.f90	/^    a_all(:,:),             &!  electronic spectral function du to electron-phonon interaction$/;"	v	module:elph2
+a_mat	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: a_mat(/;"	v	module:wannierEPW
+adddvscf2	adddvscf2.f90	/^  SUBROUTINE adddvscf2(/;"	s
+allocate_epwq	allocate_epwq.f90	/^  SUBROUTINE allocate_epwq$/;"	s
+alpha_w	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: alpha_w(/;"	v	module:wannierEPW
+analytic_cont_aniso_iaxis_to_raxis	superconductivity_aniso.f90	/^    SUBROUTINE analytic_cont_aniso_iaxis_to_raxis(/;"	s	module:superconductivity_aniso
+analytic_cont_iso_iaxis_to_raxis	superconductivity_iso.f90	/^    SUBROUTINE analytic_cont_iso_iaxis_to_raxis(/;"	s	module:superconductivity_iso
+ang2cm	constants_epw.f90	/^  REAL(DP), PARAMETER :: ang2cm /;"	v	module:constants_epw
+ang2m	constants_epw.f90	/^  REAL(DP), PARAMETER :: ang2m /;"	v	module:constants_epw
+asr_typ	epwcom.f90	/^  CHARACTER(LEN=10)  :: asr_typ$/;"	v	module:control_epw
+atcart	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: atcart(/;"	v	module:wannierEPW
+atsym	wannierEPW.f90	/^   CHARACTER(len=3), ALLOCATABLE :: atsym(/;"	v	module:wannierEPW
+attr	io_dyn_mat2.f90	/^  CHARACTER(iotk_attlenx)  :: attr$/;"	v	module:io_dyn_mat2
+backtoBZ	ktokpmq.f90	/^  SUBROUTINE backtoBZ(/;"	s
+band_plot	epwcom.f90	/^  LOGICAL :: band_plot$/;"	v	module:control_epw
+bands_skipped	epwcom.f90	/^  CHARACTER(len=256) :: bands_skipped$/;"	v	module:control_epw
+bcast_epw_input	bcast_epw_input.f90	/^  SUBROUTINE bcast_epw_input$/;"	s
+bcast_epw_input1	bcast_epw_input.f90	/^SUBROUTINE bcast_epw_input1$/;"	s
+bewph	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: a2f_iso(:), gap(:), fdwp(:), bewph(/;"	v	module:eliashberg_common_iso
+bloch2wan	bloch2wan.f90	/^  MODULE bloch2wan$/;"	m
+bmat	elph2.f90	/^    vmef(:,:,:,:),          &!  velocity matrix elements on the fine mesh (ipol, nbnd, nbnd, nks)$/;"	v	module:elph2
+bnd_cum	epwcom.f90	/^  INTEGER :: bnd_cum$/;"	v	module:control_epw
+bohr	constants_epw.f90	/^  REAL(DP), PARAMETER :: bohr /;"	v	module:constants_epw
+bohr2ang	constants_epw.f90	/^  REAL(DP), PARAMETER :: bohr2ang /;"	v	module:constants_epw
+broyden_beta	epwcom.f90	/^  REAL (KIND=DP) :: broyden_beta$/;"	v	module:control_epw
+broyden_ndim	epwcom.f90	/^  INTEGER :: broyden_ndim$/;"	v	module:control_epw
+carrier	epwcom.f90	/^  LOGICAL :: carrier$/;"	v	module:control_epw
+cdmew	elph2.f90	/^    chw_ks (:,:,:),         &!  Hamiltonian in wannier basis  (Kohn-Sham eigenvalues if many-body eigenvalues are read in)$/;"	v	module:elph2
+center_w	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: center_w(/;"	v	module:wannierEPW
+check_inverse	pw2wan90epw.f90	/^  SUBROUTINE check_inverse(/;"	s
+chw	elph2.f90	/^    cuq(:,:,:),             &!  rot matrix for wannier interpolation of k+q point, coarse mesh (nbnd*nbnd*nkstot)$/;"	v	module:elph2
+chw_ks	elph2.f90	/^    chw (:,:,:),            &!  Hamiltonian in wannier basis $/;"	v	module:elph2
+ci	constants_epw.f90	/^  COMPLEX(DP), PARAMETER :: ci /;"	v	module:constants_epw
+close_epw	close_epw.f90	/^  MODULE close_epw$/;"	m
+close_final	close_epw.f90	/^    SUBROUTINE close_final$/;"	s	module:close_epw
+cm2m	constants_epw.f90	/^  REAL(DP), PARAMETER :: cm2m /;"	v	module:constants_epw
+code	epw.f90	/^  CHARACTER(LEN=12) :: code /;"	v	program:epw
+compute_amn_para	pw2wan90epw.f90	/^  SUBROUTINE compute_amn_para$/;"	s
+compute_mmn_para	pw2wan90epw.f90	/^  SUBROUTINE compute_mmn_para$/;"	s
+compute_pmn_para	pw2wan90epw.f90	/^  SUBROUTINE compute_pmn_para$/;"	s
+compute_umn_c	rigid_epw.f90	/^  SUBROUTINE compute_umn_c /;"	s
+compute_umn_f	rigid_epw.f90	/^  SUBROUTINE compute_umn_f /;"	s
+cone	constants_epw.f90	/^  COMPLEX(DP), PARAMETER :: cone /;"	v	module:constants_epw
+constants_epw	constants_epw.f90	/^  MODULE constants_epw$/;"	m
+control_epw	epwcom.f90	/^  MODULE control_epw$/;"	m
+conv_thr_iaxis	epwcom.f90	/^  REAL (KIND=DP) :: conv_thr_iaxis$/;"	v	module:control_epw
+conv_thr_racon	epwcom.f90	/^  REAL (KIND=DP) :: conv_thr_racon$/;"	v	module:control_epw
+conv_thr_raxis	epwcom.f90	/^  REAL (KIND=DP) :: conv_thr_raxis$/;"	v	module:control_epw
+count_kpoints	io_eliashberg.f90	/^    SUBROUTINE count_kpoints(/;"	s	module:io_eliashberg
+createkmap	createkmap.f90	/^  SUBROUTINE createkmap(/;"	s
+createkmap2	createkmap.f90	/^  SUBROUTINE createkmap2(/;"	s
+createkmap_pw2	createkmap.f90	/^  SUBROUTINE createkmap_pw2$/;"	s
+crystal	io_epw.f90	/^  INTEGER :: crystal /;"	v	module:io_epw
+csph	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: csph(/;"	v	module:wannierEPW
+cu	elph2.f90	/^    el_ph_mat  (:,:,:,:),   &!  e-p matrix  (nbnd, nbnd, nks, 3*nat)$/;"	v	module:elph2
+cumulant	epwcom.f90	/^  LOGICAL :: cumulant$/;"	v	module:control_epw
+cumulant_conv	spectral_cumulant.f90	/^  SUBROUTINE cumulant_conv(/;"	s
+cumulant_time	spectral_cumulant.f90	/^  SUBROUTINE cumulant_time(/;"	s
+cuq	elph2.f90	/^    cu(:,:,:),              &!  rot matrix for wannier interpolation of k point, coarse mesh (nbnd*nbnd*nkstot)$/;"	v	module:elph2
+cvmew	elph2.f90	/^    cdmew (:,:,:,:),        &!  Dipole matrix in wannier basis $/;"	v	module:elph2
+czero	constants_epw.f90	/^  COMPLEX(DP), PARAMETER :: czero /;"	v	module:constants_epw
+deallocate_eliashberg	superconductivity.f90	/^    SUBROUTINE deallocate_eliashberg$/;"	s	module:superconductivity
+deallocate_eliashberg_aniso_iaxis	superconductivity.f90	/^    SUBROUTINE deallocate_eliashberg_aniso_iaxis$/;"	s	module:superconductivity
+deallocate_eliashberg_aniso_raxis	superconductivity.f90	/^    SUBROUTINE deallocate_eliashberg_aniso_raxis$/;"	s	module:superconductivity
+deallocate_eliashberg_iso_iaxis	superconductivity.f90	/^    SUBROUTINE deallocate_eliashberg_iso_iaxis$/;"	s	module:superconductivity
+deallocate_eliashberg_iso_raxis	superconductivity.f90	/^    SUBROUTINE deallocate_eliashberg_iso_raxis$/;"	s	module:superconductivity
+deallocate_elphon	superconductivity.f90	/^    SUBROUTINE deallocate_elphon$/;"	s	module:superconductivity
+deallocate_epw	close_epw.f90	/^    SUBROUTINE deallocate_epw$/;"	s	module:close_epw
+degaussq	epwcom.f90	/^  REAL (KIND=DP) :: degaussq$/;"	v	module:control_epw
+degaussw	epwcom.f90	/^  REAL (KIND=DP) :: degaussw$/;"	v	module:control_epw
+delta_approx	epwcom.f90	/^  LOGICAL :: delta_approx$/;"	v	module:control_epw
+delta_qsmear	epwcom.f90	/^  REAL (KIND=DP) :: delta_qsmear$/;"	v	module:control_epw
+delta_smear	epwcom.f90	/^  REAL (KIND=DP) :: delta_smear$/;"	v	module:control_epw
+deltaq	elph2.f90	/^    efnew,                  &!  Fermi level on the fine grid. Added globaly for efficiency reason $/;"	v	module:elph2
+dis_froz_max	epwcom.f90	/^  REAL (KIND=DP) :: dis_froz_max$/;"	v	module:control_epw
+dis_froz_min	epwcom.f90	/^  REAL (KIND=DP) :: dis_froz_min$/;"	v	module:control_epw
+dis_win_max	epwcom.f90	/^  REAL (KIND=DP) :: dis_win_max$/;"	v	module:control_epw
+dis_win_min	epwcom.f90	/^  REAL (KIND=DP) :: dis_win_min$/;"	v	module:control_epw
+division	division.f90	/^  MODULE division$/;"	m
+dmebloch2wan	bloch2wan.f90	/^    SUBROUTINE dmebloch2wan /;"	s	module:bloch2wan
+dmec	elph2.f90	/^    epf17 (:, :, :, :),     &!  full ep matrix in bloch rep stored in mem (nkqtotf, nbnd, nbnd, nmodes)-nbnd inside wndw $/;"	v	module:elph2
+dmef	elph2.f90	/^    dmec(:,:,:,:),          &!  dipole matrix elements on the coarse mesh (ipol, nbnd, nbnd, nks)$/;"	v	module:elph2
+dmewan2bloch	wan2bloch.f90	/^    SUBROUTINE dmewan2bloch /;"	s	module:wan2bloch
+done_elph	elph2.f90	/^    exband(:),              &!  k-point independent list of bands excluded from the calculation of overlap and projection matrices in W90$/;"	v	module:elph2
+dos_ef_seq	selfen_phon.f90	/^FUNCTION dos_ef_seq /;"	f
+dos_quasiparticle	superconductivity.f90	/^    SUBROUTINE dos_quasiparticle(/;"	s	module:superconductivity
+dosef	eliashbergcom.f90	/^  REAL(DP) :: ef0, dosef$/;"	v	module:eliashberg_common_aniso
+dvanqq2	dvanqq2.f90	/^  SUBROUTINE dvanqq2$/;"	s
+dvqpsi_us3	dvqpsi_us3.f90	/^  SUBROUTINE dvqpsi_us3(/;"	s
+dvqpsi_us_only3	dvqpsi_us_only3.f90	/^  subroutine dvqpsi_us_only3 /;"	s
+dvscf_dir	epwcom.f90	/^  CHARACTER(len=100) :: dvscf_dir /;"	v	module:control_epw
+dws	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: dws(/;"	v	module:eliashberg_common
+dwsph	eliashbergcom.f90	/^  REAL(DP) :: wsphmax, dwsph,/;"	v	module:eliashberg_common
+dx2my2	pw2wan90epw.f90	/^FUNCTION dx2my2(/;"	f
+dxy	pw2wan90epw.f90	/^FUNCTION dxy(/;"	f
+dxz	pw2wan90epw.f90	/^FUNCTION dxz(/;"	f
+dynbloch2wan	bloch2wan.f90	/^    SUBROUTINE dynbloch2wan /;"	s	module:bloch2wan
+dynifc2blochc	wan2bloch.f90	/^    SUBROUTINE dynifc2blochc /;"	s	module:wan2bloch
+dynifc2blochf	wan2bloch.f90	/^    SUBROUTINE dynifc2blochf /;"	s	module:wan2bloch
+dynq	elph2.f90	/^    umatq_all(:,:,:),       &!  the rotation matrix for the unique setting of the wfs gauge -- for all k+q points$/;"	v	module:elph2
+dynwan2bloch	wan2bloch.f90	/^    SUBROUTINE dynwan2bloch /;"	s	module:wan2bloch
+dyz	pw2wan90epw.f90	/^FUNCTION dyz(/;"	f
+dz2	pw2wan90epw.f90	/^FUNCTION dz2(/;"	f
+e2	constants_epw.f90	/^  REAL(DP), PARAMETER :: e2 /;"	v	module:constants_epw
+ef0	eliashbergcom.f90	/^  REAL(DP) :: ef0,/;"	v	module:eliashberg_common_aniso
+efermi_read	epwcom.f90	/^  LOGICAL :: efermi_read$/;"	v	module:control_epw
+efermig_seq	ephwann_shuffle.f90	/^  FUNCTION efermig_seq /;"	f
+efnew	elph2.f90	/^  REAL(KIND=DP) ::          &!$/;"	v	module:elph2
+eig_read	epwcom.f90	/^  LOGICAL :: eig_read$/;"	v	module:control_epw
+eigval	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE    :: eigval(/;"	v	module:wannierEPW
+ekfs	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(:,:,:,:,:), ekfs(/;"	v	module:eliashberg_common_aniso
+el_ph_mat	elph2.f90	/^  COMPLEX(KIND=DP), ALLOCATABLE :: &$/;"	v	module:elph2
+elecselfen	epwcom.f90	/^  LOGICAL :: elecselfen$/;"	v	module:control_epw
+electron_SI	constants_epw.f90	/^  REAL(DP), PARAMETER :: electron_SI /;"	v	module:constants_epw
+electron_read	io_scattering.f90	/^    SUBROUTINE electron_read(/;"	s	module:io_scattering
+electron_write	io_scattering.f90	/^    SUBROUTINE electron_write(/;"	s	module:io_scattering
+eliashberg	epwcom.f90	/^  LOGICAL :: eliashberg$/;"	v	module:control_epw
+eliashberg_a2f	a2f.f90	/^  SUBROUTINE eliashberg_a2f$/;"	s
+eliashberg_aniso_iaxis	superconductivity_aniso.f90	/^    SUBROUTINE eliashberg_aniso_iaxis$/;"	s	module:superconductivity_aniso
+eliashberg_common	eliashbergcom.f90	/^  MODULE eliashberg_common$/;"	m
+eliashberg_common_aniso	eliashbergcom.f90	/^  MODULE eliashberg_common_aniso$/;"	m
+eliashberg_common_iso	eliashbergcom.f90	/^  MODULE eliashberg_common_iso$/;"	m
+eliashberg_eqs	eliashberg.f90	/^  SUBROUTINE eliashberg_eqs$/;"	s
+eliashberg_init	superconductivity.f90	/^    SUBROUTINE eliashberg_init$/;"	s	module:superconductivity
+eliashberg_iso_iaxis	superconductivity_iso.f90	/^    SUBROUTINE eliashberg_iso_iaxis$/;"	s	module:superconductivity_iso
+eliashberg_iso_raxis	superconductivity_iso.f90	/^    SUBROUTINE eliashberg_iso_raxis$/;"	s	module:superconductivity_iso
+eliashberg_memlt_aniso_acon	superconductivity.f90	/^    SUBROUTINE eliashberg_memlt_aniso_acon$/;"	s	module:superconductivity
+eliashberg_memlt_aniso_iaxis	superconductivity.f90	/^    SUBROUTINE eliashberg_memlt_aniso_iaxis(/;"	s	module:superconductivity
+eliashberg_read_aniso_iaxis	io_eliashberg.f90	/^    SUBROUTINE eliashberg_read_aniso_iaxis(/;"	s	module:io_eliashberg
+eliashberg_write_cont_raxis	io_eliashberg.f90	/^    SUBROUTINE eliashberg_write_cont_raxis(/;"	s	module:io_eliashberg
+eliashberg_write_iaxis	io_eliashberg.f90	/^    SUBROUTINE eliashberg_write_iaxis(/;"	s	module:io_eliashberg
+eliashberg_write_raxis	io_eliashberg.f90	/^    SUBROUTINE eliashberg_write_raxis(/;"	s	module:io_eliashberg
+eliashbergcom	eliashbergcom.f90	/^  MODULE eliashbergcom$/;"	m
+elph	elph2.f90	/^  LOGICAL ::                &!$/;"	v	module:elph2
+elph2	elph2.f90	/^  MODULE elph2$/;"	m
+elphel2_shuffle	elphel2_shuffle.f90	/^  SUBROUTINE elphel2_shuffle(/;"	s
+elphon_shuffle	elphon_shuffle.f90	/^  SUBROUTINE elphon_shuffle(/;"	s
+elphon_shuffle_wrap	elphon_shuffle_wrap.f90	/^  SUBROUTINE elphon_shuffle_wrap$/;"	s
+ep_coupling	epwcom.f90	/^  LOGICAL :: ep_coupling$/;"	v	module:control_epw
+epbread	epwcom.f90	/^  LOGICAL :: epbread$/;"	v	module:control_epw
+epbwrite	epwcom.f90	/^  LOGICAL :: epbwrite$/;"	v	module:control_epw
+epexst	epwcom.f90	/^  LOGICAL :: epexst$/;"	v	module:control_epw
+epf17	elph2.f90	/^    epmatq (:,:,:,:,:),     &!  e-p matrix for every q (nbnd, nbnd, nks, nmodes, nqtot)$/;"	v	module:elph2
+ephbloch2wane	bloch2wan.f90	/^    SUBROUTINE ephbloch2wane /;"	s	module:bloch2wan
+ephbloch2wanp	bloch2wan.f90	/^    SUBROUTINE ephbloch2wanp /;"	s	module:bloch2wan
+ephbloch2wanp_mem	bloch2wan.f90	/^    SUBROUTINE ephbloch2wanp_mem /;"	s	module:bloch2wan
+ephwan2bloch	wan2bloch.f90	/^    SUBROUTINE ephwan2bloch /;"	s	module:wan2bloch
+ephwan2bloch_mem	wan2bloch.f90	/^    SUBROUTINE ephwan2bloch_mem /;"	s	module:wan2bloch
+ephwan2blochp	wan2bloch.f90	/^    SUBROUTINE ephwan2blochp /;"	s	module:wan2bloch
+ephwan2blochp_mem	wan2bloch.f90	/^    SUBROUTINE ephwan2blochp_mem /;"	s	module:wan2bloch
+ephwann_shuffle	ephwann_shuffle.f90	/^  SUBROUTINE ephwann_shuffle /;"	s
+ephwann_shuffle_mem	ephwann_shuffle_mem.f90	/^  SUBROUTINE ephwann_shuffle_mem /;"	s
+ephwrite	epwcom.f90	/^  LOGICAL :: ephwrite$/;"	v	module:control_epw
+epmatkqread	epwcom.f90	/^  LOGICAL :: epmatkqread$/;"	v	module:control_epw
+epmatq	elph2.f90	/^    dynq  (:,:,:),          &!  dynamical matrix for every q (nmode, nmodes, nqtot)$/;"	v	module:elph2
+epmatwp	elph2.f90	/^    rdw (:,:,:),            &!  dynamical matrix in wannier basis (real) $/;"	v	module:elph2
+eps10	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps10 /;"	v	module:constants_epw
+eps12	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps12 /;"	v	module:constants_epw
+eps14	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps14 /;"	v	module:constants_epw
+eps16	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps16 /;"	v	module:constants_epw
+eps160	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps160 /;"	v	module:constants_epw
+eps2	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps2 /;"	v	module:constants_epw
+eps20	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps20 /;"	v	module:constants_epw
+eps24	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps24 /;"	v	module:constants_epw
+eps32	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps32 /;"	v	module:constants_epw
+eps4	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps4 /;"	v	module:constants_epw
+eps5	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps5 /;"	v	module:constants_epw
+eps6	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps6 /;"	v	module:constants_epw
+eps8	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps8 /;"	v	module:constants_epw
+eps80	constants_epw.f90	/^  REAL(DP), PARAMETER :: eps80 /;"	v	module:constants_epw
+eps_acustic	epwcom.f90	/^  REAL (KIND=DP) :: eps_acustic$/;"	v	module:control_epw
+eps_rpa	elph2.f90	/^    bmat(:,:,:,:),          &!  overlap U_k+q U_k^\\dagger on the coarse mesh (nbnd, nbnd, nks, nqtot)$/;"	v	module:elph2
+epsi	elph2.f90	/^    zstar(:,:,:),           &!  Born effective charges$/;"	v	module:elph2
+epsiHEG	epwcom.f90	/^  REAL (KIND=DP) :: epsiHEG$/;"	v	module:control_epw
+epsilon2_abs	elph2.f90	/^    omegap(:),              &!  Photon energy for phonon-assisted absorption$/;"	v	module:elph2
+epsilon2_abs_lorenz	elph2.f90	/^    wscache(:,:,:,:,:),     &!  Use as cache when doing IFC when lifc = .true.$/;"	v	module:elph2
+eptemp	epwcom.f90	/^  REAL (KIND=DP) :: eptemp$/;"	v	module:control_epw
+epw	epw.f90	/^  PROGRAM epw$/;"	p
+epw_init	epw_init.f90	/^  SUBROUTINE epw_init(/;"	s
+epw_read	ephwann_shuffle.f90	/^  SUBROUTINE epw_read /;"	s
+epw_readin	epw_readin.f90	/^  SUBROUTINE epw_readin$/;"	s
+epw_setup	epw_setup.f90	/^  SUBROUTINE epw_setup$/;"	s
+epw_setup_restart	epw_setup.f90	/^  SUBROUTINE epw_setup_restart$/;"	s
+epw_summary	epw_summary.f90	/^  SUBROUTINE epw_summary$/;"	s
+epw_write	ephwann_shuffle.f90	/^  SUBROUTINE epw_write /;"	s
+epwcom	epwcom.f90	/^MODULE epwcom$/;"	m
+epwdata	io_epw.f90	/^  INTEGER :: epwdata /;"	v	module:io_epw
+epwread	epwcom.f90	/^  LOGICAL :: epwread$/;"	v	module:control_epw
+epwwrite	epwcom.f90	/^  LOGICAL :: epwwrite$/;"	v	module:control_epw
+eqvect_strict	elphon_shuffle_wrap.f90	/^  LOGICAL function eqvect_strict(/;"	f
+esigmai_all	elph2.f90	/^    esigmar_all(:,:,:),     &!$/;"	v	module:elph2
+esigmai_all_offd	elph2.f90	/^    esigmar_all_offd(:,:,:,:),     &! jmlim: off-diag$/;"	v	module:elph2
+esigmar_all	elph2.f90	/^    zi_all(:,:),            &!$/;"	v	module:elph2
+esigmar_all_offd	elph2.f90	/^    esigmai_all(:,:,:),     &!   $/;"	v	module:elph2
+estemp	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: dws(:), ws(:), wsph(:), wsi(:), estemp(/;"	v	module:eliashberg_common
+estimate_tc_gap	superconductivity.f90	/^    SUBROUTINE estimate_tc_gap$/;"	s	module:superconductivity
+et_all	epwcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: et_all(/;"	v	module:klist_epw
+et_ks	elph2.f90	/^    a_all_ph(:,:),          &!  phononic spectral function du to electron-phonon interaction$/;"	v	module:elph2
+et_loc	epwcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: et_loc(/;"	v	module:klist_epw
+etf	elph2.f90	/^    wqf(:),                 &!  weights on the fine q grid $/;"	v	module:elph2
+etf_k	elph2.f90	/^    etf(:,:),               &!  interpolated eigenvalues (nbnd, nkqf)$/;"	v	module:elph2
+etf_ks	elph2.f90	/^    etf_k(:,:),             &!  Saved interpolated KS eigenenergies for later used in q-parallelization (nbnd, nkqf)$/;"	v	module:elph2
+etf_mem	epwcom.f90	/^  INTEGER :: etf_mem$/;"	v	module:control_epw
+etfd	elph2.f90	/^    etf_ks(:,:),            &!  interpolated eigenvalues (nbnd, nkqf) KS eigenvalues in the case of eig_read$/;"	v	module:elph2
+etfd_ks	elph2.f90	/^    etfd(:,:,:),            &!  interpolated eigenvalues (nbnd, nkqf) eigenvalues for shifted grid in the case of eig_read$/;"	v	module:elph2
+etq	elph2.f90	/^    xkq(:,:),               &!  local k+q grid, coarse (3, nks)$/;"	v	module:elph2
+ev2cmm1	constants_epw.f90	/^  REAL(DP), PARAMETER :: ev2cmm1 /;"	v	module:constants_epw
+evaluate_a2f_lambda	superconductivity_aniso.f90	/^    SUBROUTINE evaluate_a2f_lambda$/;"	s	module:superconductivity_aniso
+evaluate_a2fij	superconductivity_aniso.f90	/^    SUBROUTINE evaluate_a2fij$/;"	s	module:superconductivity_aniso
+exband	elph2.f90	/^    lwinq(:,:),             &!$/;"	v	module:elph2
+excluded_band	wannierEPW.f90	/^   LOGICAL, ALLOCATABLE :: excluded_band(/;"	v	module:wannierEPW
+fdwp	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: a2f_iso(:), gap(:), fdwp(/;"	v	module:eliashberg_common_iso
+fermi_diff	epwcom.f90	/^  REAL (KIND=DP) :: fermi_diff$/;"	v	module:control_epw
+fermi_energy	epwcom.f90	/^  REAL (KIND=DP) :: fermi_energy$/;"	v	module:control_epw
+fermicarrier	ephwann_shuffle.f90	/^  FUNCTION fermicarrier(/;"	f
+fermiwindow	fermiwindow.f90	/^  SUBROUTINE fermiwindow /;"	s
+fila2f	epwcom.f90	/^  CHARACTER (LEN=80) :: fila2f$/;"	v	module:output_epw
+fildvscf0	epwcom.f90	/^  CHARACTER (LEN=80) :: fildvscf0$/;"	v	module:output_epw
+fileig	epwcom.f90	/^  CHARACTER(len=80) :: fileig /;"	v	module:control_epw
+filkf	epwcom.f90	/^  CHARACTER (LEN=80) :: filkf$/;"	v	module:output_epw
+filqf	epwcom.f90	/^  CHARACTER (LEN=80) :: filqf$/;"	v	module:output_epw
+filukk	epwcom.f90	/^  CHARACTER (LEN=80) :: filukk$/;"	v	module:output_epw
+filukq	epwcom.f90	/^  CHARACTER (LEN=80) :: filukq$/;"	v	module:output_epw
+fkbounds	division.f90	/^    SUBROUTINE fkbounds(/;"	s	module:division
+fkbounds2	division.f90	/^    SUBROUTINE fkbounds2(/;"	s	module:division
+fkbounds_bnd	division.f90	/^    SUBROUTINE fkbounds_bnd(/;"	s	module:division
+fpi	constants_epw.f90	/^  REAL(DP), PARAMETER :: fpi /;"	v	module:constants_epw
+fractrasl	elphel2_shuffle.f90	/^  SUBROUTINE fractrasl(/;"	s
+free_energy	superconductivity.f90	/^    SUBROUTINE free_energy(/;"	s	module:superconductivity
+fsthick	epwcom.f90	/^  REAL (KIND=DP) :: fsthick$/;"	v	module:control_epw
+fxx2m3y2	pw2wan90epw.f90	/^FUNCTION fxx2m3y2(/;"	f
+fxyz	pw2wan90epw.f90	/^FUNCTION fxyz(/;"	f
+fxz2	pw2wan90epw.f90	/^FUNCTION fxz2(/;"	f
+fy3x2my2	pw2wan90epw.f90	/^FUNCTION fy3x2my2(/;"	f
+fyz2	pw2wan90epw.f90	/^FUNCTION fyz2(/;"	f
+fz3	pw2wan90epw.f90	/^FUNCTION fz3(/;"	f
+fzx2my2	pw2wan90epw.f90	/^FUNCTION fzx2my2(/;"	f
+g0vec_all	kfold.f90	/^  INTEGER :: g0vec_all(/;"	v	module:kfold
+g0vec_all_r	kfold.f90	/^  REAL(DP) :: g0vec_all_r(/;"	v	module:kfold
+g2	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(/;"	v	module:eliashberg_common_aniso
+g_kpb	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: g_kpb(/;"	v	module:wannierEPW
+gamma_acont	superconductivity.f90	/^    SUBROUTINE gamma_acont(/;"	s	module:superconductivity
+gamma_acont	superconductivity_iso.f90	/^    SUBROUTINE gamma_acont(/;"	s	module:superconductivity_iso
+gamma_all	elph2.f90	/^    wf(:,:),                &!  interpolated eigenfrequencies $/;"	v	module:elph2
+gamma_nest	elph2.f90	/^    gamma_all(:,:,:),       &!$/;"	v	module:elph2
+gamma_v_all	elph2.f90	/^    gamma_nest(:,:),        &!  Nesting function in the case of q-parallelization$/;"	v	module:elph2
+gap	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: a2f_iso(:), gap(/;"	v	module:eliashberg_common_iso
+gap0	eliashbergcom.f90	/^  REAL(DP) :: wsphmax, dwsph, gap0$/;"	v	module:eliashberg_common
+gap_FS	io_eliashberg.f90	/^    SUBROUTINE gap_FS(/;"	s	module:io_eliashberg
+gap_distribution_FS	io_eliashberg.f90	/^    SUBROUTINE gap_distribution_FS /;"	s	module:io_eliashberg
+gap_edge	epwcom.f90	/^  REAL (KIND=DP) :: gap_edge$/;"	v	module:control_epw
+gen_freqgrid_iaxis	superconductivity.f90	/^    SUBROUTINE gen_freqgrid_iaxis(/;"	s	module:superconductivity
+gen_freqgrid_raxis	superconductivity.f90	/^    SUBROUTINE gen_freqgrid_raxis$/;"	s	module:superconductivity
+generate_guiding_functions	pw2wan90epw.f90	/^  SUBROUTINE generate_guiding_functions(/;"	s
+get_eps_mahan	selfen_pl.f90	/^  SUBROUTINE get_eps_mahan /;"	s
+gf	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: gf(/;"	v	module:wannierEPW
+gf_spinor	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: gf_spinor(/;"	v	module:wannierEPW
+glatt	wannierEPW.f90	/^   REAL(DP)              :: glatt(/;"	v	module:wannierEPW
+gmap	elph2.f90	/^    shift (:),              &!  for every k+q, index of the G0 which folds k+q into k+q+G0 of the first BZ$/;"	v	module:elph2
+gmap	kfold.f90	/^  INTEGER, ALLOCATABLE :: gmap(/;"	v	module:kfold
+gmap_sym	gmap_sym.f90	/^  SUBROUTINE gmap_sym(/;"	s
+ha2ev	constants_epw.f90	/^  REAL(DP), PARAMETER :: ha2ev /;"	v	module:constants_epw
+hambloch2wan	bloch2wan.f90	/^    SUBROUTINE hambloch2wan /;"	s	module:bloch2wan
+hamwan2bloch	wan2bloch.f90	/^    SUBROUTINE hamwan2bloch /;"	s	module:wan2bloch
+hbar	constants_epw.f90	/^  REAL(DP), PARAMETER :: hbar /;"	v	module:constants_epw
+hbarJ	constants_epw.f90	/^  REAL(DP), PARAMETER :: hbarJ /;"	v	module:constants_epw
+hpsort_eps_epw	sort.f90	/^  subroutine hpsort_eps_epw /;"	s
+hslt	sort.f90	/^  logical function hslt(/;"	f	subroutine:hpsort_eps_epw
+ibndmax	elph2.f90	/^    ibndmin,                &!  band bounds for slimming down electron-phonon matrix $/;"	v	module:elph2
+ibndmin	elph2.f90	/^    nrr,                    &!  number of wigner-seitz points (elec interp only)$/;"	v	module:elph2
+ibte	transport_iter.f90	/^    SUBROUTINE ibte /;"	s	module:transport_iter
+ifc	elph2.f90	/^    zi_allcb(:,:,:),        &!  Second Z-factor in scattering rate (for both VB and CB calculations) $/;"	v	module:elph2
+ig_	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: ig_(/;"	v	module:wannierEPW
+igk	elph2.f90	/^  INTEGER, ALLOCATABLE ::   &! $/;"	v	module:elph2
+igk_k_all	elph2.f90	/^    igkq(:),                &!  Index for k+q+G vector$/;"	v	module:elph2
+igkq	elph2.f90	/^    igk(:),                 &!  Index for k+G vector$/;"	v	module:elph2
+iknum	wannierEPW.f90	/^   INTEGER  :: iknum /;"	v	module:wannierEPW
+ikstart	wannierEPW.f90	/^   INTEGER  :: ispinw, ikstart,/;"	v	module:wannierEPW
+ikstop	wannierEPW.f90	/^   INTEGER  :: ispinw, ikstart, ikstop /;"	v	module:wannierEPW
+imag_read	epwcom.f90	/^  LOGICAL :: imag_read$/;"	v	module:control_epw
+indabs	indabs.f90	/^  SUBROUTINE indabs(/;"	s
+init_random_seed	loadkmesh.f90	/^SUBROUTINE init_random_seed(/;"	s
+inputepw	epw_readin.f90	/^  namelist \/ inputepw /;"	n	subroutine:epw_readin
+int_mob	epwcom.f90	/^  LOGICAL :: int_mob$/;"	v	module:control_epw
+integrate_eliashberg_iso_raxis	superconductivity_iso.f90	/^    SUBROUTINE integrate_eliashberg_iso_raxis(/;"	s	module:superconductivity_iso
+inv_tau_all	elph2.f90	/^    epsi(:,:),              &!  dielectric tensor$/;"	v	module:elph2
+inv_tau_allcb	elph2.f90	/^    inv_tau_all(:,:,:),     &!  scattering rate$/;"	v	module:elph2
+io_dyn_mat2	io_dyn_mat2.f90	/^  MODULE io_dyn_mat2$/;"	m
+io_eliashberg	io_eliashberg.f90	/^  MODULE io_eliashberg$/;"	m
+io_epw	io_epw.f90	/^  MODULE io_epw$/;"	m
+io_scattering	io_scattering.f90	/^  MODULE io_scattering$/;"	m
+iospectral	io_epw.f90	/^  INTEGER :: iospectral /;"	v	module:io_epw
+iospectral_cum	io_epw.f90	/^  INTEGER :: iospectral_cum /;"	v	module:io_epw
+iospectral_sup	io_epw.f90	/^  INTEGER :: iospectral_sup /;"	v	module:io_epw
+iprint	epwcom.f90	/^  INTEGER :: iprint$/;"	v	module:control_epw
+irotate	elphon_shuffle_wrap.f90	/^  SUBROUTINE irotate(/;"	s
+isk_all	epwcom.f90	/^  INTEGER, ALLOCATABLE :: isk_all(/;"	v	module:klist_epw
+isk_dummy	epwcom.f90	/^  INTEGER, ALLOCATABLE :: isk_dummy(/;"	v	module:klist_epw
+isk_loc	epwcom.f90	/^  INTEGER, ALLOCATABLE :: isk_loc(/;"	v	module:klist_epw
+ispinw	wannierEPW.f90	/^   INTEGER  :: ispinw,/;"	v	module:wannierEPW
+iswitch	epwcom.f90	/^  INTEGER :: iswitch$/;"	v	module:control_epw
+iter_close	close_epw.f90	/^    SUBROUTINE iter_close$/;"	s	module:close_epw
+iter_open	io_scattering.f90	/^    SUBROUTINE iter_open(/;"	s	module:io_scattering
+iter_restart	transport_iter.f90	/^    SUBROUTINE iter_restart(/;"	s	module:transport_iter
+iterative_bte	epwcom.f90	/^  LOGICAL :: iterative_bte$/;"	v	module:control_epw
+iua2ffil	io_epw.f90	/^  INTEGER :: iua2ffil /;"	v	module:io_epw
+iua2ftrfil	io_epw.f90	/^  INTEGER :: iua2ftrfil /;"	v	module:io_epw
+iubvec	io_epw.f90	/^  INTEGER :: iubvec /;"	v	module:io_epw
+iudecayH	io_epw.f90	/^  INTEGER :: iudecayH /;"	v	module:io_epw
+iudecayP	io_epw.f90	/^  INTEGER :: iudecayP /;"	v	module:io_epw
+iudecaydyn	io_epw.f90	/^  INTEGER :: iudecaydyn /;"	v	module:io_epw
+iudecayv	io_epw.f90	/^  INTEGER :: iudecayv /;"	v	module:io_epw
+iudosfil	io_epw.f90	/^  INTEGER :: iudosfil /;"	v	module:io_epw
+iudvscf	io_epw.f90	/^  INTEGER :: iudvscf /;"	v	module:io_epw
+iudyn	io_epw.f90	/^  INTEGER :: iudyn /;"	v	module:io_epw
+iueig	io_epw.f90	/^  INTEGER :: iueig /;"	v	module:io_epw
+iuepb	io_epw.f90	/^  INTEGER :: iuepb /;"	v	module:io_epw
+iufe	io_epw.f90	/^  INTEGER :: iufe /;"	v	module:io_epw
+iufilFi_all	io_epw.f90	/^  INTEGER :: iufilFi_all /;"	v	module:io_epw
+iufilegnv	io_epw.f90	/^  INTEGER :: iufilegnv /;"	v	module:io_epw
+iufileig	io_epw.f90	/^  INTEGER :: iufileig /;"	v	module:io_epw
+iufileph	io_epw.f90	/^  INTEGER :: iufileph /;"	v	module:io_epw
+iufilfreq	io_epw.f90	/^  INTEGER :: iufilfreq /;"	v	module:io_epw
+iufilgap	io_epw.f90	/^  INTEGER :: iufilgap /;"	v	module:io_epw
+iufilgapFS	io_epw.f90	/^  INTEGER :: iufilgapFS /;"	v	module:io_epw
+iufilibtev_sup	io_epw.f90	/^  INTEGER :: iufilibtev_sup /;"	v	module:io_epw
+iufilikmap	io_epw.f90	/^  INTEGER :: iufilikmap /;"	v	module:io_epw
+iufilkappa	io_epw.f90	/^  INTEGER :: iufilkappa /;"	v	module:io_epw
+iufilkappael	io_epw.f90	/^  INTEGER :: iufilkappael /;"	v	module:io_epw
+iufilker	io_epw.f90	/^  INTEGER :: iufilker /;"	v	module:io_epw
+iufilkqmap	io_epw.f90	/^  INTEGER :: iufilkqmap /;"	v	module:io_epw
+iufillambda	io_epw.f90	/^  INTEGER :: iufillambda /;"	v	module:io_epw
+iufillambdaFS	io_epw.f90	/^  INTEGER :: iufillambdaFS /;"	v	module:io_epw
+iufilscatt_rate	io_epw.f90	/^  INTEGER :: iufilscatt_rate /;"	v	module:io_epw
+iufilseebeck	io_epw.f90	/^  INTEGER :: iufilseebeck /;"	v	module:io_epw
+iufilsigma	io_epw.f90	/^  INTEGER :: iufilsigma /;"	v	module:io_epw
+iufilsigma_all	io_epw.f90	/^  INTEGER :: iufilsigma_all /;"	v	module:io_epw
+iufiltau_all	io_epw.f90	/^  INTEGER :: iufiltau_all /;"	v	module:io_epw
+iuindabs	io_epw.f90	/^  INTEGER :: iuindabs /;"	v	module:io_epw
+iukgmap	io_epw.f90	/^  INTEGER :: iukgmap /;"	v	module:io_epw
+iukmap	io_epw.f90	/^  INTEGER :: iukmap /;"	v	module:io_epw
+iummn	io_epw.f90	/^  INTEGER :: iummn /;"	v	module:io_epw
+iun_amn	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn,/;"	v	module:wannierEPW
+iun_band	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn, iun_band,/;"	v	module:wannierEPW
+iun_mmn	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn,/;"	v	module:wannierEPW
+iun_nnkp	wannierEPW.f90	/^   INTEGER  :: iun_nnkp,/;"	v	module:wannierEPW
+iun_plot	io_epw.f90	/^  INTEGER :: iun_plot /;"	v	module:io_epw
+iun_plot	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn, iun_band, iun_spn, iun_plot,/;"	v	module:wannierEPW
+iun_spn	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn, iun_band, iun_spn,/;"	v	module:wannierEPW
+iundmedata	io_epw.f90	/^  INTEGER :: iundmedata /;"	v	module:io_epw
+iunepmat	io_epw.f90	/^  INTEGER :: iunepmat /;"	v	module:io_epw
+iunepmatcb	io_epw.f90	/^  INTEGER :: iunepmatcb /;"	v	module:io_epw
+iunepmatwe	io_epw.f90	/^  INTEGER :: iunepmatwe /;"	v	module:io_epw
+iunepmatwp	io_epw.f90	/^  INTEGER :: iunepmatwp /;"	v	module:io_epw
+iunepmatwp2	io_epw.f90	/^  INTEGER :: iunepmatwp2 /;"	v	module:io_epw
+iunifc	io_epw.f90	/^  INTEGER :: iunifc /;"	v	module:io_epw
+iunimem	io_epw.f90	/^  INTEGER :: iunimem /;"	v	module:io_epw
+iunkf	io_epw.f90	/^  INTEGER :: iunkf /;"	v	module:io_epw
+iunksdata	io_epw.f90	/^  INTEGER :: iunksdata /;"	v	module:io_epw
+iunout	io_dyn_mat2.f90	/^  INTEGER, PRIVATE :: iunout$/;"	v	module:io_dyn_mat2
+iunqf	io_epw.f90	/^  INTEGER :: iunqf /;"	v	module:io_epw
+iunrestart	io_epw.f90	/^  INTEGER :: iunrestart /;"	v	module:io_epw
+iunselecq	io_epw.f90	/^  INTEGER :: iunselecq /;"	v	module:io_epw
+iunsparsei	io_epw.f90	/^  INTEGER :: iunsparsei /;"	v	module:io_epw
+iunsparseicb	io_epw.f90	/^  INTEGER :: iunsparseicb /;"	v	module:io_epw
+iunsparsej	io_epw.f90	/^  INTEGER :: iunsparsej /;"	v	module:io_epw
+iunsparsejcb	io_epw.f90	/^  INTEGER :: iunsparsejcb /;"	v	module:io_epw
+iunsparsek	io_epw.f90	/^  INTEGER :: iunsparsek /;"	v	module:io_epw
+iunsparsekcb	io_epw.f90	/^  INTEGER :: iunsparsekcb /;"	v	module:io_epw
+iunsparseq	io_epw.f90	/^  INTEGER :: iunsparseq /;"	v	module:io_epw
+iunsparseqcb	io_epw.f90	/^  INTEGER :: iunsparseqcb /;"	v	module:io_epw
+iunsparset	io_epw.f90	/^  INTEGER :: iunsparset /;"	v	module:io_epw
+iunsparsetcb	io_epw.f90	/^  INTEGER :: iunsparsetcb /;"	v	module:io_epw
+iunukk	io_epw.f90	/^  INTEGER :: iunukk /;"	v	module:io_epw
+iunvmedata	io_epw.f90	/^  INTEGER :: iunvmedata /;"	v	module:io_epw
+iuprojfil	io_epw.f90	/^  INTEGER :: iuprojfil /;"	v	module:io_epw
+iuqdos	io_epw.f90	/^  INTEGER :: iuqdos /;"	v	module:io_epw
+iuqpeig	io_epw.f90	/^  INTEGER :: iuqpeig /;"	v	module:io_epw
+iures	io_epw.f90	/^  INTEGER :: iures /;"	v	module:io_epw
+iuukk	io_epw.f90	/^  INTEGER :: iuukk /;"	v	module:io_epw
+iuwane	io_epw.f90	/^  INTEGER :: iuwane /;"	v	module:io_epw
+iuwanep	io_epw.f90	/^  INTEGER :: iuwanep /;"	v	module:io_epw
+iuwinfil	io_epw.f90	/^  INTEGER :: iuwinfil /;"	v	module:io_epw
+ixkf	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: ixkff/;"	v	module:eliashberg_common_aniso
+ixkff	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: ixkff(/;"	v	module:eliashberg_common_aniso
+ixkqf	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: ixkff(:), ixkf(:), ixkqf(/;"	v	module:eliashberg_common_aniso
+ixkqf_tr	transportcom.f90	/^  INTEGER, ALLOCATABLE :: ixkqf_tr(/;"	v	module:transport_common
+ixqfs	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: ixkff(:), ixkf(:), ixkqf(:,:), ixqfs(/;"	v	module:eliashberg_common_aniso
+jdos	elph2.f90	/^    a_all_offd(:,:),        &!  jmlim: spectral function with off-diag self energy$/;"	v	module:elph2
+kb	constants_epw.f90	/^  REAL(DP), PARAMETER :: kb /;"	v	module:constants_epw
+kelvin2Ry	constants_epw.f90	/^  REAL(DP), PARAMETER :: kelvin2Ry=/;"	v	module:constants_epw
+kelvin2eV	constants_epw.f90	/^  REAL(DP), PARAMETER :: kelvin2eV=/;"	v	module:constants_epw
+kernel_aniso_iaxis	superconductivity_aniso.f90	/^    SUBROUTINE kernel_aniso_iaxis(/;"	s	module:superconductivity_aniso
+kernel_aniso_iaxis_analytic_cont	superconductivity_aniso.f90	/^    SUBROUTINE kernel_aniso_iaxis_analytic_cont(/;"	s	module:superconductivity_aniso
+kernel_iso_iaxis	superconductivity_iso.f90	/^    SUBROUTINE kernel_iso_iaxis(/;"	s	module:superconductivity_iso
+kernel_iso_iaxis_analytic_cont	superconductivity_iso.f90	/^    SUBROUTINE kernel_iso_iaxis_analytic_cont(/;"	s	module:superconductivity_iso
+kernel_raxis	superconductivity_iso.f90	/^    SUBROUTINE kernel_raxis(/;"	s	module:superconductivity_iso
+kerread	epwcom.f90	/^  LOGICAL :: kerread$/;"	v	module:control_epw
+kerwrite	epwcom.f90	/^  LOGICAL :: kerwrite$/;"	v	module:control_epw
+kfold	kfold.f90	/^  MODULE kfold$/;"	m
+klist_epw	epwcom.f90	/^MODULE klist_epw$/;"	m
+kmap	epwcom.f90	/^  INTEGER :: kmap(/;"	v	module:klist_epw
+kmaps	epwcom.f90	/^  LOGICAL :: kmaps$/;"	v	module:control_epw
+kmesh_fine	io_eliashberg.f90	/^    SUBROUTINE kmesh_fine$/;"	s	module:io_eliashberg
+kpb	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: kpb(/;"	v	module:wannierEPW
+kpmq_map	io_eliashberg.f90	/^    SUBROUTINE kpmq_map(/;"	s	module:io_eliashberg
+kpoint_grid_epw	kpoint_grid_epw.f90	/^SUBROUTINE kpoint_grid_epw /;"	s
+kpointdivision	division.f90	/^    SUBROUTINE kpointdivision /;"	s	module:division
+kpt_latt	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: kpt_latt(/;"	v	module:wannierEPW
+kqmap_fine	io_eliashberg.f90	/^    SUBROUTINE kqmap_fine$/;"	s	module:io_eliashberg
+ktokpmq	ktokpmq.f90	/^  subroutine ktokpmq(/;"	s
+l_w	wannierEPW.f90	/^   INTEGER, ALLOCATABLE  :: l_w(/;"	v	module:wannierEPW
+lacon	epwcom.f90	/^  LOGICAL :: lacon$/;"	v	module:control_epw
+lacon_fly	eliashbergcom.f90	/^  LOGICAL :: limag_fly, lacon_fly$/;"	v	module:eliashberg_common_aniso
+lambda_all	elph2.f90	/^    gamma_v_all(:,:,:),     &!$/;"	v	module:elph2
+lambda_phself	io_epw.f90	/^  INTEGER :: lambda_phself /;"	v	module:io_epw
+lambda_v_all	elph2.f90	/^    lambda_all(:,:,:),      &!$/;"	v	module:elph2
+lambdai_aniso_ver1	superconductivity_aniso.f90	/^    SUBROUTINE lambdai_aniso_ver1(/;"	s	module:superconductivity_aniso
+lambdai_aniso_ver2	superconductivity_aniso.f90	/^    SUBROUTINE lambdai_aniso_ver2(/;"	s	module:superconductivity_aniso
+lambdai_iso	superconductivity_iso.f90	/^    SUBROUTINE lambdai_iso(/;"	s	module:superconductivity_iso
+lambdar_aniso_ver1	superconductivity_aniso.f90	/^    SUBROUTINE lambdar_aniso_ver1(/;"	s	module:superconductivity_aniso
+lambdar_aniso_ver2	superconductivity_aniso.f90	/^    SUBROUTINE lambdar_aniso_ver2(/;"	s	module:superconductivity_aniso
+lambdar_iso	superconductivity_iso.f90	/^    SUBROUTINE lambdar_iso(/;"	s	module:superconductivity_iso
+laniso	epwcom.f90	/^  LOGICAL :: laniso$/;"	v	module:control_epw
+lib_dealloc	pw2wan90epw.f90	/^  SUBROUTINE lib_dealloc$/;"	s
+lifc	epwcom.f90	/^  LOGICAL :: lifc$/;"	v	module:control_epw
+limag	epwcom.f90	/^  LOGICAL :: limag$/;"	v	module:control_epw
+limag_fly	eliashbergcom.f90	/^  LOGICAL :: limag_fly,/;"	v	module:eliashberg_common_aniso
+lindabs	epwcom.f90	/^  LOGICAL :: lindabs$/;"	v	module:control_epw
+linewidth_elself	io_epw.f90	/^  INTEGER :: linewidth_elself=/;"	v	module:io_epw
+linewidth_phself	io_epw.f90	/^  INTEGER :: linewidth_phself=/;"	v	module:io_epw
+liso	epwcom.f90	/^  LOGICAL :: liso$/;"	v	module:control_epw
+load_rebal	load_rebal.f90	/^  SUBROUTINE load_rebal$/;"	s
+loadkmesh_para	loadkmesh.f90	/^SUBROUTINE loadkmesh_para$/;"	s
+loadkmesh_serial	loadkmesh.f90	/^SUBROUTINE loadkmesh_serial$/;"	s
+loadqmesh_para	loadqmesh.f90	/^SUBROUTINE loadqmesh_para$/;"	s
+loadqmesh_serial	loadqmesh.f90	/^SUBROUTINE loadqmesh_serial$/;"	s
+loadumat	loadumat.f90	/^  SUBROUTINE loadumat(/;"	s
+logwann	wannierEPW.f90	/^   LOGICAL            :: logwann$/;"	v	module:wannierEPW
+longrange	epwcom.f90	/^  LOGICAL :: longrange$/;"	v	module:control_epw
+lower_band	elph2.f90	/^    ibndmax,                &!$/;"	v	module:elph2
+lower_bnd	transportcom.f90	/^  INTEGER :: lower_bnd$/;"	v	module:transport_common
+lpade	epwcom.f90	/^  LOGICAL :: lpade$/;"	v	module:control_epw
+lphase	epwcom.f90	/^  LOGICAL :: lphase$/;"	v	module:control_epw
+lpolar	epwcom.f90	/^  LOGICAL :: lpolar /;"	v	module:control_epw
+lreal	epwcom.f90	/^  LOGICAL :: lreal$/;"	v	module:control_epw
+lscreen	epwcom.f90	/^  LOGICAL :: lscreen$/;"	v	module:control_epw
+lunif	epwcom.f90	/^  LOGICAL :: lunif$/;"	v	module:control_epw
+lw	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: lw(/;"	v	module:wannierEPW
+lwin	elph2.f90	/^  LOGICAL, allocatable ::   &!$/;"	v	module:elph2
+lwindow	wannierEPW.f90	/^   LOGICAL, ALLOCATABLE     :: lwindow(/;"	v	module:wannierEPW
+lwinq	elph2.f90	/^    lwin(:,:),              &!  identify bands within outer energy windows (when disentanglement is used)$/;"	v	module:elph2
+m_mat	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: m_mat(/;"	v	module:wannierEPW
+map_rebal	elph2.f90	/^    ngk_all(:),             &!  Global number of plane wave for each global k-point$/;"	v	module:elph2
+map_rebal_inv	elph2.f90	/^    map_rebal(:),           &!  Map between the k-point and their load rebalanced one$/;"	v	module:elph2
+max_memlt	epwcom.f90	/^  REAL (KIND=DP) :: max_memlt$/;"	v	module:control_epw
+meff	epwcom.f90	/^  REAL (KIND=DP) :: meff$/;"	v	module:control_epw
+mem_integer_size_eliashberg	superconductivity.f90	/^    SUBROUTINE mem_integer_size_eliashberg(/;"	s	module:superconductivity
+mem_size	ephwann_shuffle.f90	/^  SUBROUTINE mem_size(/;"	s
+mem_size_eliashberg	superconductivity.f90	/^    SUBROUTINE mem_size_eliashberg(/;"	s	module:superconductivity
+memlt_pool	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: memlt_pool(/;"	v	module:eliashberg_common_aniso
+merge_read	io_scattering.f90	/^    SUBROUTINE merge_read(/;"	s	module:io_scattering
+mev2invps	constants_epw.f90	/^  REAL(DP), PARAMETER :: mev2invps /;"	v	module:constants_epw
+mev2ps	constants_epw.f90	/^  REAL(DP), PARAMETER :: mev2ps /;"	v	module:constants_epw
+mix_broyden	broyden.f90	/^  SUBROUTINE mix_broyden(/;"	s
+mix_broyden2	broyden.f90	/^  SUBROUTINE mix_broyden2(/;"	s
+mix_broyden2_aniso	broyden.f90	/^  SUBROUTINE mix_broyden2_aniso(/;"	s
+mix_broyden_aniso	broyden.f90	/^  SUBROUTINE mix_broyden_aniso(/;"	s
+mob_maxiter	epwcom.f90	/^  INTEGER :: mob_maxiter$/;"	v	module:control_epw
+mobilityel_save	transportcom.f90	/^                           Kappael(:,:), Kappa(:,:),  mobilityh_save(:), &$/;"	v	module:transport_common
+mobilityh_save	transportcom.f90	/^                           Kappael(:,:), Kappa(:,:),  mobilityh_save(/;"	v	module:transport_common
+mp_grid	wannierEPW.f90	/^   INTEGER               :: mp_grid(/;"	v	module:wannierEPW
+mp_mesh_k	epwcom.f90	/^  LOGICAL :: mp_mesh_k$/;"	v	module:control_epw
+mp_mesh_q	epwcom.f90	/^  LOGICAL :: mp_mesh_q$/;"	v	module:control_epw
+mr_w	wannierEPW.f90	/^   INTEGER, ALLOCATABLE  :: l_w(:), mr_w(/;"	v	module:wannierEPW
+muc	epwcom.f90	/^  REAL (KIND=DP) :: muc$/;"	v	module:control_epw
+mw	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: lw(:,:), mw(/;"	v	module:wannierEPW
+n_proj	wannierEPW.f90	/^   INTEGER  :: n_proj /;"	v	module:wannierEPW
+n_r	epwcom.f90	/^  REAL (KIND=DP) :: n_r$/;"	v	module:control_epw
+n_wannier	wannierEPW.f90	/^   INTEGER  :: n_wannier /;"	v	module:wannierEPW
+nbndfs	eliashbergcom.f90	/^  INTEGER :: nkfs, nbndfs$/;"	v	module:eliashberg_common_aniso
+nbndskip	epwcom.f90	/^  INTEGER :: nbndskip$/;"	v	module:control_epw
+nbndsub	epwcom.f90	/^  INTEGER :: nbndsub$/;"	v	module:control_epw
+ncarrier	epwcom.f90	/^  REAL (KIND=DP) :: ncarrier$/;"	v	module:control_epw
+nel	epwcom.f90	/^  REAL (KIND=DP) :: nel$/;"	v	module:control_epw
+nest_fn	epwcom.f90	/^  LOGICAL :: nest_fn$/;"	v	module:control_epw
+nesting_fn_q	nesting_fn.f90	/^  subroutine nesting_fn_q(/;"	s
+newdq2	newdq2.f90	/^  SUBROUTINE newdq2(/;"	s
+nexband	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn, iun_band, iun_spn, iun_plot, nnbx, nexband$/;"	v	module:wannierEPW
+ng0vec	kfold.f90	/^  INTEGER :: ng0vec /;"	v	module:kfold
+ngaussw	epwcom.f90	/^  INTEGER :: ngaussw$/;"	v	module:control_epw
+ngk_all	elph2.f90	/^    igk_k_all(:,:),         &!  Global index (in case of parallel)$/;"	v	module:elph2
+nkf	elph2.f90	/^    nkqf,                   &!  number of k+q points per pool (fine grid)$/;"	v	module:elph2
+nkf1	epwcom.f90	/^  INTEGER :: nkf1,/;"	v	module:control_epw
+nkf2	epwcom.f90	/^  INTEGER :: nkf1, nkf2,/;"	v	module:control_epw
+nkf3	epwcom.f90	/^  INTEGER :: nkf1, nkf2, nkf3$/;"	v	module:control_epw
+nkfs	eliashbergcom.f90	/^  INTEGER :: nkfs,/;"	v	module:eliashberg_common_aniso
+nkqf	elph2.f90	/^  INTEGER ::                &!$/;"	v	module:elph2
+nkqtotf	elph2.f90	/^    nqf,                    &!  number of q points per pool (fine grid)$/;"	v	module:elph2
+nnb	wannierEPW.f90	/^   INTEGER              :: nnb /;"	v	module:wannierEPW
+nnbx	wannierEPW.f90	/^   INTEGER  :: iun_nnkp, iun_mmn, iun_amn, iun_band, iun_spn, iun_plot, nnbx,/;"	v	module:wannierEPW
+nqf	elph2.f90	/^    nkf,                    &!  number of k points per pool (fine grid)$/;"	v	module:elph2
+nqf1	epwcom.f90	/^  INTEGER :: nqf1,/;"	v	module:control_epw
+nqf2	epwcom.f90	/^  INTEGER :: nqf1, nqf2,/;"	v	module:control_epw
+nqf3	epwcom.f90	/^  INTEGER :: nqf1, nqf2, nqf3$/;"	v	module:control_epw
+nqfs	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: ixkff(:), ixkf(:), ixkqf(:,:), ixqfs(:,:), nqfs(/;"	v	module:eliashberg_common_aniso
+nqsmear	epwcom.f90	/^  INTEGER :: nqsmear$/;"	v	module:control_epw
+nqstep	epwcom.f90	/^  INTEGER :: nqstep$/;"	v	module:control_epw
+nqtotf	elph2.f90	/^    nkqtotf,                &!  total number of k+q points (fine grid)$/;"	v	module:elph2
+nrr	elph2.f90	/^    nqtotf,                 &!  total number of q points (fine grid)$/;"	v	module:elph2
+nsiter	epwcom.f90	/^  INTEGER :: nsiter$/;"	v	module:control_epw
+nsiw	eliashbergcom.f90	/^  INTEGER, ALLOCATABLE :: nsiw(/;"	v	module:eliashberg_common
+nsmear	epwcom.f90	/^  INTEGER :: nsmear$/;"	v	module:control_epw
+nstemp	epwcom.f90	/^  INTEGER :: nstemp$/;"	v	module:control_epw
+nsw	eliashbergcom.f90	/^  INTEGER :: nsw$/;"	v	module:eliashberg_common
+nswc	epwcom.f90	/^  INTEGER :: nswc$/;"	v	module:control_epw
+nswfc	epwcom.f90	/^  INTEGER :: nswfc$/;"	v	module:control_epw
+nswi	epwcom.f90	/^  INTEGER :: nswi$/;"	v	module:control_epw
+ntempxx	epwcom.f90	/^  INTEGER :: ntempxx /;"	v	module:control_epw
+num_bands	wannierEPW.f90	/^   INTEGER               :: num_bands /;"	v	module:wannierEPW
+num_iter	epwcom.f90	/^  INTEGER :: num_iter$/;"	v	module:control_epw
+num_nnmax	wannierEPW.f90	/^   INTEGER               :: num_nnmax=/;"	v	module:wannierEPW
+num_sph	wannierEPW.f90	/^   INTEGER, ALLOCATABLE :: num_sph(/;"	v	module:wannierEPW
+nw	epwcom.f90	/^  INTEGER :: nw$/;"	v	module:control_epw
+nw_specfun	epwcom.f90	/^  INTEGER :: nw_specfun$/;"	v	module:control_epw
+nwanxx	epwcom.f90	/^  INTEGER :: nwanxx /;"	v	module:control_epw
+omegamax	epwcom.f90	/^  REAL (KIND=DP) :: omegamax$/;"	v	module:control_epw
+omegamin	epwcom.f90	/^  REAL (KIND=DP) :: omegamin$/;"	v	module:control_epw
+omegap	elph2.f90	/^    ifc(:,:,:,:,:,:,:),     &!  Interatomic force constant in real space$/;"	v	module:elph2
+omegastep	epwcom.f90	/^  REAL (KIND=DP) :: omegastep$/;"	v	module:control_epw
+one	constants_epw.f90	/^  REAL(DP), PARAMETER :: one /;"	v	module:constants_epw
+openfilepw	openfilepw.f90	/^  SUBROUTINE openfilepw$/;"	s
+orient_gf_spinor	pw2wan90epw.f90	/^  SUBROUTINE orient_gf_spinor(/;"	s
+output_epw	epwcom.f90	/^MODULE output_epw$/;"	m
+p_z	pw2wan90epw.f90	/^FUNCTION p_z(/;"	f
+pade_coeff	superconductivity.f90	/^    subroutine pade_coeff /;"	s	module:superconductivity
+pade_cont_aniso_iaxis_to_raxis	superconductivity_aniso.f90	/^    SUBROUTINE pade_cont_aniso_iaxis_to_raxis(/;"	s	module:superconductivity_aniso
+pade_cont_iso_iaxis_to_raxis	superconductivity_iso.f90	/^    SUBROUTINE pade_cont_iso_iaxis_to_raxis(/;"	s	module:superconductivity_iso
+pade_eval	superconductivity.f90	/^    subroutine pade_eval /;"	s	module:superconductivity
+para_bounds	ktokpmq.f90	/^  SUBROUTINE para_bounds(/;"	s
+phases_a_m	pw2wan90epw.f90	/^  SUBROUTINE phases_a_m$/;"	s
+phonselfen	epwcom.f90	/^  LOGICAL :: phonselfen$/;"	v	module:control_epw
+pi	constants_epw.f90	/^  REAL(DP), PARAMETER :: pi /;"	v	module:constants_epw
+pibytwo	constants_epw.f90	/^  REAL(DP), PARAMETER :: pibytwo=/;"	v	module:constants_epw
+plot_band	plot_band.f90	/^  SUBROUTINE plot_band$/;"	s
+plselfen	epwcom.f90	/^  LOGICAL :: plselfen$/;"	v	module:control_epw
+poolgather	poolgather.f90	/^  subroutine poolgather /;"	s
+poolgather2	poolgather.f90	/^  subroutine poolgather2 /;"	s
+poolgather_int	poolgather.f90	/^  subroutine poolgather_int /;"	s
+poolgather_int1	poolgather.f90	/^  subroutine poolgather_int1 /;"	s
+poolgatherc4	poolgather.f90	/^  subroutine poolgatherc4 /;"	s
+print_clock_epw	printing.f90	/^    SUBROUTINE print_clock_epw$/;"	s	module:printing
+print_gkk	printing.f90	/^    SUBROUTINE print_gkk /;"	s	module:printing
+print_ibte	print_ibte.f90	/^  SUBROUTINE print_ibte(/;"	s
+print_mob	printing.f90	/^    SUBROUTINE print_mob(/;"	s	module:printing
+print_mob_sym	printing.f90	/^    SUBROUTINE print_mob_sym(/;"	s	module:printing
+print_serta	printing.f90	/^    SUBROUTINE print_serta(/;"	s	module:printing
+print_serta_sym	printing.f90	/^    SUBROUTINE print_serta_sym(/;"	s	module:printing
+printing	printing.f90	/^  MODULE printing$/;"	m
+proj	epwcom.f90	/^  CHARACTER(len=256), dimension(200) :: proj /;"	v	module:control_epw
+proj_w90	wannierize.f90	/^  SUBROUTINE proj_w90$/;"	s
+prtgkk	epwcom.f90	/^  LOGICAL :: prtgkk$/;"	v	module:control_epw
+pw2wan90epw	pw2wan90epw.f90	/^  SUBROUTINE pw2wan90epw /;"	s
+pwc	epwcom.f90	/^  REAL (KIND=DP) :: pwc$/;"	v	module:control_epw
+px	pw2wan90epw.f90	/^FUNCTION px(/;"	f
+py	pw2wan90epw.f90	/^FUNCTION py(/;"	f
+qwindow	transport.f90	/^    SUBROUTINE qwindow(/;"	s	module:transport
+r_w	wannierEPW.f90	/^   INTEGER, ALLOCATABLE  :: r_w(/;"	v	module:wannierEPW
+radialpart	pw2wan90epw.f90	/^  SUBROUTINE radialpart(/;"	s
+rand_k	epwcom.f90	/^  LOGICAL :: rand_k$/;"	v	module:control_epw
+rand_nk	epwcom.f90	/^  INTEGER :: rand_nk$/;"	v	module:control_epw
+rand_nq	epwcom.f90	/^  INTEGER :: rand_nq$/;"	v	module:control_epw
+rand_q	epwcom.f90	/^  LOGICAL :: rand_q$/;"	v	module:control_epw
+rdw	elph2.f90	/^    cvmew (:,:,:,:),        &!  Velocity matrix in wannier basis $/;"	v	module:elph2
+read_a2f	io_eliashberg.f90	/^    SUBROUTINE read_a2f$/;"	s	module:io_eliashberg
+read_dyn_mat	io_dyn_mat2.f90	/^    SUBROUTINE read_dyn_mat(/;"	s	module:io_dyn_mat2
+read_dyn_mat_header	io_dyn_mat2.f90	/^    SUBROUTINE read_dyn_mat_header(/;"	s	module:io_dyn_mat2
+read_dyn_mat_param	io_dyn_mat2.f90	/^    SUBROUTINE read_dyn_mat_param(/;"	s	module:io_dyn_mat2
+read_eigenvalues	io_eliashberg.f90	/^    SUBROUTINE read_eigenvalues$/;"	s	module:io_eliashberg
+read_ephmat	io_eliashberg.f90	/^    SUBROUTINE read_ephmat$/;"	s	module:io_eliashberg
+read_frequencies	io_eliashberg.f90	/^    SUBROUTINE read_frequencies$/;"	s	module:io_eliashberg
+read_ifc	readmat_shuffle2.f90	/^  SUBROUTINE read_ifc$/;"	s
+read_ifc_param	io_dyn_mat2.f90	/^    SUBROUTINE read_ifc_param(/;"	s	module:io_dyn_mat2
+read_ifc_xml	io_dyn_mat2.f90	/^    SUBROUTINE read_ifc_xml(/;"	s	module:io_dyn_mat2
+read_kqmap	io_eliashberg.f90	/^    SUBROUTINE read_kqmap$/;"	s	module:io_eliashberg
+read_modes	elphon_shuffle_wrap.f90	/^  SUBROUTINE read_modes(/;"	s
+readdvscf	readdvscf.f90	/^  SUBROUTINE readdvscf(/;"	s
+readgmap	readgmap.f90	/^  SUBROUTINE readgmap /;"	s
+readmat_shuffle2	readmat_shuffle2.f90	/^  subroutine readmat_shuffle2 /;"	s
+readwfc	readwfc.f90	/^  SUBROUTINE readwfc(/;"	s
+reduce_unk	wannierEPW.f90	/^   LOGICAL            :: reduce_unk /;"	v	module:wannierEPW
+refold	createkmap.f90	/^  SUBROUTINE refold /;"	s
+restart	epwcom.f90	/^  LOGICAL :: restart$/;"	v	module:control_epw
+restart_filq	epwcom.f90	/^  CHARACTER (LEN=80) :: restart_filq$/;"	v	module:output_epw
+restart_freq	epwcom.f90	/^  INTEGER :: restart_freq$/;"	v	module:control_epw
+rgd_blk	rigid_epw.f90	/^  SUBROUTINE rgd_blk /;"	s
+rgd_blk_epw	rigid_epw.f90	/^  SUBROUTINE rgd_blk_epw /;"	s
+rgd_blk_epw_fine	rigid_epw.f90	/^  SUBROUTINE rgd_blk_epw_fine /;"	s
+rgd_blk_epw_fine_mem	rgd_blk_epw_fine_mem.f90	/^SUBROUTINE rgd_blk_epw_fine_mem(/;"	s
+rlatt	wannierEPW.f90	/^   REAL(DP)              :: rlatt(/;"	v	module:wannierEPW
+rotate_cart	elphel2_shuffle.f90	/^  SUBROUTINE rotate_cart(/;"	s
+rotate_eigenm	rotate_eigenm.f90	/^  subroutine rotate_eigenm /;"	s
+rotate_epmat	rotate_epmat.f90	/^  subroutine rotate_epmat /;"	s
+rpa_epsilon	rigid_epw.f90	/^  SUBROUTINE rpa_epsilon /;"	s
+run_wannier	pw2wan90epw.f90	/^  SUBROUTINE run_wannier$/;"	s
+rwepmatw	ephwann_shuffle.f90	/^  subroutine rwepmatw /;"	s
+ryd2ev	constants_epw.f90	/^  REAL(DP), PARAMETER :: ryd2ev /;"	v	module:constants_epw
+ryd2ghz	constants_epw.f90	/^  REAL(DP), PARAMETER :: ryd2ghz /;"	v	module:constants_epw
+ryd2mev	constants_epw.f90	/^  REAL(DP), PARAMETER :: ryd2mev /;"	v	module:constants_epw
+rydcm1	constants_epw.f90	/^  REAL(DP), PARAMETER :: rydcm1 /;"	v	module:constants_epw
+s	pw2wan90epw.f90	/^FUNCTION s(/;"	f
+s_BZtoIBZ_full	transportcom.f90	/^  INTEGER, ALLOCATABLE :: s_BZtoIBZ_full(/;"	v	module:transport_common
+scan_file_to	pw2wan90epw.f90	/^  SUBROUTINE scan_file_to(/;"	s
+scatread	epwcom.f90	/^  LOGICAL :: scatread$/;"	v	module:control_epw
+scattering	epwcom.f90	/^  LOGICAL :: scattering$/;"	v	module:control_epw
+scattering_0rta	epwcom.f90	/^  LOGICAL :: scattering_0rta$/;"	v	module:control_epw
+scattering_rate_q	transport.f90	/^    SUBROUTINE scattering_rate_q(/;"	s	module:transport
+scattering_read	io_scattering.f90	/^    SUBROUTINE scattering_read(/;"	s	module:io_scattering
+scattering_serta	epwcom.f90	/^  LOGICAL :: scattering_serta$/;"	v	module:control_epw
+scattering_write	io_scattering.f90	/^    SUBROUTINE scattering_write(/;"	s	module:io_scattering
+scissor	epwcom.f90	/^  REAL (KIND=DP) :: scissor$/;"	v	module:control_epw
+scr_typ	epwcom.f90	/^  INTEGER :: scr_typ$/;"	v	module:control_epw
+seedname2	wannierEPW.f90	/^   CHARACTER(len=256) :: seedname2 /;"	v	module:wannierEPW
+selecqread	epwcom.f90	/^  LOGICAL :: selecqread$/;"	v	module:control_epw
+selfen_elec_q	selfen_elec.f90	/^  SUBROUTINE selfen_elec_q /;"	s
+selfen_phon_q	selfen_phon.f90	/^  SUBROUTINE selfen_phon_q(/;"	s
+selfen_pl_q	selfen_pl.f90	/^  SUBROUTINE selfen_pl_q /;"	s
+set_asr2	readmat_shuffle2.f90	/^SUBROUTINE set_asr2 /;"	s
+set_ndnmbr	set_ndnmbr.f90	/^  subroutine set_ndnmbr /;"	s
+set_u_matrix	pw2wan90epw.f90	/^  SUBROUTINE set_u_matrix(/;"	s
+setphases_wrap	setphases_wrap.f90	/^  subroutine setphases_wrap$/;"	s
+setup_nnkp	pw2wan90epw.f90	/^  SUBROUTINE setup_nnkp(/;"	s
+sgf_spinor	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: sgf_spinor(/;"	v	module:wannierEPW
+shift	elph2.f90	/^  INTEGER, ALLOCATABLE ::   &!$/;"	v	module:elph2
+shift	kfold.f90	/^  INTEGER, ALLOCATABLE :: shift(/;"	v	module:kfold
+shortrange	epwcom.f90	/^  LOGICAL :: shortrange$/;"	v	module:control_epw
+sigmai_all	elph2.f90	/^    sigmar_all(:,:),        &!  To store sigmar, sigmai and zi globally$/;"	v	module:elph2
+sigmai_mode	elph2.f90	/^    sigmai_all(:,:),        &!$/;"	v	module:elph2
+sigmar_all	elph2.f90	/^    lambda_v_all(:,:,:),    &!$/;"	v	module:elph2
+smear_rpa	epwcom.f90	/^  REAL (KIND=DP) :: smear_rpa$/;"	v	module:control_epw
+sp1	readmat_shuffle2.f90	/^subroutine sp1(/;"	s
+sp2	readmat_shuffle2.f90	/^subroutine sp2(/;"	s
+sp3	readmat_shuffle2.f90	/^subroutine sp3(/;"	s
+sp_zeu	readmat_shuffle2.f90	/^subroutine sp_zeu(/;"	s
+specfun_el	epwcom.f90	/^  LOGICAL :: specfun_el$/;"	v	module:control_epw
+specfun_ph	epwcom.f90	/^  LOGICAL :: specfun_ph$/;"	v	module:control_epw
+specfun_pl	epwcom.f90	/^  LOGICAL :: specfun_pl$/;"	v	module:control_epw
+spectra	elph2.f90	/^    jdos(:),                &!$/;"	v	module:elph2
+spectral_cumulant	spectral_cumulant.f90	/^  SUBROUTINE spectral_cumulant /;"	s
+spectral_func_ph	spectral_func_ph.f90	/^  SUBROUTINE spectral_func_ph /;"	s
+spectral_func_pl_q	spectral_func_pl.f90	/^  SUBROUTINE spectral_func_pl_q(/;"	s
+spectral_func_q	spectral_func.f90	/^  SUBROUTINE spectral_func_q /;"	s
+spectral_func_q_offdiag	spectral_func_offdiag.f90	/^  SUBROUTINE spectral_func_q_offdiag /;"	s
+spin_eig	wannierEPW.f90	/^   INTEGER,  ALLOCATABLE :: spin_eig(/;"	v	module:wannierEPW
+spin_qaxis	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: spin_qaxis(/;"	v	module:wannierEPW
+spreads	wannierEPW.f90	/^   REAL(DP)                 :: spreads(/;"	v	module:wannierEPW
+star_q2	star_q2.f90	/^  subroutine star_q2 /;"	s
+stop_epw	stop_epw.f90	/^  SUBROUTINE stop_epw$/;"	s
+sum_eliashberg_aniso_iaxis	superconductivity_aniso.f90	/^    SUBROUTINE sum_eliashberg_aniso_iaxis(/;"	s	module:superconductivity_aniso
+sum_eliashberg_iso_iaxis	superconductivity_iso.f90	/^    SUBROUTINE sum_eliashberg_iso_iaxis(/;"	s	module:superconductivity_iso
+sumkg_seq	ephwann_shuffle.f90	/^  function sumkg_seq /;"	f
+sumr	elph2.f90	/^    spectra(:,:,:,:,:,:),   &!  dipole absorption spectra, polarizations, nomega, nsmear, dme\/vme, absorption\/emission$/;"	v	module:elph2
+superconductivity	superconductivity.f90	/^  MODULE superconductivity$/;"	m
+superconductivity_aniso	superconductivity_aniso.f90	/^  MODULE superconductivity_aniso$/;"	m
+superconductivity_iso	superconductivity_iso.f90	/^  MODULE superconductivity_iso$/;"	m
+system_2d	epwcom.f90	/^  LOGICAL :: system_2d$/;"	v	module:control_epw
+system_mem_usage	system_mem_usage.f90	/^  SUBROUTINE system_mem_usage /;"	s
+tau_read	io_scattering.f90	/^    SUBROUTINE tau_read /;"	s	module:io_scattering
+tau_write	io_scattering.f90	/^    SUBROUTINE tau_write(/;"	s	module:io_scattering
+temps	epwcom.f90	/^  REAL (kind=DP), dimension(50) :: temps /;"	v	module:control_epw
+tempsmax	epwcom.f90	/^  REAL (KIND=DP) :: tempsmax$/;"	v	module:control_epw
+tempsmin	epwcom.f90	/^  REAL (KIND=DP) :: tempsmin$/;"	v	module:control_epw
+tf_epsilon	rigid_epw.f90	/^  SUBROUTINE tf_epsilon /;"	s
+title	epwcom.f90	/^  CHARACTER(LEN=75) :: title /;"	v	module:control_epw
+transp_temp	transportcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: transp_temp(/;"	v	module:transport_common
+transport	transport.f90	/^  MODULE transport$/;"	m
+transport_coeffs	transport.f90	/^    SUBROUTINE transport_coeffs /;"	s	module:transport
+transport_common	transportcom.f90	/^  MODULE transport_common$/;"	m
+transport_iter	transport_iter.f90	/^  MODULE transport_iter$/;"	m
+transportcom	transportcom.f90	/^  MODULE transportcom$/;"	m
+two	constants_epw.f90	/^  REAL(DP), PARAMETER :: two /;"	v	module:constants_epw
+twopi	constants_epw.f90	/^  REAL(DP), PARAMETER :: twopi /;"	v	module:constants_epw
+u_mat	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: u_mat(/;"	v	module:wannierEPW
+u_mat_opt	wannierEPW.f90	/^   COMPLEX(DP), ALLOCATABLE :: u_mat_opt(/;"	v	module:wannierEPW
+umat	elph2.f90	/^    epmatwp (:,:,:,:,:),    &!  e-p matrix  in wannier basis - electrons and phonons$/;"	v	module:elph2
+umat_all	elph2.f90	/^    umatq(:,:,:),           &!  the rotation matrix for the unique setting of the wfs gauge for the k + q-- on the local pool$/;"	v	module:elph2
+umatq	elph2.f90	/^    umat(:,:,:),            &!  the rotation matrix for the unique setting of the wfs gauge -- on the local pool$/;"	v	module:elph2
+umatq_all	elph2.f90	/^    umat_all(:,:,:),        &!  the rotation matrix for the unique setting of the wfs gauge -- for all k points$/;"	v	module:elph2
+upper_band	elph2.f90	/^    lower_band,             &!  Lower band index for image (band) parallelization$/;"	v	module:elph2
+upper_bnd	transportcom.f90	/^  INTEGER :: upper_bnd$/;"	v	module:transport_common
+use_ws	epwcom.f90	/^  LOGICAL :: use_ws$/;"	v	module:control_epw
+vec	readmat_shuffle2.f90	/^     real(DP),pointer :: vec(/;"	k	type:vector
+vector	readmat_shuffle2.f90	/^  type vector$/;"	t	subroutine:set_asr2
+vme	epwcom.f90	/^  LOGICAL :: vme$/;"	v	module:control_epw
+vmebloch2wan	bloch2wan.f90	/^    SUBROUTINE vmebloch2wan /;"	s	module:bloch2wan
+vmef	elph2.f90	/^    dmef(:,:,:,:),          &!  dipole matrix elements on the fine   mesh (ipol, nbnd, nbnd, nks)$/;"	v	module:elph2
+vmewan2bloch	wan2bloch.f90	/^    SUBROUTINE vmewan2bloch /;"	s	module:wan2bloch
+w0g	eliashbergcom.f90	/^                           a2fij(:,:,:,:,:), w0g(/;"	v	module:eliashberg_common_aniso
+wan2bloch	wan2bloch.f90	/^  MODULE wan2bloch$/;"	m
+wan_mode	wannierEPW.f90	/^   CHARACTER(LEN=15)  :: wan_mode /;"	v	module:wannierEPW
+wann_centers	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE    :: wann_centers(/;"	v	module:wannierEPW
+wann_run	wannierize.f90	/^  SUBROUTINE wann_run$/;"	s
+wann_spreads	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE    :: wann_spreads(/;"	v	module:wannierEPW
+wannierEPW	wannierEPW.f90	/^MODULE  wannierEPW$/;"	m
+wannierize	epwcom.f90	/^  LOGICAL :: wannierize$/;"	v	module:control_epw
+wdata	epwcom.f90	/^  CHARACTER(len=256), dimension(200) :: wdata$/;"	v	module:control_epw
+wepexst	epwcom.f90	/^  LOGICAL :: wepexst$/;"	v	module:control_epw
+wf	elph2.f90	/^    etfd_ks(:,:,:),         &!  interpolated eigenvalues (nbnd, nkqf) KS eigenvalues for shifted grid in the case of eig_read$/;"	v	module:elph2
+wigner	wigner.f90	/^  MODULE wigner$/;"	m
+wigner_seitz_wrap	wigner.f90	/^    SUBROUTINE wigner_seitz_wrap /;"	s	module:wigner
+wigner_seitzg	wigner.f90	/^    SUBROUTINE wigner_seitzg /;"	s	module:wigner
+wigner_seitzkq	wigner.f90	/^    SUBROUTINE wigner_seitzkq /;"	s	module:wigner
+wkf	elph2.f90	/^    xkfd(:,:,:),            &!  fine k point grid , displaced along each cartesian direction +\/delta_q (3, nkqf, 6)$/;"	v	module:elph2
+wkfs	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(:,:,:,:,:), ekfs(:,:), xkff(:,:), xkfs(:,:), wkfs(/;"	v	module:eliashberg_common_aniso
+wmax	epwcom.f90	/^  REAL (KIND=DP) :: wmax$/;"	v	module:control_epw
+wmax_specfun	epwcom.f90	/^  REAL (KIND=DP) :: wmax_specfun$/;"	v	module:control_epw
+wmin	epwcom.f90	/^  REAL (KIND=DP) :: wmin$/;"	v	module:control_epw
+wmin_specfun	epwcom.f90	/^  REAL (KIND=DP) :: wmin_specfun$/;"	v	module:control_epw
+wqf	elph2.f90	/^    xqf(:,:),               &!  fine q point grid $/;"	v	module:elph2
+write_amn	wannierEPW.f90	/^   LOGICAL            :: write_amn /;"	v	module:wannierEPW
+write_band	pw2wan90epw.f90	/^  SUBROUTINE write_band$/;"	s
+write_ephmat	io_eliashberg.f90	/^    SUBROUTINE write_ephmat(/;"	s	module:io_eliashberg
+write_filukk	pw2wan90epw.f90	/^  SUBROUTINE write_filukk$/;"	s
+write_mmn	wannierEPW.f90	/^   LOGICAL            :: write_mmn /;"	v	module:wannierEPW
+write_plot	pw2wan90epw.f90	/^  SUBROUTINE write_plot$/;"	s
+write_spn	wannierEPW.f90	/^   LOGICAL            :: write_spn /;"	v	module:wannierEPW
+write_unk	wannierEPW.f90	/^   LOGICAL            :: write_unk /;"	v	module:wannierEPW
+write_wfn	epwcom.f90	/^  LOGICAL :: write_wfn$/;"	v	module:control_epw
+write_winfil	wannierize.f90	/^  SUBROUTINE write_winfil$/;"	s
+ws	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: dws(/;"	v	module:eliashberg_common
+wscache	elph2.f90	/^    epsilon2_abs(:,:,:),    &!  Imaginary part of dielectric function for phonon-assisted absorption, vs omega, vs broadening $/;"	v	module:elph2
+wscut	epwcom.f90	/^  REAL (KIND=DP) :: wscut$/;"	v	module:control_epw
+wsfc	epwcom.f90	/^  REAL (KIND=DP) :: wsfc$/;"	v	module:control_epw
+wsi	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: dws(:), ws(:), wsph(:), wsi(/;"	v	module:eliashberg_common
+wsph	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: dws(:), ws(:), wsph(/;"	v	module:eliashberg_common
+wsphmax	eliashbergcom.f90	/^  REAL(DP) :: wsphmax,/;"	v	module:eliashberg_common
+wvfn_formatted	wannierEPW.f90	/^   LOGICAL            :: wvfn_formatted /;"	v	module:wannierEPW
+xaxis	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: xaxis(/;"	v	module:wannierEPW
+xk_all	epwcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: xk_all(/;"	v	module:klist_epw
+xk_cryst	epwcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: xk_cryst(/;"	v	module:klist_epw
+xk_loc	epwcom.f90	/^  REAL(kind=DP), ALLOCATABLE :: xk_loc(/;"	v	module:klist_epw
+xkf	elph2.f90	/^    etq(:,:),               &!  eigenvalues of k+q wavefunctions$/;"	v	module:elph2
+xkfd	elph2.f90	/^    xkf(:,:),               &!  fine k point grid (3, nkqf)$/;"	v	module:elph2
+xkff	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(:,:,:,:,:), ekfs(:,:), xkff(/;"	v	module:eliashberg_common_aniso
+xkfs	eliashbergcom.f90	/^  REAL(DP), ALLOCATABLE :: g2(:,:,:,:,:), ekfs(:,:), xkff(:,:), xkfs(/;"	v	module:eliashberg_common_aniso
+xkq	elph2.f90	/^    et_ks(:,:),             &!  lda eigenvalues$/;"	v	module:elph2
+xqf	elph2.f90	/^    wkf(:),                 &!  weights on the fine grid (nkqf)$/;"	v	module:elph2
+ylm_expansion	pw2wan90epw.f90	/^  SUBROUTINE ylm_expansion /;"	s
+ylm_wannier	pw2wan90epw.f90	/^  SUBROUTINE ylm_wannier(/;"	s
+zaxis	wannierEPW.f90	/^   REAL(DP), ALLOCATABLE :: zaxis(/;"	v	module:wannierEPW
+zero	constants_epw.f90	/^  REAL(DP), PARAMETER :: zero /;"	v	module:constants_epw
+zerophase	wannierEPW.f90	/^   LOGICAL,  ALLOCATABLE    :: zerophase(/;"	v	module:wannierEPW
+zi_all	elph2.f90	/^    sigmai_mode(:,:,:),     &! $/;"	v	module:elph2
+zi_allcb	elph2.f90	/^    zi_allvb(:,:,:),        &!  Z-factor in scattering rate  $/;"	v	module:elph2
+zi_allvb	elph2.f90	/^    inv_tau_allcb(:,:,:),   &!  Second scattering rate (for both)$/;"	v	module:elph2
+zstar	elph2.f90	/^    sumr(:,:,:,:),          &!  to apply the ASR correction to every xq$/;"	v	module:elph2

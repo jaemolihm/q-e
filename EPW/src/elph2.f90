@@ -63,6 +63,9 @@
     zi_all(:,:),            &!
     esigmar_all(:,:,:),     &!
     esigmai_all(:,:,:),     &!   
+    esigmar_all_offd(:,:,:,:),     &! jmlim: off-diag
+    esigmai_all_offd(:,:,:,:),     &! jmlim: off-diag
+    a_all_offd(:,:),        &!  jmlim: spectral function with off-diag self energy
     jdos(:),                &!
     spectra(:,:,:,:,:,:),   &!  dipole absorption spectra, polarizations, nomega, nsmear, dme/vme, absorption/emission
     sumr(:,:,:,:),          &!  to apply the ASR correction to every xq

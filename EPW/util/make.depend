@@ -836,14 +836,3 @@ wannierize.o : wannierEPW.o
 wigner.o : ../../Modules/cell_base.o
 wigner.o : ../../Modules/kind.o
 wigner.o : constants_epw.o
-spectral_func_offdiag.o : ../../Modules/io_global.o
-spectral_func_offdiag.o : ../../Modules/kind.o
-spectral_func_offdiag.o : ../../Modules/mp_global.o
-spectral_func_offdiag.o : ../../PHonon/PH/phcom.o
-spectral_func_offdiag.o : ../../PW/src/pwcom.o
-spectral_func_offdiag.o : ../../UtilXlib/mp.o
-spectral_func_offdiag.o : constants_epw.o
-spectral_func_offdiag.o : division.o
-spectral_func_offdiag.o : elph2.o
-spectral_func_offdiag.o : epwcom.o
-spectral_func_offdiag.o : io_epw.o

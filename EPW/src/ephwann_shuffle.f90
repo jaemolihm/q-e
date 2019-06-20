@@ -57,7 +57,8 @@
                             sigmar_all, zi_allvb, inv_tau_all, lambda_v_all,    &
                             inv_tau_allcb, zi_allcb, exband, xkfd, etfd,        &
                             etfd_ks, gamma_v_all, esigmar_all, esigmai_all,     &
-                            a_all, a_all_ph
+                            a_all, a_all_ph, &
+                            esigmar_all_offd, esigmai_all_offd, a_all_offd ! jmlim
   USE transportcom,  ONLY : transp_temp, mobilityh_save, mobilityel_save, lower_bnd, &
                             upper_bnd 
   USE wan2bloch,     ONLY : dmewan2bloch, hamwan2bloch, dynwan2bloch,           &
@@ -295,6 +296,8 @@
   !! Used to store $e^{2\pi r \cdot k}$ exponential of displaced vector 
   COMPLEX(kind=DP), ALLOCATABLE :: cfacqd(:,:,:,:)
   !! Used to store $e^{2\pi r \cdot k+q}$ exponential of dispaced vector
+  COMPLEX(kind=DP), ALLOCATABLE :: cufkk_all(:,:,:) ! jmlim
+  !! Used to store and pass electron eigenvectors to spectral_func_q_offdiag
   ! 
   IF (nbndsub /= nbnd) &
        WRITE(stdout, '(/,5x,a,i4)' ) 'Band disentanglement is used:  nbndsub = ', nbndsub
@@ -940,6 +943,14 @@
       esigmar_all(:,:,:) = zero
       esigmai_all(:,:,:) = zero
       a_all(:,:) = zero
+! jmlim: off-diag
+      ALLOCATE (esigmar_all_offd(ibndmax-ibndmin+1, ibndmax-ibndmin+1, nkqtotf/2, nw_specfun))
+      ALLOCATE (esigmai_all_offd(ibndmax-ibndmin+1, ibndmax-ibndmin+1, nkqtotf/2, nw_specfun))
+      ALLOCATE (a_all_offd(nw_specfun, nkqtotf/2))
+      ALLOCATE (cufkk_all(nbndsub, nbndsub, nkf))
+      esigmar_all_offd(:,:,:,:) = zero
+      esigmai_all_offd(:,:,:,:) = zero
+      a_all_offd(:,:) = zero
     ENDIF
     IF (specfun_ph) THEN
       ALLOCATE (a_all_ph(nw_specfun, totq))
@@ -1159,6 +1170,7 @@
              ( nbndsub, nrr_k, cufkk, etf(:, ikk), chw, cfac, dims)
         CALL hamwan2bloch &
              ( nbndsub, nrr_k, cufkq, etf(:, ikq), chw, cfacq, dims)
+        cufkk_all(:,:,ik) = cufkk(:,:)
         ! 
         ! Apply a possible scissor shift 
         etf(icbm:nbndsub, ikk) = etf(icbm:nbndsub, ikk) + scissor
@@ -1330,6 +1342,8 @@
       IF (plselfen .AND. .NOT. vme ) CALL selfen_pl_q(iqq, iq, totq)
       IF (nest_fn    ) CALL nesting_fn_q(iqq, iq)
       IF (specfun_el ) CALL spectral_func_q(iqq, iq, totq)
+! jmlim: spectral function with off-diagonal self-energy
+      IF (specfun_el ) CALL spectral_func_q_offdiag(iqq, iq, totq, cufkk_all)
       IF (specfun_ph ) CALL spectral_func_ph(iqq, iq, totq)
       IF (specfun_pl .AND. .NOT. vme ) CALL spectral_func_pl_q(iqq, iq, totq)
       IF (ephwrite) THEN
