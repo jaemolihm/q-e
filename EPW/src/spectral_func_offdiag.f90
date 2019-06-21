@@ -36,7 +36,8 @@
   USE klist_epw,     ONLY : isk_dummy
   USE elph2,         ONLY : etf, ibndmin, ibndmax, nkqf, xqf, &
                             epf17, wkf, nkf, wf, wqf, xkf, nkqtotf,&
-                            esigmar_all_offd, esigmai_all_offd, a_all_offd
+                            esigmar_all_offd, esigmai_all_offd, a_all_offd, &
+                            esigmar_all, esigmai_all
   USE constants_epw, ONLY : ryd2mev, one, ryd2ev, two, zero, pi, ci, eps8, czero, cone
   USE mp,            ONLY : mp_barrier, mp_sum
   USE mp_global,     ONLY : me_pool, inter_pool_comm
@@ -118,13 +119,16 @@
   ! begin jmlim off-diagonal
   INTEGER :: ibnd2
   complex(DP), allocatable :: mat_temp(:,:) ! for matrix inversion
+  complex(DP), allocatable :: green_diag(:,:) ! for matrix inversion
   complex(DP), allocatable :: mat_temp2(:,:) ! for unitary rotation
+  complex(DP), allocatable :: mat_temp3(:,:) ! for unitary rotation
   REAL(DP), allocatable :: evals_temp(:)
   complex(DP), allocatable :: work(:)
   integer :: lwork
   integer, allocatable :: ipiv(:)
   integer :: info, reclen
-  REAL(DP), allocatable :: a_all_offd_diag(:,:,:)
+  REAL(DP), allocatable :: a_all_offd_resolv(:,:,:)
+  REAL(DP), allocatable :: a_all_d_resolv(:,:,:)
   COMPLEX(DP), allocatable :: esigma_part(:,:,:,:)
   COMPLEX(DP), allocatable :: cufkk_all_all(:,:,:)
   COMPLEX(DP), allocatable :: ham_wannier(:,:)
@@ -195,7 +199,7 @@
 
   fermicount = 0 
   DO ik=1, nkf
-    ! write(stdout, *) 'ik, iq', ik, iq
+    write(stdout, *) 'ik, iq', ik, iq
     !
     ikk = 2 * ik - 1
     ikq = ikk + 1
@@ -364,11 +368,16 @@
 !     ENDIF
     !
     ALLOCATE(mat_temp(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+    ALLOCATE(mat_temp2(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+    ALLOCATE(mat_temp3(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
+    ALLOCATE(green_diag(ibndmax-ibndmin+1, ibndmax-ibndmin+1))
     ALLOCATE(evals_temp(ibndmax-ibndmin+1))
     ALLOCATE(ipiv(ibndmax-ibndmin+1))
-    ALLOCATE(a_all_offd_diag(ibndmax-ibndmin+1, nw_specfun, nksqtotf))
+    ALLOCATE(a_all_offd_resolv(ibndmax-ibndmin+1, nw_specfun, nksqtotf))
+    ALLOCATE(a_all_d_resolv(ibndmax-ibndmin+1, nw_specfun, nksqtotf))
     ALLOCATE(ham_wannier(nbndsub, nbndsub))
-    a_all_offd_diag = 0.d0
+    a_all_offd_resolv = 0.d0
+    a_all_d_resolv = 0.d0
     DO ik=1, nksqtotf
       !
       ikk = 2 * ik - 1
@@ -399,6 +408,21 @@
           mat_temp(ibnd, ibnd) = mat_temp(ibnd, ibnd) + ww
         ENDDO
 
+        ! jml: diagonal self-energy only (Note: diagonal in energy eigenbasis)
+        ! green_diag = ww - ham_wannier - cufkk_all_all.H @ diag(esigma_all) @ cufkk_all_all
+        green_diag = mat_temp
+        mat_temp2 = czero
+        do ibnd = 1, nbndsub
+          mat_temp2(ibnd, ibnd) = CMPLX(esigmar_all(ibnd,ik,iw), esigmai_all(ibnd,ik,iw))
+        end do
+        CALL ZGEMM('C', 'N', nbndsub, nbndsub, nbndsub, &
+          cone, cufkk_all_all(1,1,ik), nbndsub, mat_temp2, nbndsub, &
+          czero, mat_temp3, nbndsub)
+        CALL ZGEMM('N', 'N', nbndsub, nbndsub, nbndsub, &
+          -cone, mat_temp3, nbndsub, cufkk_all_all(1,1,ik), nbndsub, &
+          cone, green_diag, nbndsub)
+
+
         ! jml: Note that esigma are in Wannier basis, not energy eigenbasis
         
         ! jml: does this work?
@@ -415,6 +439,7 @@
           ENDDO
         ENDDO
 
+
         CALL ZGETRF(ibndmax-ibndmin+1, ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, info)
         allocate(work(1))
         CALL ZGETRI(ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, work, -1, info)
@@ -424,9 +449,20 @@
         CALL ZGETRI(ibndmax-ibndmin+1, mat_temp, ibndmax-ibndmin+1, ipiv, work, lwork, info)
         deallocate(work)
 
+        CALL ZGETRF(ibndmax-ibndmin+1, ibndmax-ibndmin+1, green_diag, ibndmax-ibndmin+1, ipiv, info)
+        allocate(work(1))
+        CALL ZGETRI(ibndmax-ibndmin+1, green_diag, ibndmax-ibndmin+1, ipiv, work, -1, info)
+        lwork = int(work(1))
+        deallocate(work)
+        allocate(work(lwork))
+        CALL ZGETRI(ibndmax-ibndmin+1, green_diag, ibndmax-ibndmin+1, ipiv, work, lwork, info)
+        deallocate(work)
+
         DO ibnd=1, ibndmax-ibndmin+1
           a_all_offd(iw,ik) = a_all_offd(iw,ik) + aimag(mat_temp(ibnd,ibnd)) / pi
-          a_all_offd_diag(ibnd,iw,ik) = aimag(mat_temp(ibnd,ibnd)) / pi
+          ! Wannier-resolved spectral function
+          a_all_offd_resolv(ibnd,iw,ik) = aimag(mat_temp(ibnd,ibnd)) / pi
+          a_all_d_resolv(ibnd,iw,ik) = aimag(green_diag(ibnd,ibnd)) / pi
         END DO
 
         !
@@ -440,6 +476,8 @@
       !
     ENDDO ! ik
     DEALLOCATE(mat_temp)
+    DEALLOCATE(mat_temp2)
+    DEALLOCATE(mat_temp3)
     DEALLOCATE(ham_wannier)
     DEALLOCATE(cufkk_all_all)
     ! !
@@ -477,10 +515,16 @@
       write(iospectral, rec=1) a_all_offd / ryd2mev
       close(iospectral)
 
-      inquire(iolength=reclen) a_all_offd_diag(:,:,:)
-      open(UNIT=iospectral, FILE='specfun_offdiag_diag.elself', form='unformatted', &
+      inquire(iolength=reclen) a_all_offd_resolv(:,:,:)
+      open(UNIT=iospectral, FILE='specfun_offdiag_resolv.elself', form='unformatted', &
            status='unknown', access='direct', recl=reclen)
-      write(iospectral, rec=1) a_all_offd_diag / ryd2mev
+      write(iospectral, rec=1) a_all_offd_resolv / ryd2mev
+      close(iospectral)
+
+      inquire(iolength=reclen) a_all_d_resolv(:,:,:)
+      open(UNIT=iospectral, FILE='specfun_diag_resolv.elself', form='unformatted', &
+           status='unknown', access='direct', recl=reclen)
+      write(iospectral, rec=1) a_all_d_resolv / ryd2mev
       close(iospectral)
 
       ! inquire(iolength=reclen) ryd2mev * (esigmar_all_offd + ci * esigmai_all_offd)
