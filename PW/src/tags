@@ -1,0 +1,1665 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+1	efermig.f90	/^1 continue$/;"	l	function:efermig	file:
+10	addusdens.f90	/^  10 CONTINUE$/;"	l	subroutine:addusdens_g	file:
+10	addusforce.f90	/^  10 CONTINUE$/;"	l	subroutine:addusforce_g	file:
+10	addusstress.f90	/^10 CONTINUE$/;"	l	subroutine:addusstress_g	file:
+10	buffers.f90	/^  10      continue$/;"	l	subroutine:close_buffer	file:
+10	electrons.f90	/^10  FLUSH( stdout )$/;"	l	subroutine:electrons_scf	file:
+10	force_ew.f90	/^10 alpha = alpha - 0.1d0$/;"	l	subroutine:force_ew	file:
+10	force_hub.f90	/^10   DEALLOCATE ( dproj ) $/;"	l	subroutine:dndtau_gamma	file:
+10	force_hub.f90	/^10   DEALLOCATE ( dproj ) $/;"	l	subroutine:dndtau_k	file:
+10	pw_restart_new.f90	/^ 10      CONTINUE$/;"	l	subroutine:pw_write_schema	file:
+10	run_driver.f90	/^10 CONTINUE$/;"	l	function:get_server_address	file:
+10	stres_hub.f90	/^10    CALL mp_sum(dns_, intra_pool_comm)$/;"	l	subroutine:dndepsilon	file:
+10	stres_us.f90	/^10     CONTINUE$/;"	l	subroutine:stres_us_gamma	file:
+10	stres_us.f90	/^10     CONTINUE$/;"	l	subroutine:stres_us_k	file:
+10	sumkt.f90	/^10   a (i + 1) = temp$/;"	l	subroutine:piksort	file:
+10	symm_base.f90	/^10   CONTINUE$/;"	l	function:checksym	file:
+10	symm_base.f90	/^10   CONTINUE$/;"	l	subroutine:set_sym_bl	file:
+10	symm_base.f90	/^10 CONTINUE$/;"	l	subroutine:sgam_at	file:
+100	efermit.f90	/^100 continue$/;"	l	function:efermit	file:
+100	ewald.f90	/^100 alpha = alpha - 0.1d0$/;"	l	function:ewald	file:
+100	force_ew.f90	/^100 continue$/;"	l	subroutine:force_ew	file:
+100	generate_rVV10_kernel_table.f90	/^  100 call errore ('generate_vv10_sgd_kernel_table', 'Writing table file', abs (ios) )$/;"	l	subroutine:write_data	file:
+100	generate_vdW_kernel_table.f90	/^100 CALL errore ('generate_vdW_kernel_table', 'Writing table file', abs (ios) )$/;"	l	subroutine:write_data	file:
+100	init_us_1.f90	/^100 continue$/;"	l	subroutine:init_us_1	file:
+100	irrek.f90	/^100     CONTINUE$/;"	l	subroutine:irrek_nc	file:
+100	irrek.f90	/^100     continue$/;"	l	subroutine:irrek	file:
+100	n_plane_waves.f90	/^100  npwx = max (npwx, npw )$/;"	l	function:n_plane_waves	file:
+100	pw2casino_write.f90	/^  100 FORMAT (3(1x,f20.15))$/;"	l	subroutine:write_header	file:
+100	pw_restart_new.f90	/^ 100  CALL errore('pw_readschemafile',TRIM(errmsg),ierr)$/;"	l	subroutine:pw_readschema_file	file:
+100	stres_us.f90	/^100    CONTINUE$/;"	l	subroutine:stres_us_gamma	file:
+100	stres_us.f90	/^100    CONTINUE$/;"	l	subroutine:stres_us_k	file:
+100	summary.f90	/^100 FORMAT( \/,\/,5X, &$/;"	l	subroutine:summary	file:
+100	symm_base.f90	/^100  CONTINUE$/;"	l	subroutine:sgam_at_ifc	file:
+100	vcsubs.f90	/^100              sig = dsqrt (log (um \/ (eps * eps) ) )$/;"	l	subroutine:ranv	file:
+101	summary.f90	/^101 FORMAT(5X, &$/;"	l	subroutine:summary	file:
+101	vcsmd.f90	/^101 FORMAT(1X,4D12.5,I6)$/;"	l	subroutine:vcsmd	file:
+1010	memory_report.f90	/^ 1010 format (\/5x,'Estimated static dynamical RAM per process > ', F10.2, A3)$/;"	l	subroutine:memory_report	file:
+1010	report_mag.f90	/^ 1010 format (\/,1x,78('='))$/;"	l	subroutine:report_mag	file:
+1011	memory_report.f90	/^ 1011 format (\/5x,'Estimated max dynamical RAM per process > ', F10.2, A3)$/;"	l	subroutine:memory_report	file:
+1011	report_mag.f90	/^ 1011 format (5x,'atom number ',i4,' relative position : ',3f9.4)$/;"	l	subroutine:report_mag	file:
+1012	memory_report.f90	/^ 1012 format (\/5x,'Estimated total dynamical RAM > ', F10.2, A3)$/;"	l	subroutine:memory_report	file:
+1012	report_mag.f90	/^ 1012 format (5x,'magnetization :      ',3f12.6)$/;"	l	subroutine:report_mag	file:
+1013	memory_report.f90	/^ 1013 format (\/5x,'Dynamical RAM for ', A19, ': ', F10.2, ' MB')$/;"	l	subroutine:memory_report	file:
+1013	report_mag.f90	/^ 1013 format (5x,'polar coord.: r, theta, phi [deg] : ',3f12.6)$/;"	l	subroutine:report_mag	file:
+1014	memory_report.f90	/^ 1014 format (\/5x,'Dynamical RAM for ', A19, ': ', '?? MB (not yet implemented')$/;"	l	subroutine:memory_report	file:
+1014	report_mag.f90	/^ 1014 format (5x,'charge : ',f12.6)$/;"	l	subroutine:report_mag	file:
+1015	report_mag.f90	/^ 1015 format (5x,'constrained moment : ',3f12.6) $/;"	l	subroutine:report_mag	file:
+1017	report_mag.f90	/^ 1017 format (5x,'constrained theta [deg] : ',f12.6) $/;"	l	subroutine:report_mag	file:
+1018	report_mag.f90	/^ 1018 format (5x,'magnetization\/charge:',3f12.6)$/;"	l	subroutine:report_mag	file:
+102	summary.f90	/^102 FORMAT(5X, &$/;"	l	subroutine:summary	file:
+1020	report_mag.f90	/^ 1020 format (5x,'atom: ',i4,4X,'charge: ',F9.4,4X,'magn: ',F9.4,4X,'constr: ',f9.4)$/;"	l	subroutine:report_mag	file:
+103	summary.f90	/^103 FORMAT(5X, &$/;"	l	subroutine:summary	file:
+103	vcsmd.f90	/^103 FORMAT(1X,6D12.5,I6)$/;"	l	subroutine:vcsmd	file:
+104	summary.f90	/^104 FORMAT(5X, &$/;"	l	subroutine:summary	file:
+104	vcsmd.f90	/^104 FORMAT(1X,2D12.5,I6)$/;"	l	subroutine:vcsmd	file:
+105	summary.f90	/^105 FORMAT(5X, &$/;"	l	subroutine:summary	file:
+105	vcsmd.f90	/^105 FORMAT(1X,3D12.5,I6)$/;"	l	subroutine:vcsmd	file:
+110	summary.f90	/^110  FORMAT( 5X,'A smooth kinetic-energy cutoff is imposed at ', &$/;"	l	subroutine:summary	file:
+111	vcsubs.f90	/^ 111    continue$/;"	l	subroutine:ranv	file:
+12	stres_ewa.f90	/^12 alpha = alpha - 0.1d0$/;"	l	subroutine:stres_ewa	file:
+15	force_cc.f90	/^15 continue$/;"	l	subroutine:force_cc	file:
+15	stres_cc.f90	/^15 continue$/;"	l	subroutine:stres_cc	file:
+15	tetra.f90	/^15   CONTINUE$/;"	l	subroutine:opt_tetra_init	file:
+15	tetra.f90	/^15   CONTINUE$/;"	l	subroutine:tetra_init	file:
+20	buffers.f90	/^  20      deallocate (vect)$/;"	l	subroutine:close_buffer	file:
+20	compute_ux.f90	/^20 CONTINUE$/;"	l	subroutine:compute_ux	file:
+20	esm.f90	/^20   indsw = irr (ir)$/;"	l	subroutine:esm_rgen_2d	file:
+20	pw2casino.f90	/^20 CONTINUE$/;"	l	subroutine:pw2casino	file:
+20	symm_base.f90	/^20   CONTINUE$/;"	l	subroutine:sgam_at	file:
+20	tetra.f90	/^20   CONTINUE$/;"	l	subroutine:opt_tetra_init	file:
+20	tetra.f90	/^20   CONTINUE$/;"	l	subroutine:tetra_init	file:
+200	irrek.f90	/^200  CONTINUE$/;"	l	subroutine:irrek_nc	file:
+50	force_ew.f90	/^50      continue$/;"	l	subroutine:force_ew	file:
+666	vcsubs.f90	/^666     continue$/;"	l	subroutine:vcmove	file:
+9000	c_bands.f90	/^9000 FORMAT( '     total cpu time spent up to now is ',F10.1,' secs' )$/;"	l	subroutine:c_bands_nscf	file:
+9000	electrons.f90	/^9000 FORMAT(\/'     total cpu time spent up to now is ',F10.1,' secs' )$/;"	l	subroutine:electrons_scf	file:
+9000	non_scf.f90	/^9000 FORMAT(\/'     total cpu time spent up to now is ',F10.1,' secs' )$/;"	l	subroutine:non_scf	file:
+9000	stress.f90	/^9000 format (10x,'total   stress  (Ry\/bohr**3) ',18x,'(kbar)', &$/;"	l	subroutine:stress	file:
+9001	c_bands.f90	/^9001 FORMAT(\/'     Computing kpt #: ',I5, '  of ',I5 )$/;"	l	subroutine:c_bands_nscf	file:
+9001	electrons.f90	/^9001 FORMAT(\/'     per-process dynamical memory: ',f7.1,' Mb' )$/;"	l	subroutine:electrons_scf	file:
+9001	fcp.f90	/^9001  FORMAT(\/,5X,'FCP Optimisation: Force acting on FCP =',F12.6,' Ry',\/)$/;"	l	subroutine:fcp_line_minimisation	file:
+9002	c_bands.f90	/^9002 FORMAT(\/'     Computing kpt #: ',I5, '  of ',I5,' on this pool' )$/;"	l	subroutine:c_bands_nscf	file:
+9002	electrons.f90	/^9002 FORMAT(\/'     Self-consistent Calculation' )$/;"	l	subroutine:electrons_scf	file:
+9002	fcp.f90	/^9002  FORMAT(\/,5X,'FCP Optimisation: Force acting on FCP =',F12.6,' Ry',\/)$/;"	l	subroutine:fcp_mdiis_update	file:
+9002	non_scf.f90	/^9002 FORMAT(\/'     Band Structure Calculation' )$/;"	l	subroutine:non_scf	file:
+9005	stress.f90	/^9005 format &$/;"	l	subroutine:stress	file:
+9006	stress.f90	/^9006 format (5x,'EXX     stress (kbar)',3f10.2\/2(26x,3f10.2\/)\/ )$/;"	l	subroutine:stress	file:
+9010	efermit.f90	/^9010 format (\/5x,'Warning: too many iterations in bisection'\/ &$/;"	l	function:efermit	file:
+9010	electrons.f90	/^9010 FORMAT(\/'     iteration #',I3,'     ecut=', F9.2,' Ry',5X,'beta=',F5.2 )$/;"	l	subroutine:electrons_scf	file:
+9010	run_driver.f90	/^9010 FORMAT( \/,5X,'Current dimensions of program PWSCF are:', &$/;"	l	subroutine:run_driver	file:
+9010	run_pwscf.f90	/^9010 FORMAT( \/,5X,'Current dimensions of program PWSCF are:', &$/;"	l	subroutine:run_pwscf	file:
+9010	run_pwscf.f90	/^9010 FORMAT( \/5X,'lsda relaxation :  a final configuration with zero', &$/;"	l	subroutine:reset_magn	file:
+9015	print_ks_energies.f90	/^9015 FORMAT(\/' ------ SPIN UP ------------'\/ )$/;"	l	subroutine:print_ks_energies	file:
+9016	print_ks_energies.f90	/^9016 FORMAT(\/' ------ SPIN DOWN ----------'\/ )$/;"	l	subroutine:print_ks_energies	file:
+9017	electrons.f90	/^9017 FORMAT(\/'     total magnetization       =', F9.2,' Bohr mag\/cell', &$/;"	l	subroutine:print_energies	file:
+9018	electrons.f90	/^9018 FORMAT(\/'     total magnetization       =',3F9.2,' Bohr mag\/cell' &$/;"	l	subroutine:print_energies	file:
+9020	efermit.f90	/^9020 format (\/5x,'Warning: ef =',f10.6, &$/;"	l	function:efermit	file:
+9020	print_ks_energies.f90	/^9020 FORMAT(\/'          k =',3F7.4,'     band energies (ev):'\/ )$/;"	l	subroutine:print_ks_energies	file:
+9020	run_pwscf.f90	/^9020 FORMAT( \/5X,'the program is checking if it is really ', &$/;"	l	subroutine:reset_magn	file:
+9021	print_ks_energies.f90	/^9021 FORMAT(\/'          k =',3F7.4,' (',I6,' PWs)   bands (ev):'\/ )$/;"	l	subroutine:print_ks_energies	file:
+9030	print_ks_energies.f90	/^9030 FORMAT( '  ',8F9.4 )$/;"	l	subroutine:print_ks_energies	file:
+9032	print_ks_energies.f90	/^9032 FORMAT(\/'     occupation numbers ' )$/;"	l	subroutine:print_ks_energies	file:
+9035	forces.f90	/^9035 FORMAT(5X,'atom ',I4,' type ',I2,'   force = ',3F14.8)$/;"	l	subroutine:forces	file:
+9040	print_ks_energies.f90	/^9040 FORMAT(\/'     the Fermi energy is ',F10.4,' ev' )$/;"	l	subroutine:print_ks_energies	file:
+9041	print_ks_energies.f90	/^9041 FORMAT(\/'     the spin up\/dw Fermi energies are ',2F10.4,' ev' )$/;"	l	subroutine:print_ks_energies	file:
+9042	print_ks_energies.f90	/^9042 FORMAT(\/'     highest occupied, lowest unoccupied level (ev): ',2F10.4 )$/;"	l	subroutine:print_ks_energies	file:
+9043	print_ks_energies.f90	/^9043 FORMAT(\/'     highest occupied level (ev): ',F10.4 )$/;"	l	subroutine:print_ks_energies	file:
+9050	electrons.f90	/^9050 FORMAT(\/'     WARNING: integrated charge=',F15.8,', expected=',F15.8 )$/;"	l	subroutine:electrons_scf	file:
+9050	esm.f90	/^9050 FORMAT( '#z (A)',2X,'Tot chg (e\/A)',2X,'Avg v_hartree (eV)',2X,&$/;"	l	subroutine:esm_printpot	file:
+9051	esm.f90	/^9051  FORMAT( '     field strength                   = ', F8.2,' Ry\/a.u.')$/;"	l	subroutine:esm_summary	file:
+9051	esm.f90	/^9051 FORMAT( F6.2,F20.7,F20.7,F18.7,F18.7 )$/;"	l	subroutine:esm_printpot	file:
+9052	esm.f90	/^9052  FORMAT( '     ESM offset from cell edge        = ', F8.2,' A' &$/;"	l	subroutine:esm_summary	file:
+9053	esm.f90	/^9053  FORMAT( '     grid points for fit at edges     = ', I8,' ')$/;"	l	subroutine:esm_summary	file:
+9054	esm.f90	/^9054  FORMAT( '     smoothness parameter             = ', F8.2,' 1\/a.u.' )$/;"	l	subroutine:esm_summary	file:
+9056	fcp.f90	/^9056  FORMAT( '     Target Fermi energy              = ', F9.4,' eV' &$/;"	l	subroutine:fcp_summary	file:
+9057	fcp.f90	/^9057  FORMAT( '     Initial tot_charge               = ', F9.6)$/;"	l	subroutine:fcp_summary	file:
+9058	fcp.f90	/^9058  FORMAT( '     FCP relax algorism               =  Line-Minimisation')$/;"	l	subroutine:fcp_summary	file:
+9059	fcp.f90	/^9059  FORMAT( '     FCP relax step                   = ', F9.2)$/;"	l	subroutine:fcp_summary	file:
+9060	electrons.f90	/^9060 FORMAT(\/'     The total energy is the sum of the following terms:',\/,&$/;"	l	subroutine:print_energies	file:
+9060	fcp.f90	/^9060  FORMAT( '     FCP relax algorism               =  MDIIS')$/;"	l	subroutine:fcp_summary	file:
+9061	electrons.f90	/^9061 FORMAT( '     electric field correction =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9061	fcp.f90	/^9061  FORMAT( '     FCP MDIIS-size                   = ', I6)$/;"	l	subroutine:fcp_summary	file:
+9062	electrons.f90	/^9062 FORMAT( '     - averaged Fock potential =',0PF17.8,' Ry' )$/;"	l	subroutine:electrons	file:
+9062	electrons.f90	/^9062 FORMAT( '     gate field correction     =',F17.8,' Ry' ) ! TB$/;"	l	subroutine:print_energies	file:
+9062	fcp.f90	/^9062  FORMAT( '     FCP MDIIS-step                   = ', F9.2)$/;"	l	subroutine:fcp_summary	file:
+9063	electrons.f90	/^9063 FORMAT( '     + Fock energy (ACE)       =',0PF17.8,' Ry' )$/;"	l	subroutine:electrons	file:
+9063	fcp.f90	/^9063  FORMAT( '     FCP force convergence threshold  = ', 1PE9.1,' V' &$/;"	l	subroutine:fcp_summary	file:
+9064	electrons.f90	/^9064 FORMAT( '     + Fock energy (full)      =',0PF17.8,' Ry' )$/;"	l	subroutine:electrons	file:
+9064	fcp.f90	/^9064  FORMAT( '     FCP temperature                  = ', F9.6)$/;"	l	subroutine:fcp_summary	file:
+9065	electrons.f90	/^9065 FORMAT( '     Hubbard energy            =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9065	fcp.f90	/^9065  FORMAT( '     FCP mass                         = ', F9.6)$/;"	l	subroutine:fcp_summary	file:
+9066	electrons.f90	/^9066 FORMAT(\/,A2,'   total energy              =',0PF17.8,' Ry' &$/;"	l	subroutine:electrons	file:
+9067	electrons.f90	/^9067 FORMAT( '     one-center paw contrib.   =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9067	electrons.f90	/^9067 FORMAT('     est. exchange err (dexx)  =',0PF17.8,' Ry' )$/;"	l	subroutine:electrons	file:
+9068	electrons.f90	/^9068 FORMAT( '      -> PAW hartree energy AE =',F17.8,' Ry' &$/;"	l	subroutine:print_energies	file:
+9068	electrons.f90	/^9068 FORMAT('     est. exchange err (dexx)  =',1PE17.1,' Ry' )$/;"	l	subroutine:electrons	file:
+9069	electrons.f90	/^9069 FORMAT( '     scf correction            =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9070	electrons.f90	/^9070 FORMAT( '     smearing contrib. (-TS)   =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9071	electrons.f90	/^9071 FORMAT( '     Magnetic field            =',3F12.7,' Ry' )$/;"	l	subroutine:print_energies	file:
+9072	electrons.f90	/^9072 FORMAT( '     pot.stat. contrib. (-muN) =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9073	electrons.f90	/^9073 FORMAT( '     lambda                    =',F11.2,' Ry' )$/;"	l	subroutine:print_energies	file:
+9074	electrons.f90	/^9074 FORMAT( '     Dispersion Correction     =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9075	electrons.f90	/^9075 FORMAT( '     Dispersion XDM Correction =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9076	electrons.f90	/^9076 FORMAT( '     Dispersion T-S Correction =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9077	electrons.f90	/^9077 FORMAT( '     External forces energy    =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9078	electrons.f90	/^9078 FORMAT( '     DFT-D3 Dispersion         =',F17.8,' Ry' )$/;"	l	subroutine:print_energies	file:
+9080	electrons.f90	/^9080 FORMAT(\/'     total energy              =',0PF17.8,' Ry' &$/;"	l	subroutine:print_energies	file:
+9081	electrons.f90	/^9081 FORMAT(\/'!    total energy              =',0PF17.8,' Ry' &$/;"	l	subroutine:print_energies	file:
+9082	electrons.f90	/^9082 FORMAT(\/'     total energy              =',0PF17.8,' Ry' &$/;"	l	subroutine:print_energies	file:
+9083	electrons.f90	/^9083 FORMAT(\/'!    total energy              =',0PF17.8,' Ry' &$/;"	l	subroutine:print_energies	file:
+9085	electrons.f90	/^9085 FORMAT(\/'     total all-electron energy =',0PF17.6,' Ry' )$/;"	l	subroutine:print_energies	file:
+9101	electrons.f90	/^9101 FORMAT(\/'     EXX self-consistency reached' )$/;"	l	subroutine:electrons	file:
+9101	electrons.f90	/^9101 FORMAT(\/'     End of self-consistent calculation' )$/;"	l	subroutine:electrons_scf	file:
+9102	non_scf.f90	/^9102 FORMAT(\/'     End of band structure calculation' )$/;"	l	subroutine:non_scf	file:
+9110	electrons.f90	/^9110 FORMAT(\/'     convergence has been achieved in ',i3,' iterations' )$/;"	l	subroutine:electrons_scf	file:
+9110	run_pwscf.f90	/^9110 FORMAT( \/5X,'A final scf calculation at the relaxed structure.' )$/;"	l	subroutine:reset_gvectors	file:
+9120	electrons.f90	/^9120 FORMAT(\/'     EXX convergence NOT achieved after ',i3,' iterations: stopping' )$/;"	l	subroutine:electrons	file:
+9120	electrons.f90	/^9120 FORMAT(\/'     convergence NOT achieved after ',i3,' iterations: stopping' )$/;"	l	subroutine:electrons_scf	file:
+9120	run_pwscf.f90	/^9120 FORMAT(  5X,'The G-vectors are recalculated for the final unit cell'\/ &$/;"	l	subroutine:reset_gvectors	file:
+9121	electrons.f90	/^9121 FORMAT(\/'     scf convergence threshold =',1PE17.1,' Ry' )$/;"	l	subroutine:electrons	file:
+99	init_us_0.f90	/^ 99     continue$/;"	l	subroutine:init_us_0	file:
+99	vloc_psi.f90	/^99 format ( 20 ('(',2f12.9,')') )$/;"	l	subroutine:vloc_psi_k	file:
+AbsOvG	loc_scdm.f90	/^SUBROUTINE AbsOvG(/;"	s	module:loc_scdm
+AbsOvG_k	loc_scdm_k.f90	/^SUBROUTINE AbsOvG_k(/;"	s	module:loc_scdm_k
+AbsOvR	loc_scdm.f90	/^SUBROUTINE AbsOvR(/;"	s	module:loc_scdm
+AbsOv_histogram	loc_scdm.f90	/^SUBROUTINE AbsOv_histogram(/;"	s	module:loc_scdm
+AbsOv_histogram_k	loc_scdm_k.f90	/^SUBROUTINE AbsOv_histogram_k(/;"	s	module:loc_scdm_k
+Coul_cut_2D	Coul_cut_2D.f90	/^MODULE Coul_cut_2D$/;"	m
+ENTRY	buffers.f90	/^  TYPE(index_of_list),SAVE,POINTER :: ENTRY /;"	v	module:buiol
+GENERATE_KERNEL_	generate_vdW_kernel_table.f90	/^PROGRAM GENERATE_KERNEL_$/;"	p
+Hubbard_J	ldaU.f90	/^       Hubbard_J0/;"	v	module:ldaU
+Hubbard_J0	ldaU.f90	/^       Hubbard_U(ntypx),     &! the Hubbard U$/;"	v	module:ldaU
+Hubbard_U	ldaU.f90	/^       eth,                  &! the Hubbard contribution to the energy$/;"	v	module:ldaU
+Hubbard_alpha	ldaU.f90	/^       Hubbard_J(3,ntypx),   &! extra Hubbard parameters for full LDA+U:  $/;"	v	module:ldaU
+Hubbard_beta	ldaU.f90	/^       Hubbard_alpha(ntypx), &! the Hubbard alpha (used to calculate U)$/;"	v	module:ldaU
+Hubbard_l	ldaU.f90	/^       lda_plus_u_kind,      &! 1\/0 --> full\/simplified(old) LDA+U calculation$/;"	v	module:ldaU
+Hubbard_lmax	ldaU.f90	/^       Hubbard_l(ntypx),     &! the angular momentum of Hubbard states$/;"	v	module:ldaU
+MODFLAGS	Makefile	/^MODFLAGS= $(BASEMOD_FLAGS) \\$/;"	m
+MatCheck	utils.f90	/^SUBROUTINE MatCheck(/;"	s
+MatChol	utils.f90	/^SUBROUTINE MatChol(/;"	s
+MatInv	utils.f90	/^SUBROUTINE MatInv(/;"	s
+MatPrt	utils.f90	/^SUBROUTINE MatPrt(/;"	s
+MatSymm	utils.f90	/^SUBROUTINE MatSymm(/;"	s
+MatSymm_k	utils.f90	/^SUBROUTINE MatSymm_k(/;"	s
+MatTrp	utils.f90	/^SUBROUTINE MatTrp(/;"	s
+One	loc_scdm.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=/;"	v	module:loc_scdm
+One	loc_scdm_k.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=/;"	v	module:loc_scdm_k
+PAW_atomic_becsum	paw_init.f90	/^SUBROUTINE PAW_atomic_becsum(/;"	s	module:paw_init
+PAW_clean_fock_kernel	paw_exx.f90	/^  SUBROUTINE PAW_clean_fock_kernel(/;"	s	module:paw_exx
+PAW_ddot	paw_onecenter.f90	/^FUNCTION PAW_ddot(/;"	f	module:paw_onecenter
+PAW_desymmetrize	paw_symmetry.f90	/^SUBROUTINE PAW_desymmetrize(/;"	s	module:paw_symmetry
+PAW_dgcxc_potential	paw_onecenter.f90	/^SUBROUTINE PAW_dgcxc_potential(/;"	s	module:paw_onecenter
+PAW_divergence	paw_onecenter.f90	/^SUBROUTINE PAW_divergence(/;"	s	module:paw_onecenter
+PAW_dpotential	paw_onecenter.f90	/^SUBROUTINE PAW_dpotential(/;"	s	module:paw_onecenter
+PAW_dumqsymmetrize	paw_symmetry.f90	/^SUBROUTINE PAW_dumqsymmetrize(/;"	s	module:paw_symmetry
+PAW_dusymmetrize	paw_symmetry.f90	/^SUBROUTINE PAW_dusymmetrize(/;"	s	module:paw_symmetry
+PAW_dxc_potential	paw_onecenter.f90	/^SUBROUTINE PAW_dxc_potential(/;"	s	module:paw_onecenter
+PAW_fock_onecenter	paw_exx.f90	/^  SUBROUTINE PAW_fock_onecenter(/;"	s	module:paw_exx
+PAW_gcxc_potential	paw_onecenter.f90	/^SUBROUTINE PAW_gcxc_potential(/;"	s	module:paw_onecenter
+PAW_gradient	paw_onecenter.f90	/^SUBROUTINE PAW_gradient(/;"	s	module:paw_onecenter
+PAW_h_potential	paw_onecenter.f90	/^SUBROUTINE PAW_h_potential(/;"	s	module:paw_onecenter
+PAW_increase_lm	paw_init.f90	/^SUBROUTINE PAW_increase_lm(/;"	s	module:paw_init
+PAW_init_fock_kernel	paw_exx.f90	/^  SUBROUTINE PAW_init_fock_kernel(/;"	s	module:paw_exx
+PAW_init_onecenter	paw_init.f90	/^SUBROUTINE PAW_init_onecenter(/;"	s	module:paw_init
+PAW_lm2rad	paw_onecenter.f90	/^SUBROUTINE PAW_lm2rad(/;"	s	module:paw_onecenter
+PAW_make_ae_charge_xdm	xdm_dispersion.f90	/^  SUBROUTINE PAW_make_ae_charge_xdm(/;"	s	module:xdm_module
+PAW_newdxx	paw_exx.f90	/^  SUBROUTINE PAW_newdxx(/;"	s	module:paw_exx
+PAW_post_init	paw_init.f90	/^SUBROUTINE PAW_post_init(/;"	s	module:paw_init
+PAW_potential	paw_onecenter.f90	/^SUBROUTINE PAW_potential(/;"	s	module:paw_onecenter
+PAW_rad2lm	paw_onecenter.f90	/^SUBROUTINE PAW_rad2lm(/;"	s	module:paw_onecenter
+PAW_rad2lm3	paw_onecenter.f90	/^SUBROUTINE PAW_rad2lm3(/;"	s	module:paw_onecenter
+PAW_rad_init	paw_init.f90	/^SUBROUTINE PAW_rad_init(/;"	s	module:paw_init
+PAW_rho_lm	paw_onecenter.f90	/^SUBROUTINE PAW_rho_lm(/;"	s	module:paw_onecenter
+PAW_rho_lm_ij	paw_exx.f90	/^  SUBROUTINE PAW_rho_lm_ij(/;"	s	module:paw_exx
+PAW_symmetrize	paw_symmetry.f90	/^SUBROUTINE PAW_symmetrize(/;"	s	module:paw_symmetry
+PAW_symmetrize_ddd	paw_symmetry.f90	/^SUBROUTINE PAW_symmetrize_ddd(/;"	s	module:paw_symmetry
+PAW_xc_potential	paw_onecenter.f90	/^SUBROUTINE PAW_xc_potential(/;"	s	module:paw_onecenter
+PAW_xx_energy	paw_exx.f90	/^  FUNCTION PAW_xx_energy(/;"	f	module:paw_exx
+PTSVD	utils.f90	/^SUBROUTINE PTSVD(/;"	s
+PWLIBS	Makefile	/^PWLIBS = \\$/;"	m
+PWOBJS	Makefile	/^PWOBJS = \\$/;"	m
+QEMODS	Makefile	/^QEMODS=..\/..\/Modules\/libqemod.a \\$/;"	m
+SCDM_PGG	loc_scdm.f90	/^SUBROUTINE SCDM_PGG(/;"	s	module:loc_scdm
+SCDM_PGG_k	loc_scdm_k.f90	/^SUBROUTINE SCDM_PGG_k(/;"	s	module:loc_scdm_k
+TIMING	paw_init.f90	/^  LOGICAL,PARAMETER :: TIMING /;"	v	module:paw_init
+TIMING	paw_onecenter.f90	/^    LOGICAL, PARAMETER :: TIMING /;"	v	module:paw_onecenter
+TLDEPS	Makefile	/^TLDEPS= bindir libs mods libks_solvers dftd3$/;"	m
+Three	loc_scdm.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=1.0d0, Two=2.0d0, Three=/;"	v	module:loc_scdm
+Three	loc_scdm_k.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=1.0d0, Two=2.0d0, Three=/;"	v	module:loc_scdm_k
+Two	loc_scdm.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=1.0d0, Two=/;"	v	module:loc_scdm
+Two	loc_scdm_k.f90	/^  REAL(DP), PARAMETER :: Zero=0.0d0, One=1.0d0, Two=/;"	v	module:loc_scdm_k
+U_projection	ldaU.f90	/^  CHARACTER(len=30) :: &      ! 'atomic', 'ortho-atomic', 'file'$/;"	v	module:ldaU
+Zero	loc_scdm.f90	/^  REAL(DP), PARAMETER :: Zero=/;"	v	module:loc_scdm
+Zero	loc_scdm_k.f90	/^  REAL(DP), PARAMETER :: Zero=/;"	v	module:loc_scdm_k
+a1i	xdm_dispersion.f90	/^  REAL(DP) :: a1i /;"	v	module:xdm_module
+a2F	a2fmod.f90	/^MODULE a2F$/;"	m
+a2Fsave	a2fmod.f90	/^    SUBROUTINE a2Fsave$/;"	s	module:a2F
+a2i	xdm_dispersion.f90	/^  REAL(DP) :: a2i /;"	v	module:xdm_module
+aainit_1	plus_u_full.f90	/^subroutine aainit_1(/;"	s
+absmag	pwcom.f90	/^       magtot,                       &! total magnetization$/;"	v	module:lsda_mod
+acc	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: vel(:,:), acc(/;"	v	module:dynamics_module
+acc	fcp.f90	/^   REAL(DP) :: vel, acc$/;"	v	module:fcp
+accep	symm_base.f90	/^       sr (3,3,48),          &! symmetry matrices, in cartesian axis$/;"	v	module:symm_base
+aceinit	exx.f90	/^SUBROUTINE aceinit(/;"	s	module:exx
+aceinit_gamma	exx.f90	/^SUBROUTINE aceinit_gamma(/;"	s	module:exx
+aceinit_k	exx.f90	/^SUBROUTINE aceinit_k(/;"	s	module:exx
+aceupdate	exx.f90	/^SUBROUTINE aceupdate(/;"	s	module:exx
+aceupdate_k	exx.f90	/^SUBROUTINE aceupdate_k(/;"	s	module:exx
+acfdt_eband	acfdt_in_pw.f90	/^  REAL(DP) :: acfdt_eband /;"	v	module:acfdt_ener
+acfdt_ener	acfdt_in_pw.f90	/^MODULE acfdt_ener$/;"	m
+acfdt_in_pw	acfdt_in_pw.f90	/^  LOGICAL  :: acfdt_in_pw /;"	v	module:acfdt_ener
+add_becsum_nc	sum_band.f90	/^SUBROUTINE add_becsum_nc /;"	s
+add_becsum_so	sum_band.f90	/^SUBROUTINE add_becsum_so(/;"	s
+add_bfield	add_bfield.f90	/^SUBROUTINE add_bfield /;"	s
+add_efield	add_efield.f90	/^SUBROUTINE add_efield(/;"	s
+add_gatefield	add_gatefield.f90	/^SUBROUTINE add_gatefield(/;"	s
+add_nlxx_pot	us_exx.f90	/^   SUBROUTINE add_nlxx_pot(/;"	s	module:us_exx
+add_paw_to_deeq	add_paw_to_deeq.f90	/^SUBROUTINE add_paw_to_deeq(/;"	s
+add_qexsd_step	add_qexsd_step.f90	/^SUBROUTINE add_qexsd_step(/;"	s
+add_small_mag	paw_onecenter.f90	/^SUBROUTINE add_small_mag(/;"	s	module:paw_onecenter
+add_vhub_to_deeq	add_vhub_to_deeq.f90	/^SUBROUTINE add_vhub_to_deeq(/;"	s
+add_vuspsi	add_vuspsi.f90	/^SUBROUTINE add_vuspsi(/;"	s
+add_vuspsi_gamma	add_vuspsi.f90	/^     SUBROUTINE add_vuspsi_gamma(/;"	s	subroutine:add_vuspsi
+add_vuspsi_k	add_vuspsi.f90	/^     SUBROUTINE add_vuspsi_k(/;"	s	subroutine:add_vuspsi
+add_vuspsi_nc	add_vuspsi.f90	/^     SUBROUTINE add_vuspsi_nc(/;"	s	subroutine:add_vuspsi
+add_vuspsir_gamma	realus.f90	/^  SUBROUTINE add_vuspsir_gamma /;"	s
+add_vuspsir_k	realus.f90	/^  SUBROUTINE add_vuspsir_k /;"	s
+addusdens	addusdens.f90	/^SUBROUTINE addusdens(/;"	s
+addusdens_g	addusdens.f90	/^SUBROUTINE addusdens_g(/;"	s
+addusdens_r	realus.f90	/^    SUBROUTINE addusdens_r(/;"	s
+addusforce	addusforce.f90	/^SUBROUTINE addusforce /;"	s
+addusforce_g	addusforce.f90	/^SUBROUTINE addusforce_g /;"	s
+addusforce_r	realus.f90	/^    SUBROUTINE addusforce_r /;"	s
+addusstress	addusstress.f90	/^SUBROUTINE addusstress /;"	s
+addusstress_g	addusstress.f90	/^SUBROUTINE addusstress_g /;"	s
+addusstress_r	realus.f90	/^    SUBROUTINE addusstress_r /;"	s
+addusxx_g	us_exx.f90	/^  SUBROUTINE addusxx_g(/;"	s	module:us_exx
+addusxx_r	us_exx.f90	/^  SUBROUTINE addusxx_r(/;"	s	module:us_exx
+afree	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: afree(/;"	v	module:xdm_module
+allfrac	symm_base.f90	/^       nofrac= .false.,      &! if .TRUE. fract. translations are not allowed$/;"	v	module:symm_base
+alloc_buffer	buffers.f90	/^  FUNCTION alloc_buffer(/;"	f
+alloc_failed	xdm_dispersion.f90	/^  SUBROUTINE alloc_failed(/;"	s	module:xdm_module
+allocate_bp_efield	bp_mod.f90	/^  SUBROUTINE allocate_bp_efield /;"	s	module:bp
+allocate_dyn_vars	dynamics_module.f90	/^   SUBROUTINE allocate_dyn_vars(/;"	s	module:dynamics_module
+allocate_fft	allocate_fft.f90	/^SUBROUTINE allocate_fft$/;"	s
+allocate_locpot	allocate_locpot.f90	/^subroutine allocate_locpot$/;"	s
+allocate_nlpot	allocate_nlpot.f90	/^SUBROUTINE allocate_nlpot$/;"	s
+allocate_paw_fockrnl	paw_exx.f90	/^  SUBROUTINE allocate_paw_fockrnl(/;"	s	module:paw_exx
+allocate_paw_internals	paw_init.f90	/^  SUBROUTINE allocate_paw_internals$/;"	s	module:paw_init
+allocate_wfc	allocate_wfc.f90	/^SUBROUTINE allocate_wfc(/;"	s
+alpha	martyna_tuckerman.f90	/^  REAL (DP) :: alpha,/;"	v	module:martyna_tuckerman
+alpha	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: alpha(/;"	v	module:xdm_module
+alpha0	update_pot.f90	/^  REAL(dp) :: &$/;"	v	module:extrapolation
+alpha_free	xdm_dispersion.f90	/^  REAL(DP), PARAMETER :: alpha_free(/;"	v	module:xdm_module
+angle_rot	divide_class.f90	/^FUNCTION angle_rot(/;"	f
+angle_rot_s	divide_class.f90	/^FUNCTION angle_rot_s(/;"	f
+angle_vectors	divide_class.f90	/^FUNCTION angle_vectors(/;"	f
+apply_thermostat	dynamics_module.f90	/^      SUBROUTINE apply_thermostat(/;"	s	subroutine:verlet
+apply_thermostat	fcp.f90	/^      SUBROUTINE apply_thermostat(/;"	s	subroutine:fcp_verlet
+approx_screening	mix_rho.f90	/^SUBROUTINE approx_screening(/;"	s
+approx_screening2	mix_rho.f90	/^SUBROUTINE approx_screening2(/;"	s
+assign_mix_to_scf_type	scf_mod.f90	/^ subroutine assign_mix_to_scf_type(/;"	s	module:scf
+assign_scf_to_mix_type	scf_mod.f90	/^ subroutine assign_scf_to_mix_type(/;"	s	module:scf
+at_old	pwcom.f90	/^       press, cmass,     &! target pressure and cell mass,$/;"	v	module:cellmd
+atomic_rho	atomic_rho.f90	/^SUBROUTINE atomic_rho /;"	s
+atomic_rho_g	atomic_rho.f90	/^SUBROUTINE atomic_rho_g /;"	s
+atomic_wfc	atomic_wfc.f90	/^SUBROUTINE atomic_wfc /;"	s
+atomic_wfc___	atomic_wfc.f90	/^   SUBROUTINE atomic_wfc___(/;"	s	subroutine:atomic_wfc
+atomic_wfc_nc	atomic_wfc.f90	/^   SUBROUTINE atomic_wfc_nc /;"	s	subroutine:atomic_wfc
+atomic_wfc_nc_updown	plus_u_full.f90	/^SUBROUTINE atomic_wfc_nc_updown /;"	s
+atomic_wfc_so	atomic_wfc.f90	/^  SUBROUTINE atomic_wfc_so /;"	s	subroutine:atomic_wfc
+atomic_wfc_so_mag	atomic_wfc.f90	/^   SUBROUTINE atomic_wfc_so_mag /;"	s	subroutine:atomic_wfc
+avc1	pw2blip.f90	/^   REAL(dp) FUNCTION avc1(/;"	f	module:pw2blip
+avc2	pw2blip.f90	/^   REAL(dp) FUNCTION avc2(/;"	f	module:pw2blip
+average_pp	average_pp.f90	/^SUBROUTINE average_pp /;"	s
+basis	atomic_wfc_mod.f90	/^MODULE basis$/;"	m
+bcast_scf_type	scf_mod.f90	/^ SUBROUTINE bcast_scf_type /;"	s	module:scf
+bec	scf_mod.f90	/^     REAL(DP),    ALLOCATABLE :: bec(/;"	k	type:mix_type
+bec	scf_mod.f90	/^     REAL(DP),   ALLOCATABLE :: bec(/;"	k	type:scf_type
+bec_evcel	bp_mod.f90	/^  TYPE(bec_type) :: bec_evcel$/;"	v	module:bp
+becp_rotate_k	us_exx.f90	/^  SUBROUTINE becp_rotate_k(/;"	s	module:us_exx
+becxx	us_exx.f90	/^  TYPE(bec_type),ALLOCATABLE :: becxx(/;"	v	module:us_exx
+becxx0	us_exx.f90	/^  TYPE(bec_type),ALLOCATABLE :: becxx0(/;"	v	module:us_exx
+beta	martyna_tuckerman.f90	/^  REAL (DP) :: alpha, beta$/;"	v	module:martyna_tuckerman
+beta0	update_pot.f90	/^    alpha0,           &! the mixing parameters for the extrapolation$/;"	v	module:extrapolation
+betapointlist	realus.f90	/^    SUBROUTINE betapointlist(/;"	s
+betasave	realus.f90	/^  REAL(DP), ALLOCATABLE :: betasave(/;"	v	module:realus
+bexg_merge	us_exx.f90	/^  FUNCTION bexg_merge(/;"	f	module:us_exx
+bg	pw2blip.f90	/^   REAL(dp) :: rnr(3),rnr2(3),bg(/;"	v	module:pw2blip
+bg_vol	pw2blip.f90	/^   INTEGER :: blipgrid(3),ld_bg(3),bg_vol$/;"	v	module:pw2blip
+blipeval	pw2blip.f90	/^   SUBROUTINE blipeval(/;"	s	module:pw2blip
+blipgrid	pw2blip.f90	/^   INTEGER :: blipgrid(/;"	v	module:pw2blip
+blipreal	pw2blip.f90	/^   INTEGER,PUBLIC :: blipreal /;"	v	module:pw2blip
+block	extfield.f90	/^       relaxz,       &! relax in z direction$/;"	v	module:extfield
+block_1	extfield.f90	/^      zgate,         &! position of charged plate$/;"	v	module:extfield
+block_2	extfield.f90	/^      block_1,       &! blocking potential$/;"	v	module:extfield
+block_height	extfield.f90	/^      block_2,       &$/;"	v	module:extfield
+box	realus.f90	/^     INTEGER,ALLOCATABLE  :: box(/;"	k	type:realsp_augmentation
+box_beta	realus.f90	/^  INTEGER,  ALLOCATABLE :: box_beta(/;"	v	module:realus
+boxdist_beta	realus.f90	/^  REAL(DP), ALLOCATABLE :: boxdist_beta(/;"	v	module:realus
+boxrad	realus.f90	/^  REAL(DP), ALLOCATABLE :: boxrad(/;"	v	module:realus
+boxrad_beta	realus.f90	/^  REAL(DP), ALLOCATABLE :: boxrad_beta(/;"	v	module:realus
+bp	bp_mod.f90	/^MODULE bp$/;"	m
+bp_global_map	bp_mod.f90	/^ SUBROUTINE bp_global_map$/;"	s	module:bp
+btype	pwcom.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:wvfct
+buffers	buffers.f90	/^Module buffers$/;"	m
+buiol	buffers.f90	/^MODULE buiol$/;"	m
+buiol_check_unit	buffers.f90	/^  FUNCTION buiol_check_unit(/;"	f
+buiol_close_unit	buffers.f90	/^  FUNCTION buiol_close_unit(/;"	f
+buiol_get_dir	buffers.f90	/^  FUNCTION buiol_get_dir(/;"	f
+buiol_get_ext	buffers.f90	/^  FUNCTION buiol_get_ext(/;"	f
+buiol_open_unit	buffers.f90	/^  FUNCTION buiol_open_unit(/;"	f
+buiol_read_record	buffers.f90	/^  FUNCTION buiol_read_record(/;"	f
+buiol_report_buffer	buffers.f90	/^  SUBROUTINE buiol_report_buffer(/;"	s
+buiol_report_unit	buffers.f90	/^  SUBROUTINE buiol_report_unit(/;"	s
+buiol_write_record	buffers.f90	/^  FUNCTION buiol_write_record(/;"	f
+c_bands	c_bands.f90	/^SUBROUTINE c_bands(/;"	s
+c_bands_efield	c_bands.f90	/^SUBROUTINE c_bands_efield /;"	s
+c_bands_nscf	c_bands.f90	/^SUBROUTINE c_bands_nscf(/;"	s
+c_phase	bp_c_phase.f90	/^SUBROUTINE c_phase$/;"	s
+c_phase_field	c_phase_field.f90	/^SUBROUTINE c_phase_field(/;"	s
+calbec_rs_gamma	realus.f90	/^    SUBROUTINE calbec_rs_gamma /;"	s
+calbec_rs_k	realus.f90	/^    SUBROUTINE calbec_rs_k /;"	s
+calc	pwcom.f90	/^  CHARACTER(len=2) :: &$/;"	v	module:cellmd
+calc_btq	bp_calc_btq.f90	/^SUBROUTINE calc_btq(/;"	s
+calc_energies	pw2casino_write.f90	/^   SUBROUTINE calc_energies$/;"	s	subroutine:write_casino_wfn
+calc_pol	electrons.f90	/^     FUNCTION calc_pol /;"	f	subroutine:electrons_scf
+cart_to_crys	symme.f90	/^   SUBROUTINE cart_to_crys /;"	s	module:symme
+cavc	pw2blip.f90	/^   COMPLEX(dp) FUNCTION cavc(/;"	f	module:pw2blip
+cavc_flat	pw2blip.f90	/^   COMPLEX(dp),ALLOCATABLE :: psic(:),cavc_flat(/;"	v	module:pw2blip
+cdiagh	cdiagh.f90	/^SUBROUTINE cdiagh(/;"	s
+cell_factor	pwcom.f90	/^       omega_old,        &! the cell volume at the previous step$/;"	v	module:cellmd
+cellmd	pwcom.f90	/^MODULE cellmd$/;"	m
+change_data_structure	exx_band.f90	/^  SUBROUTINE change_data_structure(/;"	s	module:exx_band
+char_mat	pwcom.f90	/^   COMPLEX(DP) :: char_mat(/;"	v	module:rap_point_group
+char_mat_so	pwcom.f90	/^   COMPLEX(DP) :: char_mat_so(/;"	v	module:rap_point_group_so
+check_and_allocate	pw_restart_new.f90	/^       SUBROUTINE check_and_allocate(/;"	s	subroutine:pw_write_schema
+check_atoms	lchk_tauxk.f90	/^subroutine check_atoms /;"	s
+check_ortho	ortho_wfc.f90	/^SUBROUTINE check_ortho(/;"	s
+check_para_diag	setup.f90	/^LOGICAL FUNCTION check_para_diag(/;"	f
+check_tgroup	divide_class_so.f90	/^SUBROUTINE check_tgroup(/;"	s
+checkallsym	symm_base.f90	/^SUBROUTINE checkallsym /;"	s	module:symm_base
+checksym	symm_base.f90	/^LOGICAL FUNCTION checksym /;"	f	module:symm_base
+chi	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: vel(:,:), acc(:,:), chi(/;"	v	module:dynamics_module
+clean_pw	clean_pw.f90	/^SUBROUTINE clean_pw(/;"	s
+cleanup_xdm	xdm_dispersion.f90	/^  SUBROUTINE cleanup_xdm(/;"	s	module:xdm_module
+close_buffer	buffers.f90	/^  SUBROUTINE close_buffer /;"	s	module:buffers
+close_files	close_files.f90	/^SUBROUTINE close_files(/;"	s
+close_mix_file	scf_mod.f90	/^ subroutine close_mix_file(/;"	s	module:scf
+closefile	stop_run.f90	/^SUBROUTINE closefile(/;"	s
+cmass	pwcom.f90	/^       press, cmass,/;"	v	module:cellmd
+code_group	pwcom.f90	/^   INTEGER :: &$/;"	v	module:rap_point_group
+code_group_is	pwcom.f90	/^          nsym_is,       & ! The number of operations of the invariant subgroup$/;"	v	module:rap_point_group_is
+comm_packet	exx_band.f90	/^  TYPE comm_packet$/;"	t	module:exx_band
+comm_recv	exx_band.f90	/^  TYPE(comm_packet), ALLOCATABLE :: comm_recv(/;"	v	module:exx_band
+comm_recv_reverse	exx_band.f90	/^  TYPE(comm_packet), ALLOCATABLE :: comm_recv_reverse(/;"	v	module:exx_band
+comm_send	exx_band.f90	/^  TYPE(comm_packet), ALLOCATABLE :: comm_recv(:,:), comm_send(/;"	v	module:exx_band
+comm_send_reverse	exx_band.f90	/^  TYPE(comm_packet), ALLOCATABLE :: comm_send_reverse(/;"	v	module:exx_band
+comp_dspinldau	plus_u_full.f90	/^subroutine comp_dspinldau /;"	s
+compare_mat	divide_class.f90	/^FUNCTION compare_mat(/;"	f
+compare_mat_so	divide_class_so.f90	/^FUNCTION compare_mat_so(/;"	f
+compute_averages	dynamics_module.f90	/^   SUBROUTINE compute_averages(/;"	s	module:dynamics_module
+compute_becpsi	exx.f90	/^SUBROUTINE compute_becpsi /;"	s	module:exx
+compute_becsum	compute_becsum.f90	/^SUBROUTINE compute_becsum /;"	s
+compute_becxx	us_exx.f90	/^  SUBROUTINE compute_becxx /;"	s	module:us_exx
+compute_deff	compute_deff.f90	/^SUBROUTINE compute_deff(/;"	s
+compute_deff_nc	compute_deff.f90	/^SUBROUTINE compute_deff_nc(/;"	s
+compute_density	exx.f90	/^SUBROUTINE compute_density(/;"	s	module:exx
+compute_density_k	exx.f90	/^SUBROUTINE compute_density_k(/;"	s	module:exx
+compute_distances_SoA	make_pointlists.f90	/^SUBROUTINE compute_distances_SoA(/;"	s
+compute_dpot_nonc	paw_onecenter.f90	/^SUBROUTINE compute_dpot_nonc(/;"	s	module:paw_onecenter
+compute_drho_spin_lm	paw_onecenter.f90	/^SUBROUTINE compute_drho_spin_lm(/;"	s	module:paw_onecenter
+compute_el_dip	compute_dip.f90	/^SUBROUTINE compute_el_dip(/;"	s
+compute_g	paw_onecenter.f90	/^SUBROUTINE compute_g(/;"	s	module:paw_onecenter
+compute_ion_dip	compute_dip.f90	/^SUBROUTINE compute_ion_dip(/;"	s
+compute_magnetization	electrons.f90	/^     SUBROUTINE compute_magnetization(/;"	s	subroutine:electrons_scf
+compute_pot_nonc	paw_onecenter.f90	/^SUBROUTINE compute_pot_nonc(/;"	s	module:paw_onecenter
+compute_pproj	new_ns.f90	/^  SUBROUTINE compute_pproj(/;"	s	subroutine:new_ns
+compute_qdipol	compute_qdipol.f90	/^SUBROUTINE compute_qdipol(/;"	s
+compute_qdipol_so	compute_qdipol_so.f90	/^SUBROUTINE compute_qdipol_so(/;"	s
+compute_rho	compute_rho.f90	/^   SUBROUTINE compute_rho(/;"	s
+compute_rho_spin_lm	paw_onecenter.f90	/^SUBROUTINE compute_rho_spin_lm(/;"	s	module:paw_onecenter
+compute_ux	compute_ux.f90	/^   SUBROUTINE compute_ux(/;"	s
+coniug_mat	divide_class.f90	/^SUBROUTINE coniug_mat(/;"	s
+coniug_mat_so	divide_class_so.f90	/^SUBROUTINE coniug_mat_so(/;"	s
+control_temp	dynamics_module.f90	/^         vel_defined,  &! if true, vel is used rather than tau_old to do the next step$/;"	v	module:dynamics_module
+conv_ns	ldaU.f90	/^       lda_plus_u,           &! .TRUE. if lda+u calculation is performed$/;"	v	module:ldaU
+convert_tau	input.f90	/^SUBROUTINE convert_tau /;"	s
+copy_U_wfc	ldaU.f90	/^  SUBROUTINE copy_U_wfc /;"	s	module:ldaU
+copy_sym	symm_base.f90	/^INTEGER FUNCTION copy_sym /;"	f	module:symm_base
+coset	coset.f90	/^subroutine coset /;"	s
+coulomb_done	exx_base.f90	/^  LOGICAL, ALLOCATABLE :: coulomb_done(/;"	v	module:exx_base
+coulomb_fac	exx_base.f90	/^  REAL(DP), ALLOCATABLE :: coulomb_fac(/;"	v	module:exx_base
+create_index	pw2casino_write.f90	/^   SUBROUTINE create_index(/;"	s	subroutine:write_casino_wfn
+create_index2	pw2casino_write.f90	/^   SUBROUTINE create_index2(/;"	s	subroutine:write_casino_wfn
+create_mix_type	scf_mod.f90	/^ SUBROUTINE create_mix_type /;"	s	module:scf
+create_scf_type	scf_mod.f90	/^ SUBROUTINE create_scf_type /;"	s	module:scf
+create_socket	run_driver.f90	/^  SUBROUTINE create_socket /;"	s	subroutine:run_driver
+crys_to_cart	symme.f90	/^   SUBROUTINE crys_to_cart /;"	s	module:symme
+crys_to_cart_mat3	symme.f90	/^   SUBROUTINE crys_to_cart_mat3 /;"	s	module:symme
+current_k	pwcom.f90	/^       npw,              &! the number of plane waves$/;"	v	module:wvfct
+current_phase_kpoint	realus.f90	/^  INTEGER               :: current_phase_kpoint=/;"	v	module:realus
+current_spin	pwcom.f90	/^       nspin,           &! number of spin polarization: 2 if lsda, 1 other$/;"	v	module:lsda_mod
+cutoff_2D	Coul_cut_2D.f90	/^  REAL(DP), ALLOCATABLE :: cutoff_2D(/;"	v	module:Coul_cut_2D
+cutoff_ewald	Coul_cut_2D.f90	/^subroutine cutoff_ewald /;"	s	module:Coul_cut_2D
+cutoff_fact	Coul_cut_2D.f90	/^subroutine cutoff_fact /;"	s	module:Coul_cut_2D
+cutoff_force_ew	Coul_cut_2D.f90	/^subroutine cutoff_force_ew /;"	s	module:Coul_cut_2D
+cutoff_force_lc	Coul_cut_2D.f90	/^subroutine cutoff_force_lc /;"	s	module:Coul_cut_2D
+cutoff_hartree	Coul_cut_2D.f90	/^subroutine cutoff_hartree /;"	s	module:Coul_cut_2D
+cutoff_local	Coul_cut_2D.f90	/^subroutine cutoff_local /;"	s	module:Coul_cut_2D
+cutoff_lr_Vloc	Coul_cut_2D.f90	/^subroutine cutoff_lr_Vloc /;"	s	module:Coul_cut_2D
+cutoff_stres_evloc	Coul_cut_2D.f90	/^subroutine cutoff_stres_evloc /;"	s	module:Coul_cut_2D
+cutoff_stres_sigmaewa	Coul_cut_2D.f90	/^subroutine cutoff_stres_sigmaewa /;"	s	module:Coul_cut_2D
+cutoff_stres_sigmahar	Coul_cut_2D.f90	/^subroutine cutoff_stres_sigmahar /;"	s	module:Coul_cut_2D
+cutoff_stres_sigmaloc	Coul_cut_2D.f90	/^subroutine cutoff_stres_sigmaloc /;"	s	module:Coul_cut_2D
+cx	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: cx(/;"	v	module:xdm_module
+d	paw_symmetry.f90	/^        REAL(DP),POINTER :: d(/;"	k	type:symmetrization_tensor
+d	us_exx.f90	/^        REAL(DP),POINTER :: d(/;"	k	type:symmetrization_tensor
+d1	symm_base.f90	/^  REAL(DP),TARGET :: &$/;"	v	module:symm_base
+d2	symm_base.f90	/^       d1(3,3,48),           &! matrices for rotating spherical$/;"	v	module:symm_base
+d3	symm_base.f90	/^       d2(5,5,48),           &! harmonics (d1 for l=1, ...)$/;"	v	module:symm_base
+d_matrix	d_matrix.f90	/^subroutine d_matrix /;"	s
+d_spin	pwcom.f90	/^   COMPLEX(DP) :: char_mat_so(12,24),  &   ! the character tables$/;"	v	module:rap_point_group_so
+d_spin_is	pwcom.f90	/^   COMPLEX(DP) :: &$/;"	v	module:rap_point_group_is
+d_spin_ldau	ldaU.f90	/^       wfcU(:,:),             &! atomic wfcs with U term$/;"	v	module:ldaU
+data	buffers.f90	/^    COMPLEX(DP), POINTER :: data(/;"	k	type:data_in_the_list
+data_in_the_list	buffers.f90	/^  TYPE data_in_the_list /;"	t	module:buiol
+data_structure	data_structure.f90	/^SUBROUTINE data_structure(/;"	s
+davcio_mix_type	scf_mod.f90	/^ subroutine davcio_mix_type(/;"	s	module:scf
+dbesj0	esm.f90	/^real(8) FUNCTION dbesj0(/;"	f	module:esm
+dbesj1	esm.f90	/^real(8) FUNCTION dbesj1(/;"	f	module:esm
+dealloc_buffer	buffers.f90	/^  SUBROUTINE dealloc_buffer(/;"	s
+deallocate_bp_efield	bp_mod.f90	/^ SUBROUTINE deallocate_bp_efield$/;"	s	module:bp
+deallocate_dyn_vars	dynamics_module.f90	/^   SUBROUTINE deallocate_dyn_vars(/;"	s	module:dynamics_module
+deallocate_exx	exx.f90	/^  SUBROUTINE deallocate_exx /;"	s	module:exx
+deallocate_igk	pwcom.f90	/^  SUBROUTINE deallocate_igk /;"	s	module:klist
+deallocate_ldaU	ldaU.f90	/^  SUBROUTINE deallocate_ldaU /;"	s	module:ldaU
+deallocate_paw_fockrnl	paw_exx.f90	/^  SUBROUTINE deallocate_paw_fockrnl(/;"	s	module:paw_exx
+deallocate_paw_internals	paw_init.f90	/^  SUBROUTINE deallocate_paw_internals$/;"	s	module:paw_init
+deallocate_realsp	realus.f90	/^    SUBROUTINE deallocate_realsp(/;"	s
+deallocate_realsp_aug	realus.f90	/^    SUBROUTINE deallocate_realsp_aug /;"	s
+deallocate_tetra	tetra.f90	/^SUBROUTINE deallocate_tetra /;"	s	module:ktetra
+deband	pwcom.f90	/^       eband,          &! the band energy$/;"	v	module:ener
+degauss	pwcom.f90	/^       xqq(3),            &! coordinates of q point (used in the ACFDT part)$/;"	v	module:klist
+delta_e	electrons.f90	/^     FUNCTION delta_e(/;"	f	subroutine:electrons_scf
+delta_escf	electrons.f90	/^     FUNCTION delta_escf(/;"	f	subroutine:electrons_scf
+delta_t	dynamics_module.f90	/^         virial,      &! virial (used for the pressure)$/;"	v	module:dynamics_module
+demet	pwcom.f90	/^       exdm,           &! the XDM dispersion energy$/;"	v	module:ener
+deriv_drhoc	deriv_drhoc.f90	/^subroutine deriv_drhoc /;"	s
+destroy_mix_type	scf_mod.f90	/^ SUBROUTINE destroy_mix_type /;"	s	module:scf
+destroy_scf_type	scf_mod.f90	/^ SUBROUTINE destroy_scf_type /;"	s	module:scf
+dexx	exx.f90	/^              fock3 = 0.0_DP, & !   sum <old|vx(new)|old>$/;"	v	module:exx
+df	mix_rho.f90	/^  TYPE(mix_type), ALLOCATABLE, SAVE :: &$/;"	v	module:mix_save
+dfftp_exx	exx_band.f90	/^  TYPE(fft_type_descriptor) :: dfftp_exx,/;"	v	module:exx_band
+dfftp_loc	exx_band.f90	/^  TYPE(fft_type_descriptor) :: dfftp_loc,/;"	v	module:exx_band
+dffts_exx	exx_band.f90	/^  TYPE(fft_type_descriptor) :: dfftp_exx, dffts_exx$/;"	v	module:exx_band
+dffts_loc	exx_band.f90	/^  TYPE(fft_type_descriptor) :: dfftp_loc, dffts_loc$/;"	v	module:exx_band
+dfftt	exx.f90	/^  TYPE ( fft_type_descriptor ) :: dfftt /;"	v	module:exx
+dfunct	newd.f90	/^MODULE dfunct$/;"	m
+diag_bands	c_bands.f90	/^SUBROUTINE diag_bands(/;"	s
+diag_bands_gamma	c_bands.f90	/^  SUBROUTINE diag_bands_gamma(/;"	s	subroutine:diag_bands
+diag_bands_k	c_bands.f90	/^  SUBROUTINE diag_bands_k(/;"	s
+diff_coeff	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: diff_coeff(/;"	v	module:dynamics_module
+dipfield	extfield.f90	/^       tefield,      &! if .TRUE. a finite electric field is added to the$/;"	v	module:extfield
+dist	realus.f90	/^     REAL(DP),ALLOCATABLE :: dist(/;"	k	type:realsp_augmentation
+divide_class	divide_class.f90	/^SUBROUTINE divide_class(/;"	s
+divide_class_so	divide_class_so.f90	/^SUBROUTINE divide_class_so(/;"	s
+divide_et_impera	divide_et_impera.f90	/^SUBROUTINE divide_et_impera(/;"	s
+dndepsilon	stres_hub.f90	/^SUBROUTINE dndepsilon /;"	s
+dndtau_gamma	force_hub.f90	/^SUBROUTINE dndtau_gamma /;"	s
+dndtau_k	force_hub.f90	/^SUBROUTINE dndtau_k /;"	s
+do_comp_esm	esm.f90	/^  LOGICAL              :: do_comp_esm=/;"	v	module:esm
+do_comp_mt	martyna_tuckerman.f90	/^  LOGICAL :: do_comp_mt /;"	v	module:martyna_tuckerman
+do_cutoff_2D	Coul_cut_2D.f90	/^  LOGICAL :: do_cutoff_2D=/;"	v	module:Coul_cut_2D
+do_diag_in_band_group	pwscf.f90	/^  LOGICAL :: use_images, do_diag_in_band_group /;"	v	program:pwscf
+do_fft_y	pw2blip.f90	/^   INTEGER,ALLOCATABLE :: do_fft_z(:),do_fft_y(/;"	v	module:pw2blip
+do_fft_z	pw2blip.f90	/^   INTEGER,ALLOCATABLE :: do_fft_z(/;"	v	module:pw2blip
+do_stop	stop_run.f90	/^SUBROUTINE do_stop(/;"	s
+domag	pwcom.f90	/^      starting_spin_angle, &  ! if .TRUE. the initial wavefunctions are $/;"	v	module:spin_orb
+domat	exx.f90	/^  LOGICAL :: domat$/;"	v	module:exx
+dprojdepsilon_gamma	stres_hub.f90	/^SUBROUTINE dprojdepsilon_gamma /;"	s
+dprojdepsilon_k	stres_hub.f90	/^SUBROUTINE dprojdepsilon_k /;"	s
+dprojdtau_gamma	force_hub.f90	/^SUBROUTINE dprojdtau_gamma /;"	s
+dprojdtau_k	force_hub.f90	/^SUBROUTINE dprojdtau_k /;"	s
+dq	pwcom.f90	/^  REAL(DP), PARAMETER:: &$/;"	v	module:us
+dqvan2	dqvan2.f90	/^SUBROUTINE dqvan2 /;"	s
+drhoc	drhoc.f90	/^subroutine drhoc /;"	s
+driver_getforce	run_driver.f90	/^  SUBROUTINE driver_getforce(/;"	s	subroutine:run_driver
+driver_init	run_driver.f90	/^  SUBROUTINE driver_init(/;"	s	subroutine:run_driver
+driver_posdata	run_driver.f90	/^  SUBROUTINE driver_posdata(/;"	s	subroutine:run_driver
+dt	dynamics_module.f90	/^   REAL(DP) :: &$/;"	v	module:dynamics_module
+dv	mix_rho.f90	/^    df(:),        &! information from preceding iterations$/;"	v	module:mix_save
+dvl11	esm.f90	/^function dvl11(/;"	f	module:esm
+dvl11j0	esm.f90	/^function dvl11j0(/;"	f	module:esm
+dvl12j0	esm.f90	/^function dvl12j0(/;"	f	module:esm
+dvl21j0	esm.f90	/^function dvl21j0(/;"	f	module:esm
+dvl22	esm.f90	/^function dvl22(/;"	f	module:esm
+dvl22j0	esm.f90	/^function dvl22j0(/;"	f	module:esm
+dvloc_coul	dvloc_of_g.f90	/^subroutine dvloc_coul /;"	s
+dvloc_of_g	dvloc_of_g.f90	/^subroutine dvloc_of_g /;"	s
+dynamics_module	dynamics_module.f90	/^MODULE dynamics_module$/;"	m
+eamp	extfield.f90	/^      eopreg,        &! amplitude of the inverse region (0<eopreg<1)$/;"	v	module:extfield
+eband	pwcom.f90	/^       hwf_energy,     &! this is the Harris-Weinert-Foulkes energy$/;"	v	module:ener
+ecutfock	exx.f90	/^  REAL(DP)  :: ecutfock$/;"	v	module:exx
+ecutvcut	exx_base.f90	/^  REAL(DP)          :: ecutvcut$/;"	v	module:exx_base
+edftd3	pwcom.f90	/^       elondon,        &! the semi-empirical dispersion energy$/;"	v	module:ener
+edir	extfield.f90	/^  INTEGER :: &$/;"	v	module:extfield
+ef	pwcom.f90	/^       epaw,           &! sum of one-center paw contributions$/;"	v	module:ener
+ef_dw	pwcom.f90	/^       ef, ef_up, ef_dw /;"	v	module:ener
+ef_up	pwcom.f90	/^       ef, ef_up,/;"	v	module:ener
+efermig	efermig.f90	/^FUNCTION efermig /;"	f
+efermit	efermit.f90	/^FUNCTION efermit /;"	f
+efield	bp_mod.f90	/^  REAL(DP) :: efield /;"	v	module:bp
+efield_cart	bp_mod.f90	/^  REAL(DP) :: efield_cart(/;"	v	module:bp
+efield_cry	bp_mod.f90	/^  REAL(DP) :: efield_cry(/;"	v	module:bp
+ehart	pwcom.f90	/^       deband,         &! scf correction to have variational energy$/;"	v	module:ener
+el_dipole	extfield.f90	/^      etotefield,    &! energy correction due to the field$/;"	v	module:extfield
+el_dipole	scf_mod.f90	/^     REAL(DP)                 :: el_dipole /;"	k	type:mix_type
+el_pol	bp_mod.f90	/^  REAL(DP) :: el_pol(/;"	v	module:bp
+el_pol_acc	bp_mod.f90	/^  REAL(DP) :: el_pol_acc(/;"	v	module:bp
+el_pol_old	bp_mod.f90	/^  REAL(DP) :: el_pol_old(/;"	v	module:bp
+electrons	electrons.f90	/^SUBROUTINE electrons(/;"	s
+electrons_scf	electrons.f90	/^SUBROUTINE electrons_scf /;"	s
+elem	pwcom.f90	/^          nelem(/;"	v	module:rap_point_group
+elem_name	pwcom.f90	/^   CHARACTER(len=55) :: elem_name(/;"	v	module:rap_point_group
+elem_name_so	pwcom.f90	/^   CHARACTER(len=55) :: elem_name_so(/;"	v	module:rap_point_group_so
+elem_so	pwcom.f90	/^          nelem_so(/;"	v	module:rap_point_group_so
+elondon	pwcom.f90	/^       ewld,           &! the ewald energy$/;"	v	module:ener
+emaxpos	extfield.f90	/^  REAL(DP) :: &$/;"	v	module:extfield
+ener	pwcom.f90	/^MODULE ener$/;"	m
+energy_xdm	xdm_dispersion.f90	/^  FUNCTION energy_xdm(/;"	f	module:xdm_module
+eopreg	extfield.f90	/^      emaxpos,       &! position of the maximum of the field (0<emaxpos<1)$/;"	v	module:extfield
+epaw	pwcom.f90	/^       demet,          &! variational correction ("-TS") for metals$/;"	v	module:ener
+eps	exx_base.f90	/^  REAL(DP)         :: eps /;"	v	module:exx_base
+eps1	symm_base.f90	/^  REAL(DP), PARAMETER :: eps1 /;"	v	module:symm_base
+eps2	symm_base.f90	/^  REAL(DP), PARAMETER :: eps1 = 1.0d-6, eps2 /;"	v	module:symm_base
+eps_occ	exx.f90	/^  REAL(DP), PARAMETER :: eps_occ /;"	v	module:exx
+eps_qdiv	exx_base.f90	/^  REAL(DP)         :: eps_qdiv /;"	v	module:exx_base
+epse	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:relax
+epsf	pwcom.f90	/^       epse = 0.0_dp,           &! threshold on total energy$/;"	v	module:relax
+epsp	pwcom.f90	/^       epsf,                    &! threshold on forces$/;"	v	module:relax
+eqvect	eqvect.f90	/^logical function eqvect /;"	f
+erf_scrlen	exx_base.f90	/^  REAL(DP)          :: erf_scrlen /;"	v	module:exx_base
+erfc_scrlen	exx_base.f90	/^  REAL(DP)          :: erfc_scrlen /;"	v	module:exx_base
+errinfo	utils.f90	/^SUBROUTINE errinfo(/;"	s
+esave	xdm_dispersion.f90	/^  REAL(DP) :: esave /;"	v	module:xdm_module
+esaveold	xdm_dispersion.f90	/^  REAL(DP) :: esaveold /;"	v	module:xdm_module
+esm	esm.f90	/^MODULE esm$/;"	m
+esm_a	esm.f90	/^  REAL(KIND=DP)        :: esm_efield, esm_w, esm_a$/;"	v	module:esm
+esm_bc	esm.f90	/^  CHARACTER (LEN=3)    :: esm_bc$/;"	v	module:esm
+esm_efield	esm.f90	/^  REAL(KIND=DP)        :: esm_efield,/;"	v	module:esm
+esm_ewald	esm.f90	/^FUNCTION esm_ewald(/;"	f	module:esm
+esm_ewaldg	esm.f90	/^     SUBROUTINE esm_ewaldg(/;"	s	module:esm
+esm_ewaldg_bc1	esm.f90	/^SUBROUTINE esm_ewaldg_bc1 /;"	s	module:esm
+esm_ewaldg_bc2	esm.f90	/^SUBROUTINE esm_ewaldg_bc2 /;"	s	module:esm
+esm_ewaldg_bc3	esm.f90	/^SUBROUTINE esm_ewaldg_bc3 /;"	s	module:esm
+esm_ewaldg_bc4	esm.f90	/^SUBROUTINE esm_ewaldg_bc4 /;"	s	module:esm
+esm_ewaldg_pbc	esm.f90	/^SUBROUTINE esm_ewaldg_pbc /;"	s	module:esm
+esm_ewaldr	esm.f90	/^     SUBROUTINE esm_ewaldr(/;"	s	module:esm
+esm_ewaldr_bc4	esm.f90	/^SUBROUTINE esm_ewaldr_bc4 /;"	s	module:esm
+esm_ewaldr_pbc	esm.f90	/^SUBROUTINE esm_ewaldr_pbc /;"	s	module:esm
+esm_force_ew	esm.f90	/^SUBROUTINE esm_force_ew(/;"	s	module:esm
+esm_force_ewg	esm.f90	/^     SUBROUTINE esm_force_ewg(/;"	s	module:esm
+esm_force_ewg_bc1	esm.f90	/^SUBROUTINE esm_force_ewg_bc1 /;"	s	module:esm
+esm_force_ewg_bc2	esm.f90	/^SUBROUTINE esm_force_ewg_bc2 /;"	s	module:esm
+esm_force_ewg_bc3	esm.f90	/^SUBROUTINE esm_force_ewg_bc3 /;"	s	module:esm
+esm_force_ewg_bc4	esm.f90	/^SUBROUTINE esm_force_ewg_bc4 /;"	s	module:esm
+esm_force_ewg_pbc	esm.f90	/^SUBROUTINE esm_force_ewg_pbc /;"	s	module:esm
+esm_force_ewr	esm.f90	/^     SUBROUTINE esm_force_ewr(/;"	s	module:esm
+esm_force_ewr_bc4	esm.f90	/^SUBROUTINE esm_force_ewr_bc4 /;"	s	module:esm
+esm_force_ewr_pbc	esm.f90	/^SUBROUTINE esm_force_ewr_pbc /;"	s	module:esm
+esm_force_lc	esm.f90	/^     SUBROUTINE esm_force_lc(/;"	s	module:esm
+esm_force_lc_bc1	esm.f90	/^SUBROUTINE esm_force_lc_bc1 /;"	s	module:esm
+esm_force_lc_bc2	esm.f90	/^SUBROUTINE esm_force_lc_bc2 /;"	s	module:esm
+esm_force_lc_bc3	esm.f90	/^SUBROUTINE esm_force_lc_bc3 /;"	s	module:esm
+esm_force_lc_bc4	esm.f90	/^SUBROUTINE esm_force_lc_bc4 /;"	s	module:esm
+esm_force_lc_pbc	esm.f90	/^SUBROUTINE esm_force_lc_pbc(/;"	s	module:esm
+esm_ggen_2d	esm.f90	/^SUBROUTINE esm_ggen_2d(/;"	s	module:esm
+esm_hartree	esm.f90	/^     subroutine esm_hartree(/;"	s	module:esm
+esm_hartree_bc1	esm.f90	/^SUBROUTINE esm_hartree_bc1(/;"	s	module:esm
+esm_hartree_bc2	esm.f90	/^SUBROUTINE esm_hartree_bc2 /;"	s	module:esm
+esm_hartree_bc3	esm.f90	/^SUBROUTINE esm_hartree_bc3 /;"	s	module:esm
+esm_hartree_bc4	esm.f90	/^SUBROUTINE esm_hartree_bc4 /;"	s	module:esm
+esm_hartree_pbc	esm.f90	/^SUBROUTINE esm_hartree_pbc /;"	s	module:esm
+esm_init	esm.f90	/^SUBROUTINE esm_init(/;"	s	module:esm
+esm_local	esm.f90	/^     SUBROUTINE esm_local(/;"	s	module:esm
+esm_local_bc1	esm.f90	/^SUBROUTINE esm_local_bc1 /;"	s	module:esm
+esm_local_bc2	esm.f90	/^SUBROUTINE esm_local_bc2 /;"	s	module:esm
+esm_local_bc3	esm.f90	/^SUBROUTINE esm_local_bc3 /;"	s	module:esm
+esm_local_bc4	esm.f90	/^SUBROUTINE esm_local_bc4 /;"	s	module:esm
+esm_local_pbc	esm.f90	/^SUBROUTINE esm_local_pbc /;"	s	module:esm
+esm_nfit	esm.f90	/^  INTEGER              :: esm_nfit$/;"	v	module:esm
+esm_printpot	esm.f90	/^SUBROUTINE esm_printpot(/;"	s	module:esm
+esm_rgen_2d	esm.f90	/^SUBROUTINE esm_rgen_2d /;"	s	module:esm
+esm_stres_ewa	esm.f90	/^  subroutine esm_stres_ewa(/;"	s	module:esm
+esm_stres_ewg	esm.f90	/^  subroutine esm_stres_ewg(/;"	s	module:esm
+esm_stres_ewg_bc1	esm.f90	/^  subroutine esm_stres_ewg_bc1(/;"	s	module:esm
+esm_stres_ewg_bc2	esm.f90	/^  subroutine esm_stres_ewg_bc2(/;"	s	module:esm
+esm_stres_ewg_bc3	esm.f90	/^  subroutine esm_stres_ewg_bc3(/;"	s	module:esm
+esm_stres_ewr	esm.f90	/^  subroutine esm_stres_ewr(/;"	s	module:esm
+esm_stres_ewr_pbc	esm.f90	/^  subroutine esm_stres_ewr_pbc(/;"	s	module:esm
+esm_stres_har	esm.f90	/^  subroutine esm_stres_har(/;"	s	module:esm
+esm_stres_har_bc1	esm.f90	/^  subroutine esm_stres_har_bc1(/;"	s	module:esm
+esm_stres_har_bc2	esm.f90	/^  subroutine esm_stres_har_bc2(/;"	s	module:esm
+esm_stres_har_bc3	esm.f90	/^  subroutine esm_stres_har_bc3(/;"	s	module:esm
+esm_stres_loclong	esm.f90	/^  subroutine esm_stres_loclong(/;"	s	module:esm
+esm_stres_loclong_bc1	esm.f90	/^  subroutine esm_stres_loclong_bc1(/;"	s	module:esm
+esm_stres_loclong_bc2	esm.f90	/^  subroutine esm_stres_loclong_bc2(/;"	s	module:esm
+esm_stres_loclong_bc3	esm.f90	/^  subroutine esm_stres_loclong_bc3(/;"	s	module:esm
+esm_summary	esm.f90	/^SUBROUTINE esm_summary /;"	s	module:esm
+esm_w	esm.f90	/^  REAL(KIND=DP)        :: esm_efield, esm_w,/;"	v	module:esm
+et	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:wvfct
+eth	ldaU.f90	/^  REAL(DP) :: &$/;"	v	module:ldaU
+etot	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:ener
+etot_smart	dynamics_module.f90	/^   real(dp) :: etot_smart$/;"	v	module:dynamics_module
+etotefield	extfield.f90	/^      eamp,          &! field amplitude (in a.u.) (1 a.u. = 51.44 10^11 V\/m)$/;"	v	module:extfield
+etotgatefield	extfield.f90	/^      block_height,  &$/;"	v	module:extfield
+etxc	pwcom.f90	/^       ehart,          &! the hartree energy$/;"	v	module:ener
+etxcc	pwcom.f90	/^       vtxc,           &! another exchange-correlation energy$/;"	v	module:ener
+evc0	exx.f90	/^  COMPLEX(DP), ALLOCATABLE :: evc0(/;"	v	module:exx
+evc_exx	exx_band.f90	/^  COMPLEX(DP), ALLOCATABLE :: evc_exx(/;"	v	module:exx_band
+evcel	bp_mod.f90	/^  COMPLEX(DP), ALLOCATABLE , TARGET :: evcel(/;"	v	module:bp
+evcelm	bp_mod.f90	/^  COMPLEX(DP), ALLOCATABLE , TARGET :: evcelm(/;"	v	module:bp
+evcelp	bp_mod.f90	/^  COMPLEX(DP), ALLOCATABLE , TARGET :: evcelp(/;"	v	module:bp
+ewald	ewald.f90	/^function ewald /;"	f
+ewald_dipole	ewald_dipole.f90	/^subroutine ewald_dipole /;"	s
+ewld	pwcom.f90	/^       etxcc,          &! the nlcc exchange and correlation$/;"	v	module:ener
+exdm	pwcom.f90	/^       edftd3,         &! the grimme-d3 dispersion energy$/;"	v	module:ener
+exit_status	pwscf.f90	/^  INTEGER :: exit_status$/;"	v	program:pwscf
+exp_erfc	esm.f90	/^real(8) function exp_erfc /;"	f	module:esm
+extension	buffers.f90	/^    CHARACTER(LEN=256) :: extension,/;"	k	type:index_of_list
+external_force_lc	plugin_int_forces.f90	/^SUBROUTINE external_force_lc(/;"	s
+external_wg_corr_force	plugin_int_forces.f90	/^SUBROUTINE external_wg_corr_force(/;"	s
+extfield	extfield.f90	/^MODULE extfield$/;"	m
+extrapolate_charge	update_pot.f90	/^SUBROUTINE extrapolate_charge(/;"	s	module:extrapolation
+extrapolate_wfcs	update_pot.f90	/^SUBROUTINE extrapolate_wfcs(/;"	s	module:extrapolation
+extrapolation	update_pot.f90	/^MODULE extrapolation$/;"	m
+exx	exx.f90	/^MODULE exx$/;"	m
+exx_band	exx_band.f90	/^MODULE exx_band$/;"	m
+exx_base	exx_base.f90	/^MODULE exx_base$/;"	m
+exx_div_check	exx_base.f90	/^  SUBROUTINE exx_div_check(/;"	s	module:exx_base
+exx_divergence	exx_base.f90	/^  FUNCTION exx_divergence /;"	f	module:exx_base
+exx_fft_create	exx.f90	/^  SUBROUTINE exx_fft_create /;"	s	module:exx
+exx_fft_initialized	exx.f90	/^  LOGICAL :: exx_fft_initialized /;"	v	module:exx
+exx_grid_check	exx_base.f90	/^  SUBROUTINE exx_grid_check /;"	s	module:exx_base
+exx_grid_init	exx_base.f90	/^  SUBROUTINE exx_grid_init(/;"	s	module:exx_base
+exx_grid_initialized	exx_base.f90	/^  LOGICAL :: exx_grid_initialized /;"	v	module:exx_base
+exx_gvec_reinit	exx.f90	/^  SUBROUTINE exx_gvec_reinit(/;"	s	module:exx
+exx_mp_init	exx_base.f90	/^  SUBROUTINE exx_mp_init(/;"	s	module:exx_base
+exx_set_symm	exx_base.f90	/^  SUBROUTINE exx_set_symm /;"	s	module:exx_base
+exx_stress	exx.f90	/^  FUNCTION exx_stress(/;"	f	module:exx
+exxalfa	exx.f90	/^  REAL(DP):: exxalfa=/;"	v	module:exx
+exxbuff	exx.f90	/^  COMPLEX(DP), ALLOCATABLE :: exxbuff(/;"	v	module:exx
+exxdiv	exx_base.f90	/^  REAL(DP)         :: exxdiv /;"	v	module:exx_base
+exxdiv_treatment	exx_base.f90	/^  CHARACTER(32)    :: exxdiv_treatment /;"	v	module:exx_base
+exxenergy	exx.f90	/^  FUNCTION exxenergy /;"	f	module:exx
+exxenergy2	exx.f90	/^  FUNCTION exxenergy2(/;"	f	module:exx
+exxenergy2_gamma	exx.f90	/^  FUNCTION exxenergy2_gamma(/;"	f	module:exx
+exxenergy2_k	exx.f90	/^  FUNCTION exxenergy2_k(/;"	f	module:exx
+exxenergyace	electrons.f90	/^FUNCTION exxenergyace /;"	f
+exxinit	exx.f90	/^  SUBROUTINE exxinit(/;"	s	module:exx
+exxmat	exx.f90	/^  REAL(DP), ALLOCATABLE    :: exxmat(/;"	v	module:exx
+f_inp	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:fixed_occ
+fact	xdm_dispersion.f90	/^  REAL(DP), PARAMETER :: fact(/;"	v	module:xdm_module
+fact0	buffers.f90	/^  REAL(DP),PARAMETER :: fact0 /;"	v	module:buiol
+fact1	buffers.f90	/^  REAL(DP),PARAMETER :: fact1 /;"	v	module:buiol
+fact_hepsi	bp_mod.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: fact_hepsi(/;"	v	module:bp
+factor_a	h_epsi_her_set.f90	/^ SUBROUTINE factor_a(/;"	s
+fc_pol	bp_mod.f90	/^  REAL(DP) :: fc_pol(/;"	v	module:bp
+fcoef	pwcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: fcoef(/;"	v	module:spin_orb
+fcp	fcp.f90	/^MODULE fcp$/;"	m
+fcp_line_minimisation	fcp.f90	/^   SUBROUTINE fcp_line_minimisation(/;"	s	module:fcp
+fcp_mdiis_end	fcp.f90	/^   SUBROUTINE fcp_mdiis_end(/;"	s	module:fcp
+fcp_mdiis_update	fcp.f90	/^   SUBROUTINE fcp_mdiis_update(/;"	s	module:fcp
+fcp_summary	fcp.f90	/^   SUBROUTINE fcp_summary /;"	s	module:fcp
+fcp_verlet	fcp.f90	/^   SUBROUTINE fcp_verlet(/;"	s	module:fcp
+fft_fact	symm_base.f90	/^       invs(48),             &! index of inverse operation: S^{-1}_i=S(invs(i))$/;"	v	module:symm_base
+filter	init_us_0.f90	/^  REAL(DP) function filter /;"	f	subroutine:init_us_0
+filter	init_us_b0.f90	/^  REAL(DP) function filter /;"	f	subroutine:init_us_b0
+find_alpha_and_beta	update_pot.f90	/^SUBROUTINE find_alpha_and_beta(/;"	s	module:extrapolation
+find_group	find_group.f90	/^SUBROUTINE find_group(/;"	s
+find_prev_unit	buffers.f90	/^  FUNCTION find_prev_unit(/;"	f
+find_sym	symm_base.f90	/^SUBROUTINE find_sym /;"	s	module:symm_base
+find_sym_ifc	symm_base.f90	/^SUBROUTINE find_sym_ifc /;"	s	module:symm_base
+find_u	divide_class_so.f90	/^SUBROUTINE find_u(/;"	s
+find_unit	buffers.f90	/^  FUNCTION find_unit(/;"	f
+first_data_structure_change	exx_band.f90	/^  LOGICAL :: first_data_structure_change /;"	v	module:exx_band
+first_iter	dynamics_module.f90	/^         refold_pos,   &! if true the positions are refolded into the supercell$/;"	v	module:dynamics_module
+fixed_occ	pwcom.f90	/^MODULE fixed_occ$/;"	m
+fock0	exx.f90	/^  REAL(DP) :: fock0 /;"	v	module:exx
+fock1	exx.f90	/^  REAL(DP) :: fock0 = 0.0_DP, & !   sum <old|Vx(old)|old>$/;"	v	module:exx
+fock2	exx.f90	/^              fock1 = 0.0_DP, & !   sum <new|vx(old)|new>$/;"	v	module:exx
+fock3	exx.f90	/^              fock2 = 0.0_DP, & !   sum <new|vx(new)|new>$/;"	v	module:exx
+force	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:force_mod
+force_cc	force_cc.f90	/^subroutine force_cc /;"	s
+force_corr	force_corr.f90	/^subroutine force_corr /;"	s
+force_ew	force_ew.f90	/^subroutine force_ew /;"	s
+force_hub	force_hub.f90	/^SUBROUTINE force_hub(/;"	s
+force_lc	force_lc.f90	/^subroutine force_lc /;"	s
+force_mod	pwcom.f90	/^MODULE force_mod$/;"	m
+force_precond	dynamics_module.f90	/^   SUBROUTINE force_precond(/;"	s	module:dynamics_module
+force_smart	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: tau_smart(:,:), force_smart(/;"	v	module:dynamics_module
+force_us	force_us.f90	/^SUBROUTINE force_us(/;"	s
+force_us_gamma	force_us.f90	/^     SUBROUTINE force_us_gamma(/;"	s	subroutine:force_us
+force_us_k	force_us.f90	/^     SUBROUTINE force_us_k(/;"	s	subroutine:force_us
+force_xdm	xdm_dispersion.f90	/^  FUNCTION force_xdm(/;"	f	module:xdm_module
+forcefield	extfield.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:extfield
+forcegate	extfield.f90	/^      forcefield(:,:), &$/;"	v	module:extfield
+forces	forces.f90	/^SUBROUTINE forces(/;"	s
+forces_ion_efield	forces_bp_efield.f90	/^SUBROUTINE forces_ion_efield /;"	s
+forces_us_efield	forces_bp_efield.f90	/^SUBROUTINE forces_us_efield(/;"	s
+fragments	loc_scdm.f90	/^  INTEGER, ALLOCATABLE :: fragments(/;"	v	module:loc_scdm
+fsave	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: fsave(/;"	v	module:xdm_module
+ft	symm_base.f90	/^  REAL (DP) :: &$/;"	v	module:symm_base
+ft_is	pwcom.f90	/^   REAL(DP) :: &$/;"	v	module:rap_point_group_is
+fwfft_orbital_gamma	realus.f90	/^  SUBROUTINE fwfft_orbital_gamma /;"	s
+fwfft_orbital_k	realus.f90	/^  SUBROUTINE fwfft_orbital_k /;"	s
+g2_convolution	exx_base.f90	/^  SUBROUTINE g2_convolution(/;"	s	module:exx_base
+g2_convolution_all	exx_base.f90	/^  SUBROUTINE g2_convolution_all(/;"	s	module:exx_base
+g2_kin	g2_kin.f90	/^SUBROUTINE g2_kin /;"	s
+g2kin	pwcom.f90	/^       wg(:,:),          &! the weight of each k point and band$/;"	v	module:wvfct
+g_exx	exx_band.f90	/^  REAL(DP), ALLOCATABLE :: g_exx(/;"	v	module:exx_band
+g_int	pw2blip.f90	/^   INTEGER,ALLOCATABLE :: g_int(/;"	v	module:pw2blip
+g_lm	paw_onecenter.f90	/^    REAL(DP), ALLOCATABLE :: g_lm(/;"	v	module:paw_onecenter
+g_loc	exx_band.f90	/^  REAL(DP), ALLOCATABLE :: g_loc(/;"	v	module:exx_band
+g_psi	g_psi.f90	/^subroutine g_psi /;"	s
+g_psi_mod	g_psi_mod.f90	/^MODULE g_psi_mod$/;"	m
+gamma	pw2blip.f90	/^   REAL(dp),ALLOCATABLE :: gamma(/;"	v	module:pw2blip
+gamma_approx	pw2blip.f90	/^   INTEGER,PARAMETER :: gamma_approx /;"	v	module:pw2blip
+gamma_only	martyna_tuckerman.f90	/^  LOGICAL :: gamma_only /;"	v	module:martyna_tuckerman
+gate	extfield.f90	/^       block,        &! add potential barrier$/;"	v	module:extfield
+gau_scrlen	exx_base.f90	/^  REAL (DP)         :: gau_scrlen /;"	v	module:exx_base
+gauss_weights	paw_init.f90	/^    SUBROUTINE gauss_weights(/;"	s	subroutine:PAW_rad_init
+gdir	bp_mod.f90	/^  INTEGER :: &$/;"	v	module:bp
+gen_at_dj	gen_at_dj.f90	/^subroutine gen_at_dj /;"	s
+gen_at_dy	gen_at_dy.f90	/^subroutine gen_at_dy /;"	s
+gen_ran_array	pw2casino_write.f90	/^   SUBROUTINE gen_ran_array(/;"	s	subroutine:write_casino_wfn
+gen_rndm_r_1	plus_u_full.f90	/^subroutine gen_rndm_r_1(/;"	s
+gen_us_dj	gen_us_dj.f90	/^subroutine gen_us_dj /;"	s
+gen_us_dy	gen_us_dy.f90	/^subroutine gen_us_dy /;"	s
+generate_kernel	generate_vdW_kernel_table.f90	/^SUBROUTINE generate_kernel /;"	s
+generate_rVV10_kernel_table	generate_rVV10_kernel_table.f90	/^SUBROUTINE generate_rVV10_kernel_table /;"	s
+generate_rVV10_kernel_table_	generate_rVV10_kernel_table.f90	/^program generate_rVV10_kernel_table_$/;"	p
+get_buffer	buffers.f90	/^  SUBROUTINE get_buffer(/;"	s	module:buffers
+get_homo_lumo	print_ks_energies.f90	/^SUBROUTINE get_homo_lumo /;"	s
+get_locals	get_locals.f90	/^      subroutine get_locals(/;"	s
+get_rho	sum_band.f90	/^     SUBROUTINE get_rho(/;"	s
+get_rho_domag	sum_band.f90	/^     SUBROUTINE get_rho_domag(/;"	s
+get_rho_gamma	sum_band.f90	/^     SUBROUTINE get_rho_gamma(/;"	s
+get_server_address	pwscf.f90	/^  CHARACTER(len=256) :: get_server_address$/;"	v	program:pwscf
+get_server_address	run_driver.f90	/^FUNCTION get_server_address /;"	f
+gg_exx	exx_band.f90	/^  REAL(DP), ALLOCATABLE :: g_exx(:,:), gg_exx(/;"	v	module:exx_band
+gg_loc	exx_band.f90	/^  REAL(DP), ALLOCATABLE :: g_loc(:,:), gg_loc(/;"	v	module:exx_band
+ggt	exx.f90	/^  REAL(kind=DP), DIMENSION(:), POINTER :: ggt$/;"	v	module:exx
+gind_block	paw_onecenter.f90	/^    INTEGER, EXTERNAL :: gind_block$/;"	v	module:paw_onecenter
+gk_l2gmap_kdip	pw_restart_new.f90	/^    SUBROUTINE gk_l2gmap_kdip(/;"	s	module:pw_restart_new
+gk_sort	gk_sort.f90	/^SUBROUTINE gk_sort(/;"	s
+global_kpoint_index	divide_et_impera.f90	/^FUNCTION global_kpoint_index /;"	f
+gname	pwcom.f90	/^   CHARACTER(len=11) :: gname /;"	v	module:rap_point_group
+gname_is	pwcom.f90	/^   CHARACTER(len=11) :: gname_is /;"	v	module:rap_point_group_is
+gradcorr	gradcorr.f90	/^SUBROUTINE gradcorr(/;"	s
+gradv_h_of_rho_r	v_of_rho.f90	/^SUBROUTINE gradv_h_of_rho_r(/;"	s
+grid_factor	exx_base.f90	/^  REAL(DP)          :: grid_factor /;"	v	module:exx_base
+group_name	find_group.f90	/^FUNCTION group_name(/;"	f
+gstart	martyna_tuckerman.f90	/^  integer :: gstart /;"	v	module:martyna_tuckerman
+gstart_exx	exx_band.f90	/^  INTEGER :: ngm_exx, ngm_g_exx, gstart_exx$/;"	v	module:exx_band
+gstart_loc	exx_band.f90	/^  INTEGER :: ngm_loc, ngm_g_loc, gstart_loc$/;"	v	module:exx_band
+gstart_t	exx.f90	/^  INTEGER :: gstart_t$/;"	v	module:exx
+gt	exx.f90	/^  REAL(kind=DP), DIMENSION(:,:),POINTER :: gt$/;"	v	module:exx
+gweights	gweights.f90	/^subroutine gweights /;"	s
+gweights_only	gweights.f90	/^subroutine gweights_only /;"	s
+h_diag	g_psi_mod.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:g_psi_mod
+h_epsi_her_apply	h_epsi_her_apply.f90	/^subroutine h_epsi_her_apply(/;"	s
+h_epsi_her_set	h_epsi_her_set.f90	/^subroutine h_epsi_her_set(/;"	s
+h_psi	h_psi.f90	/^SUBROUTINE h_psi(/;"	s
+h_psi_	h_psi.f90	/^SUBROUTINE h_psi_(/;"	s
+h_psi_meta	h_psi_meta.f90	/^subroutine h_psi_meta /;"	s
+has_e	pwcom.f90	/^          elem_so(12,24),  &! Which elements in the smat list for each class$/;"	v	module:rap_point_group_so
+high_frequency_mixing	scf_mod.f90	/^ subroutine high_frequency_mixing /;"	s	module:scf
+hinit0	hinit0.f90	/^SUBROUTINE hinit0(/;"	s
+hinit1	hinit1.f90	/^SUBROUTINE hinit1(/;"	s
+hist_len	dynamics_module.f90	/^   INTEGER, PARAMETER :: hist_len /;"	v	module:dynamics_module
+history	update_pot.f90	/^  INTEGER :: &$/;"	v	module:extrapolation
+hpsi_exx	exx_band.f90	/^  COMPLEX(DP), ALLOCATABLE :: psi_exx(:,:), hpsi_exx(/;"	v	module:exx_band
+hs_1psi	hs_1psi.f90	/^SUBROUTINE hs_1psi(/;"	s
+hubbard_matrix	plus_u_full.f90	/^subroutine hubbard_matrix /;"	s
+hubbard_occ	tabd.f90	/^FUNCTION hubbard_occ /;"	f
+hwf_energy	pwcom.f90	/^       etot,           &! the total Kohn-Sham energy of the solid$/;"	v	module:ener
+i2s	pw2casino_write.f90	/^   CHARACTER(20) FUNCTION i2s(/;"	f	subroutine:write_casino_wfn
+ibnd_buff_end	exx.f90	/^  integer :: ibnd_buff_start, ibnd_buff_end$/;"	v	module:exx
+ibnd_buff_start	exx.f90	/^  integer :: ibnd_buff_start,/;"	v	module:exx
+ibnd_end	exx.f90	/^  INTEGER :: ibnd_start = 0, ibnd_end /;"	v	module:exx
+ibnd_start	exx.f90	/^  INTEGER :: ibnd_start /;"	v	module:exx
+ienv	xdm_dispersion.f90	/^  INTEGER, ALLOCATABLE :: ienv(/;"	v	module:xdm_module
+ig_l2g_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: ig_l2g_exx(/;"	v	module:exx_band
+ig_l2g_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: ig_l2g_loc(/;"	v	module:exx_band
+igk_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: igk_exx(/;"	v	module:exx_band
+igk_k	pwcom.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:klist
+imill_2d	esm.f90	/^  INTEGER, ALLOCATABLE :: mill_2d(:,:), imill_2d(/;"	v	module:esm
+increase_nrec	buffers.f90	/^  SUBROUTINE increase_nrec(/;"	s
+index	buffers.f90	/^    TYPE(data_in_the_list),POINTER :: index(/;"	k	type:index_of_list
+index_of_list	buffers.f90	/^  TYPE index_of_list$/;"	t	module:buiol
+index_sym	exx_base.f90	/^  INTEGER, ALLOCATABLE :: index_sym(/;"	v	module:exx_base
+index_xk	exx_base.f90	/^  INTEGER, ALLOCATABLE :: index_xk(/;"	v	module:exx_base
+index_xkq	exx_base.f90	/^  INTEGER, ALLOCATABLE :: index_xkq(/;"	v	module:exx_base
+indices	exx_band.f90	/^     INTEGER, ALLOCATABLE :: indices(/;"	k	type:comm_packet
+init_at_1	init_at_1.f90	/^subroutine init_at_1(/;"	s
+init_igk	pwcom.f90	/^  SUBROUTINE init_igk /;"	s	module:klist
+init_lda_plus_u	ldaU.f90	/^  SUBROUTINE init_lda_plus_u /;"	s	module:ldaU
+init_mdiis	fcp.f90	/^   LOGICAL          :: init_mdiis /;"	v	module:fcp
+init_ns	init_ns.f90	/^subroutine init_ns$/;"	s
+init_ns_nc	init_ns.f90	/^subroutine init_ns_nc$/;"	s
+init_q_aeps	init_q_aeps.f90	/^SUBROUTINE init_q_aeps /;"	s
+init_realspace_vars	realus.f90	/^    SUBROUTINE init_realspace_vars(/;"	s
+init_rng	pw2casino_write.f90	/^   SUBROUTINE init_rng(/;"	s	subroutine:write_casino_wfn
+init_run	init_run.f90	/^SUBROUTINE init_run(/;"	s
+init_start_k	start_k.f90	/^    SUBROUTINE init_start_k /;"	s	module:start_k
+init_us_0	init_us_0.f90	/^subroutine init_us_0$/;"	s
+init_us_1	init_us_1.f90	/^subroutine init_us_1$/;"	s
+init_us_2	init_us_2.f90	/^subroutine init_us_2 /;"	s
+init_us_b0	init_us_b0.f90	/^subroutine init_us_b0$/;"	s
+init_vars_from_schema	pw_restart_new.f90	/^    SUBROUTINE init_vars_from_schema(/;"	s	module:pw_restart_new
+init_vloc	init_vloc.f90	/^subroutine init_vloc(/;"	s
+init_wfc	wfcinit.f90	/^SUBROUTINE init_wfc /;"	s
+init_wg_corr	martyna_tuckerman.f90	/^  SUBROUTINE init_wg_corr$/;"	s	module:martyna_tuckerman
+init_xdm	xdm_dispersion.f90	/^  SUBROUTINE init_xdm(/;"	s	module:xdm_module
+initialisation_level	realus.f90	/^  INTEGER               :: initialisation_level$/;"	v	module:realus
+initialize_g_vectors	run_driver.f90	/^  SUBROUTINE initialize_g_vectors(/;"	s	subroutine:run_driver
+initialize_local_to_exact_map	exx_band.f90	/^  SUBROUTINE initialize_local_to_exact_map(/;"	s	module:exx_band
+inputpp	pw2casino.f90	/^  NAMELIST \/ inputpp /;"	n	subroutine:pw2casino
+int_to_char	pw_restart_new.f90	/^  CHARACTER(LEN=6), EXTERNAL :: int_to_char$/;"	v	module:pw_restart_new
+interpolate_vrs	set_vrs.f90	/^subroutine interpolate_vrs /;"	s
+invchol	utils.f90	/^SUBROUTINE invchol(/;"	s
+invchol_k	utils.f90	/^SUBROUTINE invchol_k(/;"	s
+inve	pw2blip.f90	/^   SUBROUTINE inve(/;"	s	module:pw2blip
+inverse_s	symm_base.f90	/^   SUBROUTINE inverse_s /;"	s	module:symm_base
+invfft_orbital_gamma	realus.f90	/^  SUBROUTINE invfft_orbital_gamma /;"	s
+invfft_orbital_k	realus.f90	/^  SUBROUTINE invfft_orbital_k /;"	s
+invs	symm_base.f90	/^       s(3,3,48),            &! symmetry matrices, in crystal axis$/;"	v	module:symm_base
+invsym	symm_base.f90	/^       time_reversal=.true., &! if .TRUE. the system has time reversal symmetry$/;"	v	module:symm_base
+io_buffer	scf_mod.f90	/^  COMPLEX(DP), PRIVATE, ALLOCATABLE:: io_buffer(/;"	v	module:scf
+io_rho_xml	io_rho_xml.f90	/^MODULE io_rho_xml$/;"	m
+ion_dipole	extfield.f90	/^      el_dipole,     &! electronic_dipole used when dipole correction is on$/;"	v	module:extfield
+ion_pol	bp_mod.f90	/^  REAL(DP) :: ion_pol(/;"	v	module:bp
+iosys	input.f90	/^SUBROUTINE iosys(/;"	s
+ipoolrecover	para.f90	/^SUBROUTINE ipoolrecover(/;"	s
+ir_ram	pwcom.f90	/^   CHARACTER(len=3)  :: ir_ram(/;"	v	module:rap_point_group
+irreducible_BZ	irrek.f90	/^subroutine irreducible_BZ /;"	s
+irrek	irrek.f90	/^subroutine irrek /;"	s
+irrek_nc	irrek.f90	/^subroutine irrek_nc /;"	s
+irt	symm_base.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:symm_base
+is_axis	divide_class.f90	/^FUNCTION is_axis(/;"	f
+is_c2v	divide_class.f90	/^SUBROUTINE is_c2v(/;"	s
+is_complex	divide_class.f90	/^FUNCTION is_complex(/;"	f
+is_complex_so	divide_class_so.f90	/^FUNCTION is_complex_so(/;"	f
+is_d2	divide_class.f90	/^SUBROUTINE is_d2(/;"	s
+is_group	symm_base.f90	/^LOGICAL FUNCTION is_group /;"	f	module:symm_base
+is_hubbard	ldaU.f90	/^  LOGICAL :: &$/;"	v	module:ldaU
+is_parallel	divide_class.f90	/^FUNCTION is_parallel(/;"	f
+iscdm	loc_scdm.f90	/^  integer :: iscdm=/;"	v	module:loc_scdm
+isk	pwcom.f90	/^       current_spin,    &! spin of the current kpoint$/;"	v	module:lsda_mod
+ispaw	xdm_dispersion.f90	/^  LOGICAL :: ispaw$/;"	v	module:xdm_module
+iweights	iweights.f90	/^subroutine iweights /;"	s
+iweights_only	iweights.f90	/^subroutine iweights_only /;"	s
+ix_e	paw_onecenter.f90	/^    INTEGER, SAVE :: nx_loc, ix_s, ix_e /;"	v	module:paw_onecenter
+ix_s	paw_onecenter.f90	/^    INTEGER, SAVE :: nx_loc, ix_s,/;"	v	module:paw_onecenter
+k	paw_exx.f90	/^    REAL(DP),POINTER :: k(/;"	k	type:paw_fockrnl_type
+k1	start_k.f90	/^       nk1,/;"	v	module:start_k
+k2	start_k.f90	/^       k1, k2,/;"	v	module:start_k
+k3	start_k.f90	/^       k1, k2, k3 /;"	v	module:start_k
+ke	paw_exx.f90	/^  TYPE(paw_fockrnl_type),ALLOCATABLE :: ke(/;"	v	module:paw_exx
+kedtau	scf_mod.f90	/^       rho_core(:),    &! the core charge in real space$/;"	v	module:scf
+kin_g	scf_mod.f90	/^     COMPLEX(DP), ALLOCATABLE :: kin_g(/;"	k	type:mix_type
+kin_g	scf_mod.f90	/^     COMPLEX(DP),ALLOCATABLE :: kin_g(/;"	k	type:scf_type
+kin_r	scf_mod.f90	/^     REAL(DP),   ALLOCATABLE :: kin_r(/;"	k	type:scf_type
+klist	pwcom.f90	/^MODULE klist$/;"	m
+kp_strings	bp_strings.f90	/^SUBROUTINE kp_strings /;"	s
+kpoint_grid	kpoint_grid.f90	/^SUBROUTINE kpoint_grid /;"	s
+kpoint_grid_efield	kpoint_grid.f90	/^SUBROUTINE kpoint_grid_efield /;"	s
+ktetra	tetra.f90	/^MODULE ktetra$/;"	m
+l3dstring	bp_mod.f90	/^  LOGICAL :: l3dstring /;"	v	module:bp
+l_el_pol_old	bp_mod.f90	/^  LOGICAL  :: l_el_pol_old!/;"	v	module:bp
+la2F	a2fmod.f90	/^  LOGICAL :: la2F /;"	v	module:a2F
+langevin_md	dynamics_module.f90	/^   SUBROUTINE langevin_md(/;"	s	module:dynamics_module
+laue_class	find_group.f90	/^FUNCTION laue_class(/;"	f
+lberry	bp_mod.f90	/^  LOGICAL :: &$/;"	v	module:bp
+ld_bg	pw2blip.f90	/^   INTEGER :: blipgrid(3),ld_bg(/;"	v	module:pw2blip
+ldaU	ldaU.f90	/^MODULE ldaU$/;"	m
+lda_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: lda_exx(/;"	v	module:exx_band
+lda_local	exx_band.f90	/^  INTEGER, ALLOCATABLE :: lda_local(/;"	v	module:exx_band
+lda_original	exx_band.f90	/^  INTEGER :: lda_original,/;"	v	module:exx_band
+lda_plus_u	ldaU.f90	/^       is_hubbard(ntypx),    &! .TRUE. if this atom species has U correction$/;"	v	module:ldaU
+lda_plus_u_co	scf_mod.f90	/^  LOGICAL, PRIVATE :: lda_plus_u_co,/;"	v	module:scf
+lda_plus_u_kind	ldaU.f90	/^       niter_with_fixed_ns,  &! no. of iterations with fixed ns$/;"	v	module:ldaU
+lda_plus_u_nc	scf_mod.f90	/^  LOGICAL, PRIVATE :: lda_plus_u_co, lda_plus_u_nc$/;"	v	module:scf
+ldim_block	paw_onecenter.f90	/^    INTEGER, EXTERNAL :: ldim_block$/;"	v	module:paw_onecenter
+lelfield	bp_mod.f90	/^       lberry  =.false., & ! if .TRUE. calculate polarization using Berry phase$/;"	v	module:bp
+lforce	pwcom.f90	/^  LOGICAL :: &$/;"	v	module:force_mod
+lforcet	pwcom.f90	/^      lspinorb,            &  ! if .TRUE. this is a spin-orbit calculation$/;"	v	module:spin_orb
+lgauss	pwcom.f90	/^  LOGICAL :: &$/;"	v	module:klist
+lmovecell	pwcom.f90	/^  LOGICAL :: lmovecell /;"	v	module:cellmd
+loc_scdm	loc_scdm.f90	/^MODULE loc_scdm /;"	m
+loc_scdm_k	loc_scdm_k.f90	/^MODULE loc_scdm_k$/;"	m
+local_kpoint_index	divide_et_impera.f90	/^FUNCTION local_kpoint_index /;"	f
+local_tf_ddot	scf_mod.f90	/^ FUNCTION local_tf_ddot(/;"	f	module:scf
+local_thr	exx.f90	/^  REAL(DP)::  local_thr /;"	v	module:exx
+localize_orbitals	loc_scdm.f90	/^SUBROUTINE localize_orbitals(/;"	s	module:loc_scdm
+localize_orbitals_k	loc_scdm_k.f90	/^SUBROUTINE localize_orbitals_k(/;"	s	module:loc_scdm_k
+locbuff	exx.f90	/^  REAL(DP), ALLOCATABLE    :: locbuff(/;"	v	module:exx
+locbuff_G	loc_scdm.f90	/^  complex(DP), allocatable :: locbuff_G(/;"	v	module:loc_scdm
+locmat	exx.f90	/^  REAL(DP), ALLOCATABLE    :: locmat(/;"	v	module:exx
+lorbm	bp_mod.f90	/^       lelfield=.false., & ! if .TRUE. finite electric field using Berry phase$/;"	v	module:bp
+lr_Vloc	Coul_cut_2D.f90	/^  REAL(DP), ALLOCATABLE :: lr_Vloc(/;"	v	module:Coul_cut_2D
+lsda	pwcom.f90	/^  LOGICAL :: &$/;"	v	module:lsda_mod
+lsda_mod	pwcom.f90	/^MODULE lsda_mod$/;"	m
+lspinorb	pwcom.f90	/^  LOGICAL :: &$/;"	v	module:spin_orb
+lstres	pwcom.f90	/^       lforce,         &! if .TRUE. compute the forces$/;"	v	module:force_mod
+ltetra	pwcom.f90	/^       lgauss,         &! if .TRUE.: use gaussian broadening$/;"	v	module:klist
+lvec	xdm_dispersion.f90	/^  INTEGER, ALLOCATABLE :: ienv(:), lvec(/;"	v	module:xdm_module
+lvp	pw2blip.f90	/^   REAL(dp) :: rnr(3),rnr2(3),bg(3,3),lvp(/;"	v	module:pw2blip
+lxkcry	pwcom.f90	/^       ltetra,         &! if .TRUE.: use tetrahedra$/;"	v	module:klist
+lz	Coul_cut_2D.f90	/^  real(DP) :: lz$/;"	v	module:Coul_cut_2D
+magtot	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:lsda_mod
+make_pointlists	make_pointlists.f90	/^SUBROUTINE make_pointlists$/;"	s
+makov_payne	makov_payne.f90	/^SUBROUTINE makov_payne(/;"	s
+map_igk_to_fft	pw2blip.f90	/^   INTEGER,ALLOCATABLE :: map_igk_to_fft(/;"	v	module:pw2blip
+map_minus_igk_to_fft	pw2blip.f90	/^   INTEGER,ALLOCATABLE :: map_minus_igk_to_fft(/;"	v	module:pw2blip
+mapg_owner	bp_mod.f90	/^  INTEGER, ALLOCATABLE :: mapg_owner(/;"	v	module:bp
+mapgm_global	bp_mod.f90	/^  INTEGER, ALLOCATABLE, TARGET :: mapgm_global(/;"	v	module:bp
+mapgp_global	bp_mod.f90	/^  INTEGER, ALLOCATABLE, TARGET :: mapgp_global(/;"	v	module:bp
+martyna_tuckerman	martyna_tuckerman.f90	/^MODULE martyna_tuckerman$/;"	m
+mass	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: mass(/;"	v	module:dynamics_module
+matcalc	utils.f90	/^SUBROUTINE matcalc /;"	s
+matcalc_k	utils.f90	/^SUBROUTINE matcalc_k /;"	s
+matches	pwscf.f90	/^  LOGICAL, external :: matches$/;"	v	program:pwscf
+matprt_k	utils.f90	/^SUBROUTINE matprt_k(/;"	s
+maxbox	realus.f90	/^     INTEGER :: maxbox /;"	k	type:realsp_augmentation
+maxbox_beta	realus.f90	/^  INTEGER,  ALLOCATABLE :: box_beta(:,:), maxbox_beta(/;"	v	module:realus
+maxc6	xdm_dispersion.f90	/^  REAL(DP) :: maxc6$/;"	v	module:xdm_module
+mcm	symm_base.f90	/^INTEGER FUNCTION mcm(/;"	f	module:symm_base
+md_init	dynamics_module.f90	/^      SUBROUTINE md_init(/;"	s	subroutine:verlet
+md_init	fcp.f90	/^      SUBROUTINE md_init(/;"	s	subroutine:fcp_verlet
+mdiist	fcp.f90	/^   TYPE(mdiis_type) :: mdiist$/;"	v	module:fcp
+me_paw	paw_onecenter.f90	/^    INTEGER, SAVE :: paw_comm, me_paw,/;"	v	module:paw_onecenter
+measure_localization	loc_scdm.f90	/^SUBROUTINE measure_localization(/;"	s	module:loc_scdm
+measure_localization_k	loc_scdm_k.f90	/^SUBROUTINE measure_localization_k(/;"	s	module:loc_scdm_k
+memory_report	memory_report.f90	/^SUBROUTINE memory_report(/;"	s
+mill_2d	esm.f90	/^  INTEGER, ALLOCATABLE :: mill_2d(/;"	v	module:esm
+mill_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: mill_exx(/;"	v	module:exx_band
+mill_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: mill_loc(/;"	v	module:exx_band
+mirror_axis	divide_class.f90	/^SUBROUTINE mirror_axis(/;"	s
+mix_rho	mix_rho.f90	/^SUBROUTINE mix_rho(/;"	s
+mix_save	mix_rho.f90	/^MODULE mix_save$/;"	m
+mix_type	scf_mod.f90	/^  TYPE mix_type$/;"	t	module:scf
+mix_type_AXPY	scf_mod.f90	/^ subroutine mix_type_AXPY /;"	s	module:scf
+mix_type_COPY	scf_mod.f90	/^ subroutine mix_type_COPY /;"	s	module:scf
+mix_type_SCAL	scf_mod.f90	/^ subroutine mix_type_SCAL /;"	s	module:scf
+ml	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: alpha(:), ml(/;"	v	module:xdm_module
+mopopla	extfield.f90	/^      FUNCTION mopopla(/;"	f	module:extfield
+move_ions	move_ions.f90	/^SUBROUTINE move_ions /;"	s
+msg	exx_band.f90	/^     COMPLEX(DP), ALLOCATABLE :: msg(/;"	k	type:comm_packet
+msmall_lm	paw_onecenter.f90	/^    REAL(DP), ALLOCATABLE   :: msmall_lm(/;"	v	module:paw_onecenter
+multable	multable.f90	/^SUBROUTINE multable /;"	s
+n_local	exx_band.f90	/^  INTEGER :: n_local /;"	v	module:exx_band
+n_original	exx_band.f90	/^  INTEGER :: lda_original, n_original$/;"	v	module:exx_band
+n_plane_waves	n_plane_waves.f90	/^INTEGER FUNCTION n_plane_waves /;"	f
+n_scdm	loc_scdm.f90	/^  integer :: n_scdm$/;"	v	module:loc_scdm
+n_scdm	loc_scdm_k.f90	/^  integer :: n_scdm /;"	v	module:loc_scdm_k
+name_class	pwcom.f90	/^   CHARACTER(len=5) :: name_class(/;"	v	module:rap_point_group
+name_class_so	pwcom.f90	/^   CHARACTER(len=5) :: name_class_so(/;"	v	module:rap_point_group_so
+name_class_so1	pwcom.f90	/^   CHARACTER(len=5) :: name_class_so(24), &  ! the name of the class$/;"	v	module:rap_point_group_so
+name_rap	pwcom.f90	/^   CHARACTER(len=15) :: name_rap(/;"	v	module:rap_point_group
+name_rap_so	pwcom.f90	/^   CHARACTER(len=15) :: name_rap_so(/;"	v	module:rap_point_group_so
+natomwfc	atomic_wfc_mod.f90	/^  INTEGER :: &$/;"	v	module:basis
+nberrycyc	bp_mod.f90	/^       nppstr,      &! number of k-points (parallel vector)$/;"	v	module:bp
+nbnd	pwcom.f90	/^       nbndx/;"	v	module:wvfct
+nbndproj	exx.f90	/^  INTEGER :: nbndproj$/;"	v	module:exx
+nbndx	pwcom.f90	/^       npwx,             &! maximum number of PW for wavefunctions$/;"	v	module:wvfct
+nc_magnetization_from_lsda	potinit.f90	/^SUBROUTINE nc_magnetization_from_lsda /;"	s
+nclass	pwcom.f90	/^          code_group,  &   ! The code of the point group$/;"	v	module:rap_point_group
+ndof	dynamics_module.f90	/^         nraise,      &! parameter used in thermalization$/;"	v	module:dynamics_module
+neldw	pwcom.f90	/^       nelup=0.0_dp,      &! number of spin-up electrons (if two_fermi_energies=t)$/;"	v	module:klist
+nelec	pwcom.f90	/^       degauss,           &! smearing parameter$/;"	v	module:klist
+nelem	pwcom.f90	/^          nclass,  &       ! The number of classes of the point group$/;"	v	module:rap_point_group
+nelem_so	pwcom.f90	/^          nrap,    &       ! The number of classes of the point group$/;"	v	module:rap_point_group_so
+nelup	pwcom.f90	/^       nelec,             &! number of electrons$/;"	v	module:klist
+nenv	xdm_dispersion.f90	/^  INTEGER :: nenv$/;"	v	module:xdm_module
+new_evc	new_occ.f90	/^SUBROUTINE new_evc(/;"	s
+new_ns	new_ns.f90	/^SUBROUTINE new_ns(/;"	s
+new_ns_nc	new_ns.f90	/^SUBROUTINE new_ns_nc(/;"	s
+newd	newd.f90	/^SUBROUTINE newd(/;"	s	module:dfunct
+newd_nc	newd.f90	/^    SUBROUTINE newd_nc(/;"	s	subroutine:newd
+newd_so	newd.f90	/^    SUBROUTINE newd_so(/;"	s	subroutine:newd
+newdxx_g	us_exx.f90	/^  SUBROUTINE newdxx_g(/;"	s	module:us_exx
+newdxx_r	us_exx.f90	/^  SUBROUTINE newdxx_r(/;"	s	module:us_exx
+newq	newd.f90	/^SUBROUTINE newq(/;"	s	module:dfunct
+newq_r	realus.f90	/^    SUBROUTINE newq_r(/;"	s
+next	buffers.f90	/^    TYPE(index_of_list),POINTER :: next /;"	k	type:index_of_list
+ngauss	pwcom.f90	/^       nkstot,            &! total number of k points$/;"	v	module:klist
+ngk	pwcom.f90	/^       igk_k(:,:),&       ! index of G corresponding to a given index of k+G$/;"	v	module:klist
+ngk_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: ngk_local(:), ngk_exx(/;"	v	module:exx_band
+ngk_local	exx_band.f90	/^  INTEGER, ALLOCATABLE :: ngk_local(/;"	v	module:exx_band
+ngm_2d	esm.f90	/^  INTEGER              :: ngm_2d /;"	v	module:esm
+ngm_exx	exx_band.f90	/^  INTEGER :: ngm_exx,/;"	v	module:exx_band
+ngm_g_exx	exx_band.f90	/^  INTEGER :: ngm_exx, ngm_g_exx,/;"	v	module:exx_band
+ngm_g_loc	exx_band.f90	/^  INTEGER :: ngm_loc, ngm_g_loc,/;"	v	module:exx_band
+ngm_loc	exx_band.f90	/^  INTEGER :: ngm_loc,/;"	v	module:exx_band
+ngms_exx	exx_band.f90	/^  INTEGER :: ngms_exx,/;"	v	module:exx_band
+ngms_g_exx	exx_band.f90	/^  INTEGER :: ngms_exx, ngms_g_exx$/;"	v	module:exx_band
+ngms_g_loc	exx_band.f90	/^  INTEGER :: ngms_loc, ngms_g_loc$/;"	v	module:exx_band
+ngms_loc	exx_band.f90	/^  INTEGER :: ngms_loc,/;"	v	module:exx_band
+ngmt_g	exx.f90	/^  INTEGER :: ngmt_g$/;"	v	module:exx
+ngs	symme.f90	/^  INTEGER :: ngs /;"	v	module:symme
+ngtot	pw2blip.f90	/^   INTEGER :: ngtot$/;"	v	module:pw2blip
+nij_type	us_exx.f90	/^  INTEGER, ALLOCATABLE :: nij_type(/;"	v	module:us_exx
+niter_with_fixed_ns	ldaU.f90	/^       nwfcU,                &! total no. of atomic wavefunctions having U term$/;"	v	module:ldaU
+nk1	start_k.f90	/^  INTEGER :: &$/;"	v	module:start_k
+nk2	start_k.f90	/^       nk1, nk2,/;"	v	module:start_k
+nk3	start_k.f90	/^       nk1, nk2, nk3,/;"	v	module:start_k
+nkqs	exx_base.f90	/^  INTEGER :: nkqs /;"	v	module:exx_base
+nks	pwcom.f90	/^  INTEGER :: &$/;"	v	module:klist
+nks_start	start_k.f90	/^  INTEGER :: nks_start=/;"	v	module:start_k
+nkstot	pwcom.f90	/^       nks,               &! number of k points in this pool$/;"	v	module:klist
+nl_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: mill_exx(:,:), nl_exx(/;"	v	module:exx_band
+nl_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: mill_loc(:,:), nl_loc(/;"	v	module:exx_band
+nlm_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nlm_exx(/;"	v	module:exx_band
+nlm_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nlm_loc(/;"	v	module:exx_band
+nls_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nls_exx(/;"	v	module:exx_band
+nls_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nls_loc(/;"	v	module:exx_band
+nlsm_exx	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nlsm_exx(/;"	v	module:exx_band
+nlsm_loc	exx_band.f90	/^  INTEGER, ALLOCATABLE :: nlsm_loc(/;"	v	module:exx_band
+nntetra	tetra.f90	/^       ntetra, &         ! number of tetrahedra$/;"	v	module:ktetra
+no_digits_int	pw2casino_write.f90	/^   INTEGER FUNCTION no_digits_int(/;"	f	subroutine:write_casino_wfn
+no_rho_sym	symme.f90	/^  LOGICAL :: &$/;"	v	module:symme
+no_t_rev	symm_base.f90	/^       nosym_evc = .false.,  &! if .TRUE. symmetry is used only to symmetrize$/;"	v	module:symm_base
+nofrac	symm_base.f90	/^       invsym,               &! if .TRUE. the system has inversion symmetry$/;"	v	module:symm_base
+non_scf	non_scf.f90	/^  SUBROUTINE non_scf /;"	s
+nosym	symm_base.f90	/^       allfrac= .false.,     &! if .TRUE. all fractionary translations allowed,$/;"	v	module:symm_base
+nosym_evc	symm_base.f90	/^       nosym = .false.,      &! if .TRUE. no symmetry is used$/;"	v	module:symm_base
+nppstr	bp_mod.f90	/^       gdir,        &! G-vector for polarization calculation$/;"	v	module:bp
+nppstr_3d	bp_mod.f90	/^  INTEGER :: nppstr_3d(/;"	v	module:bp
+nproc_paw	paw_onecenter.f90	/^    INTEGER, SAVE :: paw_comm, me_paw, nproc_paw$/;"	v	module:paw_onecenter
+npw	pwcom.f90	/^       nbnd,             &! number of bands$/;"	v	module:wvfct
+npwt	exx.f90	/^  INTEGER :: npwt$/;"	v	module:exx
+npwx	pwcom.f90	/^  INTEGER ::  &$/;"	v	module:wvfct
+npwx_exx	exx_band.f90	/^  INTEGER :: npwx_exx /;"	v	module:exx_band
+npwx_local	exx_band.f90	/^  INTEGER :: npwx_local /;"	v	module:exx_band
+nq1	exx_base.f90	/^  INTEGER :: nq1=/;"	v	module:exx_base
+nq2	exx_base.f90	/^  INTEGER :: nq1=1, nq2=/;"	v	module:exx_base
+nq3	exx_base.f90	/^  INTEGER :: nq1=1, nq2=1, nq3=/;"	v	module:exx_base
+nqs	exx_base.f90	/^  INTEGER :: nqs=/;"	v	module:exx_base
+nqx	pwcom.f90	/^       nqxq/;"	v	module:us
+nqxq	pwcom.f90	/^  INTEGER :: &$/;"	v	module:us
+nr	pw2blip.f90	/^   INTEGER :: nr(/;"	v	module:pw2blip
+nraise	dynamics_module.f90	/^   INTEGER :: &$/;"	v	module:dynamics_module
+nrap	pwcom.f90	/^   INTEGER :: &$/;"	v	module:rap_point_group_so
+nrec	buffers.f90	/^    INTEGER :: nrec,/;"	k	type:index_of_list
+nrec0	buffers.f90	/^  INTEGER,PARAMETER :: nrec0 /;"	v	module:buiol
+nrot	symm_base.f90	/^       fft_fact(3) = 1,      &! FFT dimensions must be multiple of fft_fact$/;"	v	module:symm_base
+ns	scf_mod.f90	/^     REAL(DP),    ALLOCATABLE :: ns(/;"	k	type:mix_type
+ns	scf_mod.f90	/^     REAL(DP),   ALLOCATABLE :: ns(/;"	k	type:scf_type
+ns_adj	ns_adj.f90	/^subroutine ns_adj$/;"	s
+ns_ddot	scf_mod.f90	/^FUNCTION ns_ddot(/;"	f	module:scf
+ns_nc	scf_mod.f90	/^     COMPLEX(DP), ALLOCATABLE :: ns_nc(/;"	k	type:mix_type
+ns_nc	scf_mod.f90	/^     COMPLEX(DP),ALLOCATABLE :: ns_nc(/;"	k	type:scf_type
+nspin	pwcom.f90	/^  INTEGER :: &$/;"	v	module:lsda_mod
+nspinx	ldaU.f90	/^  INTEGER, PARAMETER :: nspinx=/;"	v	module:ldaU
+nsym	symm_base.f90	/^       spacegroup = 0,       &! space group index, as read from input$/;"	v	module:symm_base
+nsym_is	pwcom.f90	/^   INTEGER :: &$/;"	v	module:rap_point_group_is
+nsym_na	symm_base.f90	/^       nsym_ns = 0,          &! nonsymmorphic (fractional translation) symms$/;"	v	module:symm_base
+nsym_ns	symm_base.f90	/^       nsym = 1,             &! total number of crystal symmetries$/;"	v	module:symm_base
+ntcheck	pwcom.f90	/^       ntimes=-1,        &! # of thermalization steps to be performed (-i=inf)$/;"	v	module:cellmd
+ntetra	tetra.f90	/^  INTEGER :: &$/;"	v	module:ktetra
+ntimes	pwcom.f90	/^       nzero,            &! iteration # of last thermalization$/;"	v	module:cellmd
+num_accept	dynamics_module.f90	/^         ndof,        &! the number of degrees of freedom$/;"	v	module:dynamics_module
+nunits	buffers.f90	/^  INTEGER:: nunits /;"	v	module:buffers
+nvec	xdm_dispersion.f90	/^  INTEGER :: nvec$/;"	v	module:xdm_module
+nwfcU	ldaU.f90	/^  INTEGER :: &$/;"	v	module:ldaU
+nwordwfc_exx	exx_band.f90	/^  INTEGER :: nwordwfc_exx$/;"	v	module:exx_band
+nx_el	bp_mod.f90	/^  INTEGER, ALLOCATABLE :: nx_el(/;"	v	module:bp
+nx_loc	paw_onecenter.f90	/^    INTEGER, SAVE :: nx_loc,/;"	v	module:paw_onecenter
+nzero	pwcom.f90	/^  INTEGER :: &$/;"	v	module:cellmd
+oatwfc	ldaU.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:ldaU
+of_g	scf_mod.f90	/^     COMPLEX(DP), ALLOCATABLE :: of_g(/;"	k	type:mix_type
+of_g	scf_mod.f90	/^     COMPLEX(DP),ALLOCATABLE :: of_g(/;"	k	type:scf_type
+of_r	scf_mod.f90	/^     REAL(DP),   ALLOCATABLE :: of_r(/;"	k	type:scf_type
+offsetU	ldaU.f90	/^       oatwfc(:), offsetU(/;"	v	module:ldaU
+offset_atom_wfc	offset_atom_wfc.f90	/^SUBROUTINE offset_atom_wfc(/;"	s
+omega_old	pwcom.f90	/^       at_old(3,3),      &! the lattice vectors at the previous ste$/;"	v	module:cellmd
+on_double_grid	exx_base.f90	/^  LOGICAl           :: on_double_grid /;"	v	module:exx_base
+one_atom_occupations	pwcom.f90	/^       tfixed_occ, &          ! if .TRUE. the occupations are fixed.$/;"	v	module:fixed_occ
+open_buffer	buffers.f90	/^  SUBROUTINE open_buffer /;"	s	module:buffers
+open_mix_file	scf_mod.f90	/^ subroutine open_mix_file(/;"	s	module:scf
+openfil	openfil.f90	/^SUBROUTINE openfil(/;"	s
+opt_tetra_dos_t	tetra.f90	/^SUBROUTINE opt_tetra_dos_t /;"	s	module:ktetra
+opt_tetra_init	tetra.f90	/^  SUBROUTINE opt_tetra_init(/;"	s	module:ktetra
+opt_tetra_partialdos	tetra.f90	/^SUBROUTINE opt_tetra_partialdos(/;"	s	module:ktetra
+opt_tetra_weights	tetra.f90	/^SUBROUTINE opt_tetra_weights(/;"	s	module:ktetra
+opt_tetra_weights_only	tetra.f90	/^SUBROUTINE opt_tetra_weights_only(/;"	s	module:ktetra
+orbm_kubo	orbm_kubo.f90	/^SUBROUTINE orbm_kubo(/;"	s
+orthoUwfc	orthoatwfc.f90	/^SUBROUTINE orthoUwfc$/;"	s
+ortho_swfc	orthoatwfc.f90	/^SUBROUTINE ortho_swfc /;"	s
+ortho_wfc	ortho_wfc.f90	/^SUBROUTINE ortho_wfc(/;"	s
+orthoatwfc	orthoatwfc.f90	/^SUBROUTINE orthoatwfc /;"	s
+orthogonalize_vects	new_occ.f90	/^SUBROUTINE orthogonalize_vects(/;"	s
+output_tau	output_tau.f90	/^SUBROUTINE output_tau(/;"	s
+paw_comm	paw_onecenter.f90	/^    INTEGER, SAVE :: paw_comm,/;"	v	module:paw_onecenter
+paw_exx	paw_exx.f90	/^MODULE paw_exx$/;"	m
+paw_fockrnl_type	paw_exx.f90	/^  TYPE paw_fockrnl_type$/;"	t	module:paw_exx
+paw_has_init_paw_fockrnl	paw_exx.f90	/^  LOGICAL,PRIVATE :: paw_has_init_paw_fockrnl /;"	v	module:paw_exx
+paw_init	paw_init.f90	/^MODULE paw_init$/;"	m
+paw_onecenter	paw_onecenter.f90	/^MODULE paw_onecenter$/;"	m
+paw_symmetry	paw_symmetry.f90	/^MODULE paw_symmetry$/;"	m
+pdl_tot	bp_mod.f90	/^  REAL(DP) :: pdl_tot /;"	v	module:bp
+phase_control	bp_mod.f90	/^  INTEGER  :: phase_control!/;"	v	module:bp
+phi_value	generate_rVV10_kernel_table.f90	/^  real(dp) function phi_value(/;"	f	subroutine:generate_rVV10_kernel_table
+phi_value	generate_vdW_kernel_table.f90	/^  real(dp) FUNCTION phi_value(/;"	f	subroutine:generate_kernel
+pi	pw2blip.f90	/^   REAL(dp),PARAMETER :: pi /;"	v	module:pw2blip
+piksort	sumkt.f90	/^subroutine piksort /;"	s
+plugin_check	plugin_check.f90	/^SUBROUTINE plugin_check(/;"	s
+plugin_clean	plugin_clean.f90	/^subroutine plugin_clean(/;"	s
+plugin_clock	plugin_clock.f90	/^subroutine plugin_clock(/;"	s
+plugin_ext_forces	plugin_ext_forces.f90	/^SUBROUTINE plugin_ext_forces(/;"	s
+plugin_init_cell	plugin_init_cell.f90	/^SUBROUTINE plugin_init_cell(/;"	s
+plugin_init_ions	plugin_init_ions.f90	/^SUBROUTINE plugin_init_ions(/;"	s
+plugin_init_potential	plugin_init_potential.f90	/^subroutine plugin_init_potential(/;"	s
+plugin_initbase	plugin_initbase.f90	/^subroutine plugin_initbase(/;"	s
+plugin_initialization	plugin_initialization.f90	/^SUBROUTINE plugin_initialization(/;"	s
+plugin_int_forces	plugin_int_forces.f90	/^SUBROUTINE plugin_int_forces(/;"	s
+plugin_print_energies	plugin_print_energies.f90	/^SUBROUTINE plugin_print_energies(/;"	s
+plugin_read_input	plugin_read_input.f90	/^subroutine plugin_read_input(/;"	s
+plugin_scf_energy	plugin_scf_energy.f90	/^SUBROUTINE plugin_scf_energy(/;"	s
+plugin_scf_potential	plugin_scf_potential.f90	/^SUBROUTINE plugin_scf_potential(/;"	s
+plugin_summary	plugin_summary.f90	/^subroutine plugin_summary(/;"	s
+polint	esm.f90	/^SUBROUTINE polint(/;"	s	module:esm
+poolcollect	para.f90	/^SUBROUTINE poolcollect(/;"	s
+poolrecover	para.f90	/^SUBROUTINE poolrecover(/;"	s
+poolscatter	para.f90	/^SUBROUTINE poolscatter(/;"	s
+pot_order	update_pot.f90	/^    history,          &! number of old steps available for potential updating$/;"	v	module:extrapolation
+potinit	potinit.f90	/^SUBROUTINE potinit(/;"	s
+pre_init	init_run.f90	/^SUBROUTINE pre_init(/;"	s
+prep_gaussian_quadrature	generate_vdW_kernel_table.f90	/^  SUBROUTINE prep_gaussian_quadrature(/;"	s	subroutine:generate_kernel
+press	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:cellmd
+print_averages	dynamics_module.f90	/^   SUBROUTINE print_averages(/;"	s	module:dynamics_module
+print_clock_pw	print_clock_pw.f90	/^SUBROUTINE print_clock_pw(/;"	s
+print_energies	electrons.f90	/^     SUBROUTINE print_energies /;"	s	subroutine:electrons_scf
+print_ks_energies	print_ks_energies.f90	/^SUBROUTINE print_ks_energies(/;"	s
+print_overlap	pw2casino_write.f90	/^   SUBROUTINE print_overlap(/;"	s	subroutine:write_casino_wfn
+print_ps_info	summary.f90	/^SUBROUTINE print_ps_info$/;"	s
+print_symmetries	summary.f90	/^SUBROUTINE print_symmetries /;"	s
+print_vdw_info	summary.f90	/^SUBROUTINE print_vdw_info$/;"	s
+proj_verlet	dynamics_module.f90	/^   SUBROUTINE proj_verlet(/;"	s	module:dynamics_module
+project_velocity	dynamics_module.f90	/^   SUBROUTINE project_velocity(/;"	s	module:dynamics_module
+promolecular_rho	xdm_dispersion.f90	/^  SUBROUTINE promolecular_rho(/;"	s	module:xdm_module
+psi_exx	exx_band.f90	/^  COMPLEX(DP), ALLOCATABLE :: psi_exx(/;"	v	module:exx_band
+psic	pw2blip.f90	/^   COMPLEX(dp),ALLOCATABLE :: psic(/;"	v	module:pw2blip
+psic_box_temp	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: psic_box_temp(/;"	v	module:realus
+psic_temp	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: psic_temp(/;"	v	module:realus
+punch	punch.f90	/^SUBROUTINE punch(/;"	s
+pw2blip	pw2blip.f90	/^MODULE pw2blip$/;"	m
+pw2blip_cleanup	pw2blip.f90	/^   SUBROUTINE pw2blip_cleanup$/;"	s	module:pw2blip
+pw2blip_get	pw2blip.f90	/^   SUBROUTINE pw2blip_get(/;"	s	module:pw2blip
+pw2blip_init	pw2blip.f90	/^   SUBROUTINE pw2blip_init(/;"	s	module:pw2blip
+pw2blip_transform	pw2blip.f90	/^   SUBROUTINE pw2blip_transform(/;"	s	module:pw2blip
+pw2blip_transform2	pw2blip.f90	/^   SUBROUTINE pw2blip_transform2(/;"	s	module:pw2blip
+pw2casino	pw2casino.f90	/^SUBROUTINE pw2casino(/;"	s
+pw_init_qexsd_input	pw_init_qexsd_input.f90	/^  SUBROUTINE pw_init_qexsd_input(/;"	s
+pw_readschema_file	pw_restart_new.f90	/^    SUBROUTINE pw_readschema_file(/;"	s	module:pw_restart_new
+pw_restart_new	pw_restart_new.f90	/^MODULE pw_restart_new$/;"	m
+pw_write_binaries	pw_restart_new.f90	/^    SUBROUTINE pw_write_binaries(/;"	s	module:pw_restart_new
+pw_write_schema	pw_restart_new.f90	/^    SUBROUTINE pw_write_schema(/;"	s	module:pw_restart_new
+pwcom	pwcom.f90	/^MODULE pwcom$/;"	m
+pweval	pw2casino_write.f90	/^   SUBROUTINE pweval(/;"	s	subroutine:write_casino_wfn
+pwscf	pwscf.f90	/^PROGRAM pwscf$/;"	p
+q_ae	ldaU.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:ldaU
+q_ps	ldaU.f90	/^       q_ae(:,:,:),          &! coefficients for projecting onto beta functions$/;"	v	module:ldaU
+qe_cosh	esm.f90	/^  complex(DP) function qe_cosh(/;"	f	module:esm
+qe_erf	esm.f90	/^  real(DP), external   :: qe_erf,/;"	v	module:esm
+qe_erfc	esm.f90	/^  real(DP), external   :: qe_erf, qe_erfc$/;"	v	module:esm
+qe_exp	esm.f90	/^  complex(DP) function qe_exp(/;"	f	module:esm
+qe_gauss	esm.f90	/^  function qe_gauss(/;"	f	module:esm
+qe_sinh	esm.f90	/^  complex(DP) function qe_sinh(/;"	f	module:esm
+qgm	us_exx.f90	/^  COMPLEX(DP),ALLOCATABLE :: qgm(/;"	v	module:us_exx
+qnorm	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:klist
+qpointlist	realus.f90	/^    SUBROUTINE qpointlist(/;"	s
+qr	realus.f90	/^     REAL(DP),ALLOCATABLE :: qr(/;"	k	type:realsp_augmentation
+qrad	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:us
+qromb	esm.f90	/^SUBROUTINE qromb(/;"	s	module:esm
+qvan2	qvan2.f90	/^subroutine qvan2 /;"	s
+qvan3	bp_qvan3.f90	/^      subroutine qvan3(/;"	s
+qvan_clean	us_exx.f90	/^  SUBROUTINE qvan_clean /;"	s	module:us_exx
+qvan_init	us_exx.f90	/^  SUBROUTINE qvan_init /;"	s	module:us_exx
+radial_distr	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: radial_distr(/;"	v	module:dynamics_module
+radial_fft	generate_rVV10_kernel_table.f90	/^  subroutine radial_fft(/;"	s	subroutine:generate_rVV10_kernel_table
+radial_fft	generate_vdW_kernel_table.f90	/^  SUBROUTINE radial_fft(/;"	s	subroutine:generate_kernel
+ran3	vcsubs.f90	/^real(8) function ran3 /;"	f
+ranv	vcsubs.f90	/^subroutine ranv /;"	s
+ranx	pw2casino_write.f90	/^   REAL(dp) FUNCTION ranx(/;"	f	subroutine:write_casino_wfn
+rap_point_group	pwcom.f90	/^MODULE rap_point_group$/;"	m
+rap_point_group_is	pwcom.f90	/^MODULE rap_point_group_is$/;"	m
+rap_point_group_so	pwcom.f90	/^MODULE rap_point_group_so$/;"	m
+rcore	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rcore(/;"	v	module:xdm_module
+rdiagh	rdiagh.f90	/^SUBROUTINE rdiagh(/;"	s
+rdispls	symme.f90	/^  INTEGER, ALLOCATABLE :: sendcnt(:), recvcnt(:), sdispls(:), rdispls(/;"	v	module:symme
+read_and_share	run_driver.f90	/^  SUBROUTINE read_and_share(/;"	s	subroutine:run_driver
+read_cards_pw	input.f90	/^SUBROUTINE read_cards_pw /;"	s
+read_collected_to_evc	pw_restart_new.f90	/^    SUBROUTINE read_collected_to_evc(/;"	s	module:pw_restart_new
+read_config_from_file	read_conf_from_file.f90	/^FUNCTION read_config_from_file(/;"	f
+read_file	read_file_new.f90	/^SUBROUTINE read_file(/;"	s
+read_scf	io_rho_xml.f90	/^    SUBROUTINE read_scf /;"	s	module:io_rho_xml
+read_xml_file	read_file_new.f90	/^SUBROUTINE read_xml_file /;"	s
+readschema_algo	pw_restart_new.f90	/^    SUBROUTINE readschema_algo(/;"	s	module:pw_restart_new
+readschema_band_structure	pw_restart_new.f90	/^    SUBROUTINE readschema_band_structure(/;"	s	module:pw_restart_new
+readschema_brillouin_zone	pw_restart_new.f90	/^    SUBROUTINE readschema_brillouin_zone(/;"	s	module:pw_restart_new
+readschema_cell	pw_restart_new.f90	/^    SUBROUTINE readschema_cell(/;"	s	module:pw_restart_new
+readschema_dim	pw_restart_new.f90	/^    SUBROUTINE readschema_dim(/;"	s	module:pw_restart_new
+readschema_ef	pw_restart_new.f90	/^    SUBROUTINE readschema_ef /;"	s	module:pw_restart_new
+readschema_efield	pw_restart_new.f90	/^    SUBROUTINE readschema_efield(/;"	s	module:pw_restart_new
+readschema_exx	pw_restart_new.f90	/^    SUBROUTINE readschema_exx /;"	s	module:pw_restart_new
+readschema_header	pw_restart_new.f90	/^    SUBROUTINE readschema_header /;"	s	module:pw_restart_new
+readschema_ions	pw_restart_new.f90	/^    SUBROUTINE readschema_ions(/;"	s	module:pw_restart_new
+readschema_magnetization	pw_restart_new.f90	/^    SUBROUTINE readschema_magnetization(/;"	s	module:pw_restart_new
+readschema_occupations	pw_restart_new.f90	/^    SUBROUTINE readschema_occupations(/;"	s	module:pw_restart_new
+readschema_outputPBC	pw_restart_new.f90	/^    SUBROUTINE readschema_outputPBC(/;"	s	module:pw_restart_new
+readschema_planewaves	pw_restart_new.f90	/^    SUBROUTINE readschema_planewaves /;"	s	module:pw_restart_new
+readschema_spin	pw_restart_new.f90	/^    SUBROUTINE readschema_spin(/;"	s	module:pw_restart_new
+readschema_symmetry	pw_restart_new.f90	/^    SUBROUTINE readschema_symmetry /;"	s	module:pw_restart_new
+readschema_xc	pw_restart_new.f90	/^    SUBROUTINE readschema_xc /;"	s	module:pw_restart_new
+real_space	realus.f90	/^  LOGICAL               :: real_space /;"	v	module:realus
+real_space_dq	realus.f90	/^    SUBROUTINE real_space_dq(/;"	s
+real_space_q	realus.f90	/^    SUBROUTINE real_space_q(/;"	s
+realsp_augmentation	realus.f90	/^  TYPE realsp_augmentation$/;"	t	module:realus
+realus	realus.f90	/^MODULE realus$/;"	m
+recl	buffers.f90	/^    INTEGER :: nrec, unit, recl$/;"	k	type:index_of_list
+record_length	scf_mod.f90	/^  INTEGER, PRIVATE  :: record_length,/;"	v	module:scf
+recvcnt	symme.f90	/^  INTEGER, ALLOCATABLE :: sendcnt(:), recvcnt(/;"	v	module:symme
+refold_pos	dynamics_module.f90	/^         control_temp, &! if true a thermostat is used to control the temperature$/;"	v	module:dynamics_module
+refold_tau	dynamics_module.f90	/^   SUBROUTINE refold_tau(/;"	s	module:dynamics_module
+relax	pwcom.f90	/^MODULE relax$/;"	m
+relaxz	extfield.f90	/^       dipfield,     &! if .TRUE. the dipole field is subtracted$/;"	v	module:extfield
+remove_atomic_rho	remove_atomic_rho.f90	/^SUBROUTINE remove_atomic_rho$/;"	s
+remove_sym	symm_base.f90	/^SUBROUTINE remove_sym /;"	s	module:symm_base
+report_buiol	buffers.f90	/^  SUBROUTINE report_buiol$/;"	s
+report_mag	report_mag.f90	/^      subroutine report_mag$/;"	s
+reset_exx	run_pwscf.f90	/^SUBROUTINE reset_exx(/;"	s
+reset_grid	start_k.f90	/^    LOGICAL FUNCTION reset_grid /;"	f	module:start_k
+reset_gvectors	run_pwscf.f90	/^SUBROUTINE reset_gvectors /;"	s
+reset_history_for_extrapolation	run_driver.f90	/^  SUBROUTINE reset_history_for_extrapolation(/;"	s	subroutine:run_driver
+reset_magn	run_pwscf.f90	/^SUBROUTINE reset_magn /;"	s
+reset_starting_magnetization	run_pwscf.f90	/^SUBROUTINE reset_starting_magnetization /;"	s
+restart_in_cbands	save_in_cbands.f90	/^SUBROUTINE restart_in_cbands /;"	s
+restart_in_electrons	restart_in_electrons.f90	/^SUBROUTINE restart_in_electrons /;"	s
+result_sum	exx_band.f90	/^  SUBROUTINE result_sum /;"	s	module:exx_band
+rfree	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rfree(/;"	v	module:xdm_module
+rho	scf_mod.f90	/^  type (scf_type) :: rho /;"	v	module:scf
+rho2zeta	rho2zeta.f90	/^SUBROUTINE rho2zeta(/;"	s
+rho_core	scf_mod.f90	/^       vrs(:,:),       &! the total pot. in real space (smooth grid)$/;"	v	module:scf
+rho_ddot	scf_mod.f90	/^ FUNCTION rho_ddot(/;"	f	module:scf
+rho_sym_needed	symme.f90	/^   LOGICAL FUNCTION rho_sym_needed /;"	f	module:symme
+rhog_core	scf_mod.f90	/^  COMPLEX(DP), ALLOCATABLE :: &$/;"	v	module:scf
+rhoz_or_updw	scf_mod.f90	/^  SUBROUTINE rhoz_or_updw(/;"	s	module:scf
+rir	exx_base.f90	/^  INTEGER, ALLOCATABLE :: rir(/;"	v	module:exx_base
+rlen_bec	scf_mod.f90	/^                       rlen_rho=0,  rlen_kin=0,  rlen_ldaU=0,  rlen_bec=/;"	v	module:scf
+rlen_dip	scf_mod.f90	/^                       rlen_rho=0,  rlen_kin=0,  rlen_ldaU=0,  rlen_bec=0,&$/;"	v	module:scf
+rlen_kin	scf_mod.f90	/^                       rlen_rho=0,  rlen_kin=/;"	v	module:scf
+rlen_ldaU	scf_mod.f90	/^                       rlen_rho=0,  rlen_kin=0,  rlen_ldaU=/;"	v	module:scf
+rlen_rho	scf_mod.f90	/^  INTEGER, PRIVATE  :: record_length, &$/;"	v	module:scf
+rmaxcore2	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rcore(:,:), w2core(:,:), rmaxcore2(/;"	v	module:xdm_module
+rmaxg2	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rfree(:,:), w2free(:,:), rmaxg2(/;"	v	module:xdm_module
+rnr	pw2blip.f90	/^   REAL(dp) :: rnr(/;"	v	module:pw2blip
+rnr2	pw2blip.f90	/^   REAL(dp) :: rnr(3),rnr2(/;"	v	module:pw2blip
+rot_ylm	pwcom.f90	/^  COMPLEX (DP) :: rot_ylm(/;"	v	module:spin_orb
+rotate_becxx	us_exx.f90	/^  SUBROUTINE rotate_becxx /;"	s	module:us_exx
+rotate_wfc	rotate_wfc.f90	/^SUBROUTINE rotate_wfc /;"	s
+run_driver	run_driver.f90	/^SUBROUTINE run_driver /;"	s
+run_manypw	manypw.f90	/^SUBROUTINE run_manypw /;"	s
+run_pwscf	run_pwscf.f90	/^SUBROUTINE run_pwscf /;"	s
+ruotaijk	ruotaijk.f90	/^subroutine ruotaijk /;"	s
+rvdw	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: cx(:,:,:), rvdw(/;"	v	module:xdm_module
+s	symm_base.f90	/^  INTEGER :: &$/;"	v	module:symm_base
+s_1psi	s_1psi.f90	/^SUBROUTINE s_1psi(/;"	s
+s_axis_to_cart	symm_base.f90	/^SUBROUTINE s_axis_to_cart /;"	s	module:symm_base
+s_diag	g_psi_mod.f90	/^    h_diag (:,:),&   ! diagonal part of the Hamiltonian$/;"	v	module:g_psi_mod
+s_psi	s_psi.f90	/^SUBROUTINE s_psi(/;"	s
+s_psi_	s_psi.f90	/^SUBROUTINE s_psi_(/;"	s
+s_psi_gamma	s_psi.f90	/^     SUBROUTINE s_psi_gamma(/;"	s	subroutine:s_psi_
+s_psi_k	s_psi.f90	/^     SUBROUTINE s_psi_k(/;"	s	subroutine:s_psi_
+s_psi_nc	s_psi.f90	/^      SUBROUTINE s_psi_nc /;"	s	subroutine:s_psi_
+s_psir_gamma	realus.f90	/^    SUBROUTINE s_psir_gamma /;"	s
+s_psir_k	realus.f90	/^  SUBROUTINE s_psir_k /;"	s
+same_lj	sum_band.f90	/^   LOGICAL FUNCTION same_lj(/;"	f	subroutine:add_becsum_so
+same_lj	transform_becsum_so.f90	/^FUNCTION same_lj(/;"	f
+save_buffer	buffers.f90	/^  SUBROUTINE save_buffer(/;"	s	module:buffers
+save_dir	buffers.f90	/^    CHARACTER(LEN=256) :: extension, save_dir$/;"	k	type:index_of_list
+save_in_cbands	save_in_cbands.f90	/^SUBROUTINE save_in_cbands /;"	s
+save_in_electrons	save_in_electrons.f90	/^SUBROUTINE save_in_electrons /;"	s
+saved	xdm_dispersion.f90	/^  LOGICAL :: saved /;"	v	module:xdm_module
+saw	extfield.f90	/^      FUNCTION saw(/;"	f	module:extfield
+scale_h	scale_h.f90	/^subroutine scale_h$/;"	s
+scdm_den	loc_scdm.f90	/^  REAL(DP) :: scdm_den,/;"	v	module:loc_scdm
+scdm_fill	loc_scdm.f90	/^SUBROUTINE scdm_fill(/;"	s	module:loc_scdm
+scdm_fill_k	loc_scdm_k.f90	/^SUBROUTINE scdm_fill_k(/;"	s	module:loc_scdm_k
+scdm_grd	loc_scdm.f90	/^  REAL(DP) :: scdm_den, scdm_grd /;"	v	module:loc_scdm
+scdm_points	loc_scdm.f90	/^SUBROUTINE scdm_points /;"	s	module:loc_scdm
+scdm_prescreening	loc_scdm.f90	/^SUBROUTINE scdm_prescreening /;"	s	module:loc_scdm
+scdm_prescreening_k	loc_scdm_k.f90	/^SUBROUTINE scdm_prescreening_k /;"	s	module:loc_scdm_k
+scdm_thresholds	loc_scdm.f90	/^SUBROUTINE scdm_thresholds(/;"	s	module:loc_scdm
+scf	scf_mod.f90	/^MODULE scf$/;"	m
+scf_type	scf_mod.f90	/^  TYPE scf_type$/;"	t	module:scf
+scf_type_COPY	scf_mod.f90	/^ subroutine scf_type_COPY /;"	s	module:scf
+sdispls	symme.f90	/^  INTEGER, ALLOCATABLE :: sendcnt(:), recvcnt(:), sdispls(/;"	v	module:symme
+sendcnt	symme.f90	/^  INTEGER, ALLOCATABLE :: sendcnt(/;"	v	module:symme
+set_class_el_name	divide_class.f90	/^SUBROUTINE set_class_el_name(/;"	s
+set_class_el_name_so	divide_class_so.f90	/^SUBROUTINE set_class_el_name_so(/;"	s
+set_cutoff	input.f90	/^SUBROUTINE set_cutoff /;"	s
+set_e	divide_class_so.f90	/^FUNCTION set_e(/;"	f
+set_environ	xdm_dispersion.f90	/^  SUBROUTINE set_environ /;"	s	module:xdm_module
+set_gcut	read_file_new.f90	/^    SUBROUTINE set_gcut(/;"	s	subroutine:read_xml_file
+set_irr_rap	divide_class.f90	/^SUBROUTINE set_irr_rap(/;"	s
+set_irr_rap_so	divide_class_so.f90	/^SUBROUTINE set_irr_rap_so(/;"	s
+set_kplusq	set_kplusq.f90	/^subroutine set_kplusq /;"	s
+set_kup_and_kdw	set_kup_and_kdw.f90	/^subroutine set_kup_and_kdw /;"	s
+set_rhoc	set_rhoc.f90	/^SUBROUTINE set_rhoc$/;"	s
+set_spin_vars	read_file_new.f90	/^    SUBROUTINE set_spin_vars(/;"	s	subroutine:read_xml_file
+set_sym	symm_base.f90	/^SUBROUTINE set_sym(/;"	s	module:symm_base
+set_sym_bl	symm_base.f90	/^SUBROUTINE set_sym_bl /;"	s	module:symm_base
+set_up_splines	generate_rVV10_kernel_table.f90	/^  subroutine set_up_splines(/;"	s	subroutine:generate_rVV10_kernel_table
+set_up_splines	generate_vdW_kernel_table.f90	/^  SUBROUTINE set_up_splines(/;"	s	subroutine:generate_kernel
+set_vrs	set_vrs.f90	/^subroutine set_vrs /;"	s
+set_xkphase	realus.f90	/^    SUBROUTINE set_xkphase(/;"	s
+setg	vcsubs.f90	/^subroutine setg /;"	s
+setlocal	setlocal.f90	/^SUBROUTINE setlocal$/;"	s
+setup	setup.f90	/^SUBROUTINE setup(/;"	s
+setxdm_a1a2	xdm_dispersion.f90	/^  SUBROUTINE setxdm_a1a2(/;"	s	module:xdm_module
+sgam_at	symm_base.f90	/^SUBROUTINE sgam_at /;"	s	module:symm_base
+sgam_at_ifc	symm_base.f90	/^SUBROUTINE sgam_at_ifc /;"	s	module:symm_base
+sgam_at_mag	symm_base.f90	/^SUBROUTINE sgam_at_mag /;"	s	module:symm_base
+shell	symme.f90	/^  TYPE(shell_/;"	v	module:symme
+shell_type	symme.f90	/^  TYPE shell_type$/;"	t	module:symme
+sigma	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:force_mod
+sigp	vcsubs.f90	/^subroutine sigp /;"	s
+size	exx_band.f90	/^     INTEGER :: size$/;"	k	type:comm_packet
+size0	buffers.f90	/^  INTEGER,PARAMETER :: size0 /;"	v	module:buiol
+smap_exx	exx_band.f90	/^  TYPE (sticks_map) :: smap_exx /;"	v	module:exx_band
+smart_MC	dynamics_module.f90	/^   SUBROUTINE smart_MC(/;"	s	module:dynamics_module
+smearing	pwcom.f90	/^  CHARACTER (len=32) :: &$/;"	v	module:klist
+smooth_coulomb_g	martyna_tuckerman.f90	/^  REAL(DP) FUNCTION smooth_coulomb_g(/;"	f	module:martyna_tuckerman
+smooth_coulomb_r	martyna_tuckerman.f90	/^  REAL(DP) FUNCTION smooth_coulomb_r(/;"	f	module:martyna_tuckerman
+sname	symm_base.f90	/^  CHARACTER(len=45) ::  sname(/;"	v	module:symm_base
+sname_is	pwcom.f90	/^   CHARACTER(len=45) :: sname_is(/;"	v	module:rap_point_group_is
+spacegroup	symm_base.f90	/^       nrot,                 &! number of bravais lattice symmetries$/;"	v	module:symm_base
+sph_ind	sph_ind.f90	/^function sph_ind(/;"	f
+spher_beta	realus.f90	/^  REAL(DP), ALLOCATABLE :: spher_beta(/;"	v	module:realus
+spin_orb	pwcom.f90	/^MODULE spin_orb$/;"	m
+spinor	spinor.f90	/^function spinor(/;"	f
+spline_ps	pwcom.f90	/^  LOGICAL :: spline_ps /;"	v	module:us
+sr	symm_base.f90	/^       ft (3,48),            &! fractional translations, in crystal axis$/;"	v	module:symm_base
+sr_is	pwcom.f90	/^          ft_is(3,48),   & ! The fractional transl. of the invariant subgroup$/;"	v	module:rap_point_group_is
+srvaddress	pwscf.f90	/^  CHARACTER(len=256) :: srvaddress$/;"	v	program:pwscf
+ssave	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: fsave(:,:), ssave(/;"	v	module:xdm_module
+start_bec	scf_mod.f90	/^                       start_rho=0, start_kin=0, start_ldaU=0, start_bec=/;"	v	module:scf
+start_dipole	scf_mod.f90	/^                       start_rho=0, start_kin=0, start_ldaU=0, start_bec=0, &$/;"	v	module:scf
+start_k	start_k.f90	/^MODULE start_k$/;"	m
+start_kin	scf_mod.f90	/^                       start_rho=0, start_kin=/;"	v	module:scf
+start_ldaU	scf_mod.f90	/^                       start_rho=0, start_kin=0, start_ldaU=/;"	v	module:scf
+start_rho	scf_mod.f90	/^                       rlen_dip=0, &$/;"	v	module:scf
+start_therm	dynamics_module.f90	/^      SUBROUTINE start_therm(/;"	s	subroutine:verlet
+start_therm	fcp.f90	/^      SUBROUTINE start_therm(/;"	s	subroutine:fcp_verlet
+starting_charge	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:vlocal
+starting_magnetization	pwcom.f90	/^       absmag,                       &! total absolute magnetization$/;"	v	module:lsda_mod
+starting_ns	ldaU.f90	/^       Hubbard_beta(ntypx),  &! the Hubbard beta (used to calculate J0)$/;"	v	module:ldaU
+starting_pot	atomic_wfc_mod.f90	/^       starting_wfc,      &! 'random','atomic','file','atomic+random' (default)$/;"	v	module:basis
+starting_scf_threshold	pwcom.f90	/^       epsp,                    &! threshold on pressure$/;"	v	module:relax
+starting_spin_angle	pwcom.f90	/^      lforcet,             &  ! if .TRUE. apply Force Theorem to calculate MAE $/;"	v	module:spin_orb
+starting_wfc	atomic_wfc_mod.f90	/^  CHARACTER(len=30) ::    &!$/;"	v	module:basis
+startingconfig	atomic_wfc_mod.f90	/^       starting_pot,      &! 'atomic' or 'file'$/;"	v	module:basis
+stop_buiol	buffers.f90	/^  SUBROUTINE stop_buiol$/;"	s
+stop_run	stop_run.f90	/^SUBROUTINE stop_run(/;"	s
+store_becxx0	us_exx.f90	/^  SUBROUTINE store_becxx0(/;"	s	module:us_exx
+stres_cc	stres_cc.f90	/^subroutine stres_cc /;"	s
+stres_ewa	stres_ewa.f90	/^subroutine stres_ewa /;"	s
+stres_gradcorr	stres_gradcorr.f90	/^SUBROUTINE stres_gradcorr(/;"	s
+stres_har	stres_har.f90	/^subroutine stres_har /;"	s
+stres_hub	stres_hub.f90	/^SUBROUTINE stres_hub /;"	s
+stres_knl	stres_knl.f90	/^subroutine stres_knl /;"	s
+stres_loc	stres_loc.f90	/^subroutine stres_loc /;"	s
+stres_mgga	stres_mgga.f90	/^SUBROUTINE stres_mgga(/;"	s
+stres_nonloc_dft	stres_nonloc_dft.f90	/^subroutine stres_nonloc_dft(/;"	s
+stres_us	stres_us.f90	/^SUBROUTINE stres_us(/;"	s
+stres_us_gamma	stres_us.f90	/^     SUBROUTINE stres_us_gamma(/;"	s	subroutine:stres_us
+stres_us_k	stres_us.f90	/^     SUBROUTINE stres_us_k(/;"	s	subroutine:stres_us
+stress	stress.f90	/^subroutine stress /;"	s
+stress_bp_efield	forces_bp_efield.f90	/^ SUBROUTINE stress_bp_efield /;"	s
+stress_ion_efield	forces_bp_efield.f90	/^ SUBROUTINE stress_ion_efield /;"	s
+stress_xdm	xdm_dispersion.f90	/^  FUNCTION stress_xdm(/;"	f	module:xdm_module
+strf	pwcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: &$/;"	v	module:vlocal
+struc_fact	struct_fact.f90	/^subroutine struc_fact /;"	s
+sum_band	sum_band.f90	/^SUBROUTINE sum_band(/;"	s
+sum_band_gamma	sum_band.f90	/^     SUBROUTINE sum_band_gamma(/;"	s
+sum_band_k	sum_band.f90	/^     SUBROUTINE sum_band_k(/;"	s
+sum_bec	sum_band.f90	/^SUBROUTINE sum_bec /;"	s
+sum_vrs	set_vrs.f90	/^subroutine sum_vrs /;"	s
+sumfor	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:force_mod
+sumkg	sumkg.f90	/^function sumkg /;"	f
+sumkt	sumkt.f90	/^FUNCTION sumkt /;"	f
+summary	summary.f90	/^SUBROUTINE summary(/;"	s
+swfcatom	atomic_wfc_mod.f90	/^  COMPLEX(dp), ALLOCATABLE :: &$/;"	v	module:basis
+sym_rho	symme.f90	/^  SUBROUTINE sym_rho /;"	s	module:symme
+sym_rho_deallocate	symme.f90	/^  SUBROUTINE sym_rho_deallocate /;"	s	module:symme
+sym_rho_init	symme.f90	/^   SUBROUTINE sym_rho_init /;"	s	module:symme
+sym_rho_init_para	symme.f90	/^  SUBROUTINE sym_rho_init_para /;"	s	module:symme
+sym_rho_init_shells	symme.f90	/^  SUBROUTINE sym_rho_init_shells /;"	s	module:symme
+sym_rho_serial	symme.f90	/^  SUBROUTINE sym_rho_serial /;"	s	module:symme
+symm_base	symm_base.f90	/^MODULE symm_base$/;"	m
+symmatrix	symme.f90	/^   SUBROUTINE symmatrix /;"	s	module:symme
+symmatrix3	symme.f90	/^   SUBROUTINE symmatrix3 /;"	s	module:symme
+symme	symme.f90	/^MODULE symme$/;"	m
+symmetrization_tensor	paw_symmetry.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:PAW_desymmetrize
+symmetrization_tensor	paw_symmetry.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:PAW_dumqsymmetrize
+symmetrization_tensor	paw_symmetry.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:PAW_dusymmetrize
+symmetrization_tensor	paw_symmetry.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:PAW_symmetrize
+symmetrization_tensor	paw_symmetry.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:PAW_symmetrize_ddd
+symmetrization_tensor	us_exx.f90	/^    TYPE symmetrization_tensor$/;"	t	subroutine:becp_rotate_k
+symmetrize_at	symmetrize_at.f90	/^subroutine symmetrize_at(/;"	s
+symscalar	symme.f90	/^   SUBROUTINE symscalar /;"	s	module:symme
+symtensor	symme.f90	/^   SUBROUTINE symtensor /;"	s	module:symme
+symtensor3	symme.f90	/^   SUBROUTINE symtensor3 /;"	s	module:symme
+symv	symme.f90	/^   SUBROUTINE symv /;"	s	module:symme
+symvector	symme.f90	/^   SUBROUTINE symvector /;"	s	module:symme
+t_rev	symm_base.f90	/^  INTEGER :: &$/;"	v	module:symm_base
+tab	pwcom.f90	/^       qrad(:,:,:,:),   &! radial FT of Q functions$/;"	v	module:us
+tab_at	pwcom.f90	/^       tab(:,:,:),      &! interpolation table for PPs$/;"	v	module:us
+tab_d2y	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:us
+tabp	realus.f90	/^  TYPE(realsp_augmentation),POINTER :: tabp(/;"	v	module:realus
+tag_wg_corr_as_obsolete	martyna_tuckerman.f90	/^  SUBROUTINE tag_wg_corr_as_obsolete$/;"	s	module:martyna_tuckerman
+tau	fcp.f90	/^   REAL(DP) :: tau,/;"	v	module:fcp
+tau_new	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: tau_old(:,:), tau_new(/;"	v	module:dynamics_module
+tau_new	fcp.f90	/^   REAL(DP) :: tau, tau_old, tau_new$/;"	v	module:fcp
+tau_old	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: tau_old(/;"	v	module:dynamics_module
+tau_old	fcp.f90	/^   REAL(DP) :: tau, tau_old,/;"	v	module:fcp
+tau_ref	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: tau_old(:,:), tau_new(:,:), tau_ref(/;"	v	module:dynamics_module
+tau_smart	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: tau_smart(/;"	v	module:dynamics_module
+tauk_ddot	scf_mod.f90	/^FUNCTION tauk_ddot(/;"	f	module:scf
+tefield	extfield.f90	/^  LOGICAL :: &$/;"	v	module:extfield
+temperature	dynamics_module.f90	/^         dt,          &! time step$/;"	v	module:dynamics_module
+terminate_verlet	dynamics_module.f90	/^   SUBROUTINE terminate_verlet$/;"	s	module:dynamics_module
+test_exit_cond	c_bands.f90	/^  FUNCTION test_exit_cond(/;"	f
+test_overlap	pw2casino_write.f90	/^   SUBROUTINE test_overlap$/;"	s	subroutine:write_casino_wfn
+tetra	tetra.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:ktetra
+tetra_dos_t	tetra.f90	/^subroutine tetra_dos_t /;"	s	module:ktetra
+tetra_init	tetra.f90	/^  SUBROUTINE tetra_init /;"	s	module:ktetra
+tetra_type	tetra.f90	/^  INTEGER:: &$/;"	v	module:ktetra
+tetra_weights	tetra.f90	/^subroutine tetra_weights /;"	s	module:ktetra
+tetra_weights_only	tetra.f90	/^subroutine tetra_weights_only /;"	s	module:ktetra
+tfixed_occ	pwcom.f90	/^  LOGICAL :: &$/;"	v	module:fixed_occ
+tg_psic	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: tg_psic(/;"	v	module:realus
+tg_psic_box_temp	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: psic_box_temp(:),tg_psic_box_temp(/;"	v	module:realus
+tg_psic_temp	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: psic_temp(:),tg_psic_temp(/;"	v	module:realus
+tg_vrs	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: tg_vrs(/;"	v	module:realus
+thermalize	dynamics_module.f90	/^   SUBROUTINE thermalize(/;"	s	module:dynamics_module
+thermalize	fcp.f90	/^   SUBROUTINE thermalize(/;"	s	module:fcp
+thermostat	dynamics_module.f90	/^   CHARACTER(len=10) &$/;"	v	module:dynamics_module
+time_reversal	symm_base.f90	/^  LOGICAL :: &$/;"	v	module:symm_base
+tipo_sym	find_group.f90	/^FUNCTION tipo_sym(/;"	f
+to_c80	pw2casino_write.f90	/^   FUNCTION to_c80(/;"	f	subroutine:write_casino_wfn
+tot_charge	pwcom.f90	/^       tot_magnetization, &! nelup-neldw >= 0 (negative value means unspecified)$/;"	v	module:klist
+tot_dipole	extfield.f90	/^      ion_dipole,    &! ionic_dipole      used when dipole correction is on$/;"	v	module:extfield
+tot_magnetization	pwcom.f90	/^       neldw=0.0_dp,      &! number of spin-dw electrons (if two_fermi_energies=t)$/;"	v	module:klist
+transform_becsum_nc	transform_becsum_nc.f90	/^SUBROUTINE transform_becsum_nc(/;"	s
+transform_becsum_so	transform_becsum_so.f90	/^SUBROUTINE transform_becsum_so(/;"	s
+transform_el	bp_mod.f90	/^  REAL(DP) :: transform_el(/;"	v	module:bp
+transform_evc_to_exx	exx_band.f90	/^  SUBROUTINE transform_evc_to_exx(/;"	s	module:exx_band
+transform_hpsi_to_local	exx_band.f90	/^  SUBROUTINE transform_hpsi_to_local(/;"	s	module:exx_band
+transform_psi_to_exx	exx_band.f90	/^  SUBROUTINE transform_psi_to_exx(/;"	s	module:exx_band
+transform_qq_so	transform_qq_so.f90	/^SUBROUTINE transform_qq_so(/;"	s
+transform_to_exx	exx_band.f90	/^  SUBROUTINE transform_to_exx(/;"	s	module:exx_band
+transform_to_local	exx_band.f90	/^  SUBROUTINE transform_to_local(/;"	s	module:exx_band
+trapzd	esm.f90	/^SUBROUTINE trapzd(/;"	s	module:esm
+trnvecc	trnvecc.f90	/^subroutine trnvecc /;"	s
+two_fermi_energies	pwcom.f90	/^       lxkcry=.false., &! if .TRUE.:k-pnts in cryst. basis accepted in input$/;"	v	module:klist
+unit	buffers.f90	/^    INTEGER :: nrec, unit,/;"	k	type:index_of_list
+update_file	update_pot.f90	/^SUBROUTINE update_file /;"	s	module:extrapolation
+update_igk	exx_band.f90	/^  SUBROUTINE update_igk(/;"	s	module:exx_band
+update_neb	update_pot.f90	/^SUBROUTINE update_neb /;"	s	module:extrapolation
+update_pot	update_pot.f90	/^SUBROUTINE update_pot(/;"	s	module:extrapolation
+updg	vcsubs.f90	/^subroutine updg /;"	s
+us	pwcom.f90	/^MODULE us$/;"	m
+us_exx	us_exx.f90	/^MODULE us_exx$/;"	m
+use_ace	exx.f90	/^  LOGICAL :: use_ace /;"	v	module:exx
+use_coulomb_vcut_spheric	exx_base.f90	/^  LOGICAL           :: use_coulomb_vcut_spheric /;"	v	module:exx_base
+use_coulomb_vcut_ws	exx_base.f90	/^  LOGICAL           :: use_coulomb_vcut_ws /;"	v	module:exx_base
+use_images	pwscf.f90	/^  LOGICAL :: use_images,/;"	v	program:pwscf
+use_regularization	exx_base.f90	/^  LOGICAL           :: use_regularization /;"	v	module:exx_base
+use_scdm	loc_scdm.f90	/^  LOGICAL ::  use_scdm=/;"	v	module:loc_scdm
+usnldiag	usnldiag.f90	/^SUBROUTINE usnldiag /;"	s
+v	scf_mod.f90	/^  type (scf_type) :: v /;"	v	module:scf
+v_h	v_of_rho.f90	/^SUBROUTINE v_h(/;"	s
+v_h_of_rho_r	v_of_rho.f90	/^SUBROUTINE v_h_of_rho_r(/;"	s
+v_hubbard	v_of_rho.f90	/^SUBROUTINE v_hubbard(/;"	s
+v_hubbard_nc	v_of_rho.f90	/^SUBROUTINE v_hubbard_nc(/;"	s
+v_loc_psir	realus.f90	/^  SUBROUTINE v_loc_psir /;"	s
+v_loc_psir_inplace	realus.f90	/^  SUBROUTINE v_loc_psir_inplace /;"	s
+v_of_0	scf_mod.f90	/^  REAL(DP) :: v_of_0 /;"	v	module:scf
+v_of_rho	v_of_rho.f90	/^SUBROUTINE v_of_rho(/;"	s
+v_xc	v_of_rho.f90	/^SUBROUTINE v_xc(/;"	s
+v_xc_meta	v_of_rho.f90	/^SUBROUTINE v_xc_meta(/;"	s
+vacuum_level	makov_payne.f90	/^SUBROUTINE vacuum_level(/;"	s
+vcinit	vcsubs.f90	/^subroutine vcinit /;"	s
+vcmove	vcsubs.f90	/^subroutine vcmove /;"	s
+vcsmd	vcsmd.f90	/^SUBROUTINE vcsmd(/;"	s
+vcut	exx_base.f90	/^  TYPE(vcut_/;"	v	module:exx_base
+vect	symme.f90	/^     INTEGER, POINTER :: vect(/;"	k	type:shell_type
+vel	dynamics_module.f90	/^   REAL(DP), ALLOCATABLE :: vel(/;"	v	module:dynamics_module
+vel	fcp.f90	/^   REAL(DP) :: vel,/;"	v	module:fcp
+vel_defined	dynamics_module.f90	/^   LOGICAL :: &$/;"	v	module:dynamics_module
+vel_defined	fcp.f90	/^   LOGICAL  :: vel_defined$/;"	v	module:fcp
+verlet	dynamics_module.f90	/^   SUBROUTINE verlet(/;"	s	module:dynamics_module
+versor	divide_class.f90	/^SUBROUTINE versor(/;"	s
+vexx	exx.f90	/^  SUBROUTINE vexx(/;"	s	module:exx
+vexx_gamma	exx.f90	/^  SUBROUTINE vexx_gamma(/;"	s	module:exx
+vexx_k	exx.f90	/^  SUBROUTINE vexx_k(/;"	s	module:exx
+vexx_loc	exx.f90	/^SUBROUTINE vexx_loc(/;"	s	module:exx
+vexx_loc_k	exx.f90	/^  SUBROUTINE vexx_loc_k(/;"	s	module:exx
+vexxace_gamma	exx.f90	/^SUBROUTINE vexxace_gamma(/;"	s	module:exx
+vexxace_k	exx.f90	/^SUBROUTINE vexxace_k(/;"	s	module:exx
+vhpsi	vhpsi.f90	/^subroutine vhpsi /;"	s
+vhpsi_nc	vhpsi.f90	/^subroutine vhpsi_nc /;"	s
+virial	dynamics_module.f90	/^         temperature, &! starting temperature$/;"	v	module:dynamics_module
+vl11	esm.f90	/^function vl11(/;"	f	module:esm
+vl11j0	esm.f90	/^function vl11j0(/;"	f	module:esm
+vl11j1	esm.f90	/^function vl11j1(/;"	f	module:esm
+vl12j0	esm.f90	/^function vl12j0(/;"	f	module:esm
+vl12j1	esm.f90	/^function vl12j1(/;"	f	module:esm
+vl21j0	esm.f90	/^function vl21j0(/;"	f	module:esm
+vl21j1	esm.f90	/^function vl21j1(/;"	f	module:esm
+vl22	esm.f90	/^function vl22(/;"	f	module:esm
+vl22j0	esm.f90	/^function vl22j0(/;"	f	module:esm
+vl22j1	esm.f90	/^function vl22j1(/;"	f	module:esm
+vloc	pwcom.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:vlocal
+vloc_coul	vloc_of_g.f90	/^subroutine vloc_coul /;"	s
+vloc_of_g	vloc_of_g.f90	/^subroutine vloc_of_g /;"	s
+vloc_psi_gamma	vloc_psi.f90	/^SUBROUTINE vloc_psi_gamma(/;"	s
+vloc_psi_k	vloc_psi.f90	/^SUBROUTINE vloc_psi_k(/;"	s
+vloc_psi_nc	vloc_psi.f90	/^SUBROUTINE vloc_psi_nc /;"	s
+vlocal	pwcom.f90	/^MODULE vlocal$/;"	m
+vltot	scf_mod.f90	/^  REAL(DP), ALLOCATABLE :: &$/;"	v	module:scf
+vnew	scf_mod.f90	/^  type (scf_type) :: vnew /;"	v	module:scf
+vrs	scf_mod.f90	/^       vltot(:),       &! the local potential in real space$/;"	v	module:scf
+vtxc	pwcom.f90	/^       etxc,           &! the exchange and correlation energy$/;"	v	module:ener
+w2core	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rcore(:,:), w2core(/;"	v	module:xdm_module
+w2free	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: rfree(:,:), w2free(/;"	v	module:xdm_module
+wannier_check	wannier_check.f90	/^subroutine wannier_check(/;"	s
+wannier_clean	wannier_clean.f90	/^subroutine wannier_clean(/;"	s
+wannier_enrg	wannier_enrg.f90	/^subroutine wannier_enrg(/;"	s
+wannier_init	wannier_init.f90	/^SUBROUTINE wannier_init(/;"	s
+wannier_occupancies	wannier_occ.f90	/^subroutine wannier_occupancies(/;"	s
+wannier_proj	wannier_proj.f90	/^subroutine wannier_proj(/;"	s
+wave_to_G	loc_scdm.f90	/^SUBROUTINE wave_to_G(/;"	s	module:loc_scdm
+wave_to_R	loc_scdm.f90	/^SUBROUTINE wave_to_R(/;"	s	module:loc_scdm
+weights	weights.f90	/^SUBROUTINE weights(/;"	s
+weights_only	weights.f90	/^SUBROUTINE weights_only /;"	s
+wfcU	ldaU.f90	/^  COMPLEX(DP), ALLOCATABLE :: &$/;"	v	module:ldaU
+wfc_atom	plus_u_full.f90	/^   SUBROUTINE wfc_atom /;"	s	subroutine:atomic_wfc_nc_updown
+wfc_gradient	stres_mgga.f90	/^SUBROUTINE wfc_gradient /;"	s
+wfc_order	update_pot.f90	/^    pot_order = 0,    &! type of potential updating ( see update_pot )$/;"	v	module:extrapolation
+wfcinit	wfcinit.f90	/^SUBROUTINE wfcinit(/;"	s
+wg	pwcom.f90	/^       et(:,:),          &! eigenvalues of the hamiltonian$/;"	v	module:wvfct
+wg_corr	martyna_tuckerman.f90	/^  REAL (DP), ALLOCATABLE :: wg_corr(/;"	v	module:martyna_tuckerman
+wg_corr_ewald	martyna_tuckerman.f90	/^  REAL(DP) FUNCTION wg_corr_ewald /;"	f	module:martyna_tuckerman
+wg_corr_force	martyna_tuckerman.f90	/^  SUBROUTINE wg_corr_force(/;"	s	module:martyna_tuckerman
+wg_corr_h	martyna_tuckerman.f90	/^  SUBROUTINE wg_corr_h(/;"	s	module:martyna_tuckerman
+wg_corr_is_updated	martyna_tuckerman.f90	/^  LOGICAL :: wg_corr_is_updated /;"	v	module:martyna_tuckerman
+wg_corr_loc	martyna_tuckerman.f90	/^  SUBROUTINE wg_corr_loc(/;"	s	module:martyna_tuckerman
+which_c2	divide_class.f90	/^SUBROUTINE which_c2(/;"	s
+which_irr	pwcom.f90	/^          elem(8,12),  &   ! Which elements in the smat list for each class$/;"	v	module:rap_point_group
+which_irr_so	pwcom.f90	/^          has_e(12,24),  & ! if -1 the smat is multiplied by -E$/;"	v	module:rap_point_group_so
+with_small_so	paw_onecenter.f90	/^    LOGICAL :: with_small_so /;"	v	module:paw_onecenter
+wk	pwcom.f90	/^       xk(3,npk),         &! coordinates of k points$/;"	v	module:klist
+wk_start	start_k.f90	/^  REAL(DP), ALLOCATABLE :: wk_start(/;"	v	module:start_k
+wlsm	tetra.f90	/^  REAL(dp), ALLOCATABLE :: &$/;"	v	module:ktetra
+working_pool	exx_base.f90	/^  INTEGER, ALLOCATABLE :: working_pool(/;"	v	module:exx_base
+write_bwfn_data	pw2casino_write.f90	/^   SUBROUTINE write_bwfn_data(/;"	s	subroutine:write_casino_wfn
+write_bwfn_data_gamma	pw2casino_write.f90	/^   SUBROUTINE write_bwfn_data_gamma(/;"	s	subroutine:write_casino_wfn
+write_casino_wfn	pw2casino_write.f90	/^SUBROUTINE write_casino_wfn(/;"	s
+write_data	generate_rVV10_kernel_table.f90	/^  subroutine write_data(/;"	s	subroutine:generate_rVV10_kernel_table
+write_data	generate_vdW_kernel_table.f90	/^  SUBROUTINE write_data(/;"	s	subroutine:generate_kernel
+write_dipole	makov_payne.f90	/^SUBROUTINE write_dipole(/;"	s
+write_group_info	divide_class_so.f90	/^SUBROUTINE write_group_info(/;"	s
+write_gvecs	pw2casino_write.f90	/^   SUBROUTINE write_gvecs(/;"	s	subroutine:write_casino_wfn
+write_gvecs_blip	pw2casino_write.f90	/^   SUBROUTINE write_gvecs_blip$/;"	s	subroutine:write_casino_wfn
+write_header	pw2casino_write.f90	/^   SUBROUTINE write_header$/;"	s	subroutine:write_casino_wfn
+write_kernel_table_file	generate_rVV10_kernel_table.f90	/^  subroutine write_kernel_table_file(/;"	s	subroutine:generate_rVV10_kernel_table
+write_kernel_table_file	generate_vdW_kernel_table.f90	/^  SUBROUTINE write_kernel_table_file(/;"	s	subroutine:generate_kernel
+write_mean	pw2casino_write.f90	/^   CHARACTER(72) FUNCTION write_mean(/;"	f	subroutine:write_casino_wfn
+write_ns	write_ns.f90	/^subroutine write_ns$/;"	s
+write_ns_nc	write_ns.f90	/^subroutine write_ns_nc$/;"	s
+write_pwfn_data	pw2casino_write.f90	/^   SUBROUTINE write_pwfn_data(/;"	s	subroutine:write_casino_wfn
+write_scf	io_rho_xml.f90	/^    SUBROUTINE write_scf /;"	s	module:io_rho_xml
+write_wfn_head	pw2casino_write.f90	/^   SUBROUTINE write_wfn_head$/;"	s	subroutine:write_casino_wfn
+write_wg_on_file	martyna_tuckerman.f90	/^  SUBROUTINE write_wg_on_file(/;"	s	module:martyna_tuckerman
+ws	martyna_tuckerman.f90	/^  TYPE (ws_/;"	v	module:martyna_tuckerman
+wsinit	wsweight.f90	/^subroutine wsinit(/;"	s
+wsweight	wsweight.f90	/^function wsweight(/;"	f
+wvfct	pwcom.f90	/^MODULE wvfct$/;"	m
+x_gamma_extrapolation	exx_base.f90	/^  LOGICAL           :: x_gamma_extrapolation /;"	v	module:exx_base
+x_nbnd_occ	exx.f90	/^  INTEGER :: x_nbnd_occ$/;"	v	module:exx
+x_occupation	exx.f90	/^  REAL(DP),    ALLOCATABLE :: x_occupation(/;"	v	module:exx
+xdm_module	xdm_dispersion.f90	/^module xdm_module$/;"	m
+xenv	xdm_dispersion.f90	/^  REAL(DP), ALLOCATABLE :: xenv(/;"	v	module:xdm_module
+xi	exx.f90	/^  COMPLEX(DP), ALLOCATABLE :: xi(/;"	v	module:exx
+xk	pwcom.f90	/^  REAL(DP) :: &$/;"	v	module:klist
+xk_start	start_k.f90	/^  REAL(DP), ALLOCATABLE :: xk_start(/;"	v	module:start_k
+xkphase	realus.f90	/^  COMPLEX(DP), ALLOCATABLE :: xkphase(/;"	v	module:realus
+xkq_collect	exx_base.f90	/^  REAL(DP),    ALLOCATABLE :: xkq_collect(/;"	v	module:exx_base
+xqq	pwcom.f90	/^       wk(npk),           &! weight of k points$/;"	v	module:klist
+xyz	realus.f90	/^     REAL(DP),ALLOCATABLE :: xyz(/;"	k	type:realsp_augmentation
+xyz_beta	realus.f90	/^  REAL(DP), ALLOCATABLE :: boxdist_beta(:,:), xyz_beta(/;"	v	module:realus
+yukawa	exx_base.f90	/^  REAL(DP)          :: yukawa /;"	v	module:exx_base
+zgate	extfield.f90	/^      tot_dipole,    &! total dipole      used when dipole correction is on$/;"	v	module:extfield

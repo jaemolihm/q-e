@@ -199,7 +199,7 @@
 
   fermicount = 0 
   DO ik=1, nkf
-    write(stdout, *) 'ik, iq', ik, iq
+!    write(stdout, *) 'ik, iq', ik, iq
     !
     ikk = 2 * ik - 1
     ikq = ikk + 1
