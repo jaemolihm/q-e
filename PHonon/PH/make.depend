@@ -638,6 +638,7 @@ dvqpsi_us.o : ../../PW/src/Coul_cut_2D.o
 dvqpsi_us.o : ../../PW/src/pwcom.o
 dvqpsi_us.o : ../../PW/src/scf_mod.o
 dvqpsi_us.o : phcom.o
+dvqpsi_us.o : elph.o
 dvqpsi_us_only.o : ../../LR_Modules/lrcom.o
 dvqpsi_us_only.o : ../../Modules/cell_base.o
 dvqpsi_us_only.o : ../../Modules/ions_base.o

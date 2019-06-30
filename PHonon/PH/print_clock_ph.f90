@@ -164,6 +164,9 @@ subroutine print_clock_ph
      WRITE( stdout, * )
   ENDIF
 
+  call print_clock ('rotate_dvscf_star')
+  WRITE( stdout, * )
+
   WRITE( stdout,  * ) '     General routines'
   call print_clock ('calbec')
   call print_clock ('fft')

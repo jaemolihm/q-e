@@ -291,7 +291,8 @@ SUBROUTINE elphel (irr, npe, imode0, dvscfins)
   USE buffers,    ONLY : get_buffer
   USE uspp,       ONLY : vkb
   USE el_phon,    ONLY : el_ph_mat, el_ph_mat_rec, el_ph_mat_rec_col, &
-                         comp_elph, done_elph, elph_nbnd_min, elph_nbnd_max
+                         comp_elph, done_elph, elph_nbnd_min, elph_nbnd_max, &
+                         nl_only_jml ! jml
   USE modes,      ONLY : u, nmodes
   USE units_ph,   ONLY : iubar, lrbar, iundnsscf
   USE units_lr,   ONLY : iuwfc, lrwfc
@@ -410,7 +411,7 @@ SUBROUTINE elphel (irr, npe, imode0, dvscfins)
         ELSE
            mode = imode0 + ipert
            ! FIXME: .false. or .true. ???
-           CALL dvqpsi_us (ik, u (1, mode), .FALSE. )
+           CALL dvqpsi_us (ik, u (1, mode), .FALSE.)
            !
            ! DFPT+U: calculate the bare derivative of the Hubbard potential in el-ph
            !
@@ -444,6 +445,7 @@ SUBROUTINE elphel (irr, npe, imode0, dvscfins)
               CALL cft_wave (ik, aux2(1, ibnd), aux1, -1)
            ENDIF
         ENDDO
+if (.not. nl_only_jml) then ! jml
         dvpsi=dvpsi+aux2
         !
         CALL adddvscf (ipert, ik)
@@ -454,6 +456,7 @@ SUBROUTINE elphel (irr, npe, imode0, dvscfins)
            dnsscf(:,:,:,:,ipert) = dnsscf_all_modes(:,:,:,:,mode)
            CALL adddvhubscf (ipert, ik)
         ENDIF
+end if ! jml
         !
         ! calculate elphmat(j,i)=<psi_{k+q,j}|dvscf_q*psi_{k,i}> for this pertur
         !

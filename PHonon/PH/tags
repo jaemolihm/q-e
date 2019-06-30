@@ -1,0 +1,1399 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+1	fqha.f90	/^1 continue$/;"	l	program:fqha	file:
+1	phq_setup.f90	/^ 1      CONTINUE$/;"	l	subroutine:phq_setup	file:
+10	find_equiv_sites.f90	/^10         continue$/;"	l	subroutine:find_equiv_sites	file:
+10	fqha.f90	/^10 close(1)$/;"	l	program:fqha	file:
+10	hdiag.f90	/^10 continue$/;"	l	subroutine:hdiag	file:
+10	obsolete.f90	/^10         continue$/;"	l	subroutine:random_matrix	file:
+10	random_matrix.f90	/^10         continue$/;"	l	subroutine:random_matrix_new	file:
+100	compute_weight.f90	/^100 CONTINUE$/;"	l	subroutine:compute_weight	file:
+100	d2ionq.f90	/^100 continue$/;"	l	subroutine:d2ionq	file:
+100	do_phonon.f90	/^100  CALL clean_pw_ph(iq)$/;"	l	subroutine:do_phonon	file:
+100	dvpsi_e2.f90	/^ 100  continue$/;"	l	subroutine:dvpsi_e2	file:
+100	dynmat_us.f90	/^100 CONTINUE$/;"	l	subroutine:dynmat_us	file:
+100	el_opt.f90	/^100 continue$/;"	l	subroutine:el_opt	file:
+100	elph_tetra_mod.f90	/^100 CONTINUE$/;"	l	subroutine:elph_tetra_gamma	file:
+100	elph_tetra_mod.f90	/^100 CONTINUE$/;"	l	subroutine:elph_tetra_lambda	file:
+100	elphon.f90	/^100 CONTINUE$/;"	l	subroutine:elphsum_simple	file:
+100	find_mode_sym.f90	/^100 CONTINUE$/;"	l	subroutine:find_mode_sym_new	file:
+100	generate_effective_charges_c.f90	/^100 continue$/;"	l	subroutine:generate_effective_charges_c	file:
+100	gmressolve_all.f90	/^100 continue$/;"	l	subroutine:gmressolve_all	file:
+100	io_dyn_mat_old.f90	/^100 CONTINUE$/;"	l	subroutine:read_dyn_from_file	file:
+100	openfilq.f90	/^100  CALL errore ('openfilq', 'opening file'\/\/fildyn, ABS (ios) )$/;"	l	subroutine:openfilq	file:
+100	ph_restart.f90	/^100   IF (iflag \/= 0) THEN$/;"	l	subroutine:ph_restart_set_filename	file:
+100	ph_restart.f90	/^100 CALL mp_bcast( ierr, ionode_id, intra_image_comm )$/;"	l	subroutine:check_directory_phsave	file:
+100	phq_summary.f90	/^100 format (\/,5x,a75,\/,\/,5x, &$/;"	l	subroutine:phq_summary	file:
+100	punch_plot_e.f90	/^100     CALL errore ('plotout', 'opening file'\/\/filin, ABS (ios) )$/;"	l	subroutine:punch_plot_e	file:
+1001	phq_readin.f90	/^1001 CONTINUE$/;"	l	subroutine:phq_readin	file:
+11	d2ionq.f90	/^11 alpha = alpha - 0.1d0$/;"	l	subroutine:d2ionq	file:
+110	obsolete.f90	/^110     do na = 1, 3 * nat$/;"	l	subroutine:set_irr	file:
+110	set_irr.f90	/^110     do na = 1, 3 * nat$/;"	l	subroutine:set_irr_new	file:
+111	ep_matrix_element_wannier.f90	/^111  CALL errore ('elphsum_wannier', 'opening file'\/\/file_elphmat, ABS (ios) )$/;"	l	subroutine:elphsum_wannier	file:
+15	elphon.f90	/^15   continue$/;"	l	subroutine:lint	file:
+155	solve_e.f90	/^155 continue$/;"	l	subroutine:solve_e	file:
+155	solve_e2.f90	/^155 continue$/;"	l	subroutine:solve_e2	file:
+155	solve_e_fpol.f90	/^155 continue$/;"	l	subroutine:solve_e_fpol	file:
+155	solve_linter.f90	/^155 iter0=0$/;"	l	subroutine:solve_linter	file:
+20	elphon.f90	/^20   continue$/;"	l	subroutine:lint	file:
+20	fqha.f90	/^20 close(1)$/;"	l	program:fqha	file:
+20	matdyn.f90	/^20                  IF (ios \/=0) CALL errore('matdyn',&$/;"	l	program:matdyn	file:
+200	io_dyn_mat_old.f90	/^200  WRITE (stdout,*) ' Dielectric Tensor not found'$/;"	l	subroutine:read_dyn_from_file	file:
+30	phq_readin.f90	/^30 CONTINUE$/;"	l	subroutine:phq_readin	file:
+400	obsolete.f90	/^400 continue$/;"	l	subroutine:set_irr	file:
+400	openfilq.f90	/^400 IF (trim(fildvscf).NE.' ') THEN$/;"	l	subroutine:openfilq	file:
+400	set_irr.f90	/^400 continue$/;"	l	subroutine:set_irr_new	file:
+9000	dhdrhopsi.f90	/^9000 format (5x,'Non-scf  u_k: avg # of iterations =',0pf5.1 )$/;"	l	subroutine:dhdrhopsi	file:
+9000	dyndia.f90	/^9000 format(\/,5x,'Diagonalizing the dynamical matrix', &$/;"	l	subroutine:dyndia	file:
+9000	elph_tetra_mod.f90	/^9000 FORMAT(5x,'Tetrahedron method')$/;"	l	subroutine:elph_tetra_gamma	file:
+9000	elph_tetra_mod.f90	/^9000 FORMAT(5x,'Tetrahedron method')$/;"	l	subroutine:elph_tetra_lambda	file:
+9000	elphon.f90	/^9000 FORMAT(5x,'Gaussian Broadening: ',f7.3,' Ry, ngauss=',i4)$/;"	l	subroutine:elphsum	file:
+9000	elphon.f90	/^9000 FORMAT(5x,'Gaussian Broadening: ',f7.3,' Ry, ngauss=',i4)$/;"	l	subroutine:elphsum_simple	file:
+9000	io_dyn_mat_old.f90	/^9000 format(\/,5x,'Dynamical  Matrix in cartesian axes', &$/;"	l	subroutine:write_dyn_on_file	file:
+9000	lambda.f90	/^9000 format(26x,f7.3,12x,i4)$/;"	l	program:elph	file:
+9005	elph_tetra_mod.f90	/^9005 FORMAT(5x,'DOS =',f10.6,' states\/spin\/Ry\/Unit Cell at Ef=', &$/;"	l	subroutine:elph_tetra_gamma	file:
+9005	elph_tetra_mod.f90	/^9005 FORMAT(5x,'DOS =',f10.6,' states\/spin\/Ry\/Unit Cell at Ef=', &$/;"	l	subroutine:elph_tetra_lambda	file:
+9005	elphon.f90	/^9005 FORMAT(5x,'DOS =',f10.6,' states\/spin\/Ry\/Unit Cell at Ef=', &$/;"	l	subroutine:elphsum	file:
+9005	elphon.f90	/^9005 FORMAT(5x,'DOS =',f10.6,' states\/spin\/Ry\/Unit Cell at Ef=', &$/;"	l	subroutine:elphsum_simple	file:
+9005	lambda.f90	/^9005 format(10x,f10.6,32x,f10.6)$/;"	l	program:elph	file:
+9006	elph_tetra_mod.f90	/^9006 FORMAT(5x,'double delta at Ef =',f10.6)$/;"	l	subroutine:elph_tetra_gamma	file:
+9006	elph_tetra_mod.f90	/^9006 FORMAT(5x,'double delta at Ef =',f10.6)$/;"	l	subroutine:elph_tetra_lambda	file:
+9006	elphon.f90	/^9006 FORMAT(5x,'double delta at Ef =',f10.6)$/;"	l	subroutine:elphsum	file:
+9006	elphon.f90	/^9006 FORMAT(5x,'double delta at Ef =',f10.6)$/;"	l	subroutine:elphsum_simple	file:
+9010	dhdrhopsi.f90	/^9010 format (5x,'Non-scf Du_k: avg # of iterations =',0pf5.1 )$/;"	l	subroutine:dhdrhopsi	file:
+9010	dyndia.f90	/^9010 format   (5x,'freq (',i5,') =',f15.6,' [THz] =',f15.6,' [cm-1]')$/;"	l	subroutine:dyndia	file:
+9010	elph_tetra_mod.f90	/^9010 FORMAT(5x,'lambda(',i5,')=',f8.4,'   gamma=',f8.2,' GHz')$/;"	l	subroutine:elph_tetra_gamma	file:
+9010	elph_tetra_mod.f90	/^9010 FORMAT(5x,'lambda(',i5,')=',f8.4,'   gamma=',f8.2,' GHz')$/;"	l	subroutine:elph_tetra_lambda	file:
+9010	elphon.f90	/^9010 FORMAT(5x,'lambda(',i5,')=',f8.4,'   gamma=',f8.2,' GHz')$/;"	l	subroutine:elphsum	file:
+9010	elphon.f90	/^9010 FORMAT(5x,'lambda(',i5,')=',f8.4,'   gamma=',f8.2,' GHz')$/;"	l	subroutine:elphsum_simple	file:
+9010	lambda.f90	/^9010 format(12x,i5,2x,f8.4,9x,f8.2)$/;"	l	program:elph	file:
+9010	write_eigenvectors.f90	/^9010 format(5x,'freq (',i5,') =',f15.6,' [THz] =',f15.6,' [cm-1]')$/;"	l	subroutine:write_eigenvectors	file:
+9010	write_eigenvectors.f90	/^9010 format(5x,'freq (',i5,') =',f15.6,' [THz] =',f15.6,' [cm-1]')$/;"	l	subroutine:writemodes	file:
+9014	lambda.f90	/^9014 format('# degauss   lambda    int alpha2F  <log w>     N(Ef)')$/;"	l	program:elph	file:
+9015	lambda.f90	/^9015 format(5x,'lambda =',f9.6,' ( ',f10.6,' )  <log w>=',f9.3,' K  ', &$/;"	l	program:elph	file:
+9016	lambda.f90	/^9016 format(f7.3,2f12.6,f10.3,2f12.6)$/;"	l	program:elph	file:
+9020	lambda.f90	/^9020 format('# E(THz)',10(f10.3))$/;"	l	program:elph	file:
+9020	write_eigenvectors.f90	/^9020 format (1x,'(',3 (f10.6,1x,f10.6,3x),')')$/;"	l	subroutine:write_eigenvectors	file:
+9020	write_eigenvectors.f90	/^9020 format (1x,'(',3 (f10.6,1x,f10.6,3x),')')$/;"	l	subroutine:writemodes	file:
+9025	lambda.f90	/^9025 format(f8.4,10(f10.5))$/;"	l	program:elph	file:
+9030	chi_test.f90	/^ 9030 format(' bnd:',i5,' ip:',i5,6e12.6)$/;"	l	subroutine:chi_test	file:
+9031	chi_test.f90	/^ 9031 format(' bnd:',i5,' ip:',i5,6f12.6)$/;"	l	subroutine:chi_test	file:
+99	ep_matrix_element_wannier.f90	/^99   continue$/;"	l	subroutine:get_equivalent_kpq	file:
+999	matdyn.f90	/^999  CONTINUE$/;"	l	subroutine:read_tau	file:
+CODE	q2qstar.f90	/^  CHARACTER(len=7),PARAMETER :: CODE=/;"	v	program:Q2QSTAR
+DOSofE	matdyn.f90	/^          dynq(:,:,:), DOSofE(/;"	v	program:matdyn
+DeltaE	matdyn.f90	/^  REAL(DP) :: qhat(3), qh, DeltaE,/;"	v	program:matdyn
+E	matdyn.f90	/^  REA/;"	v	program:matdyn
+Emax	matdyn.f90	/^  REAL(DP) :: qhat(3), qh, DeltaE, Emin=0._dp, Emax,/;"	v	program:matdyn
+Emin	matdyn.f90	/^  REAL(DP) :: qhat(3), qh, DeltaE, Emin=/;"	v	program:matdyn
+F0	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T, a2,a3,Ftot,norm,F0$/;"	v	program:fqha
+Ftot	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T, a2,a3,Ftot,/;"	v	program:fqha
+INPUTA2F	alpha2f.f90	/^  NAMELIST \/INPUTA2F\//;"	n	program:alpha2f
+INPUTPH	phq_readin.f90	/^  NAMELIST \/ INPUTPH /;"	n	subroutine:phq_readin
+LRMODS	Makefile	/^LRMODS = ..\/..\/LR_Modules\/liblrmod.a$/;"	m
+MODFLAGS	Makefile	/^MODFLAGS= $(BASEMOD_FLAGS) \\$/;"	m
+PHAUXOBJS	Makefile	/^PHAUXOBJS = \\$/;"	m
+PHOBJS	Makefile	/^PHOBJS = \\$/;"	m
+PWOBJS	Makefile	/^PWOBJS = ..\/..\/PW\/src\/libpw.a$/;"	m
+Q2QSTAR	q2qstar.f90	/^PROGRAM Q2QSTAR$/;"	p
+QEMODS	Makefile	/^QEMODS = ..\/..\/Modules\/libqemod.a ..\/..\/KS_Solvers\/libks_solvers.a \\$/;"	m
+RAMANOBJS	Makefile	/^RAMANOBJS =    \\$/;"	m
+T	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T,/;"	v	program:fqha
+TLDEPS	Makefile	/^TLDEPS= phlibs$/;"	m
+Tc	lambda.f90	/^  real*8 mustar, omegalog(20), Tc,/;"	v	program:elph
+YAMBO	yambo.f90	/^MODULE YAMBO$/;"	m
+a0	dynmat.f90	/^  real(DP) :: amass(ntypx), amass_(ntypx), eps0(3,3), a0,/;"	v	program:dynmat
+a1j	ramanm.f90	/^  INTEGER ::  jab(3,3), a1j(/;"	v	module:ramanm
+a2	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T, a2,/;"	v	program:fqha
+a2Fdos	matdyn.f90	/^SUBROUTINE a2Fdos /;"	s
+a2j	ramanm.f90	/^  INTEGER ::  jab(3,3), a1j(6), a2j(/;"	v	module:ramanm
+a3	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T, a2,a3,/;"	v	program:fqha
+abs_similarity	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: abs_similarity(/;"	v	program:matdyn
+acfdt_is_active	acfdtest.f90	/^ LOGICAL :: acfdt_is_active=/;"	v	module:acfdtest
+acfdt_num_der	acfdtest.f90	/^ LOGICAL :: acfdt_num_der=/;"	v	module:acfdtest
+acfdt_term1	acfdtest.f90	/^ LOGICAL :: acfdt_term1 /;"	v	module:acfdtest
+acfdt_term2	acfdtest.f90	/^ LOGICAL :: acfdt_term2 /;"	v	module:acfdtest
+acfdt_term3	acfdtest.f90	/^ LOGICAL :: acfdt_term3 /;"	v	module:acfdtest
+acfdtest	acfdtest.f90	/^MODULE acfdtest$/;"	m
+add_dkmds	add_dkmds.f90	/^subroutine add_dkmds(/;"	s
+add_for_charges	add_for_charges.f90	/^subroutine add_for_charges /;"	s
+add_zstar_ue	add_zstar_ue.f90	/^subroutine add_zstar_ue /;"	s
+add_zstar_ue_us	add_zstar_ue_us.f90	/^subroutine add_zstar_ue_us(/;"	s
+addcore	addcore.f90	/^subroutine addcore /;"	s
+adddvhubscf	adddvhubscf.f90	/^SUBROUTINE adddvhubscf /;"	s
+addnlcc	addnlcc.f90	/^subroutine addnlcc /;"	s
+addnlcc_zstar_eu_us	addnlcc_zstar_eu_us.f90	/^SUBROUTINE addnlcc_zstar_eu_us(/;"	s
+addusddens	addusddens.f90	/^subroutine addusddens /;"	s
+addusddense	addusddense.f90	/^subroutine addusddense /;"	s
+addusdynmat	addusdynmat.f90	/^subroutine addusdynmat /;"	s
+alat	matdyn.f90	/^  REAL(DP) ::     omega,alat,/;"	v	program:matdyn
+all_comp	phcom.f90	/^  LOGICAL :: all_comp /;"	v	module:partial
+all_done	phcom.f90	/^             xmldyn=.FALSE.,   & ! if true the dynamical matrix is in xml form$/;"	v	module:control_ph
+allocate_grid_variables	ph_restart.f90	/^   SUBROUTINE allocate_grid_variables(/;"	s	module:ph_restart
+allocate_part	allocate_part.f90	/^subroutine allocate_part /;"	s
+allocate_pert	allocate_pert.f90	/^subroutine allocate_pert(/;"	s
+allocate_phq	allocate_phq.f90	/^subroutine allocate_phq$/;"	s
+allocate_rotated_pattern_repr	dfile_star.f90	/^SUBROUTINE allocate_rotated_pattern_repr(/;"	s	module:dfile_star
+alpha2F	lambda.f90	/^       lambda(nsigx), alpha2F(/;"	v	program:elph
+alpha2f	alpha2f.f90	/^PROGRAM alpha2f$/;"	p
+alpha2f_routines	alpha2f.f90	/^MODULE alpha2f_routines$/;"	m
+alpha2f_vals	alpha2f.f90	/^MODULE alpha2f_vals$/;"	m
+alpha_mix	phcom.f90	/^  REAL(DP) :: alpha_mix(/;"	v	module:control_ph
+alphap	phcom.f90	/^  type (bec_type),  ALLOCATABLE, TARGET :: &$/;"	v	module:phus
+alphasum	phcom.f90	/^  REAL (DP), ALLOCATABLE :: &$/;"	v	module:phus
+alphasum_nc	phcom.f90	/^       becsumort(:,:,:,:),     &! nhm*(nhm+1)\/2,nat,nspin,3*nat)$/;"	v	module:phus
+always_run	phcom.f90	/^             with_ext_images=.FALSE., & ! if .TRUE. use an external driver$/;"	v	module:control_ph
+amass	dynmat.f90	/^  real(DP) :: amass(/;"	v	program:dynmat
+amass	matdyn.f90	/^                  epsil(3,3),                &! dielectric tensor$/;"	v	program:matdyn
+amass	q2trans.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(/;"	v	program:q2trans
+amass	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(/;"	v	program:q2trans_fd
+amass_	dynmat.f90	/^  real(DP) :: amass(ntypx), amass_(/;"	v	program:dynmat
+amass_blk	matdyn.f90	/^                  amass(ntypx),              &! atomic masses$/;"	v	program:matdyn
+amconv	q2trans.f90	/^  REAL(DP) :: amconv /;"	v	program:q2trans
+amconv	q2trans_fd.f90	/^  REAL(DP) :: amconv /;"	v	program:q2trans_fd
+asr	dynmat.f90	/^  character(len=10) :: asr$/;"	v	program:dynmat
+asr	matdyn.f90	/^  CHARACTER(LEN=10)  :: asr$/;"	v	program:matdyn
+asr	phcom.f90	/^  LOGICAL :: asr /;"	v	module:gamma_gamma
+at	dynmat.f90	/^  real(DP) :: amass(ntypx), amass_(ntypx), eps0(3,3), a0, omega, &$/;"	v	program:dynmat
+at	epa.f90	/^      ee(nwin), de(nwin), xq(3), at(/;"	v	program:epa
+at	q2trans.f90	/^  REAL(DP) :: celldm(6), at(/;"	v	program:q2trans
+at	q2trans_fd.f90	/^  REAL(DP) :: celldm(6), at(/;"	v	program:q2trans_fd
+at_blk	matdyn.f90	/^  REAL(DP) ::     omega,alat, &! cell parameters and volume$/;"	v	program:matdyn
+atm	dynmat.f90	/^  character(len=3) :: atm(/;"	v	program:dynmat
+atm	matdyn.f90	/^  CHARACTER(LEN=3), ALLOCATABLE :: atm(/;"	v	module:ifconstants
+atm	q2trans.f90	/^  CHARACTER(len=3)   :: atm(/;"	v	program:q2trans
+atm	q2trans_fd.f90	/^  CHARACTER(len=3)   :: atm(/;"	v	program:q2trans_fd
+atomic_number	elphon.f90	/^  INTEGER, EXTERNAL :: find_free_unit, atomic_number$/;"	v
+atomo	phcom.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:partial
+atomo_save	save_ph_input.f90	/^  INTEGER, ALLOCATABLE, PRIVATE :: atomo_save(/;"	v	module:save_ph
+attr	io_dyn_mat.f90	/^  CHARACTER(iotk_attlenx)  :: attr$/;"	v	module:io_dyn_mat
+attr	ph_restart.f90	/^  CHARACTER(iotk_attlenx)  :: attr$/;"	v	module:ph_restart
+attr	q2trans.f90	/^CHARACTER(600)       :: attr,/;"	v	program:q2trans
+attr	q2trans_fd.f90	/^CHARACTER(600)       :: attr,/;"	v	program:q2trans_fd
+atws	matdyn.f90	/^                  amass_blk(ntypx),          &! original atomic masses$/;"	v	program:matdyn
+auxdvscf	elph.f90	/^  CHARACTER (LEN=256) :: auxdvscf$/;"	v	module:el_phon
+auxdyn	alpha2f.f90	/^  CHARACTER (LEN=256) :: auxdyn$/;"	v	program:alpha2f
+auxdyn	phonon.f90	/^  CHARACTER (LEN=256) :: auxdyn$/;"	v	program:phonon
+axis	dynmat.f90	/^  integer :: nat, na, nt, ntyp, iout, axis,/;"	v	program:dynmat
+bands_computed	phcom.f90	/^             done_bands,  &! if .TRUE. the bands have been calculated$/;"	v	module:control_ph
+basis	dfile_star.f90	/^     CHARACTER(len=10)  :: basis$/;"	k	type:open_star_descriptor
+bcast_ph_input	bcast_ph_input.f90	/^subroutine bcast_ph_input /;"	s
+bcmax	epa.f90	/^      nev, bvmin, bvmax, nec, bcmin, bcmax,/;"	v	program:epa
+bcmin	epa.f90	/^      nev, bvmin, bvmax, nec, bcmin,/;"	v	program:epa
+becsum_nc	phcom.f90	/^       int5_so(:,:,:,:,:,:,:), &! nhm*(nhm+1)\/2, 3, 3, nat, nat, nspin),&$/;"	v	module:phus
+becsumort	phcom.f90	/^       becsum_nc(:,:,:,:),     &! nhm*(nhm+1)\/2,nat,npol,npol)$/;"	v	module:phus
+bg	dynmat.f90	/^       at(3,3), bg(/;"	v	program:dynmat
+bg	epa.f90	/^      ee(nwin), de(nwin), xq(3), at(3, 3), bg(/;"	v	program:epa
+bg	q2trans.f90	/^  REAL(DP) :: celldm(6), at(3,3), bg(/;"	v	program:q2trans
+bg	q2trans_fd.f90	/^  REAL(DP) :: celldm(6), at(3,3), bg(/;"	v	program:q2trans_fd
+bg_blk	matdyn.f90	/^                  at_blk(3,3), bg_blk(/;"	v	program:matdyn
+bpair	epa.f90	/^      nemin, nemax, ne(nwin), nepair(nwin), bpair(/;"	v	program:epa
+buffer	matdyn.f90	/^  CHARACTER(LEN=256) :: input_line, buffer$/;"	v	program:matdyn
+bvmax	epa.f90	/^      nev, bvmin, bvmax,/;"	v	program:epa
+bvmin	epa.f90	/^      nev, bvmin,/;"	v	program:epa
+calculate_and_apply_phase	ep_matrix_element_wannier.f90	/^subroutine calculate_and_apply_phase(/;"	s
+card	q2trans.f90	/^CHARACTER(600)       :: attr, card$/;"	v	program:q2trans
+card	q2trans_fd.f90	/^CHARACTER(600)       :: attr, card$/;"	v	program:q2trans_fd
+ccg_psi	ccg_psi.f90	/^subroutine ccg_psi /;"	s
+cch_psi_all	cch_psi_all.f90	/^subroutine cch_psi_all /;"	s
+cdate	elphon.f90	/^  character :: cdate*/;"	v
+cdiagh2	rigid.f90	/^subroutine cdiagh2 /;"	s	module:rigid
+celldm	dynmat.f90	/^  real(DP) :: celldm(/;"	v	program:dynmat
+celldm	q2trans.f90	/^  REAL(DP) :: celldm(/;"	v	program:q2trans
+celldm	q2trans_fd.f90	/^  REAL(DP) :: celldm(/;"	v	program:q2trans_fd
+check_all_convt	solve_linter.f90	/^SUBROUTINE check_all_convt(/;"	s
+check_at	matdyn.f90	/^SUBROUTINE check_at(/;"	s
+check_available_bands	ph_restart.f90	/^    SUBROUTINE check_available_bands(/;"	s	module:ph_restart
+check_directory_phsave	ph_restart.f90	/^    SUBROUTINE check_directory_phsave(/;"	s	module:ph_restart
+check_if_partial_dyn	check_if_partial_dyn.f90	/^SUBROUTINE check_if_partial_dyn(/;"	s
+check_initial_status	check_initial_status.f90	/^SUBROUTINE check_initial_status(/;"	s
+check_restart_recover	check_restart_recover.f90	/^SUBROUTINE check_restart_recover(/;"	s
+chi_test	chi_test.f90	/^subroutine chi_test /;"	s
+clean_input_variables	save_ph_input.f90	/^    SUBROUTINE clean_input_variables(/;"	s	module:save_ph
+clean_pw_ph	clean_pw_ph.f90	/^SUBROUTINE clean_pw_ph(/;"	s
+clean_recover	write_rec.f90	/^  SUBROUTINE clean_recover(/;"	s	module:recover_mod
+clinear	clinear.f90	/^       SUBROUTINE clinear(/;"	s
+close_phq	close_phq.f90	/^SUBROUTINE close_phq(/;"	s
+code	phonon.f90	/^  CHARACTER (LEN=9)   :: code /;"	v	program:phonon
+code_group_old	matdyn.f90	/^             nrws,                         &! number of nearest neighbor$/;"	v	program:matdyn
+collect_grid_files	check_initial_status.f90	/^   SUBROUTINE collect_grid_files(/;"	s
+comp_elph	elph.f90	/^  LOGICAL, ALLOCATABLE :: comp_elph(/;"	v	module:el_phon
+comp_iq	phcom.f90	/^       done_iq(:),      &! if .true. this q point has been already calculated$/;"	v	module:disp
+comp_irr	phcom.f90	/^  LOGICAL, ALLOCATABLE :: &$/;"	v	module:partial
+comp_irr_iq	phcom.f90	/^  LOGICAL, ALLOCATABLE ::  &$/;"	v	module:grid_irr_iq
+comp_iu	phcom.f90	/^  LOGICAL, ALLOCATABLE :: comp_iu(/;"	v	module:freq_ph
+compact_dyn	rotate_pattern_add.f90	/^  SUBROUTINE compact_dyn(/;"	s
+compute_a2F	alpha2f.f90	/^SUBROUTINE compute_a2F(/;"	s	module:alpha2f_routines
+compute_alphasum	compute_alphasum.f90	/^subroutine compute_alphasum$/;"	s
+compute_becalp	compute_becalp.f90	/^subroutine compute_becalp /;"	s
+compute_becsum_ph	compute_becsum_ph.f90	/^subroutine compute_becsum_ph$/;"	s
+compute_drhous	compute_drhous.f90	/^subroutine compute_drhous /;"	s
+compute_drhous_nc	compute_drhous_nc.f90	/^subroutine compute_drhous_nc /;"	s
+compute_dvloc	compute_dvloc.f90	/^subroutine compute_dvloc /;"	s
+compute_lambda	alpha2f.f90	/^SUBROUTINE compute_lambda(/;"	s	module:alpha2f_routines
+compute_nldyn	compute_nldyn.f90	/^subroutine compute_nldyn /;"	s
+compute_weight	compute_weight.f90	/^subroutine compute_weight /;"	s
+control_ph	phcom.f90	/^MODULE control_ph$/;"	m
+convt	phcom.f90	/^  LOGICAL :: lgamma_gamma,&! if .TRUE. this is a q=0 computation with k=0 only$/;"	v	module:control_ph
+cryst_ph	phcom.f90	/^MODULE cryst_ph$/;"	m
+crystal	q2trans.f90	/^  CHARACTER(len=20)  :: crystal$/;"	v	program:q2trans
+crystal	q2trans_fd.f90	/^  CHARACTER(len=20)  :: crystal$/;"	v	program:q2trans_fd
+ctime	elphon.f90	/^  character :: cdate*9, ctime*/;"	v
+current_iq	phcom.f90	/^             last_irr,      & ! last representation of this run$/;"	v	module:control_ph
+current_iu	phcom.f90	/^  INTEGER :: current_iu /;"	v	module:freq_ph
+d1	q2trans.f90	/^  REAL(DP) :: epsil(3,3), d1(/;"	v	program:q2trans
+d1	q2trans_fd.f90	/^  REAL(DP) :: epsil(3,3), d1(/;"	v	program:q2trans_fd
+d2	q2qstar.f90	/^  COMPLEX(DP),ALLOCATABLE :: phi(:,:,:,:), d2(/;"	v	program:Q2QSTAR
+d2	q2trans.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1, d2(/;"	v	program:q2trans
+d2	q2trans_fd.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1, d2(/;"	v	program:q2trans_fd
+d2ionq	d2ionq.f90	/^subroutine d2ionq /;"	s
+d2ionq_mm	d2ionq_mm.f90	/^SUBROUTINE d2ionq_mm /;"	s
+d2mxc	d2mxc.f90	/^function d2mxc /;"	f
+d2ns_type	phcom.f90	/^  CHARACTER(LEN=4) :: d2ns_type$/;"	v	module:ldaU_ph
+d2nsq_bare_k	d2nsq_bare.f90	/^SUBROUTINE d2nsq_bare_k /;"	s	module:d2nsq_bare_module
+d2nsq_bare_k_diag	d2nsq_bare.f90	/^SUBROUTINE d2nsq_bare_k_diag /;"	s	module:d2nsq_bare_module
+d2nsq_bare_module	d2nsq_bare.f90	/^MODULE d2nsq_bare_module$/;"	m
+d2wfc	dwfc.f90	/^SUBROUTINE d2wfc /;"	s
+davcio_drho	davcio_drho.f90	/^SUBROUTINE davcio_drho(/;"	s
+dd1	q2trans.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1,/;"	v	program:q2trans
+dd1	q2trans_fd.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1,/;"	v	program:q2trans_fd
+dd2	q2trans.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1, d2(3), dd2$/;"	v	program:q2trans
+dd2	q2trans_fd.f90	/^  REAL(DP) :: epsil(3,3), d1(3), dd1, d2(3), dd2$/;"	v	program:q2trans_fd
+de	epa.f90	/^      ee(nwin), de(/;"	v	program:epa
+de	fqha.f90	/^  real(8) :: de,/;"	v	program:fqha
+de_	fqha.f90	/^  real(8) :: de, de_,/;"	v	program:fqha
+deallocate_part	deallocate_part.f90	/^subroutine deallocate_part(/;"	s
+deallocate_pert	allocate_pert.f90	/^subroutine deallocate_pert(/;"	s
+deallocate_phq	deallocate_phq.f90	/^subroutine deallocate_phq$/;"	s
+deallocate_rotated_pattern_repr	dfile_star.f90	/^SUBROUTINE deallocate_rotated_pattern_repr(/;"	s	module:dfile_star
+debye_waller	yambo.f90	/^SUBROUTINE debye_waller(/;"	s
+dec	epa.f90	/^      gmax, gstep, ev, dev, ec, dec,/;"	v	program:epa
+def	ef_shift.f90	/^  COMPLEX(DP),SAVE,PUBLIC :: def(/;"	v	module:efermi_shift
+degauss	lambda.f90	/^  real(kind=8) :: q(3,npk), wk(npk), degauss(/;"	v	program:elph
+degauss1	lambda.f90	/^  real(kind=8) qread(3), dosef1, ef1, degauss1,/;"	v	program:elph
+degaussq	lambda.f90	/^  real(kind=8) qread(3), dosef1, ef1, degauss1, gammaq, lambda2, &$/;"	v	program:elph
+dek	ramanm.f90	/^  REAL (DP) :: eloptns (3,3,3), dek$/;"	v	module:ramanm
+delta	matdyn.f90	/^  REAL(DP) :: delta,/;"	v	program:matdyn
+delta_sphi	delta_sphi.f90	/^SUBROUTINE delta_sphi /;"	s
+delta_vrs	acfdtest.f90	/^ REAL(DP):: delta_vrs=/;"	v	module:acfdtest
+deltae	lambda.f90	/^       degaussq, emax, deltae,/;"	v	program:elph
+den_xc	acfdtest.f90	/^ REAL(DP), ALLOCATABLE :: den_xc(/;"	v	module:acfdtest
+destroy_status_run	ph_restart.f90	/^   SUBROUTINE destroy_status_run(/;"	s	module:ph_restart
+dev	epa.f90	/^      gmax, gstep, ev, dev,/;"	v	program:epa
+dfile_autoname	dfile_autoname.f90	/^MODULE dfile_autoname$/;"	m
+dfile_directory_basename	dfile_autoname.f90	/^  CHARACTER(len=12),PARAMETER :: dfile_directory_basename=/;"	v	module:dfile_autoname
+dfile_directory_file	dfile_autoname.f90	/^FUNCTION dfile_directory_file(/;"	f	module:dfile_autoname
+dfile_generate_name	dfile_autoname.f90	/^FUNCTION dfile_generate_name(/;"	f	module:dfile_autoname
+dfile_get_qlist	dfile_autoname.f90	/^SUBROUTINE dfile_get_qlist(/;"	s	module:dfile_autoname
+dfile_name	dfile_autoname.f90	/^FUNCTION dfile_name(/;"	f	module:dfile_autoname
+dfile_star	dfile_star.f90	/^MODULE dfile_star$/;"	m
+dhdrhopsi	dhdrhopsi.f90	/^subroutine dhdrhopsi$/;"	s
+dielec	dielec.f90	/^subroutine dielec(/;"	s
+dielec	q2trans_fd.f90	/^LOGICAL   :: have_overlap, htype, noNA, readifc, dielec$/;"	v	program:q2trans_fd
+dielec_test	dielec_test.f90	/^subroutine dielec_test$/;"	s
+dimwan	q2trans.f90	/^INTEGER  :: dimwan$/;"	v	program:q2trans
+dimwan	q2trans_fd.f90	/^INTEGER  :: dimwan$/;"	v	program:q2trans_fd
+dir	dfile_star.f90	/^     CHARACTER(len=256) :: dir$/;"	k	type:open_star_descriptor
+disp	phcom.f90	/^MODULE disp$/;"	m
+dnsbare	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: dnsbare(/;"	v	module:ldaU_ph
+dnsbare_all_modes	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: dnsbare(:,:,:,:,:,:),         & ! bare derivative of ns$/;"	v	module:ldaU_ph
+dnsorth	phcom.f90	/^                              dnsscf_all_modes(:,:,:,:,:),  & ! SCF  derivative of ns for all modes$/;"	v	module:ldaU_ph
+dnsorth_cart	phcom.f90	/^                              dnsorth(:,:,:,:,:),           & ! valence component of dns$/;"	v	module:ldaU_ph
+dnsq_bare	dnsq_bare.f90	/^SUBROUTINE dnsq_bare /;"	s
+dnsq_orth	dnsq_orth.f90	/^SUBROUTINE dnsq_orth(/;"	s
+dnsq_scf	dnsq_scf.f90	/^SUBROUTINE dnsq_scf /;"	s
+dnsscf	phcom.f90	/^                              dnsbare_all_modes(:,:,:,:,:), & ! bare derivative of ns for all modes$/;"	v	module:ldaU_ph
+dnsscf_all_modes	phcom.f90	/^                              dnsscf(:,:,:,:,:),            & ! SCF  derivative of ns$/;"	v	module:ldaU_ph
+do_band	phonon.f90	/^  LOGICAL :: do_band,/;"	v	program:phonon
+do_iq	phonon.f90	/^  LOGICAL :: do_band, do_iq,/;"	v	program:phonon
+do_numer_eig	acfdtest.f90	/^ LOGICAL :: do_numer_eig=/;"	v	module:acfdtest
+do_phonon	do_phonon.f90	/^SUBROUTINE do_phonon(/;"	s
+do_q2r	do_q2r.f90	/^SUBROUTINE do_q2r(/;"	s
+done_bands	phcom.f90	/^             reduce_io,   &! if .TRUE. reduces needed I\/O$/;"	v	module:control_ph
+done_bands	phcom.f90	/^       done_elph_iq(:,:),   & ! for each q and irr: if .TRUE. the elph of this $/;"	v	module:grid_irr_iq
+done_elop	ramanm.f90	/^  LOGICAL :: lraman, elop, done_lraman=.FALSE., done_elop=/;"	v	module:ramanm
+done_elph	elph.f90	/^  LOGICAL, ALLOCATABLE :: comp_elph(:), done_elph(/;"	v	module:el_phon
+done_elph_iq	phcom.f90	/^       done_irr_iq(:,:),   & ! for each q and irr: if .TRUE. this $/;"	v	module:grid_irr_iq
+done_epsil	phcom.f90	/^             epsil,       &! if .TRUE. computes dielec. const and eff. charges$/;"	v	module:control_ph
+done_fpol	phcom.f90	/^  LOGICAL :: fpol, & ! if .TRUE. dynamic dielectric constant is computed$/;"	v	module:freq_ph
+done_iq	phcom.f90	/^       lgamma_iq(:),    &! if .true. this q is gamma.$/;"	v	module:disp
+done_irr	phcom.f90	/^       comp_irr(:),    &! (3*nat) : .true. if this irr.rep. has to be computed$/;"	v	module:partial
+done_irr_iq	phcom.f90	/^       comp_irr_iq(:,:),   & ! for each q and irr: if .TRUE. this $/;"	v	module:grid_irr_iq
+done_iu	phcom.f90	/^  LOGICAL, ALLOCATABLE :: done_iu(/;"	v	module:freq_ph
+done_lraman	ramanm.f90	/^  LOGICAL :: lraman, elop, done_lraman=/;"	v	module:ramanm
+done_start_zstar	phcom.f90	/^             done_zeu=.FALSE., &! .TRUE. when the eff. charges are available$/;"	v	module:control_ph
+done_zeu	phcom.f90	/^             zeu,         &! if .TRUE. computes eff. charges as induced forces$/;"	v	module:control_ph
+done_zue	phcom.f90	/^             zue,         &! if .TRUE. computes eff. charges as induced polarization$/;"	v	module:control_ph
+dos	fqha.f90	/^  real(8) :: dos(/;"	v	program:fqha
+dos	matdyn.f90	/^  LOGICAL :: dos,/;"	v	program:matdyn
+dos_	fqha.f90	/^  real(8) :: de, de_, nu_,dos_$/;"	v	program:fqha
+dos_ef	elphon.f90	/^FUNCTION dos_ef /;"	f
+dos_gam	matdyn.f90	/^  REAL(DP), external       :: dos_gam$/;"	v	program:matdyn
+dos_gam	matdyn.f90	/^function dos_gam /;"	f
+dosef	lambda.f90	/^  real(kind=8) :: q(3,npk), wk(npk), degauss(nsigx), w2(nmodex), &$/;"	v	program:elph
+dosef1	lambda.f90	/^  real(kind=8) qread(3), dosef1,/;"	v	program:elph
+doubleprojqq	d2nsq_bare.f90	/^SUBROUTINE doubleprojqq /;"	s	module:doubleprojqq_module
+doubleprojqq2	d2nsq_bare.f90	/^SUBROUTINE doubleprojqq2 /;"	s	module:doubleprojqq_module
+doubleprojqq_module	d2nsq_bare.f90	/^MODULE doubleprojqq_module$/;"	m
+dpsi_orth	dpsi_orth.f90	/^SUBROUTINE dpsi_orth /;"	s
+drc	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE, TARGET :: drc(/;"	v	module:nlcc_ph
+drho	drho.f90	/^subroutine drho$/;"	s
+drho_star	dfile_star.f90	/^  TYPE(open_star_descriptor) :: &$/;"	v	module:dfile_star
+drhodv	drhodv.f90	/^subroutine drhodv /;"	s
+drhodvloc	drhodvloc.f90	/^subroutine drhodvloc /;"	s
+drhodvnl	drhodvnl.f90	/^subroutine drhodvnl /;"	s
+drhodvus	drhodvus.f90	/^subroutine drhodvus /;"	s
+dvanqq	dvanqq.f90	/^subroutine dvanqq$/;"	s
+dvkb	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: dvkb(/;"	v	module:ldaU_ph
+dvkb3	dvkb3.f90	/^subroutine dvkb3(/;"	s
+dvkbkpq	phcom.f90	/^  COMPLEX(DP), POINTER ::             vkbkpq(:,:), & ! beta funtions at k+q$/;"	v	module:ldaU_ph
+dvpsi_e	dvpsi_e.f90	/^subroutine dvpsi_e /;"	s
+dvpsi_e2	dvpsi_e2.f90	/^subroutine dvpsi_e2$/;"	s
+dvqhub_barepsi_us	dvqhub_barepsi_us.f90	/^SUBROUTINE dvqhub_barepsi_us /;"	s
+dvqhub_barepsi_us2	dvqhub_barepsi_us2.f90	/^SUBROUTINE dvqhub_barepsi_us2 /;"	s
+dvqpsi_us	dvqpsi_us.f90	/^subroutine dvqpsi_us /;"	s
+dvqpsi_us_only	dvqpsi_us_only.f90	/^subroutine dvqpsi_us_only /;"	s
+dvscf_star	dfile_star.f90	/^      drho_star, & ! $/;"	v	module:dfile_star
+dvscf_yambo	yambo.f90	/^  LOGICAL :: dvscf_yambo /;"	v	module:YAMBO
+dwfc	dwfc.f90	/^SUBROUTINE dwfc /;"	s
+dwfcatomk	phcom.f90	/^                                      swfcatomk(:,:),     & ! S * atomic wfc at k$/;"	v	module:ldaU_ph
+dwfcatomkpq	phcom.f90	/^                                      swfcatomkpq(:,:),   & ! S * atomic wfc at k+q$/;"	v	module:ldaU_ph
+dyn	epa.f90	/^  complex(dp), allocatable :: dyn(/;"	v	program:epa
+dyn	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: dyn(/;"	v	program:matdyn
+dyn	phcom.f90	/^       dyn0/;"	v	module:dynmat
+dyn00	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: &$/;"	v	module:dynmat
+dyn_blk	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: dyn(:,:,:,:), dyn_blk(/;"	v	program:matdyn
+dyn_hub_bare	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: dyn_hub_bare(/;"	v	module:dynmat
+dyn_hub_scf	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE :: dyn_hub_scf(/;"	v	module:dynmat
+dyn_pattern_to_cart	rotate_pattern_add.f90	/^  SUBROUTINE dyn_pattern_to_cart(/;"	s
+dyn_rec	phcom.f90	/^       dyn(:,:),             &! 3 * nat, 3 * nat)$/;"	v	module:dynmat
+dynamicalq	io_dyn_mat_old.f90	/^Module dynamicalq$/;"	m
+dyndia	dyndia.f90	/^subroutine dyndia /;"	s
+dyndiag	rigid.f90	/^subroutine dyndiag /;"	s	module:rigid
+dynmat	dynmat.f90	/^program dynmat$/;"	p
+dynmat	phcom.f90	/^MODULE dynmat$/;"	m
+dynmat0	obsolete.f90	/^subroutine dynmat0$/;"	s
+dynmat0_new	dynmat0.f90	/^subroutine dynmat0_new$/;"	s
+dynmat_hub_bare	dynmat_hub_bare.f90	/^SUBROUTINE dynmat_hub_bare$/;"	s
+dynmat_hub_scf	dynmat_hub_scf.f90	/^SUBROUTINE dynmat_hub_scf /;"	s
+dynmat_us	dynmat_us.f90	/^SUBROUTINE dynmat_us(/;"	s
+dynmatcc	dynmatcc.f90	/^subroutine dynmatcc$/;"	s
+dynmatrix	obsolete.f90	/^subroutine dynmatrix(/;"	s
+dynmatrix_new	dynmatrix.f90	/^subroutine dynmatrix_new(/;"	s
+dynq	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(:,:), q(:,:), w2(:,:), freq(:,:), wq(:), &$/;"	v	program:matdyn
+e	lambda.f90	/^       deg/;"	v	program:elph
+ec	epa.f90	/^      gmax, gstep, ev, dev, ec,/;"	v	program:epa
+ee	epa.f90	/^      gmax, gstep, ev, dev, ec, dec, wspin, &$/;"	v	program:epa
+ef	lambda.f90	/^       dosef(/;"	v	program:elph
+ef1	lambda.f90	/^  real(kind=8) qread(3), dosef1,/;"	v	program:elph
+ef_shift	ef_shift.f90	/^subroutine ef_shift /;"	s	module:efermi_shift
+ef_shift_paw	ef_shift.f90	/^subroutine ef_shift_paw /;"	s	module:efermi_shift
+efermi_shift	ef_shift.f90	/^MODULE efermi_shift$/;"	m
+effU	phcom.f90	/^  REAL(DP) :: effU(/;"	v	module:ldaU_ph
+efield_mod	phcom.f90	/^MODULE efield_mod$/;"	m
+egrid	epa.f90	/^  real(dp), allocatable :: egrid(/;"	v	program:epa
+eigen	dfile_star.f90	/^    REAL(DP), ALLOCATABLE :: gi (:,:), gimq (:), eigen(/;"	k	type:rotated_pattern_repr
+eigen_similarity	matdyn.f90	/^  LOGICAL :: dos, has_zstar, q_in_cryst_coord, eigen_similarity$/;"	v	program:matdyn
+el_opt	el_opt.f90	/^subroutine el_opt$/;"	s
+el_ph_collect	el_ph_collect.f90	/^SUBROUTINE el_ph_collect(/;"	s
+el_ph_distribute	el_ph_collect.f90	/^SUBROUTINE el_ph_distribute(/;"	s
+el_ph_mat	elph.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: &$/;"	v	module:el_phon
+el_ph_mat	epa.f90	/^  complex(dp), allocatable :: el_ph_mat(/;"	v	program:epa
+el_ph_mat_collect	elphon.f90	/^  COMPLEX(DP), ALLOCATABLE :: el_ph_mat_collect(/;"	v
+el_ph_mat_rec	elph.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: &$/;"	v	module:el_phon
+el_ph_mat_rec_col	elph.f90	/^  COMPLEX(DP), POINTER :: &$/;"	v	module:el_phon
+el_ph_ngauss	elph.f90	/^  INTEGER :: el_ph_ngauss,/;"	v	module:el_phon
+el_ph_nsigma	elph.f90	/^  INTEGER :: el_ph_ngauss, el_ph_nsigma$/;"	v	module:el_phon
+el_ph_sigma	elph.f90	/^  REAL(DP) :: el_ph_sigma$/;"	v	module:el_phon
+el_ph_sum	epa.f90	/^  complex(dp), allocatable :: el_ph_sum(/;"	v	program:epa
+el_phon	elph.f90	/^MODULE el_phon$/;"	m
+electron_phonon	phcom.f90	/^  CHARACTER(LEN=12) :: electron_phonon$/;"	v	module:control_ph
+elop	ramanm.f90	/^  LOGICAL :: lraman, elop,/;"	v	module:ramanm
+eloptns	ramanm.f90	/^  REAL (DP) :: eloptns /;"	v	module:ramanm
+elph	elph.f90	/^  LOGICAL :: elph,/;"	v	module:el_phon
+elph	lambda.f90	/^program elph$/;"	p
+elph_epa	elph.f90	/^  LOGICAL :: elph, elph_mat, elph_simple, elph_epa$/;"	v	module:el_phon
+elph_mat	elph.f90	/^  LOGICAL :: elph, elph_mat,/;"	v	module:el_phon
+elph_nbnd_max	elph.f90	/^  INTEGER :: elph_nbnd_min, elph_nbnd_max$/;"	v	module:el_phon
+elph_nbnd_min	elph.f90	/^  INTEGER :: elph_nbnd_min,/;"	v	module:el_phon
+elph_scdft	elph_scdft_mod.f90	/^SUBROUTINE elph_scdft(/;"	s	module:elph_scdft_mod
+elph_scdft_cnt_and_dsp	elph_scdft_mod.f90	/^SUBROUTINE elph_scdft_cnt_and_dsp(/;"	s	module:elph_scdft_mod
+elph_scdft_dmuxc	elph_scdft_mod.f90	/^SUBROUTINE elph_scdft_dmuxc(/;"	s	module:elph_scdft_mod
+elph_scdft_fft	elph_scdft_mod.f90	/^SUBROUTINE elph_scdft_fft(/;"	s	module:elph_scdft_mod
+elph_scdft_gather_r	elph_scdft_mod.f90	/^SUBROUTINE elph_scdft_gather_r(/;"	s	module:elph_scdft_mod
+elph_scdft_mod	elph_scdft_mod.f90	/^MODULE elph_scdft_mod$/;"	m
+elph_simple	elph.f90	/^  LOGICAL :: elph, elph_mat, elph_simple,/;"	v	module:el_phon
+elph_tetra	elph_tetra_mod.f90	/^  INTEGER,SAVE :: elph_tetra /;"	v	module:elph_tetra_mod
+elph_tetra_average_weight	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_average_weight(/;"	s	module:elph_tetra_mod
+elph_tetra_delta1	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_delta1(/;"	s	module:elph_tetra_mod
+elph_tetra_delta2	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_delta2(/;"	s	module:elph_tetra_mod
+elph_tetra_delta3	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_delta3(/;"	s	module:elph_tetra_mod
+elph_tetra_gamma	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_gamma(/;"	s	module:elph_tetra_mod
+elph_tetra_lambda	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_lambda(/;"	s	module:elph_tetra_mod
+elph_tetra_mod	elph_tetra_mod.f90	/^MODULE elph_tetra_mod$/;"	m
+elph_tetra_step1	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_step1(/;"	s	module:elph_tetra_mod
+elph_tetra_step2	elph_tetra_mod.f90	/^SUBROUTINE elph_tetra_step2(/;"	s	module:elph_tetra_mod
+elph_yambo	yambo.f90	/^  LOGICAL :: elph_yambo /;"	v	module:YAMBO
+elph_yambo_eval_and_IO	yambo.f90	/^SUBROUTINE elph_yambo_eval_and_IO(/;"	s
+elphel	elphon.f90	/^SUBROUTINE elphel /;"	s
+elphel_read_dnsscf_check	elphon.f90	/^SUBROUTINE elphel_read_dnsscf_check(/;"	s
+elphel_refolded	ep_matrix_element_wannier.f90	/^SUBROUTINE elphel_refolded /;"	s
+elphon	elphon.f90	/^SUBROUTINE elphon(/;"	s
+elphsum	elphon.f90	/^SUBROUTINE elphsum /;"	s
+elphsum_simple	elphon.f90	/^SUBROUTINE elphsum_simple$/;"	s
+elphsum_wannier	ep_matrix_element_wannier.f90	/^SUBROUTINE elphsum_wannier(/;"	s
+emax	lambda.f90	/^       degaussq, emax,/;"	v	program:elph
+ep_matrix_element_wannier	ep_matrix_element_wannier.f90	/^SUBROUTINE ep_matrix_element_wannier(/;"	s
+epa	epa.f90	/^program epa$/;"	p
+eps	matdyn.f90	/^  REAL(DP), PARAMETER :: eps=/;"	v	program:matdyn
+eps	q2trans.f90	/^  REAL(DP), PARAMETER :: eps=/;"	v	program:q2trans
+eps	q2trans_fd.f90	/^  REAL(DP), PARAMETER :: eps=/;"	v	program:q2trans_fd
+eps0	dynmat.f90	/^  real(DP) :: amass(ntypx), amass_(ntypx), eps0(/;"	v	program:dynmat
+eps12	q2trans.f90	/^  REAL(DP), PARAMETER :: eps=1.D-5, eps12=/;"	v	program:q2trans
+eps12	q2trans_fd.f90	/^  REAL(DP), PARAMETER :: eps=1.D-5, eps12=/;"	v	program:q2trans_fd
+epsil	matdyn.f90	/^                  omega_blk,                 &! original cell volume$/;"	v	program:matdyn
+epsil	phcom.f90	/^             convt,       &! if .TRUE. the phonon has converged$/;"	v	module:control_ph
+epsil	q2qstar.f90	/^  REAL(DP)      :: sxq(3, 48), xq(3), xqs(3,48), epsil(/;"	v	program:Q2QSTAR
+epsil	q2trans.f90	/^  REAL(DP) :: epsil(/;"	v	program:q2trans
+epsil	q2trans_fd.f90	/^  REAL(DP) :: epsil(/;"	v	program:q2trans_fd
+epsilon	phcom.f90	/^  REAL (DP) :: epsilon /;"	v	module:efield_mod
+epsw2	epa.f90	/^  real(dp), parameter :: epsw2 /;"	v	program:epa
+equiv_atoms	phcom.f90	/^           n_equiv_atoms(/;"	v	module:gamma_gamma
+et	epa.f90	/^  real(dp), allocatable :: et(/;"	v	program:epa
+et_collect	elphon.f90	/^  REAL(DP), ALLOCATABLE :: et_collect(/;"	v
+eth_ns	ramanm.f90	/^  REAL (dp) :: eth_rps, eth_ns$/;"	v	module:ramanm
+eth_rps	ramanm.f90	/^  REAL (dp) :: eth_rps,/;"	v	module:ramanm
+ev	epa.f90	/^      gmax, gstep, ev,/;"	v	program:epa
+ext	dfile_star.f90	/^     CHARACTER(len=256) :: ext$/;"	k	type:open_star_descriptor
+ext_recover	phcom.f90	/^             ext_restart, &! if .TRUE. there is a restart file$/;"	v	module:control_ph
+ext_restart	phcom.f90	/^             low_directory_check=.FALSE., & ! if .TRUE. search on the phsave $/;"	v	module:control_ph
+f1	acfdtest.f90	/^ REAL(DP):: f1=/;"	v	module:acfdtest
+f2	acfdtest.f90	/^ REAL(DP):: f2=/;"	v	module:acfdtest
+f3	acfdtest.f90	/^ REAL(DP):: f3=/;"	v	module:acfdtest
+f_of_q	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: f_of_q(/;"	v	program:matdyn
+factor	epa.f90	/^  real(dp) :: wtot, weight, factor,/;"	v	program:epa
+fd	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc, lo_to_split, na_ifc, fd,/;"	v	program:matdyn
+fermi_energy	q2trans.f90	/^REAL ::  fermi_energy$/;"	v	program:q2trans
+fermi_energy	q2trans_fd.f90	/^REAL ::  fermi_energy$/;"	v	program:q2trans_fd
+fildrho	phcom.f90	/^  CHARACTER (LEN=256) :: fildyn, fildvscf, fildrho$/;"	v	module:output
+fildvscf	phcom.f90	/^  CHARACTER (LEN=256) :: fildyn, fildvscf,/;"	v	module:output
+fildyn	dynmat.f90	/^  character(len=256):: fildyn,/;"	v	program:dynmat
+fildyn	matdyn.f90	/^                        fleig, fildyn,/;"	v	program:matdyn
+fildyn	phcom.f90	/^  CHARACTER (LEN=256) :: fildyn,/;"	v	module:output
+fildyn	q2qstar.f90	/^  CHARACTER(len=256) :: fildyn,/;"	v	program:Q2QSTAR
+fildyn	q2r.f90	/^  CHARACTER(len=256) :: fildyn,/;"	v	program:q2r
+fildyn	q2trans.f90	/^  CHARACTER(len=256) :: fildyn,/;"	v	program:q2trans
+fildyn	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn,/;"	v	program:q2trans_fd
+fildyn_prefix	matdyn.f90	/^                        fleig, fildyn, fildyn_prefix$/;"	v	program:matdyn
+file_ifc	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj, filf, flfrc, file_ifc$/;"	v	program:q2trans_fd
+fileig	dynmat.f90	/^  character(len=256):: fildyn, filout, filmol, filxsf, fileig$/;"	v	program:dynmat
+filelph	elphon.f90	/^  CHARACTER(LEN=80) :: filelph$/;"	v
+filelph	lambda.f90	/^  character(len=80) :: filelph$/;"	v	program:elph
+filename	fqha.f90	/^  character(len=256) :: filename$/;"	v	program:fqha
+filename	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec, fltau, fldos, filename,/;"	v	program:matdyn
+fileout	q2trans.f90	/^CHARACTER(256)       :: fileout$/;"	v	program:q2trans
+fileout	q2trans_fd.f90	/^CHARACTER(256)       :: fileout$/;"	v	program:q2trans_fd
+filf	q2trans.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj, filf,/;"	v	program:q2trans
+filf	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj, filf,/;"	v	program:q2trans_fd
+filin	q2r.f90	/^  CHARACTER(len=256) :: fildyn, filin,/;"	v	program:q2r
+filin	q2trans.f90	/^  CHARACTER(len=256) :: fildyn, filin,/;"	v	program:q2trans
+filin	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn, filin,/;"	v	program:q2trans_fd
+filj	q2trans.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj,/;"	v	program:q2trans
+filj	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj,/;"	v	program:q2trans_fd
+filmol	dynmat.f90	/^  character(len=256):: fildyn, filout, filmol,/;"	v	program:dynmat
+filout	dynmat.f90	/^  character(len=256):: fildyn, filout,/;"	v	program:dynmat
+filout	q2qstar.f90	/^  CHARACTER(len=256) :: fildyn, filout$/;"	v	program:Q2QSTAR
+filxsf	dynmat.f90	/^  character(len=256):: fildyn, filout, filmol, filxsf,/;"	v	program:dynmat
+find_equiv_sites	find_equiv_sites.f90	/^subroutine find_equiv_sites /;"	s
+find_free_unit	elphon.f90	/^  INTEGER, EXTERNAL :: find_free_unit,/;"	v
+find_irrep	find_irrep.f90	/^SUBROUTINE find_irrep(/;"	s
+find_irrep_sym	find_irrep.f90	/^SUBROUTINE find_irrep_sym(/;"	s
+find_mode_sym	obsolete.f90	/^SUBROUTINE find_mode_sym /;"	s
+find_mode_sym_new	find_mode_sym.f90	/^SUBROUTINE find_mode_sym_new /;"	s
+find_representations_mode_q	matdyn.f90	/^SUBROUTINE find_representations_mode_q /;"	s
+fiu	phcom.f90	/^  REAL (KIND=DP), ALLOCATABLE :: fiu(/;"	v	module:freq_ph
+fldos	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec, fltau, fldos,/;"	v	program:matdyn
+fldyn	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec, fltau, fldos, filename, fldyn,/;"	v	program:matdyn
+fleig	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec, fltau, fldos, filename, fldyn, &$/;"	v	program:matdyn
+flfrc	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc,/;"	v	program:matdyn
+flfrc	q2r.f90	/^  CHARACTER(len=256) :: fildyn, filin, flfrc,/;"	v	program:q2r
+flfrc	q2trans.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj, filf, flfrc$/;"	v	program:q2trans
+flfrc	q2trans_fd.f90	/^  CHARACTER(len=256) :: fildyn, filin, filj, filf, flfrc,/;"	v	program:q2trans_fd
+flfrq	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq,/;"	v	program:matdyn
+flmixdpot	phcom.f90	/^  CHARACTER(LEN=256) :: flmixdpot,/;"	v	module:control_ph
+fltau	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec, fltau,/;"	v	program:matdyn
+flvec	matdyn.f90	/^  CHARACTER(LEN=256) :: flfrc, flfrq, flvec,/;"	v	program:matdyn
+fmt	epa.f90	/^  character(len=256) :: fni, fno, job, fmt$/;"	v	program:epa
+fni	epa.f90	/^  character(len=256) :: fni,/;"	v	program:epa
+fno	epa.f90	/^  character(len=256) :: fni, fno,/;"	v	program:epa
+fpol	phcom.f90	/^  LOGICAL :: fpol,/;"	v	module:freq_ph
+fqha	fqha.f90	/^program fqha$/;"	p
+frc	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: frc(/;"	v	module:ifconstants
+frc	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(/;"	v	program:q2trans
+frc	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(/;"	v	program:q2trans_fd
+frc_blk	matdyn.f90	/^SUBROUTINE frc_blk(/;"	s
+frc_ifc	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: dyn(:,:,:,:), dyn_blk(:,:,:,:), frc_ifc(/;"	v	program:matdyn
+freq	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(:,:), q(:,:), w2(:,:), freq(/;"	v	program:matdyn
+freq_ph	phcom.f90	/^MODULE freq_ph$/;"	m
+ftau	elphon.f90	/^  INTEGER :: ftau(/;"	v
+g_kpq	elph.f90	/^  INTEGER, allocatable :: kpq(:), g_kpq(/;"	v	module:el_phon
+gamma	dynmat.f90	/^  logical :: lread, gamma,/;"	v	program:dynmat
+gamma_disp	elph.f90	/^  REAL(DP), ALLOCATABLE :: gamma_disp(/;"	v	module:el_phon
+gamma_gamma	phcom.f90	/^MODULE gamma_gamma$/;"	m
+gammaq	lambda.f90	/^  real(kind=8) qread(3), dosef1, ef1, degauss1, gammaq,/;"	v	program:elph
+gammaq2r	do_q2r.f90	/^SUBROUTINE gammaq2r(/;"	s
+gammaq2r	q2trans.f90	/^SUBROUTINE gammaq2r(/;"	s
+gavg	epa.f90	/^  real(dp), allocatable :: gavg(/;"	v	program:epa
+gbuf	epa.f90	/^  real(dp) :: wtot, weight, factor, gbuf,/;"	v	program:epa
+gdist	epa.f90	/^  real(dp), allocatable :: gdist(/;"	v	program:epa
+gen_qpoints	matdyn.f90	/^SUBROUTINE gen_qpoints /;"	s
+generate_dynamical_matrix	generate_dynamical_matrix_c.f90	/^subroutine generate_dynamical_matrix /;"	s
+generate_effective_charges_c	generate_effective_charges_c.f90	/^subroutine generate_effective_charges_c /;"	s
+gepair	epa.f90	/^  real(dp), allocatable :: gepair(/;"	v	program:epa
+get_equivalent_kpq	ep_matrix_element_wannier.f90	/^subroutine get_equivalent_kpq(/;"	s
+gi	dfile_star.f90	/^    REAL(DP), ALLOCATABLE :: gi /;"	k	type:rotated_pattern_repr
+gid	matdyn.f90	/^  INTEGER :: gid$/;"	v	program:matdyn
+gid	q2trans.f90	/^  INTEGER :: gid,/;"	v	program:q2trans
+gid	q2trans_fd.f90	/^  INTEGER :: gid,/;"	v	program:q2trans_fd
+gimq	dfile_star.f90	/^    REAL(DP), ALLOCATABLE :: gi (:,:), gimq /;"	k	type:rotated_pattern_repr
+gmax	epa.f90	/^  real(dp) :: wtot, weight, factor, gbuf, gsum, &$/;"	v	program:epa
+gmressolve_all	gmressolve_all.f90	/^subroutine gmressolve_all /;"	s
+gnum	epa.f90	/^  integer, allocatable :: gnum(/;"	v	program:epa
+grid_irr_iq	phcom.f90	/^MODULE grid_irr_iq$/;"	m
+gstep	epa.f90	/^      gmax, gstep,/;"	v	program:epa
+gsum	epa.f90	/^  real(dp) :: wtot, weight, factor, gbuf, gsum,/;"	v	program:epa
+gtot	epa.f90	/^  real(dp), allocatable :: gtot(/;"	v	program:epa
+has_equivalent	phcom.f90	/^  INTEGER, ALLOCATABLE :: &$/;"	v	module:gamma_gamma
+has_xml	dynmat.f90	/^  logical, external :: has_xml$/;"	v	program:dynmat
+has_xml	matdyn.f90	/^  LOGICAL, EXTERNAL :: has_xml$/;"	v	program:matdyn
+has_xml	q2qstar.f90	/^  LOGICAL, EXTERNAL :: has_xml$/;"	v	program:Q2QSTAR
+has_xml	q2trans.f90	/^  LOGICAL, EXTERNAL :: has_xml$/;"	v	program:q2trans
+has_xml	q2trans_fd.f90	/^  LOGICAL, EXTERNAL :: has_xml$/;"	v	program:q2trans_fd
+has_zstar	matdyn.f90	/^  LOGICAL :: dos, has_zstar,/;"	v	program:matdyn
+have_overlap	q2trans.f90	/^LOGICAL   :: have_overlap,/;"	v	program:q2trans
+have_overlap	q2trans_fd.f90	/^LOGICAL   :: have_overlap,/;"	v	program:q2trans_fd
+hdiag	hdiag.f90	/^subroutine hdiag(/;"	s
+high_sym	matdyn.f90	/^  LOGICAL, ALLOCATABLE :: high_sym(/;"	v	program:matdyn
+htype	q2trans.f90	/^LOGICAL   :: have_overlap, htype,/;"	v	program:q2trans
+htype	q2trans_fd.f90	/^LOGICAL   :: have_overlap, htype,/;"	v	program:q2trans_fd
+i	fqha.f90	/^  in/;"	v	program:fqha
+i	lambda.f90	/^  in/;"	v	program:elph
+i	matdyn.f90	/^  INTEGER :: n, i,/;"	v	program:matdyn
+i	q2qstar.f90	/^  INTEGER :: i,/;"	v	program:Q2QSTAR
+i	q2trans.f90	/^INTEGER  :: i,/;"	v	program:q2trans
+i	q2trans_fd.f90	/^INTEGER  :: i,/;"	v	program:q2trans_fd
+iasr	q2trans.f90	/^  CHARACTER (len=10) :: zasr, iasr$/;"	v	program:q2trans
+iasr	q2trans_fd.f90	/^  CHARACTER (len=10) :: zasr, iasr$/;"	v	program:q2trans_fd
+ibnd	epa.f90	/^      nat, nsymq, irotmq, iq, ik, ikk, ikq, ibnd,/;"	v	program:epa
+ibrav	dynmat.f90	/^  integer :: ibrav,/;"	v	program:dynmat
+ibrav	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3, nsc, nk1, nk2, nk3, ibrav$/;"	v	program:matdyn
+ibrav	q2trans.f90	/^  INTEGER :: gid, ibrav,/;"	v	program:q2trans
+ibrav	q2trans_fd.f90	/^  INTEGER :: gid, ibrav,/;"	v	program:q2trans_fd
+icar	q2qstar.f90	/^  INTEGER :: i,j, icar,/;"	v	program:Q2QSTAR
+icar	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar,/;"	v	program:q2trans
+icar	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar,/;"	v	program:q2trans_fd
+idir	q2trans.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag, ios, idir$/;"	v	program:q2trans
+idir	q2trans_fd.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag, ios, idir$/;"	v	program:q2trans_fd
+ierr	phonon.f90	/^  INTEGER :: iq, ierr$/;"	v	program:phonon
+ierr	q2qstar.f90	/^  INTEGER :: ierr,/;"	v	program:Q2QSTAR
+ierr	q2trans.f90	/^  INTEGER :: gid, ibrav, ierr,/;"	v	program:q2trans
+ierr	q2trans_fd.f90	/^  INTEGER :: gid, ibrav, ierr,/;"	v	program:q2trans_fd
+ifc	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3/;"	v	program:q2trans
+ifc	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3/;"	v	program:q2trans_fd
+ifc0	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(/;"	v	program:q2trans
+ifc0	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(/;"	v	program:q2trans_fd
+ifc3	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(/;"	v	program:q2trans
+ifc3	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(/;"	v	program:q2trans_fd
+ifconstants	matdyn.f90	/^Module ifconstants$/;"	m
+ifile	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile,/;"	v	program:q2trans
+ifile	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile,/;"	v	program:q2trans_fd
+igqg	elph.f90	/^  INTEGER, allocatable :: kpq(:), g_kpq(:,:),igqg(/;"	v	module:el_phon
+ii	elphon.f90	/^  INTEGER :: iuelph, ios, irr, ii,/;"	v
+ii	epa.f90	/^      nu, mu, vu, ipert, jpert, ii,/;"	v	program:epa
+ijob	epa.f90	/^      nu, mu, vu, ipert, jpert, ii, jj, kk, ll, ijob,/;"	v	program:epa
+ik	epa.f90	/^      nat, nsymq, irotmq, iq, ik,/;"	v	program:epa
+ik	lambda.f90	/^  integer :: ik,/;"	v	program:elph
+ik	q2trans.f90	/^INTEGER  :: i, j, ik,/;"	v	program:q2trans
+ik	q2trans_fd.f90	/^INTEGER  :: i, j, ik,/;"	v	program:q2trans_fd
+ikk	epa.f90	/^      nat, nsymq, irotmq, iq, ik, ikk,/;"	v	program:epa
+ikks	epa.f90	/^  integer, allocatable :: ikks(/;"	v	program:epa
+ikks_collect	elphon.f90	/^  INTEGER, ALLOCATABLE :: ikks_collect(/;"	v
+ikq	epa.f90	/^      nat, nsymq, irotmq, iq, ik, ikk, ikq,/;"	v	program:epa
+ikqg	elph.f90	/^  INTEGER :: npwq_refolded, ikqg$/;"	v	module:el_phon
+ikqs	epa.f90	/^  integer, allocatable :: ikqs(/;"	v	program:epa
+ikqs_collect	elphon.f90	/^  INTEGER, ALLOCATABLE :: ikks_collect(:), ikqs_collect(/;"	v
+image_q_irr	check_initial_status.f90	/^  SUBROUTINE image_q_irr(/;"	s
+imq	q2qstar.f90	/^  INTEGER       :: nqs, isq (48), imq,/;"	v	program:Q2QSTAR
+in_alpha2f	elph_tetra_mod.f90	/^  &  lshift_q = .false., &$/;"	v	module:elph_tetra_mod
+incdrhous	incdrhous.f90	/^subroutine incdrhous /;"	s
+incdrhous_nc	incdrhous_nc.f90	/^subroutine incdrhous_nc /;"	s
+init_representations	init_representations.f90	/^subroutine init_representations(/;"	s
+initialize_grid_variables	init_representations.f90	/^subroutine initialize_grid_variables(/;"	s
+initialize_ph	initialize_ph.f90	/^SUBROUTINE initialize_ph(/;"	s
+input	dynmat.f90	/^  namelist \/input\//;"	n	program:dynmat
+input	matdyn.f90	/^  NAMELIST \/input\//;"	n	program:matdyn
+input	q2qstar.f90	/^  NAMELIST \/ input /;"	n	program:Q2QSTAR
+input	q2r.f90	/^  NAMELIST \/ input /;"	n	program:q2r
+input	q2trans.f90	/^  NAMELIST \/ input /;"	n	program:q2trans
+input	q2trans_fd.f90	/^  NAMELIST \/ input /;"	n	program:q2trans_fd
+input_line	matdyn.f90	/^  CHARACTER(LEN=256) :: input_line,/;"	v	program:matdyn
+int1	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: &$/;"	v	module:phus
+int1_nc	phcom.f90	/^       int5(:,:,:,:,:),     &! nhm*(nhm+1)\/2, 3, 3, nat, nat),&$/;"	v	module:phus
+int2	phcom.f90	/^       int1(:,:,:,:,:),     &! nhm, nhm, 3, nat, nspin),&$/;"	v	module:phus
+int2_so	phcom.f90	/^       int1_nc(:,:,:,:,:),     &! nhm, nhm, 3, nat, nspin),&$/;"	v	module:phus
+int4	phcom.f90	/^       int2(:,:,:,:,:),     &! nhm, nhm, 3,nat, nat),&$/;"	v	module:phus
+int4_nc	phcom.f90	/^       int2_so(:,:,:,:,:,:),   &! nhm, nhm, 3, nat,nat,nspin),&$/;"	v	module:phus
+int5	phcom.f90	/^       int4(:,:,:,:,:),     &! nhm*(nhm+1)\/2, 3, 3, nat, nspin),&$/;"	v	module:phus
+int5_so	phcom.f90	/^       int4_nc(:,:,:,:,:,:),   &! nhm, nhm, 3, 3, nat, nspin),&$/;"	v	module:phus
+int_numer_eig	acfdtest.f90	/^ LOGICAL :: int_numer_eig=/;"	v	module:acfdtest
+int_to_char	matdyn.f90	/^  CHARACTER(LEN=6) :: int_to_char$/;"	v	program:matdyn
+int_to_char	q2trans.f90	/^  CHARACTER(len=6), EXTERNAL :: int_to_char$/;"	v	program:q2trans
+int_to_char	q2trans_fd.f90	/^  CHARACTER(len=6), EXTERNAL :: int_to_char$/;"	v	program:q2trans_fd
+invs	epa.f90	/^      s(3, 3, 48), invs(/;"	v	program:epa
+io_dyn_mat	io_dyn_mat.f90	/^MODULE io_dyn_mat$/;"	m
+io_pattern	io_pattern.f90	/^SUBROUTINE io_pattern /;"	s
+ios	dynmat.f90	/^  integer :: nat, na, nt, ntyp, iout, axis, nspin_mag, ios$/;"	v	program:dynmat
+ios	elphon.f90	/^  INTEGER :: iuelph, ios,/;"	v
+ios	lambda.f90	/^  integer :: nks, ios,/;"	v	program:elph
+ios	matdyn.f90	/^  INTEGER :: nspin_mag, nqs, ios$/;"	v	program:matdyn
+ios	q2r.f90	/^  INTEGER            :: ios$/;"	v	program:q2r
+ios	q2trans.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag, ios,/;"	v	program:q2trans
+ios	q2trans_fd.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag, ios,/;"	v	program:q2trans_fd
+iout	dynmat.f90	/^  integer :: nat, na, nt, ntyp, iout,/;"	v	program:dynmat
+iout	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb, ndos, iout,/;"	v	program:matdyn
+iout_dyn	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb, ndos, iout, nqtot, iout_dyn,/;"	v	program:matdyn
+iout_eig	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb, ndos, iout, nqtot, iout_dyn, iout_eig$/;"	v	program:matdyn
+ipert	epa.f90	/^      nu, mu, vu, ipert,/;"	v	program:epa
+ipol	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2, ipol,/;"	v	program:q2trans
+ipol	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2, ipol,/;"	v	program:q2trans_fd
+ipoolcollect	elphon.f90	/^SUBROUTINE ipoolcollect(/;"	s
+iq	elphon.f90	/^  INTEGER, INTENT(IN) :: iq$/;"	v
+iq	epa.f90	/^      nat, nsymq, irotmq, iq,/;"	v	program:epa
+iq	phonon.f90	/^  INTEGER :: iq,/;"	v	program:phonon
+iq	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq,/;"	v	program:q2trans
+iq	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq,/;"	v	program:q2trans_fd
+ir	q2trans.f90	/^INTEGER  :: i, j, ik, ir,/;"	v	program:q2trans
+ir	q2trans_fd.f90	/^INTEGER  :: i, j, ik, ir,/;"	v	program:q2trans_fd
+ir_point	acfdtest.f90	/^ INTEGER :: ir_point=/;"	v	module:acfdtest
+irgq	dfile_star.f90	/^    INTEGER, ALLOCATABLE ::  npert (:), irgq /;"	k	type:rotated_pattern_repr
+irotmq	dfile_star.f90	/^    INTEGER :: nsymq, irotmq,/;"	k	type:rotated_pattern_repr
+irotmq	epa.f90	/^      nat, nsymq, irotmq,/;"	v	program:epa
+irr	elphon.f90	/^  INTEGER :: iuelph, ios, irr,/;"	v
+irr_iq	phcom.f90	/^       npert_irr_iq(/;"	v	module:grid_irr_iq
+irt	epa.f90	/^  integer, allocatable :: irt(/;"	v	program:epa
+is_linear	find_mode_sym.f90	/^FUNCTION is_linear(/;"	f
+isig	matdyn.f90	/^  INTEGER :: location(1), isig$/;"	v	program:matdyn
+isq	q2qstar.f90	/^  INTEGER       :: nqs, isq /;"	v	program:Q2QSTAR
+it	matdyn.f90	/^  INTEGER :: n, i, j, it,/;"	v	program:matdyn
+itau	dynmat.f90	/^  integer, allocatable :: itau(/;"	v	program:dynmat
+itau_blk	matdyn.f90	/^  INTEGER, ALLOCATABLE:: ityp(:), itau_blk(/;"	v	program:matdyn
+ityp	io_dyn_mat_old.f90	/^  INTEGER, ALLOCATABLE ::  ityp(/;"	v	module:dynamicalq
+ityp	matdyn.f90	/^  INTEGER, ALLOCATABLE:: ityp(/;"	v	program:matdyn
+ityp_blk	matdyn.f90	/^  INTEGER, ALLOCATABLE  :: ityp_blk(/;"	v	module:ifconstants
+iuba2	ramanm.f90	/^  INTEGER :: iuchf, iud2w, iuba2,/;"	v	module:ramanm
+iubar	phcom.f90	/^       iuvkb,     & ! unit with vkb$/;"	v	module:units_ph
+iuchf	ramanm.f90	/^  INTEGER :: iuchf,/;"	v	module:ramanm
+iucom	phcom.f90	/^       lrdrho,    & ! the length of the deltarho files$/;"	v	module:units_ph
+iud2w	ramanm.f90	/^  INTEGER :: iuchf, iud2w,/;"	v	module:ramanm
+iudrho	phcom.f90	/^       iudvscf,   & ! the unit where the delta Vscf is written$/;"	v	module:units_ph
+iudrhous	phcom.f90	/^       lrdwf,     & ! length of D psi record$/;"	v	module:units_ph
+iudvkb3	phcom.f90	/^       lrcom,     & ! the length  of the bare commutator in US case$/;"	v	module:units_ph
+iudvscf	phcom.f90	/^       iunrec,    & ! the unit with the recover data$/;"	v	module:units_ph
+iudwf	phcom.f90	/^       lrebar,    & ! length of the DV_{bare} fro the electric field$/;"	v	module:units_ph
+iudyn	phcom.f90	/^       iudrhous, lrdrhous, &$/;"	v	module:units_ph
+iuebar	phcom.f90	/^       lrbar,     & ! length of the DV_{bare}$/;"	v	module:units_ph
+iuelph	elphon.f90	/^  INTEGER :: iuelph,/;"	v
+iuelph	lambda.f90	/^  integer :: nks, ios, iuelph,/;"	v	program:elph
+iuint3paw	phcom.f90	/^       iudvkb3, lrdvkb3, &$/;"	v	module:units_ph
+iundnsscf	phcom.f90	/^       lint3paw,  & ! the length of the int3_paw coefficients$/;"	v	module:units_ph
+iunout	io_dyn_mat.f90	/^  INTEGER, PRIVATE :: iunout$/;"	v	module:io_dyn_mat
+iunpun	ph_restart.f90	/^  INTEGER :: iunpun$/;"	v	module:ph_restart
+iunrec	phcom.f90	/^       iupdyn,    & ! the unit for the partial dynamical matrix$/;"	v	module:units_ph
+iunrec	write_rec.f90	/^  INTEGER ::  iunrec=/;"	v	module:recover_mod
+iunwfcwann	elph.f90	/^  INTEGER :: iunwfcwann,/;"	v	module:el_phon
+iupdyn	phcom.f90	/^       iudyn,     & ! the unit for the dynamical matrix$/;"	v	module:units_ph
+iupsir	phcom.f90	/^       iudwf,     & ! unit with D psi$/;"	v	module:units_ph
+iuvkb	phcom.f90	/^  INTEGER :: &$/;"	v	module:units_ph
+ivr	q2trans.f90	/^INTEGER, ALLOCATABLE :: nk(:), ivr(/;"	v	program:q2trans
+ivr	q2trans_fd.f90	/^INTEGER, ALLOCATABLE :: nk(:), ivr(/;"	v	program:q2trans_fd
+j	matdyn.f90	/^  INTEGER :: n, i, j,/;"	v	program:matdyn
+j	q2qstar.f90	/^  INTEGER :: i,j,/;"	v	program:Q2QSTAR
+j	q2trans.f90	/^INTEGER  :: i, j,/;"	v	program:q2trans
+j	q2trans_fd.f90	/^INTEGER  :: i, j,/;"	v	program:q2trans_fd
+j1	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1,/;"	v	program:q2trans
+j1	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1,/;"	v	program:q2trans_fd
+j2	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2,/;"	v	program:q2trans
+j2	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2,/;"	v	program:q2trans_fd
+jab	ramanm.f90	/^  INTEGER ::  jab(/;"	v	module:ramanm
+jbnd	epa.f90	/^      nat, nsymq, irotmq, iq, ik, ikk, ikq, ibnd, jbnd,/;"	v	program:epa
+jcar	q2qstar.f90	/^  INTEGER :: i,j, icar,jcar,/;"	v	program:Q2QSTAR
+jj	elphon.f90	/^  INTEGER :: iuelph, ios, irr, ii, jj,/;"	v
+jj	epa.f90	/^      nu, mu, vu, ipert, jpert, ii, jj,/;"	v	program:epa
+job	epa.f90	/^  character(len=256) :: fni, fno, job,/;"	v	program:epa
+jpert	epa.f90	/^      nu, mu, vu, ipert, jpert,/;"	v	program:epa
+jpoolcollect	elphon.f90	/^SUBROUTINE jpoolcollect(/;"	s
+k00	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(:,:,:), k00(/;"	v	program:q2trans
+k00	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(:,:,:), k00(/;"	v	program:q2trans_fd
+k01	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(:,:,:), k00(:,:), k01(/;"	v	program:q2trans
+k01	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(:,:,:), k00(:,:), k01(/;"	v	program:q2trans_fd
+k_points	matdyn.f90	/^  CHARACTER(len=80) :: k_points /;"	v	program:matdyn
+kfc	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(/;"	v	program:q2trans
+kfc	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: ifc3(:,:,:,:,:,:,:), ifc(:,:,:,:,:), ifc0(:,:,:,:), frc(:,:,:,:,:,:,:),  kfc(/;"	v	program:q2trans_fd
+kk	elphon.f90	/^  INTEGER :: iuelph, ios, irr, ii, jj, kk,/;"	v
+kk	epa.f90	/^      nu, mu, vu, ipert, jpert, ii, jj, kk,/;"	v	program:epa
+kpq	elph.f90	/^  INTEGER, allocatable :: kpq(/;"	v	module:el_phon
+l1	matdyn.f90	/^  INTEGER :: nat, nat_blk, ntyp, ntyp_blk, &$/;"	v	program:matdyn
+l1	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1,/;"	v	program:q2trans
+l1	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1,/;"	v	program:q2trans_fd
+l2	matdyn.f90	/^             l1, l2,/;"	v	program:matdyn
+l2	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2,/;"	v	program:q2trans
+l2	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2,/;"	v	program:q2trans_fd
+l3	matdyn.f90	/^             l1, l2, l3,/;"	v	program:matdyn
+l3	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3,/;"	v	program:q2trans
+l3	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3,/;"	v	program:q2trans_fd
+la2F	matdyn.f90	/^  LOGICAL :: readtau, la2F,/;"	v	program:matdyn
+la2F	q2r.f90	/^  LOGICAL            :: la2F,/;"	v	program:q2r
+la2F	q2trans.f90	/^  LOGICAL           :: la2F,/;"	v	program:q2trans
+la2F	q2trans_fd.f90	/^  LOGICAL           :: la2F,/;"	v	program:q2trans_fd
+label_list	matdyn.f90	/^  INTEGER, ALLOCATABLE :: label_list(/;"	v	program:matdyn
+lam	alpha2f.f90	/^  & omg(:,:), & ! (nmodes,nqs) Phonon frequencies on irreducible q$/;"	v	module:alpha2f_vals
+lambda	lambda.f90	/^       dosef(nsigx), ef(nsigx), lambdaq/;"	v	program:elph
+lambda2	lambda.f90	/^  real(kind=8) qread(3), dosef1, ef1, degauss1, gammaq, lambda2,/;"	v	program:elph
+lambdaq	lambda.f90	/^       dosef(nsigx), ef(nsigx), lambdaq(/;"	v	program:elph
+last_irr	phcom.f90	/^             start_irr,     & ! initial representation$/;"	v	module:control_ph
+last_q	phcom.f90	/^             start_q, last_q /;"	v	module:control_ph
+ldaU_ph	phcom.f90	/^MODULE ldaU_ph$/;"	m
+ldiag	phcom.f90	/^             recover_read=.FALSE., & ! if true the recover data have been read$/;"	v	module:control_ph
+ldisp	phcom.f90	/^             lnscf,       &! if .TRUE. the run makes first a nscf calculation$/;"	v	module:control_ph
+letter	matdyn.f90	/^  CHARACTER(LEN=3), ALLOCATABLE :: letter(/;"	v	program:matdyn
+lgamma_gamma	phcom.f90	/^  LOGICAL :: lgamma_gamma,/;"	v	module:control_ph
+lgamma_iq	phcom.f90	/^  LOGICAL, ALLOCATABLE :: &$/;"	v	module:disp
+lint	elphon.f90	/^subroutine lint /;"	s
+lint3paw	phcom.f90	/^       iuint3paw, & ! the unit of the int3_paw coefficients$/;"	v	module:units_ph
+ll	elphon.f90	/^  INTEGER :: iuelph, ios, irr, ii, jj, kk, ll$/;"	v
+ll	epa.f90	/^      nu, mu, vu, ipert, jpert, ii, jj, kk, ll,/;"	v	program:epa
+lnogridinfo	q2trans.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo,/;"	v	program:q2trans
+lnogridinfo	q2trans_fd.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo,/;"	v	program:q2trans_fd
+lnoloc	phcom.f90	/^             ext_recover, &! if .TRUE. there is a recover file$/;"	v	module:control_ph
+lnscf	phcom.f90	/^             search_sym_save=.TRUE.,  &! save search symmetry $/;"	v	module:control_ph
+lo_to_split	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc, lo_to_split,/;"	v	program:matdyn
+location	matdyn.f90	/^  INTEGER :: location(/;"	v	program:matdyn
+logavg	lambda.f90	/^       lambda(nsigx), alpha2F(nex,nsigx), logavg$/;"	v	program:elph
+loto_2d	dynmat.f90	/^  logical :: lread, gamma, loto_2d$/;"	v	program:dynmat
+loto_2d	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc, lo_to_split, na_ifc, fd, nosym,  loto_2d /;"	v	program:matdyn
+loto_2d	q2r.f90	/^  LOGICAL            :: la2F, loto_2d$/;"	v	program:q2r
+low_directory_check	phcom.f90	/^             recover,     &! if .TRUE. the run restarts$/;"	v	module:control_ph
+lperm	dynmat.f90	/^  logical :: xmldyn, lrigid, lraman, lperm,/;"	v	program:dynmat
+lplasma	dynmat.f90	/^  logical :: xmldyn, lrigid, lraman, lperm, lplasma$/;"	v	program:dynmat
+lq	q2trans.f90	/^  LOGICAL :: lq,/;"	v	program:q2trans
+lq	q2trans_fd.f90	/^  LOGICAL :: lq,/;"	v	program:q2trans_fd
+lqdir	phcom.f90	/^             ldiag=.FALSE.,        & ! if true force the diagonalization$/;"	v	module:control_ph
+lraman	dynmat.f90	/^  logical :: xmldyn, lrigid, lraman,/;"	v	program:dynmat
+lraman	ramanm.f90	/^  LOGICAL :: lraman,/;"	v	module:ramanm
+lrba2	ramanm.f90	/^  INTEGER :: iuchf, iud2w, iuba2, lrchf, lrd2w, lrba2$/;"	v	module:ramanm
+lrbar	phcom.f90	/^       iubar,     & ! unit with the part DV_{bare}$/;"	v	module:units_ph
+lrchf	ramanm.f90	/^  INTEGER :: iuchf, iud2w, iuba2, lrchf,/;"	v	module:ramanm
+lrcom	phcom.f90	/^       iucom,     & ! the unit of the bare commutator in US case$/;"	v	module:units_ph
+lrd2w	ramanm.f90	/^  INTEGER :: iuchf, iud2w, iuba2, lrchf, lrd2w,/;"	v	module:ramanm
+lrdrho	phcom.f90	/^       iudrho,    & ! the unit where the delta rho is written$/;"	v	module:units_ph
+lrdrhous	phcom.f90	/^       iudrhous, lrdrhous,/;"	v	module:units_ph
+lrdvkb3	phcom.f90	/^       iudvkb3, lrdvkb3,/;"	v	module:units_ph
+lrdwf	phcom.f90	/^       iupsir,    & ! unit with evc in real space$/;"	v	module:units_ph
+lread	dynmat.f90	/^  logical :: lread,/;"	v	program:dynmat
+lrebar	phcom.f90	/^       iuebar,    & ! unit with the part DV_{bare} for the electric field$/;"	v	module:units_ph
+lrigid	dynmat.f90	/^  logical :: xmldyn, lrigid,/;"	v	program:dynmat
+lrigid	q2qstar.f90	/^  LOGICAL :: sym(48), lrigid$/;"	v	program:Q2QSTAR
+lrigid	q2trans.f90	/^  LOGICAL :: lq, lrigid,/;"	v	program:q2trans
+lrigid	q2trans_fd.f90	/^  LOGICAL :: lq, lrigid,/;"	v	program:q2trans_fd
+lrigid1	q2trans.f90	/^  LOGICAL :: lq, lrigid, lrigid1,/;"	v	program:q2trans
+lrigid1	q2trans_fd.f90	/^  LOGICAL :: lq, lrigid, lrigid1,/;"	v	program:q2trans_fd
+lrwfcr	elph.f90	/^  INTEGER :: iunwfcwann, lrwfcr$/;"	v	module:el_phon
+lshift_q	elph_tetra_mod.f90	/^  LOGICAL,SAVE :: &$/;"	v	module:elph_tetra_mod
+ltrans	q2trans.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo, xmldyn, ltrans$/;"	v	program:q2trans
+ltrans	q2trans_fd.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo, xmldyn, ltrans$/;"	v	program:q2trans_fd
+m	q2trans.f90	/^  INTEGER :: m1/;"	v	program:q2trans
+m	q2trans_fd.f90	/^  INTEGER :: m1/;"	v	program:q2trans_fd
+m1	q2trans.f90	/^  INTEGER :: m1,/;"	v	program:q2trans
+m1	q2trans_fd.f90	/^  INTEGER :: m1,/;"	v	program:q2trans_fd
+m2	q2trans.f90	/^  INTEGER :: m1, m2,/;"	v	program:q2trans
+m2	q2trans_fd.f90	/^  INTEGER :: m1, m2,/;"	v	program:q2trans_fd
+m3	q2trans.f90	/^  INTEGER :: m1, m2, m3,/;"	v	program:q2trans
+m3	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3,/;"	v	program:q2trans_fd
+m_loc	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: frc(:,:,:,:,:,:,:), tau_blk(:,:),  zeu(:,:,:), &$/;"	v	module:ifconstants
+m_loc	q2trans.f90	/^  REAL(DP), ALLOCATABLE :: m_loc(/;"	v	program:q2trans
+m_loc	q2trans_fd.f90	/^  REAL(DP), ALLOCATABLE :: m_loc(/;"	v	program:q2trans_fd
+magnetic_sym	phcom.f90	/^   LOGICAL :: magnetic_sym /;"	v	module:cryst_ph
+mask	matdyn.f90	/^  LOGICAL, ALLOCATABLE :: mask(/;"	v	program:matdyn
+matdyn	matdyn.f90	/^PROGRAM matdyn$/;"	p
+maxter	phcom.f90	/^  INTEGER, PARAMETER :: maxter /;"	v	module:control_ph
+minus_q	dfile_star.f90	/^    LOGICAL :: minus_q$/;"	k	type:rotated_pattern_repr
+minus_q	epa.f90	/^  logical :: minus_q$/;"	v	program:epa
+modes	phcom.f90	/^MODULE modes$/;"	m
+mu	epa.f90	/^      nu, mu,/;"	v	program:epa
+mu	lambda.f90	/^  integer :: ik, ng, mu,/;"	v	program:elph
+mustar	lambda.f90	/^  real*8 mustar,/;"	v	program:elph
+myaccess	elphon.f90	/^       stitle*32, myaccess*/;"	v
+mystatus	elphon.f90	/^       stitle*32, myaccess*10, mystatus*/;"	v
+n	matdyn.f90	/^  INTEGER :: n,/;"	v	program:matdyn
+n1	q2trans.f90	/^  INTEGER :: na, nt, n1,/;"	v	program:q2trans
+n1	q2trans_fd.f90	/^  INTEGER :: na, nt, n1,/;"	v	program:q2trans_fd
+n2	q2trans.f90	/^  INTEGER :: na, nt, n1, n2,/;"	v	program:q2trans
+n2	q2trans_fd.f90	/^  INTEGER :: na, nt, n1, n2,/;"	v	program:q2trans_fd
+n3	q2trans.f90	/^  INTEGER :: na, nt, n1, n2, n3,/;"	v	program:q2trans
+n3	q2trans_fd.f90	/^  INTEGER :: na, nt, n1, n2, n3,/;"	v	program:q2trans_fd
+n_diff_sites	phcom.f90	/^  INTEGER :: n_diff_sites,/;"	v	module:gamma_gamma
+n_equiv_atoms	phcom.f90	/^           with_symmetry(:),   &  ! calculated by symmetry$/;"	v	module:gamma_gamma
+na	dynmat.f90	/^  integer :: nat/;"	v	program:dynmat
+na	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na,/;"	v	program:matdyn
+na	q2qstar.f90	/^  INTEGER :: i,j, icar,jcar, na,/;"	v	program:Q2QSTAR
+na	q2trans.f90	/^  INTEGER :: na,/;"	v	program:q2trans
+na	q2trans_fd.f90	/^  INTEGER :: na,/;"	v	program:q2trans_fd
+na1	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1,/;"	v	program:q2trans
+na1	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1,/;"	v	program:q2trans_fd
+na2	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2,/;"	v	program:q2trans
+na2	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2,/;"	v	program:q2trans_fd
+na_ifc	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc, lo_to_split, na_ifc,/;"	v	program:matdyn
+name_rap_mode	dfile_star.f90	/^    CHARACTER(len=15), ALLOCATABLE :: name_rap_mode(/;"	k	type:rotated_pattern_repr
+name_rap_mode	phcom.f90	/^  CHARACTER(15), ALLOCATABLE :: name_rap_mode(/;"	v	module:modes
+nargs	q2qstar.f90	/^  INTEGER :: ierr, nargs$/;"	v	program:Q2QSTAR
+nasr	phcom.f90	/^  INTEGER :: n_diff_sites,    &   ! Number of different sites$/;"	v	module:gamma_gamma
+nat	dynmat.f90	/^  integer :: nat,/;"	v	program:dynmat
+nat	epa.f90	/^  integer :: nmodes, nqs, nspin, nbnd, nkstot, nksqtot, &$/;"	v	program:epa
+nat	matdyn.f90	/^  INTEGER :: nat,/;"	v	program:matdyn
+nat	q2trans.f90	/^  INTEGER :: nat,/;"	v	program:q2trans
+nat	q2trans_fd.f90	/^  INTEGER :: nat,/;"	v	program:q2trans_fd
+nat_blk	matdyn.f90	/^  INTEGER :: nat, nat_blk,/;"	v	program:matdyn
+nat_todo	phcom.f90	/^  INTEGER :: nat_todo,/;"	v	module:partial
+nat_todo_input	phcom.f90	/^  INTEGER :: nat_todo,    & ! number of atoms to compute$/;"	v	module:partial
+nat_todo_save	save_ph_input.f90	/^  INTEGER, PRIVATE :: nat_todo_save$/;"	v	module:save_ph
+nax	matdyn.f90	/^  INTEGER:: nax,/;"	v	program:matdyn
+nax_blk	matdyn.f90	/^  INTEGER:: nax, nax_blk$/;"	v	program:matdyn
+nb	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb,/;"	v	program:matdyn
+nb	q2qstar.f90	/^  INTEGER :: i,j, icar,jcar, na,nb$/;"	v	program:Q2QSTAR
+nb	q2trans_fd.f90	/^  INTEGER :: na, nt, n1, n2, n3, nrx, ndummy, nb$/;"	v	program:q2trans_fd
+nbnd	epa.f90	/^  integer :: nmodes, nqs, nspin, nbnd,/;"	v	program:epa
+nc	q2trans.f90	/^  INTEGER, ALLOCATABLE ::  nc(/;"	v	program:q2trans
+nc	q2trans_fd.f90	/^  INTEGER, ALLOCATABLE ::  nc(/;"	v	program:q2trans_fd
+nch	matdyn.f90	/^  INTEGER            :: npk_label, nch$/;"	v	program:matdyn
+ndist	epa.f90	/^      nev, bvmin, bvmax, nec, bcmin, bcmax, ndist,/;"	v	program:epa
+ndiv	fqha.f90	/^  integer :: i,ndiv$/;"	v	program:fqha
+ndivx	fqha.f90	/^  integer, parameter:: ndivx=/;"	v	program:fqha
+ndos	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb, ndos,/;"	v	program:matdyn
+ndummy	q2trans_fd.f90	/^  INTEGER :: na, nt, n1, n2, n3, nrx, ndummy,/;"	v	program:q2trans_fd
+ne	epa.f90	/^      nem/;"	v	program:epa
+nec	epa.f90	/^      nev, bvmin, bvmax, nec,/;"	v	program:epa
+nemax	epa.f90	/^      nemin, nemax,/;"	v	program:epa
+nemin	epa.f90	/^      nev, bvmin, bvmax, nec, bcmin, bcmax, ndist, nepmax, &$/;"	v	program:epa
+nepair	epa.f90	/^      nemin, nemax, ne(nwin), nepair(/;"	v	program:epa
+nepmax	epa.f90	/^      nev, bvmin, bvmax, nec, bcmin, bcmax, ndist, nepmax,/;"	v	program:epa
+nev	epa.f90	/^      nu, mu, vu, ipert, jpert, ii, jj, kk, ll, ijob, &$/;"	v	program:epa
+newgrid	phcom.f90	/^             all_done, &      ! if .TRUE. all representations have been done$/;"	v	module:control_ph
+nex	lambda.f90	/^  integer, parameter:: npk=200, nsigx=50, nmodex=100, nex=/;"	v	program:elph
+nfile	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile,/;"	v	program:q2trans
+nfile	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile,/;"	v	program:q2trans_fd
+nfreq	alpha2f.f90	/^  INTEGER :: nfreq$/;"	v	module:alpha2f_vals
+nfs	phcom.f90	/^  INTEGER :: nfs /;"	v	module:freq_ph
+ng	lambda.f90	/^  integer :: ik, ng,/;"	v	program:elph
+ngauss	lambda.f90	/^  integer :: nks, ios, iuelph, ngauss,/;"	v	program:elph
+ngauss1	lambda.f90	/^  integer :: nks, ios, iuelph, ngauss, ngauss1,/;"	v	program:elph
+ngaussq	lambda.f90	/^  integer :: nks, ios, iuelph, ngauss, ngauss1, ngaussq,/;"	v	program:elph
+ngk_collect	elphon.f90	/^  INTEGER, ALLOCATABLE :: ngk_collect(/;"	v
+nirr	dfile_star.f90	/^    INTEGER :: nsymq, irotmq, nirr,/;"	k	type:rotated_pattern_repr
+nirr	phcom.f90	/^ INTEGER :: nirr,/;"	v	module:modes
+niter_ph	phcom.f90	/^  INTEGER :: niter_ph,/;"	v	module:control_ph
+nk	q2trans.f90	/^INTEGER, ALLOCATABLE :: nk(/;"	v	program:q2trans
+nk	q2trans_fd.f90	/^INTEGER, ALLOCATABLE :: nk(/;"	v	program:q2trans_fd
+nk1	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3, nsc, nk1,/;"	v	program:matdyn
+nk2	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3, nsc, nk1, nk2,/;"	v	program:matdyn
+nk3	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3, nsc, nk1, nk2, nk3,/;"	v	program:matdyn
+nkpts	q2trans.f90	/^INTEGER  :: nkpts$/;"	v	program:q2trans
+nkpts	q2trans_fd.f90	/^INTEGER  :: nkpts$/;"	v	program:q2trans_fd
+nks	lambda.f90	/^  integer :: nks,/;"	v	program:elph
+nksqtot	epa.f90	/^  integer :: nmodes, nqs, nspin, nbnd, nkstot, nksqtot,/;"	v	program:epa
+nkstot	epa.f90	/^  integer :: nmodes, nqs, nspin, nbnd, nkstot,/;"	v	program:epa
+nl_only_jml	elph.f90	/^  LOGICAL :: nl_only_jml /;"	v	module:el_phon
+nlcc_ph	phcom.f90	/^MODULE nlcc_ph$/;"	m
+nmix_ph	phcom.f90	/^  INTEGER :: niter_ph,      & ! maximum number of iterations (read from input)$/;"	v	module:control_ph
+nmodes	epa.f90	/^  integer :: nmodes,/;"	v	program:epa
+nmodes	lambda.f90	/^  integer :: nks, ios, iuelph, ngauss, ngauss1, ngaussq, nsig, nmodes$/;"	v	program:elph
+nmodes	phcom.f90	/^ INTEGER :: nirr, nmodes$/;"	v	module:modes
+nmodex	lambda.f90	/^  integer, parameter:: npk=200, nsigx=50, nmodex=/;"	v	program:elph
+nn	q2trans.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2, ipol, nn$/;"	v	program:q2trans
+nn	q2trans_fd.f90	/^  INTEGER :: m1, m2, m3, m(3), l1, l2, l3, j1, j2, na1, na2, ipol, nn$/;"	v	program:q2trans_fd
+noNA	q2trans.f90	/^LOGICAL   :: have_overlap, htype, noNA$/;"	v	program:q2trans
+noNA	q2trans_fd.f90	/^LOGICAL   :: have_overlap, htype, noNA,/;"	v	program:q2trans_fd
+nogg	phcom.f90	/^             bands_computed=.FALSE., & ! if .TRUE. the bands were computed$/;"	v	module:control_ph
+nonanal	rigid.f90	/^subroutine nonanal(/;"	s	module:rigid
+nonanal_ifc	rigid.f90	/^subroutine nonanal_ifc(/;"	s	module:rigid
+norm	fqha.f90	/^  real(8) :: dos(ndivx),nu(ndivx), T, a2,a3,Ftot,norm,/;"	v	program:fqha
+nosym	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc, lo_to_split, na_ifc, fd, nosym,/;"	v	program:matdyn
+npert	dfile_star.f90	/^    INTEGER, ALLOCATABLE ::  npert /;"	k	type:rotated_pattern_repr
+npert	phcom.f90	/^  INTEGER, ALLOCATABLE, TARGET :: npert(/;"	v	module:modes
+npert_irr_iq	phcom.f90	/^   INTEGER, ALLOCATABLE ::  &$/;"	v	module:grid_irr_iq
+npertx	dfile_star.f90	/^    INTEGER :: nsymq, irotmq, nirr, npertx$/;"	k	type:rotated_pattern_repr
+npertx	phcom.f90	/^  INTEGER :: npertx$/;"	v	module:modes
+npk	lambda.f90	/^  integer, parameter:: npk=/;"	v	program:elph
+npk_label	matdyn.f90	/^  INTEGER            :: npk_label,/;"	v	program:matdyn
+npwq_refolded	elph.f90	/^  INTEGER :: npwq_refolded,/;"	v	module:el_phon
+nq	matdyn.f90	/^  INTEGER :: n, i, j, it, nq,/;"	v	program:matdyn
+nq	q2trans.f90	/^  INTEGER :: nat, nq,/;"	v	program:q2trans
+nq	q2trans_fd.f90	/^  INTEGER :: nat, nq,/;"	v	program:q2trans_fd
+nq1	phcom.f90	/^  INTEGER :: nq1,/;"	v	module:disp
+nq2	phcom.f90	/^  INTEGER :: nq1, nq2,/;"	v	module:disp
+nq3	phcom.f90	/^  INTEGER :: nq1, nq2, nq3 /;"	v	module:disp
+nq_log	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile, nqs, nq_log$/;"	v	program:q2trans
+nq_log	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile, nqs, nq_log$/;"	v	program:q2trans_fd
+nqb	matdyn.f90	/^  INTEGER, ALLOCATABLE :: nqb(/;"	v	program:matdyn
+nqq	q2qstar.f90	/^  INTEGER       :: nqs, isq (48), imq, nqq$/;"	v	program:Q2QSTAR
+nqs	dynmat.f90	/^  integer :: ibrav, nqs$/;"	v	program:dynmat
+nqs	epa.f90	/^  integer :: nmodes, nqs,/;"	v	program:epa
+nqs	matdyn.f90	/^  INTEGER :: nspin_mag, nqs,/;"	v	program:matdyn
+nqs	phcom.f90	/^  INTEGER :: nqs /;"	v	module:disp
+nqs	q2qstar.f90	/^  INTEGER       :: nqs,/;"	v	program:Q2QSTAR
+nqs	q2trans.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile, nqs,/;"	v	program:q2trans
+nqs	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp, iq, icar, nfile, ifile, nqs,/;"	v	program:q2trans_fd
+nqtot	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx, na, nb, ndos, iout, nqtot,/;"	v	program:matdyn
+nqx	matdyn.f90	/^  INTEGER :: n, i, j, it, nq, nqx,/;"	v	program:matdyn
+nr	q2trans.f90	/^  INTEGER                  :: nr1/;"	v	program:q2trans
+nr	q2trans_fd.f90	/^  INTEGER                  :: nr1/;"	v	program:q2trans_fd
+nr1	matdyn.f90	/^  INTEGER :: nr1,/;"	v	program:matdyn
+nr1	q2trans.f90	/^  INTEGER                  :: nr1,/;"	v	program:q2trans
+nr1	q2trans_fd.f90	/^  INTEGER                  :: nr1,/;"	v	program:q2trans_fd
+nr2	matdyn.f90	/^  INTEGER :: nr1, nr2,/;"	v	program:matdyn
+nr2	q2trans.f90	/^  INTEGER                  :: nr1, nr2,/;"	v	program:q2trans
+nr2	q2trans_fd.f90	/^  INTEGER                  :: nr1, nr2,/;"	v	program:q2trans_fd
+nr3	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3,/;"	v	program:matdyn
+nr3	q2trans.f90	/^  INTEGER                  :: nr1, nr2, nr3,/;"	v	program:q2trans
+nr3	q2trans_fd.f90	/^  INTEGER                  :: nr1, nr2, nr3,/;"	v	program:q2trans_fd
+nrtot	q2trans.f90	/^INTEGER  :: nrtot$/;"	v	program:q2trans
+nrtot	q2trans_fd.f90	/^INTEGER  :: nrtot$/;"	v	program:q2trans_fd
+nrws	matdyn.f90	/^             l1, l2, l3,                   &! supercell dimensions$/;"	v	program:matdyn
+nrwsx	matdyn.f90	/^  INTEGER, PARAMETER:: ntypx=10, nrwsx=/;"	v	program:matdyn
+nrx	q2trans.f90	/^  INTEGER :: na, nt, n1, n2, n3, nrx$/;"	v	program:q2trans
+nrx	q2trans_fd.f90	/^  INTEGER :: na, nt, n1, n2, n3, nrx,/;"	v	program:q2trans_fd
+nsc	matdyn.f90	/^  INTEGER :: nr1, nr2, nr3, nsc,/;"	v	program:matdyn
+nsig	lambda.f90	/^  integer :: nks, ios, iuelph, ngauss, ngauss1, ngaussq, nsig,/;"	v	program:elph
+nsigx	lambda.f90	/^  integer, parameter:: npk=200, nsigx=/;"	v	program:elph
+nsize	q2trans.f90	/^INTEGER  :: i, j, ik, ir, nsize$/;"	v	program:q2trans
+nsize	q2trans_fd.f90	/^INTEGER  :: i, j, ik, ir, nsize$/;"	v	program:q2trans_fd
+nspin	epa.f90	/^  integer :: nmodes, nqs, nspin,/;"	v	program:epa
+nspin_mag	dynmat.f90	/^  integer :: nat, na, nt, ntyp, iout, axis, nspin_mag,/;"	v	program:dynmat
+nspin_mag	matdyn.f90	/^  INTEGER :: nspin_mag,/;"	v	program:matdyn
+nspin_mag	q2trans.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag,/;"	v	program:q2trans
+nspin_mag	q2trans_fd.f90	/^  INTEGER :: gid, ibrav, ierr, nspin_mag,/;"	v	program:q2trans_fd
+nsymq	dfile_star.f90	/^    INTEGER :: nsymq,/;"	k	type:rotated_pattern_repr
+nsymq	epa.f90	/^      nat, nsymq,/;"	v	program:epa
+nsymq_iq	phcom.f90	/^       irr_iq(:),        &! number of irreducible representation per q point$/;"	v	module:grid_irr_iq
+nt	dynmat.f90	/^  inte/;"	v	program:dynmat
+nt	q2trans.f90	/^  INTEGER :: na, nt,/;"	v	program:q2trans
+nt	q2trans_fd.f90	/^  INTEGER :: na, nt,/;"	v	program:q2trans_fd
+ntyp	dynmat.f90	/^  integer :: nat, na, nt, ntyp,/;"	v	program:dynmat
+ntyp	matdyn.f90	/^  INTEGER :: nat, nat_blk, ntyp,/;"	v	program:matdyn
+ntyp	q2trans.f90	/^  INTEGER :: nat, nq, ntyp,/;"	v	program:q2trans
+ntyp	q2trans_fd.f90	/^  INTEGER :: nat, nq, ntyp,/;"	v	program:q2trans_fd
+ntyp_blk	matdyn.f90	/^  INTEGER :: nat, nat_blk, ntyp, ntyp_blk,/;"	v	program:matdyn
+ntypx	dynmat.f90	/^  integer, parameter :: ntypx /;"	v	program:dynmat
+ntypx	matdyn.f90	/^  INTEGER, PARAMETER:: ntypx=/;"	v	program:matdyn
+ntypx	q2trans.f90	/^  INTEGER,       PARAMETER :: ntypx /;"	v	program:q2trans
+ntypx	q2trans_fd.f90	/^  INTEGER,       PARAMETER :: ntypx /;"	v	program:q2trans_fd
+nu	epa.f90	/^      nat, nsymq, irotmq, iq, ik, ikk, ikq, ibnd, jbnd, &$/;"	v	program:epa
+nu	fqha.f90	/^  real(8) :: dos(ndivx),nu(/;"	v	program:fqha
+nu	lambda.f90	/^  integer :: ik, ng, mu, nu,/;"	v	program:elph
+nu_	fqha.f90	/^  real(8) :: de, de_, nu_,/;"	v	program:fqha
+num_rap_mode	dfile_star.f90	/^    INTEGER, ALLOCATABLE :: num_rap_mode(/;"	k	type:rotated_pattern_repr
+num_rap_mode	matdyn.f90	/^  INTEGER, ALLOCATABLE :: num_rap_mode(/;"	v	program:matdyn
+num_rap_mode	phcom.f90	/^  INTEGER, ALLOCATABLE :: num_rap_mode(/;"	v	module:modes
+nwin	epa.f90	/^  integer, parameter :: nwin /;"	v	program:epa
+off_vrs_setup	acfdtest.f90	/^ LOGICAL :: off_vrs_setup /;"	v	module:acfdtest
+omega	dynmat.f90	/^  real(DP) :: amass(ntypx), amass_(ntypx), eps0(3,3), a0, omega,/;"	v	program:dynmat
+omega	lambda.f90	/^       degaussq, emax, deltae, e, omega,/;"	v	program:elph
+omega	matdyn.f90	/^  REAL(DP) ::     omega,/;"	v	program:matdyn
+omega	q2trans.f90	/^  REAL(DP) :: q(3,48), omega,/;"	v	program:q2trans
+omega	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega,/;"	v	program:q2trans_fd
+omega_blk	matdyn.f90	/^                  at_blk(3,3), bg_blk(3,3),  &! original cell$/;"	v	program:matdyn
+omega_disp	phcom.f90	/^  REAL(DP), ALLOCATABLE :: omega_disp(/;"	v	module:disp
+omegalog	lambda.f90	/^  real*8 mustar, omegalog(/;"	v	program:elph
+omg	alpha2f.f90	/^  REAL(DP),ALLOCATABLE,SAVE :: &$/;"	v	module:alpha2f_vals
+onedim	q2trans.f90	/^  LOGICAL           :: la2F, onedim$/;"	v	program:q2trans
+onedim	q2trans_fd.f90	/^  LOGICAL           :: la2F, onedim$/;"	v	program:q2trans_fd
+only_init	phcom.f90	/^             only_wfc=.FALSE.,  &! if .TRUE. computes only bands$/;"	v	module:control_ph
+only_wfc	phcom.f90	/^             done_start_zstar=.FALSE., &!$/;"	v	module:control_ph
+open	dfile_star.f90	/^     LOGICAL            :: open$/;"	k	type:open_star_descriptor
+open_dfile_directory	dfile_autoname.f90	/^FUNCTION open_dfile_directory(/;"	f	module:dfile_autoname
+open_star_descriptor	dfile_star.f90	/^  TYPE open_star_descriptor$/;"	t	module:dfile_star
+openfilq	openfilq.f90	/^SUBROUTINE openfilq(/;"	s
+output	phcom.f90	/^MODULE output$/;"	m
+ovp	q2trans.f90	/^COMPLEX, ALLOCATABLE :: rham(:,:,:), ovp(/;"	v	program:q2trans
+ovp	q2trans_fd.f90	/^COMPLEX, ALLOCATABLE :: rham(:,:,:), ovp(/;"	v	program:q2trans_fd
+partial	phcom.f90	/^MODULE partial$/;"	m
+pat	dfile_star.f90	/^     LOGICAL            :: pat$/;"	k	type:open_star_descriptor
+pathL	matdyn.f90	/^  REAL(DP) :: delta, pathL$/;"	v	program:matdyn
+pcgreen	pcgreen.f90	/^subroutine pcgreen /;"	s
+ph_readfile	ph_restart.f90	/^    SUBROUTINE ph_readfile(/;"	s	module:ph_restart
+ph_restart	ph_restart.f90	/^MODULE ph_restart$/;"	m
+ph_restart_set_filename	ph_restart.f90	/^   SUBROUTINE ph_restart_set_filename(/;"	s	module:ph_restart
+ph_writefile	ph_restart.f90	/^    SUBROUTINE ph_writefile(/;"	s	module:ph_restart
+phcom	phcom.f90	/^MODULE phcom$/;"	m
+phescf	phescf.f90	/^SUBROUTINE phescf(/;"	s
+phi	q2qstar.f90	/^  COMPLEX(DP),ALLOCATABLE :: phi(/;"	v	program:Q2QSTAR
+phid	q2trans.f90	/^  COMPLEX(DP), ALLOCATABLE :: phid(/;"	v	program:q2trans
+phid	q2trans_fd.f90	/^  COMPLEX(DP), ALLOCATABLE :: phid(/;"	v	program:q2trans_fd
+phiq	io_dyn_mat_old.f90	/^  COMPLEX(DP), ALLOCATABLE :: phiq(/;"	v	module:dynamicalq
+phonon	phonon.f90	/^PROGRAM phonon$/;"	p
+phq_init	phq_init.f90	/^SUBROUTINE phq_init(/;"	s
+phq_readin	phq_readin.f90	/^SUBROUTINE phq_readin(/;"	s
+phq_recover	phq_recover.f90	/^subroutine phq_recover$/;"	s
+phq_setup	phq_setup.f90	/^subroutine phq_setup$/;"	s
+phq_summary	phq_summary.f90	/^subroutine phq_summary$/;"	s
+phqscf	phqscf.f90	/^SUBROUTINE phqscf$/;"	s
+phus	phcom.f90	/^MODULE phus$/;"	m
+point_label_type	matdyn.f90	/^  CHARACTER(LEN=10) :: point_label_type$/;"	v	program:matdyn
+pol	alpha2f.f90	/^  & lam(:,:), & ! (nmodes,nqs) El-Ph coupling  on irreducible q$/;"	v	module:alpha2f_vals
+polar	phcom.f90	/^  REAL (KIND=DP), ALLOCATABLE :: polar(/;"	v	module:freq_ph
+polariz	polariz.f90	/^subroutine polariz /;"	s
+prefix	q2r.f90	/^  CHARACTER(len=256) :: fildyn, filin, flfrc, prefix$/;"	v	program:q2r
+prepare_q	prepare_q.f90	/^SUBROUTINE prepare_q(/;"	s
+prepare_sym_analysis	prepare_sym_analysis.f90	/^  SUBROUTINE prepare_sym_analysis(/;"	s
+print_clock_ph	print_clock_ph.f90	/^subroutine print_clock_ph$/;"	s
+print_mode_sym	find_mode_sym.f90	/^SUBROUTINE print_mode_sym(/;"	s
+proj1	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: proj1(/;"	v	module:ldaU_ph
+proj2	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: proj1(:,:),    &$/;"	v	module:ldaU_ph
+projpb	phcom.f90	/^                               proj2(:,:),    &$/;"	v	module:ldaU_ph
+projpdb	phcom.f90	/^                               projpb(:,:),   &$/;"	v	module:ldaU_ph
+psidspsi	psidspsi.f90	/^subroutine psidspsi /;"	s
+psym_dmag	psym_dmag.f90	/^SUBROUTINE psym_dmag /;"	s
+psym_dmage	psym_dmage.f90	/^SUBROUTINE psym_dmage /;"	s
+psymdvscf	psymdvscf.f90	/^SUBROUTINE psymdvscf /;"	s
+psyme	psyme.f90	/^SUBROUTINE psyme /;"	s
+psyme2	psyme2.f90	/^subroutine psyme2 /;"	s
+punch_plot_e	punch_plot_e.f90	/^SUBROUTINE punch_plot_e(/;"	s
+q	dynmat.f90	/^       at(3,3), bg(3,3), q(/;"	v	program:dynmat
+q	lambda.f90	/^  real(kind=8) :: q(/;"	v	program:elph
+q	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(:,:), q(/;"	v	program:matdyn
+q	q2trans.f90	/^  REAL(DP) :: q(/;"	v	program:q2trans
+q	q2trans_fd.f90	/^  REAL(DP) :: q(/;"	v	program:q2trans_fd
+q2qstar_ph	q2qstar_ph.f90	/^subroutine q2qstar_ph /;"	s
+q2r	q2r.f90	/^PROGRAM q2r$/;"	p
+q2trans	q2trans.f90	/^PROGRAM q2trans$/;"	p
+q2trans_fd	q2trans_fd.f90	/^PROGRAM q2trans_fd$/;"	p
+q_	dynmat.f90	/^       at(3,3), bg(3,3), q(3), q_(/;"	v	program:dynmat
+q_gen	matdyn.f90	/^SUBROUTINE q_gen(/;"	s
+q_in_band_form	matdyn.f90	/^  LOGICAL :: q_in_band_form$/;"	v	program:matdyn
+q_in_cryst_coord	matdyn.f90	/^  LOGICAL :: dos, has_zstar, q_in_cryst_coord,/;"	v	program:matdyn
+q_points	q_points.f90	/^SUBROUTINE q_points /;"	s
+q_points_wannier	q_points_wannier.f90	/^SUBROUTINE q_points_wannier /;"	s
+qexml_version	ph_restart.f90	/^  CHARACTER(len=256) :: qexml_version /;"	v	module:ph_restart
+qexml_version_before_1_4_0	ph_restart.f90	/^  LOGICAL :: qexml_version_before_1_4_0 /;"	v	module:ph_restart
+qexml_version_init	ph_restart.f90	/^  LOGICAL :: qexml_version_init /;"	v	module:ph_restart
+qh	matdyn.f90	/^  REAL(DP) :: qha/;"	v	program:matdyn
+qhat	matdyn.f90	/^  REAL(DP) :: qhat(/;"	v	program:matdyn
+qplot	phcom.f90	/^             lqdir=.FALSE.,        & ! if true each q writes in its directory$/;"	v	module:control_ph
+qq	matdyn.f90	/^  REAL(DP) :: qhat(3), qh, DeltaE, Emin=0._dp, Emax, E, qq$/;"	v	program:matdyn
+qread	lambda.f90	/^  real(kind=8) qread(/;"	v	program:elph
+r_ovp	q2trans.f90	/^REAL, ALLOCATABLE :: r_rham(:,:,:), r_ovp(/;"	v	program:q2trans
+r_ovp	q2trans_fd.f90	/^REAL, ALLOCATABLE :: r_rham(:,:,:), r_ovp(/;"	v	program:q2trans_fd
+r_rham	q2trans.f90	/^REAL, ALLOCATABLE :: r_rham(/;"	v	program:q2trans
+r_rham	q2trans_fd.f90	/^REAL, ALLOCATABLE :: r_rham(/;"	v	program:q2trans_fd
+raman	raman.f90	/^subroutine raman$/;"	s
+raman_mat	raman_mat.f90	/^subroutine raman_mat$/;"	s
+ramanm	ramanm.f90	/^MODULE ramanm$/;"	m
+ramtns	ramanm.f90	/^  REAL (DP), ALLOCATABLE ::  ramtns /;"	v	module:ramanm
+random_matrix	obsolete.f90	/^subroutine random_matrix /;"	s
+random_matrix_new	random_matrix.f90	/^subroutine random_matrix_new /;"	s
+read_control_ph	ph_restart.f90	/^    SUBROUTINE read_control_ph(/;"	s	module:ph_restart
+read_dns_bare	phcom.f90	/^  LOGICAL  :: read_dns_bare$/;"	v	module:ldaU_ph
+read_dyn_from_file	io_dyn_mat_old.f90	/^SUBROUTINE read_dyn_from_file(/;"	s
+read_dyn_mat	io_dyn_mat.f90	/^    SUBROUTINE read_dyn_mat(/;"	s	module:io_dyn_mat
+read_dyn_mat_header	io_dyn_mat.f90	/^    SUBROUTINE read_dyn_mat_header(/;"	s	module:io_dyn_mat
+read_dyn_mat_param	io_dyn_mat.f90	/^    SUBROUTINE read_dyn_mat_param(/;"	s	module:io_dyn_mat
+read_dyn_mat_tail	io_dyn_mat.f90	/^    SUBROUTINE read_dyn_mat_tail(/;"	s	module:io_dyn_mat
+read_el_phon	ph_restart.f90	/^    SUBROUTINE read_el_phon(/;"	s	module:ph_restart
+read_gamma	do_q2r.f90	/^subroutine read_gamma /;"	s
+read_gamma	q2trans.f90	/^SUBROUTINE read_gamma /;"	s
+read_header	ph_restart.f90	/^    SUBROUTINE read_header(/;"	s	module:ph_restart
+read_ifc	io_dyn_mat.f90	/^    SUBROUTINE read_ifc(/;"	s	module:io_dyn_mat
+read_ifc_param	io_dyn_mat.f90	/^    SUBROUTINE read_ifc_param(/;"	s	module:io_dyn_mat
+read_lam	alpha2f.f90	/^SUBROUTINE read_lam(/;"	s	module:alpha2f_routines
+read_modes	ph_restart.f90	/^    SUBROUTINE read_modes(/;"	s	module:ph_restart
+read_partial_ph	ph_restart.f90	/^    SUBROUTINE read_partial_ph(/;"	s	module:ph_restart
+read_polarization	alpha2f.f90	/^SUBROUTINE read_polarization(/;"	s	module:alpha2f_routines
+read_polarization	ph_restart.f90	/^    SUBROUTINE read_polarization(/;"	s	module:ph_restart
+read_qu	ph_restart.f90	/^    SUBROUTINE read_qu(/;"	s	module:ph_restart
+read_rec	write_rec.f90	/^  SUBROUTINE read_rec(/;"	s	module:recover_mod
+read_status_ph	ph_restart.f90	/^    SUBROUTINE read_status_ph(/;"	s	module:ph_restart
+read_tau	matdyn.f90	/^SUBROUTINE read_tau /;"	s
+read_tensors	ph_restart.f90	/^    SUBROUTINE read_tensors(/;"	s	module:ph_restart
+read_wfc_rspace_and_fwfft	read_wfc_rspace_and_fwfft.f90	/^subroutine read_wfc_rspace_and_fwfft(/;"	s
+readfc	matdyn.f90	/^SUBROUTINE readfc /;"	s
+readfg	matdyn.f90	/^subroutine readfg /;"	s
+readifc	q2trans_fd.f90	/^LOGICAL   :: have_overlap, htype, noNA, readifc,/;"	v	program:q2trans_fd
+readmat	elphon.f90	/^SUBROUTINE readmat /;"	s
+readmat_findq	ep_matrix_element_wannier.f90	/^SUBROUTINE readmat_findq /;"	s
+readtau	matdyn.f90	/^  LOGICAL :: readtau,/;"	v	program:matdyn
+real2frac	dfile_autoname.f90	/^FUNCTION real2frac(/;"	f	module:dfile_autoname
+rec_code	phcom.f90	/^  INTEGER :: rec_code=/;"	v	module:control_ph
+rec_code_read	phcom.f90	/^  INTEGER :: rec_code=-1000,    &! code for recover$/;"	v	module:control_ph
+recover	phcom.f90	/^             always_run=.FALSE., & ! if .TRUE. the code do not stop after$/;"	v	module:control_ph
+recover_mod	write_rec.f90	/^MODULE recover_mod$/;"	m
+recover_read	phcom.f90	/^             u_from_file=.FALSE.,  & ! if true the u are on file$/;"	v	module:control_ph
+reduce_io	phcom.f90	/^             ldisp,       &! if .TRUE. the run calculates full phonon dispersion$/;"	v	module:control_ph
+resi	q2trans.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi,/;"	v	program:q2trans
+resi	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi,/;"	v	program:q2trans_fd
+restore_ph_input_variables	save_ph_input.f90	/^    SUBROUTINE restore_ph_input_variables(/;"	s	module:save_ph
+rgd_blk	rigid.f90	/^subroutine rgd_blk /;"	s	module:rigid
+rham	q2trans.f90	/^COMPLEX, ALLOCATABLE :: rham(/;"	v	program:q2trans
+rham	q2trans_fd.f90	/^COMPLEX, ALLOCATABLE :: rham(/;"	v	program:q2trans_fd
+rigid	rigid.f90	/^MODULE rigid$/;"	m
+rotate_and_add_dyn	rotate_and_add_dyn.f90	/^subroutine rotate_and_add_dyn /;"	s
+rotate_dvscf_star	rotate_dvscf_star.f90	/^subroutine rotate_dvscf_star(/;"	s
+rotate_mod	find_mode_sym.f90	/^SUBROUTINE rotate_mod(/;"	s
+rotate_pattern_add	rotate_pattern_add.f90	/^  SUBROUTINE rotate_pattern_add(/;"	s
+rotated_pattern_repr	dfile_star.f90	/^  TYPE rotated_pattern_repr$/;"	t	module:dfile_star
+rtau	epa.f90	/^  real(dp), allocatable :: rtau(/;"	v	program:epa
+run_nscf	run_nscf.f90	/^SUBROUTINE run_nscf(/;"	s
+rws	matdyn.f90	/^                  atws(3,3),      &! lattice vector for WS initialization$/;"	v	program:matdyn
+s	epa.f90	/^      nemin, nemax, ne(nwin), nepair(nwin), bpair(2, nwin), &$/;"	v	program:epa
+s1	epa.f90	/^  character(len=32) :: s1,/;"	v	program:epa
+s2	epa.f90	/^  character(len=32) :: s1, s2,/;"	v	program:epa
+s3	epa.f90	/^  character(len=32) :: s1, s2, s3,/;"	v	program:epa
+s4	epa.f90	/^  character(len=32) :: s1, s2, s3, s4,/;"	v	program:epa
+s5	epa.f90	/^  character(len=32) :: s1, s2, s3, s4, s5$/;"	v	program:epa
+save_ph	save_ph_input.f90	/^MODULE save_ph$/;"	m
+save_ph_input_variables	save_ph_input.f90	/^    SUBROUTINE save_ph_input_variables(/;"	s	module:save_ph
+scan_dfile_directory	dfile_autoname.f90	/^FUNCTION scan_dfile_directory(/;"	f	module:dfile_autoname
+scompact_dyn	rotate_pattern_add.f90	/^  SUBROUTINE scompact_dyn(/;"	s
+sdate	elphon.f90	/^  character :: cdate*9, ctime*9, sdate*/;"	v
+sdwfcatomk	phcom.f90	/^                                      dwfcatomk(:,:,:),   & ! derivative of atomic wfc at k$/;"	v	module:ldaU_ph
+sdwfcatomkpq	phcom.f90	/^                                      dwfcatomkpq(:,:,:), & ! derivative of atomic wfc at k+q$/;"	v	module:ldaU_ph
+search_sym	phcom.f90	/^             lnoloc,      &! if .TRUE. calculates the dielectric constant$/;"	v	module:control_ph
+search_sym_save	phcom.f90	/^             search_sym=.TRUE.,  &! if .TRUE. search the mode symmetry$/;"	v	module:control_ph
+set_asr	matdyn.f90	/^SUBROUTINE set_asr /;"	s
+set_asr	q2trans.f90	/^SUBROUTINE set_asr /;"	s
+set_asr_c	set_asr_c.f90	/^SUBROUTINE set_asr_c(/;"	s
+set_drhoc	set_drhoc.f90	/^subroutine set_drhoc /;"	s
+set_dvscf	set_dvscf.f90	/^      subroutine set_dvscf /;"	s
+set_int12_nc	set_int12_nc.f90	/^SUBROUTINE set_int12_nc(/;"	s
+set_irr	obsolete.f90	/^subroutine set_irr /;"	s
+set_irr_mode	obsolete.f90	/^subroutine set_irr_mode /;"	s
+set_irr_new	set_irr.f90	/^subroutine set_irr_new /;"	s
+set_irr_nosym	obsolete.f90	/^subroutine set_irr_nosym /;"	s
+set_irr_nosym_new	set_irr_nosym.f90	/^subroutine set_irr_nosym_new /;"	s
+set_irr_sym	obsolete.f90	/^subroutine set_irr_sym /;"	s
+set_irr_sym_new	set_irr_sym.f90	/^subroutine set_irr_sym_new /;"	s
+set_tau	matdyn.f90	/^SUBROUTINE set_tau /;"	s
+set_zasr	do_q2r.f90	/^subroutine set_zasr /;"	s
+set_zasr	q2trans.f90	/^SUBROUTINE set_zasr /;"	s
+setgam	matdyn.f90	/^subroutine setgam /;"	s
+setlocq	setlocq.f90	/^subroutine setlocq /;"	s
+setlocq_coul	setlocq.f90	/^subroutine setlocq_coul /;"	s
+setup_pw	phonon.f90	/^  LOGICAL :: do_band, do_iq, setup_pw$/;"	v	program:phonon
+setupmat	matdyn.f90	/^SUBROUTINE setupmat /;"	s
+sgam_ph	obsolete.f90	/^subroutine sgam_ph /;"	s
+skip_ph	acfdtest.f90	/^ LOGICAL :: skip_ph /;"	v	module:acfdtest
+smallgq	obsolete.f90	/^subroutine smallgq /;"	s
+solve_e	solve_e.f90	/^subroutine solve_e$/;"	s
+solve_e2	solve_e2.f90	/^subroutine solve_e2$/;"	s
+solve_e_fpol	solve_e_fpol.f90	/^subroutine solve_e_fpol /;"	s
+solve_e_nscf	solve_e_nscf.f90	/^subroutine solve_e_nscf(/;"	s
+solve_linter	solve_linter.f90	/^SUBROUTINE solve_linter /;"	s
+sp1	matdyn.f90	/^subroutine sp1(/;"	s
+sp1	q2trans.f90	/^SUBROUTINE sp1(/;"	s
+sp2	matdyn.f90	/^subroutine sp2(/;"	s
+sp2	q2trans.f90	/^SUBROUTINE sp2(/;"	s
+sp3	matdyn.f90	/^subroutine sp3(/;"	s
+sp3	q2trans.f90	/^SUBROUTINE sp3(/;"	s
+sp_zeu	matdyn.f90	/^subroutine sp_zeu(/;"	s
+sp_zeu	q2trans.f90	/^SUBROUTINE sp_zeu(/;"	s
+start_irr	phcom.f90	/^             nmix_ph,       & ! mixing type$/;"	v	module:control_ph
+start_q	phcom.f90	/^             current_iq,    & ! current q point$/;"	v	module:control_ph
+stdin	q2trans.f90	/^INTEGER, PARAMETER         ::   &$/;"	v	program:q2trans
+stdin	q2trans_fd.f90	/^INTEGER, PARAMETER         ::   &$/;"	v	program:q2trans_fd
+stime	elphon.f90	/^  character :: cdate*9, ctime*9, sdate*32, stime*/;"	v
+stitle	elphon.f90	/^  character :: cdate*9, ctime*9, sdate*32, stime*32, &$/;"	v
+stop_ph	stop_ph.f90	/^SUBROUTINE stop_ph(/;"	s
+stop_smoothly_ph	stop_ph.f90	/^SUBROUTINE stop_smoothly_ph(/;"	s
+sum	lambda.f90	/^       degaussq, emax, deltae, e, omega, sum$/;"	v	program:elph
+sum1	q2trans.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi, sum1,/;"	v	program:q2trans
+sum1	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi, sum1,/;"	v	program:q2trans_fd
+sum2	q2trans.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi, sum1, sum2$/;"	v	program:q2trans
+sum2	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega, xq, amass(ntypx), resi, sum1, sum2$/;"	v	program:q2trans_fd
+sum_der_etot	acfdtest.f90	/^ REAL(DP):: sum_der_etot=/;"	v	module:acfdtest
+summarize_elopt	summarize.f90	/^SUBROUTINE summarize_elopt(/;"	s
+summarize_epsilon	summarize.f90	/^SUBROUTINE summarize_epsilon(/;"	s
+summarize_fpol	summarize.f90	/^SUBROUTINE summarize_fpol /;"	s
+summarize_zeu	summarize.f90	/^SUBROUTINE summarize_zeu(/;"	s
+summarize_zue	summarize.f90	/^SUBROUTINE summarize_zue$/;"	s
+swfc	swfc.f90	/^SUBROUTINE swfc /;"	s
+swfcatomk	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: wfcatomk(:,:),      & ! atomic wfc at k$/;"	v	module:ldaU_ph
+swfcatomkpq	phcom.f90	/^  COMPLEX(DP), POINTER ::             wfcatomkpq(:,:),    & ! atomic wfc at k+q$/;"	v	module:ldaU_ph
+sxq	q2qstar.f90	/^  REAL(DP)      :: sxq(/;"	v	program:Q2QSTAR
+sym	q2qstar.f90	/^  LOGICAL :: sym(/;"	v	program:Q2QSTAR
+sym_and_write_zue	sym_and_write_zue.f90	/^subroutine sym_and_write_zue$/;"	s
+sym_def	sym_def.f90	/^subroutine sym_def /;"	s
+sym_dmag	sym_dmag.f90	/^subroutine sym_dmag /;"	s
+sym_dmage	sym_dmage.f90	/^subroutine sym_dmage /;"	s
+sym_dns	sym_dns.f90	/^SUBROUTINE sym_dns /;"	s
+sym_dns_wrapper	sym_dns_wrapper.f90	/^SUBROUTINE sym_dns_wrapper /;"	s
+symdvscf	symdvscf.f90	/^subroutine symdvscf /;"	s
+symdyn_munu	obsolete.f90	/^subroutine symdyn_munu /;"	s
+symdyn_munu_new	symdyn_munu.f90	/^subroutine symdyn_munu_new /;"	s
+symdynph_gq	obsolete.f90	/^subroutine symdynph_gq /;"	s
+symdynph_gq_new	symdynph_gq.f90	/^subroutine symdynph_gq_new /;"	s
+syme	syme.f90	/^subroutine syme /;"	s
+syme2	syme2.f90	/^subroutine syme2 /;"	s
+syme_dns	syme_dns.f90	/^SUBROUTINE syme_dns /;"	s
+symm	symm.f90	/^subroutine symm(/;"	s
+symmorphic_or_nzb	symmorphic_or_nzb.f90	/^LOGICAL FUNCTION symmorphic_or_nzb(/;"	f
+t	dfile_star.f90	/^    COMPLEX(DP), ALLOCATABLE :: u(:,:), t(/;"	k	type:rotated_pattern_repr
+t	phcom.f90	/^       u(:,:),                     &!  3 * nat,/;"	v	module:modes
+tau	io_dyn_mat_old.f90	/^  REAL(DP), ALLOCATABLE ::  tau(/;"	v	module:dynamicalq
+tau	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(/;"	v	program:matdyn
+tau_blk	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: frc(:,:,:,:,:,:,:), tau_blk(/;"	v	module:ifconstants
+tend	matdyn.f90	/^  LOGICAL :: tend,/;"	v	program:matdyn
+term_one	d2nsq_bare.f90	/^SUBROUTINE term_one /;"	s	module:term_one_module
+term_one_1	d2nsq_bare.f90	/^SUBROUTINE term_one_1 /;"	s	module:term_one_1_module
+term_one_1_module	d2nsq_bare.f90	/^MODULE term_one_1_module$/;"	m
+term_one_diag	d2nsq_bare.f90	/^SUBROUTINE term_one_diag /;"	s	module:term_one_module
+term_one_module	d2nsq_bare.f90	/^MODULE term_one_module$/;"	m
+term_three	d2nsq_bare.f90	/^SUBROUTINE term_three /;"	s	module:term_three_module
+term_three_1	d2nsq_bare.f90	/^SUBROUTINE  term_three_1 /;"	s	module:term_three_1_module
+term_three_1_module	d2nsq_bare.f90	/^MODULE term_three_1_module$/;"	m
+term_three_diag	d2nsq_bare.f90	/^SUBROUTINE term_three_diag /;"	s	module:term_three_module
+term_three_module	d2nsq_bare.f90	/^MODULE term_three_module$/;"	m
+terr	matdyn.f90	/^  LOGICAL :: tend, terr$/;"	v	program:matdyn
+test_oep	acfdtest.f90	/^ LOGICAL :: test_oep=/;"	v	module:acfdtest
+this_dvkb3_is_on_file	phcom.f90	/^  logical, ALLOCATABLE :: this_dvkb3_is_on_file(/;"	v	module:units_ph
+this_pcxpsi_is_on_file	phcom.f90	/^  logical, ALLOCATABLE :: this_dvkb3_is_on_file(:), &$/;"	v	module:units_ph
+tmp_dir_ph	phcom.f90	/^  CHARACTER(LEN=256) :: flmixdpot, tmp_dir_ph,/;"	v	module:control_ph
+tmp_dir_phq	phcom.f90	/^  CHARACTER(LEN=256) :: flmixdpot, tmp_dir_ph, tmp_dir_phq$/;"	v	module:control_ph
+tmp_dir_save	save_ph_input.f90	/^  CHARACTER(LEN=256), PUBLIC :: tmp_dir_save$/;"	v	module:save_ph
+tmp_w2	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: abs_similarity(:,:), tmp_w2(/;"	v	program:matdyn
+tmp_z	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: tmp_z(/;"	v	program:matdyn
+tmq	dfile_star.f90	/^    COMPLEX(DP), ALLOCATABLE :: u(:,:), t(:,:,:,:), tmq /;"	k	type:rotated_pattern_repr
+tmq	phcom.f90	/^       t(:,:,:,:),                 &! npertx, npertx, 48,3 * nat),$/;"	v	module:modes
+tr2_ph	phcom.f90	/^  REAL(DP) :: tr2_ph /;"	v	module:control_ph
+tra_write_matrix	tra_write_matrix.f90	/^subroutine tra_write_matrix /;"	s
+tra_write_matrix_no_sym	tra_write_matrix.f90	/^subroutine tra_write_matrix_no_sym /;"	s
+trans	phcom.f90	/^             done_epsil=.FALSE.,  &! .TRUE. when diel. constant is available$/;"	v	module:control_ph
+transform_alphasum_nc	transform_alphasum_nc.f90	/^SUBROUTINE transform_alphasum_nc(/;"	s
+transform_alphasum_so	transform_alphasum_so.f90	/^SUBROUTINE transform_alphasum_so(/;"	s
+transform_int1_nc	transform_int_nc.f90	/^SUBROUTINE transform_int1_nc(/;"	s
+transform_int1_so	transform_int_so.f90	/^SUBROUTINE transform_int1_so(/;"	s
+transform_int2_nc	transform_int_nc.f90	/^SUBROUTINE transform_int2_nc(/;"	s
+transform_int2_so	transform_int_so.f90	/^SUBROUTINE transform_int2_so(/;"	s
+transform_int4_nc	transform_int_nc.f90	/^SUBROUTINE transform_int4_nc(/;"	s
+transform_int4_so	transform_int_so.f90	/^SUBROUTINE transform_int4_so(/;"	s
+transform_int5_nc	transform_int_nc.f90	/^SUBROUTINE transform_int5_nc(/;"	s
+transform_int5_so	transform_int_so.f90	/^SUBROUTINE transform_int5_so(/;"	s
+trasl	do_q2r.f90	/^SUBROUTINE trasl(/;"	s
+trasl	q2trans.f90	/^SUBROUTINE trasl(/;"	s
+trntnsc	trntnsc.f90	/^subroutine trntnsc /;"	s
+u	dfile_star.f90	/^    COMPLEX(DP), ALLOCATABLE :: u(/;"	k	type:rotated_pattern_repr
+u	epa.f90	/^  complex(dp), pointer :: u(/;"	v	program:epa
+u	phcom.f90	/^  COMPLEX (DP), POINTER :: &$/;"	v	module:modes
+u_from_file	phcom.f90	/^             nogg,        &! if .TRUE. gamma_gamma tricks are disabled$/;"	v	module:control_ph
+uni	epa.f90	/^  integer, parameter :: uni /;"	v	program:epa
+units_ph	phcom.f90	/^MODULE units_ph$/;"	m
+uno	epa.f90	/^  integer, parameter :: uno /;"	v	program:epa
+vec	matdyn.f90	/^     real(DP),pointer :: vec(/;"	k	type:vector
+vec	q2trans.f90	/^     real(DP),POINTER :: vec(/;"	k	type:vector
+vector	matdyn.f90	/^  type vector$/;"	t	subroutine:set_asr
+vector	q2trans.f90	/^  TYPE vector$/;"	t	subroutine:set_asr
+vkbkpq	phcom.f90	/^  COMPLEX(DP), POINTER ::             vkbkpq(/;"	v	module:ldaU_ph
+vrs_save	acfdtest.f90	/^ REAL(DP), ALLOCATABLE :: vrs_save(/;"	v	module:acfdtest
+vu	epa.f90	/^      nu, mu, vu,/;"	v	program:epa
+w0gauss	lambda.f90	/^  real(kind=8), external :: w0gauss$/;"	v	program:elph
+w2	dynmat.f90	/^  real(DP), allocatable :: w2(/;"	v	program:dynmat
+w2	epa.f90	/^  real(dp), allocatable :: w2(/;"	v	program:epa
+w2	lambda.f90	/^  real(kind=8) :: q(3,npk), wk(npk), degauss(nsigx), w2(/;"	v	program:elph
+w2	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(:,:), q(:,:), w2(/;"	v	program:matdyn
+w2	phcom.f90	/^  REAL (DP), ALLOCATABLE :: &$/;"	v	module:dynmat
+wan_index_dyn	elph.f90	/^  INTEGER, allocatable :: wan_index_dyn(/;"	v	module:el_phon
+wavg	epa.f90	/^  real(dp), allocatable :: wavg(/;"	v	program:epa
+weight	epa.f90	/^  real(dp) :: wtot, weight,/;"	v	program:epa
+wfcatomk	phcom.f90	/^  COMPLEX(DP), ALLOCATABLE, TARGET :: wfcatomk(/;"	v	module:ldaU_ph
+wfcatomkpq	phcom.f90	/^  COMPLEX(DP), POINTER ::             wfcatomkpq(/;"	v	module:ldaU_ph
+wg_collect	elphon.f90	/^  REAL(DP), ALLOCATABLE :: et_collect(:,:), wg_collect(/;"	v
+where_rec	phcom.f90	/^  CHARACTER(LEN=10)  :: where_rec=/;"	v	module:control_ph
+with_ext_images	phcom.f90	/^             only_init=.FALSE.,  &! if .TRUE. computes only initial stuff$/;"	v	module:control_ph
+with_symmetry	phcom.f90	/^           has_equivalent(:),  &  ! 0 if the atom has to be calculated$/;"	v	module:gamma_gamma
+wk	epa.f90	/^  real(dp), allocatable :: wk(/;"	v	program:epa
+wk	lambda.f90	/^  real(kind=8) :: q(3,npk), wk(/;"	v	program:elph
+wk_collect	elphon.f90	/^  REAL(DP), ALLOCATABLE :: xk_collect(:,:), wk_collect(/;"	v
+wq	epa.f90	/^  real(dp), allocatable :: wq(/;"	v	program:epa
+wq	matdyn.f90	/^  REAL(DP), ALLOCATABLE:: tau(:,:), q(:,:), w2(:,:), freq(:,:), wq(/;"	v	program:matdyn
+wq	phcom.f90	/^  REAL(DP), ALLOCATABLE :: x_q(:,:), & ! coordinates of the q points$/;"	v	module:disp
+wr	q2trans.f90	/^REAL,    ALLOCATABLE :: wr(/;"	v	program:q2trans
+wr	q2trans_fd.f90	/^REAL,    ALLOCATABLE :: wr(/;"	v	program:q2trans_fd
+write_control_ph	ph_restart.f90	/^    SUBROUTINE write_control_ph(/;"	s	module:ph_restart
+write_dfile_star	dfile_star.f90	/^SUBROUTINE write_dfile_star(/;"	s	module:dfile_star
+write_dnsscf_e	write_hub.f90	/^SUBROUTINE write_dnsscf_e /;"	s	module:write_hub
+write_dnsscf_ph	write_hub.f90	/^SUBROUTINE write_dnsscf_ph$/;"	s	module:write_hub
+write_dyn_mat	io_dyn_mat.f90	/^    SUBROUTINE write_dyn_mat(/;"	s	module:io_dyn_mat
+write_dyn_mat_header	io_dyn_mat.f90	/^    SUBROUTINE write_dyn_mat_header(/;"	s	module:io_dyn_mat
+write_dyn_mat_tail	io_dyn_mat.f90	/^    SUBROUTINE write_dyn_mat_tail(/;"	s	module:io_dyn_mat
+write_dyn_on_file	io_dyn_mat_old.f90	/^subroutine write_dyn_on_file /;"	s
+write_dynmat_hub	write_hub.f90	/^SUBROUTINE write_dynmat_hub /;"	s	module:write_hub
+write_eigenvectors	write_eigenvectors.f90	/^subroutine write_eigenvectors /;"	s
+write_el_phon	ph_restart.f90	/^        SUBROUTINE write_el_phon(/;"	s	subroutine:ph_writefile
+write_epsilon_and_zeu	write_epsilon_and_zeu.f90	/^subroutine write_epsilon_and_zeu /;"	s
+write_header_ph	ph_restart.f90	/^    SUBROUTINE write_header_ph(/;"	s	module:ph_restart
+write_hub	write_hub.f90	/^MODULE write_hub$/;"	m
+write_ifc	io_dyn_mat.f90	/^    SUBROUTINE write_ifc(/;"	s	module:io_dyn_mat
+write_matrix	write_matrix.f90	/^subroutine write_matrix /;"	s
+write_modes	ph_restart.f90	/^         SUBROUTINE write_modes(/;"	s	subroutine:ph_writefile
+write_modes_out	write_modes.f90	/^SUBROUTINE write_modes_out(/;"	s
+write_old_dyn_mat_head	io_dyn_mat_old.f90	/^  SUBROUTINE write_old_dyn_mat_head(/;"	s
+write_ph_dyn	ph_restart.f90	/^        SUBROUTINE write_ph_dyn(/;"	s	subroutine:ph_writefile
+write_polariz	polariz.f90	/^  SUBROUTINE write_polariz(/;"	s
+write_polarization	ph_restart.f90	/^         SUBROUTINE write_polarization(/;"	s	subroutine:ph_writefile
+write_qplot_data	write_qplot_data.f90	/^  SUBROUTINE write_qplot_data(/;"	s
+write_qu	ph_restart.f90	/^    SUBROUTINE write_qu(/;"	s	module:ph_restart
+write_raman	raman_mat.f90	/^subroutine write_raman /;"	s
+write_ramtns	write_ramtns.f90	/^subroutine write_ramtns /;"	s
+write_rec	write_rec.f90	/^  SUBROUTINE write_rec(/;"	s	module:recover_mod
+write_status_ph	ph_restart.f90	/^    SUBROUTINE write_status_ph(/;"	s	module:ph_restart
+write_tau	matdyn.f90	/^SUBROUTINE write_tau(/;"	s
+write_tensors	ph_restart.f90	/^         SUBROUTINE write_tensors(/;"	s	subroutine:ph_writefile
+writemodes	write_eigenvectors.f90	/^subroutine writemodes /;"	s
+writemolden	write_eigenvectors.f90	/^subroutine writemolden /;"	s
+writexsf	write_eigenvectors.f90	/^subroutine writexsf /;"	s
+wspin	epa.f90	/^      gmax, gstep, ev, dev, ec, dec, wspin,/;"	v	program:epa
+wtot	epa.f90	/^  real(dp) :: wtot,/;"	v	program:epa
+x	lambda.f90	/^  real*8 mustar, omegalog(20), Tc, x$/;"	v	program:elph
+x_q	epa.f90	/^  real(dp), allocatable :: x_q(/;"	v	program:epa
+x_q	phcom.f90	/^  REAL(DP), ALLOCATABLE :: x_q(/;"	v	module:disp
+xk_collect	elphon.f90	/^  REAL(DP), ALLOCATABLE :: xk_collect(/;"	v
+xk_gamma	elph.f90	/^  REAL(DP), allocatable :: xk_gamma(/;"	v	module:el_phon
+xmldyn	dynmat.f90	/^  logical :: xmldyn,/;"	v	program:dynmat
+xmldyn	phcom.f90	/^             qplot=.FALSE.,        & ! if true the q are read from input$/;"	v	module:control_ph
+xmldyn	q2trans.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo, xmldyn,/;"	v	program:q2trans
+xmldyn	q2trans_fd.f90	/^  LOGICAL :: lq, lrigid, lrigid1, lnogridinfo, xmldyn,/;"	v	program:q2trans_fd
+xmlifc	matdyn.f90	/^  LOGICAL :: readtau, la2F, xmlifc,/;"	v	program:matdyn
+xq	epa.f90	/^      ee(nwin), de(nwin), xq(/;"	v	program:epa
+xq	q2qstar.f90	/^  REAL(DP)      :: sxq(/;"	v	program:Q2QSTAR
+xq	q2trans.f90	/^  REAL(DP) :: q(3,48), omega, xq,/;"	v	program:q2trans
+xq	q2trans_fd.f90	/^  REAL(DP) :: q(3,48), omega, xq,/;"	v	program:q2trans_fd
+xqaux	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: xqaux(/;"	v	program:matdyn
+xqs	q2qstar.f90	/^  REAL(DP)      :: sxq(3, 48), xq(3), xqs(/;"	v	program:Q2QSTAR
+yambo_elph_file_name	yambo.f90	/^  CHARACTER(300) :: yambo_elph_file_name /;"	v	module:YAMBO
+z	dynmat.f90	/^  complex(DP), allocatable :: z(/;"	v	program:dynmat
+z	matdyn.f90	/^  COMPLEX(DP), ALLOCATABLE :: z(/;"	v	program:matdyn
+zasr	q2r.f90	/^  CHARACTER (LEN=10) :: zasr$/;"	v	program:q2r
+zasr	q2trans.f90	/^  CHARACTER (len=10) :: zasr,/;"	v	program:q2trans
+zasr	q2trans_fd.f90	/^  CHARACTER (len=10) :: zasr,/;"	v	program:q2trans_fd
+zeu	io_dyn_mat_old.f90	/^  REAL(DP), ALLOCATABLE ::  tau(:,:), zeu(/;"	v	module:dynamicalq
+zeu	matdyn.f90	/^  REAL(DP), ALLOCATABLE :: frc(:,:,:,:,:,:,:), tau_blk(:,:),  zeu(/;"	v	module:ifconstants
+zeu	phcom.f90	/^             done_zue=.FALSE., &! .TRUE. when the eff. charges are available$/;"	v	module:control_ph
+zstar_eu	zstar_eu.f90	/^subroutine zstar_eu$/;"	s
+zstar_eu_us	zstar_eu_us.f90	/^subroutine zstar_eu_us$/;"	s
+zstareu	phcom.f90	/^  REAL (DP), ALLOCATABLE :: &$/;"	v	module:efield_mod
+zstareu0	phcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: &$/;"	v	module:efield_mod
+zstarue	phcom.f90	/^       zstareu(:,:,:),       &! 3, 3, nat),$/;"	v	module:efield_mod
+zstarue0	phcom.f90	/^       zstareu0(:,:),        &! 3, 3 * nat),$/;"	v	module:efield_mod
+zstarue0_rec	phcom.f90	/^       zstarue0(:,:),        &! 3 * nat, 3)$/;"	v	module:efield_mod
+zue	phcom.f90	/^             trans,       &! if .TRUE. computes phonons$/;"	v	module:control_ph

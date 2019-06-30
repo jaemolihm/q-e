@@ -36,7 +36,8 @@ subroutine bcast_ph_input ( )
   USE ions_base,     ONLY : amass
   USE io_global,   ONLY : meta_ionode_id
   USE run_info,   ONLY : title
-  USE el_phon,    ONLY : elph_nbnd_min,elph_nbnd_max,el_ph_ngauss, el_ph_nsigma, el_ph_sigma
+  USE el_phon,    ONLY : elph_nbnd_min,elph_nbnd_max,el_ph_ngauss, el_ph_nsigma, el_ph_sigma, &
+                         nl_only_jml ! jml
   USE dfile_star, ONLY : drho_star, dvscf_star
   ! YAMBO >
   USE YAMBO,      ONLY : elph_yambo,dvscf_yambo
@@ -100,6 +101,7 @@ subroutine bcast_ph_input ( )
   CALL mp_bcast( elph_nbnd_max, meta_ionode_id, world_comm )
   CALL mp_bcast( el_ph_ngauss, meta_ionode_id, world_comm )
   CALL mp_bcast( el_ph_nsigma, meta_ionode_id, world_comm )
+  CALL mp_bcast( nl_only_jml,  meta_ionode_id, world_comm ) ! jml
   !
   ! real*8
   !

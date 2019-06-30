@@ -30,5 +30,8 @@ MODULE el_phon
   CHARACTER (LEN=256) :: auxdvscf
   LOGICAL, ALLOCATABLE :: comp_elph(:), done_elph(:)
   REAL(DP), ALLOCATABLE :: gamma_disp(:,:,:)
+
+
+  LOGICAL :: nl_only_jml = .false. ! jml: calculate nonlocal potential contribution only
   !
 END MODULE el_phon

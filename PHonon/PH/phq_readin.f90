@@ -64,7 +64,8 @@ SUBROUTINE phq_readin()
   USE cryst_ph,      ONLY : magnetic_sym
   USE ph_restart,    ONLY : ph_readfile
   USE el_phon,       ONLY : elph,elph_mat,elph_simple,elph_epa,elph_nbnd_min, elph_nbnd_max, &
-                            el_ph_sigma, el_ph_nsigma, el_ph_ngauss,auxdvscf
+                            el_ph_sigma, el_ph_nsigma, el_ph_ngauss,auxdvscf, &
+                            nl_only_jml ! jml
   USE dfile_star,    ONLY : drho_star, dvscf_star
 
   USE qpoint,        ONLY : nksq, xq
@@ -119,7 +120,8 @@ SUBROUTINE phq_readin()
                        elph_nbnd_min, elph_nbnd_max, el_ph_ngauss, &
                        el_ph_nsigma, el_ph_sigma,  electron_phonon, &
                        q_in_band_form, q2d, qplot, low_directory_check, &
-                       lshift_q, read_dns_bare, d2ns_type
+                       lshift_q, read_dns_bare, d2ns_type, &
+                       nl_only_jml ! jml: nonlocal el-ph only
 
   ! tr2_ph       : convergence threshold
   ! amass        : atomic masses
@@ -448,8 +450,8 @@ SUBROUTINE phq_readin()
   ! YAMBO >
   IF (.not.elph_yambo) then
     ! YAMBO <
-    IF (elph.AND.qplot) &
-       CALL errore('phq_readin', 'qplot and elph not implemented',1)
+!    IF (elph.AND.qplot) &
+!       CALL errore('phq_readin', 'qplot and elph not implemented',1)
   ENDIF
 
   ! YAMBO >
@@ -811,10 +813,10 @@ SUBROUTINE phq_readin()
   IF (tfixed_occ) &
      CALL errore('phq_readin','phonon with arbitrary occupations not tested',1)
   !
-  !YAMBO >
-  IF (elph.AND..NOT.(lgauss .or. ltetra).and..NOT.elph_yambo) CALL errore ('phq_readin', 'Electron-&
-       &phonon only for metals', 1)
-  !YAMBO <
+!  !YAMBO >
+!  IF (elph.AND..NOT.(lgauss .or. ltetra).and..NOT.elph_yambo) CALL errore ('phq_readin', 'Electron-&
+!       &phonon only for metals', 1)
+!  !YAMBO <
   IF (elph.AND.fildvscf.EQ.' ') CALL errore ('phq_readin', 'El-ph needs &
        &a DeltaVscf file', 1)
   !   There might be other variables in the input file which describe

@@ -40,6 +40,7 @@ subroutine dvqpsi_us (ik, uact, addnlcc)
   USE qpoint,     ONLY : xq, eigqts, ikqs, ikks
   USE klist,      ONLY : ngk, igk_k
   USE gc_lr,      ONLY: grho, dvxc_rr,  dvxc_sr,  dvxc_ss, dvxc_s
+  USE el_phon,    ONLY : nl_only_jml ! jml
 
   USE Coul_cut_2D, ONLY: do_cutoff_2D  
   USE Coul_cut_2D_ph, ONLY : cutoff_localq
@@ -54,7 +55,6 @@ subroutine dvqpsi_us (ik, uact, addnlcc)
   !! input: the pattern of displacements
   LOGICAL :: addnlcc
   !!
-  ! 
   !   And the local variables
   !
   INTEGER ::  na  
@@ -244,6 +244,7 @@ subroutine dvqpsi_us (ik, uact, addnlcc)
   !   First a term similar to the KB case.
   !   Then a term due to the change of the D coefficients.
   !
+  if (nl_only_jml) dvpsi = (0.d0, 0.d0) ! jml
   call dvqpsi_us_only (ik, uact)
 
   call stop_clock ('dvqpsi_us')
