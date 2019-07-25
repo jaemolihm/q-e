@@ -76,7 +76,7 @@
   USE division,      ONLY : fkbounds
   USE mp,            ONLY : mp_barrier, mp_bcast, mp_sum
   USE io_global,     ONLY : ionode_id
-  USE mp_global,     ONLY : inter_pool_comm, intra_pool_comm, root_pool
+  USE mp_global,     ONLY : inter_pool_comm
   USE mp_world,      ONLY : mpime, world_comm
 #if defined(__MPI)
   USE parallel_include, ONLY : MPI_MODE_RDONLY, MPI_INFO_NULL, MPI_OFFSET_KIND, &
@@ -138,16 +138,6 @@
   !! Number of states at the Fermi level
   INTEGER :: lrepmatw
   !! record length while reading file
-  INTEGER :: ikx
-  !! Counter on the coase k-grid
-  INTEGER :: ikfx 
-  !! Counter on the fine k-grid. 
-  INTEGER :: xkk1, xkq1
-  !! Integer of xkk when multiplied by nkf/nk
-  INTEGER :: xkk2, xkq2
-  !! Integer of xkk when multiplied by nkf/nk
-  INTEGER :: xkk3, xkq3
-  !! Integer of xkk when multiplied by nkf/nk
   INTEGER :: ir
   !! Counter for WS loop
   INTEGER :: nrws
@@ -1895,7 +1885,7 @@
 #endif
   USE io_global, ONLY : ionode_id
   USE mp,        ONLY : mp_barrier, mp_bcast
-  USE mp_global, ONLY : intra_pool_comm, inter_pool_comm, root_pool, world_comm
+  USE mp_global, ONLY : inter_pool_comm, world_comm
   USE mp_world,  ONLY : mpime
   !
   implicit none

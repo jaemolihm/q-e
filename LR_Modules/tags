@@ -1,0 +1,221 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+10	dynmat_sub.f90	/^10     continue$/;"	l	subroutine:readmat2	file:
+10	mix_pot.f90	/^10   continue$/;"	l	subroutine:mix_potential	file:
+100	cgsolve_all.f90	/^100 continue$/;"	l	subroutine:cgsolve_all	file:
+100	set_small_group_of_q.f90	/^100  continue$/;"	l	subroutine:smallg_q	file:
+111	commutator_Hx_psi.f90	/^  111 continue$/;"	l	subroutine:commutator_Hx_psi	file:
+111	dv_of_drho.f90	/^111 continue$/;"	l	subroutine:dv_of_drho	file:
+20	dynmat_sub.f90	/^ 20    read(1,'(a)',end=10,err=10) line$/;"	l	subroutine:readmat2	file:
+25	dynmat_sub.f90	/^ 25    read(1,*,end=10,err=10)$/;"	l	subroutine:readmat2	file:
+Coul_cut_2D_ph	Coul_cut_2D_ph.f90	/^MODULE Coul_cut_2D_ph$/;"	m
+LR_MODULES	Makefile	/^LR_MODULES = \\$/;"	m
+MODFLAGS	Makefile	/^MODFLAGS=$(BASEMOD_FLAGS) $(MOD_FLAG)$(TOPDIR)\/PW\/src$/;"	m
+RamanIR	dynmat_sub.f90	/^subroutine RamanIR /;"	s
+TLDEPS	Makefile	/^TLDEPS=mods pwlibs$/;"	m
+adddvepsi_us	adddvepsi_us.f90	/^SUBROUTINE adddvepsi_us(/;"	s
+adddvscf	adddvscf.f90	/^subroutine adddvscf /;"	s
+addusdbec	addusdbec.f90	/^subroutine addusdbec /;"	s
+addusdbec_nc	addusdbec_nc.f90	/^subroutine addusdbec_nc /;"	s
+addusldos	addusldos.f90	/^subroutine addusldos /;"	s
+alpha_pv	lrcom.f90	/^  REAL(DP) :: alpha_pv /;"	v	module:control_lr
+apply_dpot	apply_dpot.f90	/^SUBROUTINE apply_dpot(/;"	s
+bbg	lrcom.f90	/^  REAL (DP),    ALLOCATABLE :: bbg(/;"	v	module:lrus
+bbk	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: bbk(/;"	v	module:lrus
+bbnc	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: bbnc(/;"	v	module:lrus
+becp1	lrcom.f90	/^  type (bec_type), ALLOCATABLE, TARGET :: becp1(/;"	v	module:lrus
+cft_wave	cft_wave.f90	/^SUBROUTINE cft_wave /;"	s
+cft_wave_tg	cft_wave.f90	/^SUBROUTINE cft_wave_tg /;"	s
+cg_psi	cg_psi.f90	/^subroutine cg_psi /;"	s
+cgsolve_all	cgsolve_all.f90	/^subroutine cgsolve_all /;"	s
+ch_psi_all	ch_psi_all.f90	/^SUBROUTINE ch_psi_all /;"	s
+ch_psi_all_gamma	ch_psi_all.f90	/^  SUBROUTINE ch_psi_all_gamma(/;"	s	subroutine:ch_psi_all
+ch_psi_all_k	ch_psi_all.f90	/^  SUBROUTINE ch_psi_all_k(/;"	s	subroutine:ch_psi_all
+check_q_points_sym	check_q_points_sym.f90	/^LOGICAL FUNCTION check_q_points_sym(/;"	f
+commutator_Hx_psi	commutator_Hx_psi.f90	/^subroutine commutator_Hx_psi /;"	s
+commutator_Vhubx_psi	commutator_Vhubx_psi.f90	/^SUBROUTINE commutator_Vhubx_psi(/;"	s
+compute_vsgga	compute_vsgga.f90	/^SUBROUTINE compute_vsgga(/;"	s
+control_lr	lrcom.f90	/^MODULE control_lr$/;"	m
+cutoff_2D_qg	Coul_cut_2D_ph.f90	/^  REAL(DP), ALLOCATABLE :: cutoff_2D_qg(/;"	v	module:Coul_cut_2D_ph
+cutoff_dv_of_drho	Coul_cut_2D_ph.f90	/^subroutine cutoff_dv_of_drho /;"	s	module:Coul_cut_2D_ph
+cutoff_dynmat0	Coul_cut_2D_ph.f90	/^subroutine cutoff_dynmat0 /;"	s	module:Coul_cut_2D_ph
+cutoff_fact_qg	Coul_cut_2D_ph.f90	/^subroutine cutoff_fact_qg /;"	s	module:Coul_cut_2D_ph
+cutoff_localq	Coul_cut_2D_ph.f90	/^subroutine cutoff_localq /;"	s	module:Coul_cut_2D_ph
+cutoff_lr_Vlocq	Coul_cut_2D_ph.f90	/^subroutine cutoff_lr_Vlocq /;"	s	module:Coul_cut_2D_ph
+d2q0_dq2	dv_rVV10.f90	/^  real(dp), allocatable       :: dq0_dq(:), d2q0_dq2(/;"	v	module:ph_rVV10
+d2q0_dq2	dv_vdW_DF.f90	/^  real(dp), allocatable       :: dq0_dq(:), d2q0_dq2(/;"	v	module:ph_vdW_DF
+d2y_dx2	dv_rVV10.f90	/^  real(dp), allocatable, save :: d2y_dx2(/;"	v	module:ph_rVV10
+d2y_dx2	dv_vdW_DF.f90	/^  real(dp), allocatable, save :: d2y_dx2(/;"	v	module:ph_vdW_DF
+dchi_dtau	dynmat_sub.f90	/^  real(DP), allocatable :: tau(:,:),  zstar(:,:,:), dchi_dtau(/;"	v	module:dynamical
+dfpt_tetra2_lindhard	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra2_lindhard(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra2_theta	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra2_theta(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_average_beta	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_average_beta(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_beta	dfpt_tetra_mod.f90	/^  REAL(dp),ALLOCATABLE,SAVE :: &$/;"	v	module:dfpt_tetra_mod
+dfpt_tetra_calc_beta1	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_calc_beta1(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_calc_beta2	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_calc_beta2(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_calc_beta3	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_calc_beta3(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_calc_delta	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_calc_delta(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_delta	dfpt_tetra_mod.f90	/^  & dfpt_tetra_ttheta(:,:,:), & ! (nbnd, nbnd, nksq) t(ef-e_k)t(e_k - e_k+q)+ t(ef-e_k+q)t(e_k+q - e_k) $/;"	v	module:dfpt_tetra_mod
+dfpt_tetra_lindhard	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_lindhard(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1211	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1211(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1221	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1221(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1222	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1222(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1231	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1231(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1233	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1233(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_lindhard_1234	dfpt_tetra_mod.f90	/^FUNCTION dfpt_tetra_lindhard_1234(/;"	f	module:dfpt_tetra_mod
+dfpt_tetra_linit	dfpt_tetra_mod.f90	/^  LOGICAL,SAVE :: dfpt_tetra_linit /;"	v	module:dfpt_tetra_mod
+dfpt_tetra_main	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_main(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_mod	dfpt_tetra_mod.f90	/^MODULE dfpt_tetra_mod$/;"	m
+dfpt_tetra_setup	dfpt_tetra_mod.f90	/^SUBROUTINE dfpt_tetra_setup(/;"	s	module:dfpt_tetra_mod
+dfpt_tetra_ttheta	dfpt_tetra_mod.f90	/^  & dfpt_tetra_beta(:,:,:), & ! (nbnd, nbnd, nksq) beta(e_k, e_k+q)$/;"	v	module:dfpt_tetra_mod
+dgradcorr	dgradcorr.f90	/^subroutine dgradcorr /;"	s
+dgradn_dq_dgradn_n_gmod_n_gmod	dv_rVV10.f90	/^  real(dp), allocatable       :: dn_dq_dgradn_n_gmod_n(:), dgradn_dq_dgradn_n_gmod_n_gmod(/;"	v	module:ph_rVV10
+dmuxc	lrcom.f90	/^  REAL (DP), ALLOCATABLE :: dmuxc(/;"	v	module:eqv
+dn_dq_dgradn_n_gmod_n	dv_rVV10.f90	/^  real(dp), allocatable       :: dn_dq_dgradn_n_gmod_n(/;"	v	module:ph_rVV10
+dn_dq_dn_n_n	dv_rVV10.f90	/^  real(dp), allocatable       :: dq_dn_n(:), dn_dq_dn_n_n(/;"	v	module:ph_rVV10
+dn_dq_dn_n_n	dv_vdW_DF.f90	/^  real(dp), allocatable       :: dq_dn_n(:), dn_dq_dn_n_n(/;"	v	module:ph_vdW_DF
+dnonloccorr	dnonloccorr.f90	/^subroutine dnonloccorr(/;"	s
+dpqq	lrcom.f90	/^  REAL (DP), ALLOCATABLE ::    dpqq(/;"	v	module:lrus
+dpqq_so	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: dpqq_so(/;"	v	module:lrus
+dpsi	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: dvpsi(:,:), dpsi(/;"	v	module:eqv
+dq0_dq	dv_rVV10.f90	/^  real(dp), allocatable       :: dq0_dq(/;"	v	module:ph_rVV10
+dq0_dq	dv_vdW_DF.f90	/^  real(dp), allocatable       :: dq0_dq(/;"	v	module:ph_vdW_DF
+dq_dgradn_n_gmod	dv_rVV10.f90	/^  real(dp), allocatable       :: dq_dn_n(:), dn_dq_dn_n_n(:), dq_dgradn_n_gmod(/;"	v	module:ph_rVV10
+dq_dgradn_n_gmod	dv_vdW_DF.f90	/^  real(dp), allocatable       :: dq_dn_n(:), dn_dq_dn_n_n(:), dq_dgradn_n_gmod(/;"	v	module:ph_vdW_DF
+dq_dn_n	dv_rVV10.f90	/^  real(dp), allocatable       :: dq_dn_n(/;"	v	module:ph_rVV10
+dq_dn_n	dv_vdW_DF.f90	/^  real(dp), allocatable       :: dq_dn_n(/;"	v	module:ph_vdW_DF
+drhoscfs	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: dvpsi(:,:), dpsi(:,:), drhoscfs /;"	v	module:eqv
+dv_drho_rvv10	dv_rVV10.f90	/^subroutine dv_drho_rvv10(/;"	s	module:ph_rVV10
+dv_drho_vdwdf	dv_vdW_DF.f90	/^subroutine dv_drho_vdwdf(/;"	s	module:ph_vdW_DF
+dv_of_drho	dv_of_drho.f90	/^subroutine dv_of_drho /;"	s	module:dv_of_drho_lr
+dv_of_drho_lr	dv_of_drho.f90	/^MODULE dv_of_drho_lr$/;"	m
+dvpsi	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: dvpsi(/;"	v	module:eqv
+dvxc_rr	lrcom.f90	/^       segni(:),       &! nrxx)$/;"	v	module:gc_lr
+dvxc_s	lrcom.f90	/^       dvxc_ss/;"	v	module:gc_lr
+dvxc_sr	lrcom.f90	/^       dvxc_rr(:,:,:), &! derivatives of the E_xc functional w.r.t. r and s  $/;"	v	module:gc_lr
+dvxc_ss	lrcom.f90	/^       dvxc_sr(:,:,:), &! r=rho and s=|grad(rho)|$/;"	v	module:gc_lr
+dyn	dynmat_sub.f90	/^  complex(DP), allocatable :: dyn(/;"	v	module:dynamical
+dynamical	dynmat_sub.f90	/^Module dynamical$/;"	m
+eigqts	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: eigqts(/;"	v	module:qpoint
+epsg	dv_vdW_DF.f90	/^  real(DP), parameter :: epsr = 1.0d-10, epsg /;"	v	module:ph_vdW_DF
+epsr	dv_rVV10.f90	/^  real(DP), parameter :: epsr /;"	v	module:ph_rVV10
+epsr	dv_vdW_DF.f90	/^  real(DP), parameter :: epsr /;"	v	module:ph_vdW_DF
+epsrv	dv_vdW_DF.f90	/^  real(DP), parameter :: epsr = 1.0d-10, epsg = 1.0d-10, epsrv /;"	v	module:ph_vdW_DF
+eqv	lrcom.f90	/^MODULE eqv$/;"	m
+ethr_nscf	lrcom.f90	/^  REAL(DP) :: ethr_nscf /;"	v	module:control_lr
+evq	lrcom.f90	/^  COMPLEX (DP), POINTER :: evq(/;"	v	module:eqv
+fill_q0_extended_on_grid	dv_rVV10.f90	/^  SUBROUTINE fill_q0_extended_on_grid /;"	s	module:ph_rVV10
+fill_q0_extended_on_grid	dv_vdW_DF.f90	/^  SUBROUTINE fill_q0_extended_on_grid /;"	s	module:ph_vdW_DF
+fwfft_wave	cft_wave.f90	/^SUBROUTINE fwfft_wave /;"	s
+gc_lr	lrcom.f90	/^MODULE gc_lr$/;"	m
+get_abcdef	dv_rVV10.f90	/^  SUBROUTINE get_abcdef /;"	s	module:ph_rVV10
+get_abcdef	dv_vdW_DF.f90	/^  SUBROUTINE get_abcdef /;"	s	module:ph_vdW_DF
+get_delta_v	dv_rVV10.f90	/^subroutine get_delta_v(/;"	s	module:ph_rVV10
+get_delta_v	dv_vdW_DF.f90	/^subroutine get_delta_v(/;"	s	module:ph_vdW_DF
+get_thetas_exentended	dv_rVV10.f90	/^  SUBROUTINE get_thetas_exentended /;"	s	module:ph_rVV10
+get_thetas_exentended	dv_vdW_DF.f90	/^  SUBROUTINE get_thetas_exentended /;"	s	module:ph_vdW_DF
+get_u_delta_u	dv_rVV10.f90	/^subroutine get_u_delta_u(/;"	s	module:ph_rVV10
+get_u_delta_u	dv_vdW_DF.f90	/^subroutine get_u_delta_u(/;"	s	module:ph_vdW_DF
+gi	lrcom.f90	/^  REAL (DP) :: gi(/;"	v	module:lr_symm_base
+gimq	lrcom.f90	/^  REAL (DP) :: gi(3,48), gimq(/;"	v	module:lr_symm_base
+gmag	lrcom.f90	/^       grho(:,:,:),    &! gradient of the unperturbed density  (3,nrxx,nspin)$/;"	v	module:gc_lr
+gradient_drho	dv_rVV10.f90	/^  complex(dp), allocatable :: gradient_drho(/;"	v	module:ph_rVV10
+gradient_drho	dv_vdW_DF.f90	/^  complex(dp), allocatable :: gradient_drho(/;"	v	module:ph_vdW_DF
+gradient_rho	dv_rVV10.f90	/^  real(dp), allocatable :: gradient_rho(/;"	v	module:ph_rVV10
+gradient_rho	dv_vdW_DF.f90	/^  real(dp), allocatable :: gradient_rho(/;"	v	module:ph_vdW_DF
+grho	lrcom.f90	/^  REAL (DP), ALLOCATABLE :: &$/;"	v	module:gc_lr
+h_prec	h_prec.f90	/^subroutine h_prec /;"	s
+igkq	lrcom.f90	/^  INTEGER, POINTER :: igkq(/;"	v	module:qpoint
+ikks	lrcom.f90	/^  INTEGER, ALLOCATABLE :: ikks(/;"	v	module:qpoint
+ikqs	lrcom.f90	/^  INTEGER, ALLOCATABLE :: ikks(:), ikqs(/;"	v	module:qpoint
+incdrhoscf	incdrhoscf.f90	/^subroutine incdrhoscf /;"	s
+incdrhoscf_nc	incdrhoscf_nc.f90	/^subroutine incdrhoscf_nc /;"	s
+int3	lrcom.f90	/^  COMPLEX (DP), ALLOCATABLE :: &$/;"	v	module:lrus
+int3_nc	lrcom.f90	/^       int3_paw(:,:,:,:,:), &! nhm, nhm, nat, nspin, npert)$/;"	v	module:lrus
+int3_paw	lrcom.f90	/^       int3(:,:,:,:,:),     &! nhm, nhm, nat, nspin, npert)$/;"	v	module:lrus
+invfft_wave	cft_wave.f90	/^SUBROUTINE invfft_wave /;"	s
+invsymq	lrcom.f90	/^  LOGICAL :: minus_q, & ! if .TRUE. there is the symmetry sending q<->-q$/;"	v	module:lr_symm_base
+irgq	lrcom.f90	/^  INTEGER :: irgq(/;"	v	module:lr_symm_base
+irotmq	lrcom.f90	/^  INTEGER :: irgq(48), nsymq=0, irotmq$/;"	v	module:lr_symm_base
+ityp	dynmat_sub.f90	/^  integer, allocatable :: ityp(/;"	v	module:dynamical
+iuatswfc	lrcom.f90	/^             iuatwfc, & ! unit for atomic wavefunctions$/;"	v	module:units_lr
+iuatwfc	lrcom.f90	/^             lrwfc,   & ! the length of wavefunction record$/;"	v	module:units_lr
+iuwfc	lrcom.f90	/^  INTEGER :: iuwfc,/;"	v	module:units_lr
+lambda_phonon	dv_vdW_DF.f90	/^  real(DP) :: lambda_phonon /;"	v	module:ph_vdW_DF
+lgamma	lrcom.f90	/^  LOGICAL  :: lgamma /;"	v	module:control_lr
+localdos	localdos.f90	/^subroutine localdos /;"	s
+lr_Vlocq	Coul_cut_2D_ph.f90	/^  COMPLEX(DP), ALLOCATABLE :: lr_Vlocq(/;"	v	module:Coul_cut_2D_ph
+lr_addusddens	lr_addusddens.f90	/^SUBROUTINE lr_addusddens /;"	s
+lr_orthoUwfc	lr_orthoUwfc.f90	/^SUBROUTINE lr_orthoUwfc /;"	s
+lr_sm1_initialize	lr_sm1_psi.f90	/^SUBROUTINE lr_sm1_initialize(/;"	s
+lr_sm1_psi	lr_sm1_psi.f90	/^SUBROUTINE lr_sm1_psi /;"	s
+lr_symm_base	lrcom.f90	/^MODULE lr_symm_base$/;"	m
+lrpa	lrcom.f90	/^  LOGICAL  :: lrpa /;"	v	module:control_lr
+lrus	lrcom.f90	/^MODULE lrus$/;"	m
+lrwfc	lrcom.f90	/^  INTEGER :: iuwfc,   & ! unit for wavefunctions$/;"	v	module:units_lr
+m_loc	dynmat_sub.f90	/^  real(DP), allocatable :: tau(:,:),  zstar(:,:,:), dchi_dtau(:,:,:,:), &$/;"	v	module:dynamical
+minus_q	lrcom.f90	/^  LOGICAL :: minus_q,/;"	v	module:lr_symm_base
+mix_potential	mix_pot.f90	/^subroutine mix_potential /;"	s
+mode_group	mode_group.f90	/^subroutine mode_group /;"	s
+nbnd_occ	lrcom.f90	/^  INTEGER, ALLOCATABLE :: nbnd_occ(/;"	v	module:control_lr
+newdq	newdq.f90	/^subroutine newdq /;"	s
+nksq	lrcom.f90	/^  INTEGER :: nksq,/;"	v	module:qpoint
+nksqtot	lrcom.f90	/^  INTEGER :: nksq, npwq, nksqtot$/;"	v	module:qpoint
+npwq	lrcom.f90	/^  INTEGER :: nksq, npwq,/;"	v	module:qpoint
+nsymq	lrcom.f90	/^  INTEGER :: irgq(48), nsymq=/;"	v	module:lr_symm_base
+ofsbeta	lrcom.f90	/^  INTEGER, ALLOCATABLE :: ofsbeta(/;"	v	module:control_lr
+orthogonalize	orthogonalize.f90	/^SUBROUTINE orthogonalize(/;"	s
+ph_rVV10	dv_rVV10.f90	/^MODULE ph_rVV10$/;"	m
+ph_vdW_DF	dv_vdW_DF.f90	/^MODULE ph_vdW_DF$/;"	m
+polar_mode_permittivity	dynmat_sub.f90	/^subroutine polar_mode_permittivity(/;"	s
+q	dv_rVV10.f90	/^  real(dp), allocatable       :: q0/;"	v	module:ph_rVV10
+q	dv_vdW_DF.f90	/^  real(dp), allocatable       :: q0/;"	v	module:ph_vdW_DF
+q0	dv_rVV10.f90	/^  real(dp), allocatable       :: q0(/;"	v	module:ph_rVV10
+q0	dv_vdW_DF.f90	/^  real(dp), allocatable       :: q0(/;"	v	module:ph_vdW_DF
+qdipol_cryst	qdipol_cryst.f90	/^subroutine qdipol_cryst(/;"	s
+qpoint	lrcom.f90	/^MODULE qpoint$/;"	m
+readmat2	dynmat_sub.f90	/^subroutine readmat2 /;"	s
+rtau	lrcom.f90	/^  REAL (DP), ALLOCATABLE :: rtau(/;"	v	module:lr_symm_base
+s_phi	lr_orthoUwfc.f90	/^SUBROUTINE s_phi /;"	s	subroutine:lr_orthoUwfc
+segni	lrcom.f90	/^       vsgga(:),       &! nrxx)$/;"	v	module:gc_lr
+set_asr	dynmat_sub.f90	/^subroutine set_asr /;"	s
+set_dbecsum_nc	set_dbecsum_nc.f90	/^SUBROUTINE set_dbecsum_nc(/;"	s
+set_giq	smallgq.f90	/^subroutine set_giq /;"	s
+set_int3_nc	set_int3_nc.f90	/^SUBROUTINE set_int3_nc(/;"	s
+set_small_group_of_q	set_small_group_of_q.f90	/^SUBROUTINE set_small_group_of_q(/;"	s
+setmixout	mix_pot.f90	/^SUBROUTINE setmixout(/;"	s
+setqmod	setqmod.f90	/^SUBROUTINE setqmod /;"	s
+setup_alpha_pv	setup_alpha_pv.f90	/^SUBROUTINE setup_alpha_pv$/;"	s
+setup_dgc	setup_dgc.f90	/^SUBROUTINE setup_dgc$/;"	s
+setup_dmuxc	setup_dmuxc.f90	/^SUBROUTINE setup_dmuxc$/;"	s
+setup_nbnd_occ	setup_nbnd_occ.f90	/^SUBROUTINE setup_nbnd_occ$/;"	s
+setup_nscf	setup_nscf.f90	/^SUBROUTINE setup_nscf /;"	s
+setup_offset_beta	setup_offset_beta.f90	/^SUBROUTINE setup_offset_beta$/;"	s
+sgam_lr	sgam_lr.f90	/^subroutine sgam_lr /;"	s
+sm1_psi_gamma	lr_sm1_psi.f90	/^  SUBROUTINE sm1_psi_gamma(/;"	s	subroutine:lr_sm1_psi
+sm1_psi_k	lr_sm1_psi.f90	/^  SUBROUTINE sm1_psi_k(/;"	s	subroutine:lr_sm1_psi
+sm1_psi_nc	lr_sm1_psi.f90	/^SUBROUTINE sm1_psi_nc(/;"	s	subroutine:lr_sm1_psi
+smallg_q	set_small_group_of_q.f90	/^SUBROUTINE smallg_q /;"	s
+sp1	dynmat_sub.f90	/^subroutine sp1(/;"	s
+sp2	dynmat_sub.f90	/^subroutine sp2(/;"	s
+sp3	dynmat_sub.f90	/^subroutine sp3(/;"	s
+sp_zeu	dynmat_sub.f90	/^subroutine sp_zeu(/;"	s
+star_q	star_q.f90	/^subroutine star_q /;"	s
+tau	dynmat_sub.f90	/^  real(DP), allocatable :: tau(/;"	v	module:dynamical
+total_rho	dv_rVV10.f90	/^  real(dp), allocatable :: total_rho(/;"	v	module:ph_rVV10
+total_rho	dv_vdW_DF.f90	/^  real(dp), allocatable :: total_rho(/;"	v	module:ph_vdW_DF
+transform_dbecsum_nc	set_dbecsum_nc.f90	/^SUBROUTINE transform_dbecsum_nc(/;"	s
+transform_dbecsum_so	set_dbecsum_nc.f90	/^SUBROUTINE transform_dbecsum_so(/;"	s
+transform_int3_nc	set_int3_nc.f90	/^SUBROUTINE transform_int3_nc(/;"	s
+transform_int3_so	set_int3_nc.f90	/^SUBROUTINE transform_int3_so(/;"	s
+units_lr	lrcom.f90	/^MODULE units_lr$/;"	m
+vecqqproj	commutator_Vhubx_psi.f90	/^SUBROUTINE vecqqproj /;"	s
+vlocq	lrcom.f90	/^  REAL (DP), ALLOCATABLE, TARGET :: vlocq(/;"	v	module:eqv
+vsgga	lrcom.f90	/^       gmag(:,:,:),    &! 3, nrxx, nspin)$/;"	v	module:gc_lr
+xk_col	lrcom.f90	/^  REAL (DP), ALLOCATABLE :: xk_col(/;"	v	module:qpoint
+xq	lrcom.f90	/^  REAL (DP) :: xq(/;"	v	module:qpoint
+zstar	dynmat_sub.f90	/^  real(DP), allocatable :: tau(:,:),  zstar(/;"	v	module:dynamical

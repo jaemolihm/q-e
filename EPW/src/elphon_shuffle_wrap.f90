@@ -44,8 +44,8 @@
                             inverse_s, remove_sym, allfrac
   USE start_k,       ONLY : nk1, nk2, nk3
   USE phcom,         ONLY : dpsi, dvpsi, evq, nq1, nq3, nq2 
-  USE qpoint,        ONLY : igkq, xq
-  USE modes,         ONLY : nmodes
+  USE qpoint,        ONLY : igkq, xq, eigqts
+  USE modes,         ONLY : nmodes, u, npert
   USE lr_symm_base,  ONLY : minus_q, rtau, gi, gimq, irotmq, nsymq, invsymq
   USE epwcom,        ONLY : epbread, epbwrite, epwread, lifc, etf_mem, vme, &
                             nbndsub, iswitch, kmaps, eig_read, dvscf_dir, lpolar
@@ -56,10 +56,17 @@
   USE constants_epw, ONLY : ryd2ev, zero, czero
   USE fft_base,      ONLY : dfftp
   USE control_ph,    ONLY : u_from_file
-  USE noncollin_module, ONLY : m_loc, npol
+  USE noncollin_module, ONLY : m_loc, npol, noncolin
   USE iotk_module,   ONLY : iotk_open_read, iotk_scan_dat, iotk_free_unit, &
                             iotk_close_read
   USE division,      ONLY : fkbounds
+  USE uspp,          ONLY : okvan
+  USE spin_orb,      ONLY : lspinorb 
+  USE lrus,          ONLY : becp1
+  USE becmod,        ONLY : becp, deallocate_bec_type
+  USE phus,          ONLY : int1, int1_nc, int2, int2_so, &
+                            int4, int4_nc, int5, int5_so, alphap
+
 #if defined(__NAG)
   USE f90_unix_io,   ONLY : flush
 #endif
@@ -79,7 +86,7 @@
   INTEGER :: maxvalue
   !! Temporary integer for max value
   INTEGER :: nqxq_tmp
-  !! Maximum G+q length ? 
+  !! Maximum G+q length  
   INTEGER :: ibnd
   !! Band index
   INTEGER :: ik
@@ -224,9 +231,13 @@
     nqxq_tmp = INT(((SQRT(gcutm) + qnorm_tmp) / dq + 4) * cell_factor)
     IF (nqxq_tmp > maxvalue)  maxvalue = nqxq_tmp
   ENDDO
+  !
   IF (maxvalue > nqxq) THEN
     IF (ALLOCATED(qrad)) DEALLOCATE (qrad)
     ALLOCATE (qrad(maxvalue, nbetam * (nbetam + 1) / 2, lmaxq, nsp))
+    qrad(:,:,:,:) = zero
+    ! RM - need to call init_us_1 to re-calculate qrad 
+    CALL init_us_1
   ENDIF
   ! 
   ! do not perform the check if restart
@@ -295,9 +306,6 @@
     WRITE(stdout,'(/5x,a)') 'Using kmap and kgmap from disk'
   ENDIF
   !
-  CALL mp_barrier(inter_pool_comm)
-  CALL mp_barrier(inter_image_comm)
-  !
   ! Do not do symmetry stuff 
   IF (epwread .AND. .NOT. epbread) THEN
     CONTINUE
@@ -316,13 +324,13 @@
     ALLOCATE (lwinq(nbnd, nks))
     ALLOCATE (exband(nbnd))
     !
-    dynq(:,:,:) = czero
-    epmatq(:,:,:,:,:) = czero
-    bmat(:,:,:,:) = czero
-    cu(:,:,:) = czero
-    cuq(:,:,:) = czero
-    epsi(:,:) = zero
-    zstar(:,:,:) = zero
+    dynq(:, :, :)         = czero
+    epmatq(:, :, :, :, :) = czero
+    epsi(:, :)            = zero
+    zstar(:, :, :)        = zero
+    bmat(:, :, :, :)      = czero
+    cu(:, :, :)           = czero
+    cuq(:, :, :)          = czero
     !
     ! read interatomic force constat matrix from q2r
     IF (lifc) CALL read_ifc
@@ -470,7 +478,7 @@
       DO iq = 1, nq
         ! SP: First the vlocq needs to be initialized properly with the first
         !     q in the star
-        xq = xq0        
+        xq = xq0      
         CALL epw_init(.false.)
         !
         ! retrieve the q in the star
@@ -693,6 +701,35 @@
     DEALLOCATE (evq)
     DEALLOCATE (vlocq)
     DEALLOCATE (dmuxc)
+    DEALLOCATE (eigqts)
+    DEALLOCATE (rtau)
+    DEALLOCATE (u)
+    DEALLOCATE (npert)
+    IF (okvan) THEN
+      DEALLOCATE (int1)
+      DEALLOCATE (int2)
+      DEALLOCATE (int4)
+      DEALLOCATE (int5)
+      IF (noncolin) THEN 
+        DEALLOCATE (int1_nc)
+        DEALLOCATE (int4_nc)
+        IF (lspinorb) THEN
+          DEALLOCATE (int2_so)
+          DEALLOCATE (int5_so)
+        ENDIF
+      ENDIF
+    ENDIF
+    DO ik = 1, nks
+      DO ipol = 1, 3
+        CALL deallocate_bec_type( alphap(ipol,ik) )
+      ENDDO
+    ENDDO
+    DEALLOCATE (alphap)
+    DO ik = 1, size(becp1)
+      CALL deallocate_bec_type( becp1(ik) )
+    ENDDO
+    DEALLOCATE (becp1)
+    CALL deallocate_bec_type ( becp )
   ENDIF ! IF (.NOT. epbread .AND. .NOT. epwread) THEN
   !
   IF (my_image_id == 0 ) THEN
@@ -859,7 +896,7 @@
   !!
   !! This routine reads the displacement patterns.
   !!
-  USE modes,        ONLY : nirr, npert, u, name_rap_mode, num_rap_mode
+  USE modes,        ONLY : nirr, npert, u
   USE lr_symm_base, ONLY : minus_q, nsymq  
   USE iotk_module,  ONLY : iotk_index, iotk_scan_dat, iotk_scan_begin, &
                            iotk_scan_end
@@ -910,9 +947,6 @@
            imode = imode0 + ipert
            CALL iotk_scan_begin(iunpun, "PERTURBATION"// &
                                    TRIM( iotk_index(ipert) ))
-           CALL iotk_scan_dat(iunpun, "SYMMETRY_TYPE_CODE", &
-                                                      num_rap_mode(imode))
-           CALL iotk_scan_dat(iunpun, "SYMMETRY_TYPE", name_rap_mode(imode))
            CALL iotk_scan_dat(iunpun, "DISPLACEMENT_PATTERN", u(:,imode))
            CALL iotk_scan_end(iunpun, "PERTURBATION"// &
                                   TRIM( iotk_index(ipert) ))
@@ -926,13 +960,11 @@
      !
   ENDIF
   !
-  CALL mp_bcast(nirr         , meta_ionode_id, world_comm)
-  CALL mp_bcast(npert        , meta_ionode_id, world_comm)
-  CALL mp_bcast(nsymq        , meta_ionode_id, world_comm)
-  CALL mp_bcast(minus_q      , meta_ionode_id, world_comm)
-  CALL mp_bcast(u            , meta_ionode_id, world_comm)
-  CALL mp_bcast(name_rap_mode, meta_ionode_id, world_comm)
-  CALL mp_bcast(num_rap_mode , meta_ionode_id, world_comm)
+  CALL mp_bcast(nirr   , meta_ionode_id, world_comm)
+  CALL mp_bcast(npert  , meta_ionode_id, world_comm)
+  CALL mp_bcast(nsymq  , meta_ionode_id, world_comm)
+  CALL mp_bcast(minus_q, meta_ionode_id, world_comm)
+  CALL mp_bcast(u      , meta_ionode_id, world_comm)
   !
   RETURN
   !

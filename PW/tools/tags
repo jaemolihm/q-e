@@ -1,0 +1,221 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+1	kpoints.f90	/^1 format(\/,5x,'***************************************************',\/,&$/;"	l	program:special_points	file:
+10	ev.f90	/^  10           parnew(n) = par(n) + (0.5d0 - randy())*deltapar(n)$/;"	l	subroutine:find_minimum	file:
+10	ev.f90	/^  10  CONTINUE$/;"	l	program:ev	file:
+10	pwi2xsf.f90	/^ 10      continue$/;"	l	subroutine:read_atoms	file:
+11	pwi2xsf.f90	/^ 11         continue$/;"	l	program:pwi2xsf	file:
+2	kpoints.f90	/^2       format('  k(',i3,')=( ',i2,' ',i2,' ',i2,' ) --- weight=',  &$/;"	l	program:special_points	file:
+20	ev.f90	/^  20  npt = npt-1$/;"	l	program:ev	file:
+99	ev.f90	/^ 99   RETURN$/;"	l	subroutine:write_results	file:
+99	ev.f90	/^99  CALL mp_bcast ( ierr, ionode_id, world_comm )$/;"	l	program:ev	file:
+990	pwi2xsf.f90	/^ 990  continue$/;"	l	program:pwi2xsf	file:
+999	pwi2xsf.f90	/^ 999  continue$/;"	l	program:pwi2xsf	file:
+ALAT_UNIT	pwi2xsf.f90	/^     &     maximage,                                                    &$/;"	v	program:pwi2xsf
+ANGSTROM_UNIT	pwi2xsf.f90	/^     &     BOHR_UNIT,                                                   &$/;"	v	program:pwi2xsf
+ArgumentParser	scan_ibrav.py	/^  from argparse import ArgumentParser$/;"	i
+BOHR_UNIT	pwi2xsf.f90	/^     &     ALAT_UNIT,                                                   &$/;"	v	program:pwi2xsf
+CRYSTAL_UNIT	pwi2xsf.f90	/^     &     ANGSTROM_UNIT,                                               &$/;"	v	program:pwi2xsf
+CheckAtoms	pwo2xsf.sh	/^  CheckAtoms();$/;"	f
+CheckAtoms	pwo2xsf.sh	/^function CheckAtoms() {$/;"	f
+CleanTmpFiles	pwo2xsf.sh	/^CleanTmpFiles() {$/;"	f
+CrysToCartCoor	pwo2xsf.sh	/^function CrysToCartCoor(i,v,a,b,c) {$/;"	f
+Find_Lattice	cif2qe.sh	/^function Find_Lattice(a,b,c,alpha,beta,gamma) {$/;"	f
+Find_ibrav	cif2qe.sh	/^function Find_ibrav(spacegroup, reticolo) {$/;"	f
+GetInitCoor	pwo2xsf.sh	/^function GetInitCoor(nat, scale, atom, x, y, z) {$/;"	f
+MODFLAGS	Makefile	/^MODFLAGS= $(BASEMOD_FLAGS) \\$/;"	m
+PWOBJS	Makefile	/^PWOBJS = ..\/src\/libpw.a$/;"	m
+PrintPrimCoor	pwo2xsf.sh	/^function PrintPrimCoor(onlyinit,istep, nat, atom, x, y, z, fx, fy, fz) {$/;"	f
+PrintPrimVec	pwo2xsf.sh	/^function PrintPrimVec(is_vc,ith,vec) {$/;"	f
+QEMODS	Makefile	/^QEMODS = ..\/..\/Modules\/libqemod.a ..\/..\/FFTXlib\/libqefft.a \\$/;"	m
+R	ibrav2cell.f90	/^   RE/;"	v
+R	ibrav2cell.f90	/^  RE/;"	v	program:ibrav2cell
+TLDEPS	Makefile	/^TLDEPS= pwlibs$/;"	m
+a	cell2ibrav.f90	/^  REAL(DP) :: a(/;"	v	program:ibrav2cell
+a	ev.f90	/^             fac/;"	v	program:ev
+a	pwi2xsf.f90	/^     &     cell_f,             &! to tran/;"	v	program:pwi2xsf
+abs	cif2qe.sh	/^function abs(numero) {$/;"	f
+aflag	kpoints.f90	/^  logical  ::  aflag,/;"	v	program:special_points
+alat	cell2ibrav.f90	/^  REAL(DP) :: a(3,3), omega, e(3,3), alat$/;"	v	program:ibrav2cell
+alat	pwi2xsf.f90	/^     &     omega,              &! cell volume (not used)$/;"	v	program:pwi2xsf
+alpha	ibrav2cell.f90	/^   REAL(DP),INTENT(in) :: alpha,/;"	v
+angle	ibrav2cell.f90	/^  REAL(DP) :: celldm(6), angle(/;"	v	program:ibrav2cell
+answer	kpoints.f90	/^  character(len=1)  :: answer$/;"	v	program:special_points
+argv	scan_ibrav.py	/^  from sys import argv$/;"	i
+argv	scan_ibrav.py	/^  from sys import argv, stdin$/;"	i
+argv	scan_ibrav.py	/^from sys import argv$/;"	i
+array	scan_ibrav.py	/^  from numpy import array$/;"	i
+at	ibrav2cell.f90	/^  REAL(DP) :: at(/;"	v	program:ibrav2cell
+at2ibrav	cell2ibrav.f90	/^  INTEGER, EXTERNAL :: at2ibrav$/;"	v	program:ibrav2cell
+atm	pwi2xsf.f90	/^      character*3                                                       &$/;"	v	program:pwi2xsf
+atomic_posunit	pwi2xsf.f90	/^     &     inp_num_of_images,  &! number of NEB images in the input$/;"	v	program:pwi2xsf
+au_unit	ev.f90	/^      CHARACTER :: bravais*8, au_unit*/;"	v	program:ev
+b	pwi2xsf.f90	/^     &     a, b,/;"	v	program:pwi2xsf
+basename	scan_ibrav.py	/^from os.path import realpath, basename$/;"	i
+beta	ibrav2cell.f90	/^   REAL(DP),INTENT(in) :: alpha,beta,/;"	v
+birch	ev.f90	/^      FUNCTION birch(/;"	f
+bohr	pwi2xsf.f90	/^      real*8                                                            &$/;"	v	program:pwi2xsf
+bravais	ev.f90	/^      CHARACTER :: bravais*/;"	v	program:ev
+c	pwi2xsf.f90	/^     &     a, b, c,/;"	v	program:pwi2xsf
+calculation	pwi2xsf.f90	/^      character                                                         &$/;"	v	program:pwi2xsf
+cell_f	pwi2xsf.f90	/^     &     alat,               &! lattice parameter (in Angstroms)$/;"	v	program:pwi2xsf
+cell_stdin	scan_ibrav.py	/^def cell_stdin():$/;"	f
+celldm	cell2ibrav.f90	/^  REAL(DP) :: celldm(/;"	v	program:ibrav2cell
+celldm	ibrav2cell.f90	/^  REAL(DP) :: celldm(/;"	v	program:ibrav2cell
+celldm	kpoints.f90	/^  real(dp) ::  celldm(/;"	v	program:special_points
+celldm	pwi2xsf.f90	/^      real*8                                                            &$/;"	v	program:pwi2xsf
+check	kpoints.f90	/^subroutine check(/;"	s
+check_ibrav2cell	scan_ibrav.py	/^def check_ibrav2cell():$/;"	f
+check_zero	scan_ibrav.py	/^def check_zero(p, ibrav):$/;"	f
+chisq	ev.f90	/^             fac, emin, chisq,/;"	v	program:ev
+compute_cell	scan_ibrav.py	/^def compute_cell(namelist):$/;"	f
+constraint	scan_ibrav.py	/^def constraint(p):$/;"	f
+cosab	pwi2xsf.f90	/^     &     a, b, c, cosab,/;"	v	program:pwi2xsf
+cosac	pwi2xsf.f90	/^     &     a, b, c, cosab, cosac,/;"	v	program:pwi2xsf
+cosbc	pwi2xsf.f90	/^     &     a, b, c, cosab, cosac, cosbc /;"	v	program:pwi2xsf
+cv	pwi2xsf.f90	/^     &     pv( 3,3 ),          &! lattice vectors (PRIMITIVE)$/;"	v	program:pwi2xsf
+deltapar	ev.f90	/^      REAL(DP) :: par(nmaxpar), deltapar(/;"	v	program:ev
+dx	pwi2xsf.f90	/^     &     w1,w2,              &! linear interpolation weights$/;"	v	program:pwi2xsf
+dy	pwi2xsf.f90	/^     &     dx, dy,/;"	v	program:pwi2xsf
+dz	pwi2xsf.f90	/^     &     dx, dy, dz,/;"	v	program:pwi2xsf
+e	cell2ibrav.f90	/^  REAL(DP) :: a(3,3), omeg/;"	v	program:ibrav2cell
+efit	ev.f90	/^             parmax(nmaxpar), v0(nmaxpt), etot(nmaxpt), efit(/;"	v	program:ev
+emin	ev.f90	/^             fac, emin,/;"	v	program:ev
+eqstate	ev.f90	/^      SUBROUTINE eqstate(/;"	s	program:ev
+etot	ev.f90	/^             parmax(nmaxpar), v0(nmaxpt), etot(/;"	v	program:ev
+ev	ev.f90	/^PROGRAM ev$/;"	p
+eval	cif2qe.sh	/^function eval(cmd,expression) {$/;"	f
+fac	ev.f90	/^             parmax(nmaxpar), v0(nmaxpt), etot(nmaxpt), efit(nmaxpt), &$/;"	v	program:ev
+fileout	ev.f90	/^      CHARACTER(LEN=256) :: fileout$/;"	v	program:ev
+filin	ev.f90	/^      CHARACTER :: bravais*8, au_unit*3, filin*/;"	v	program:ev
+filout	kpoints.f90	/^  character(len=30) :: filout$/;"	v	program:special_points
+find_minimum	ev.f90	/^      SUBROUTINE find_minimum /;"	s	program:ev
+first_image	pwi2xsf.f90	/^     &     ltaucry, matches, last_image, first_image$/;"	v	program:pwi2xsf
+gamma	ibrav2cell.f90	/^   REAL(DP),INTENT(in) :: alpha,beta,gamma$/;"	v
+gpa_kbar	ev.f90	/^      REAL(DP), PARAMETER :: gpa_kbar /;"	v	program:ev
+grad_to_rad	ibrav2cell.f90	/^  REAL(DP),PARAMETER :: grad_to_rad /;"	v	program:ibrav2cell
+guess_bounds	scan_ibrav.py	/^def guess_bounds(p, ibrav):$/;"	f
+i	kpoints.f90	/^  in/;"	v	program:special_points
+i	pwi2xsf.f90	/^     &     ounit/;"	v	program:pwi2xsf
+ibrav	cell2ibrav.f90	/^  INTEGER :: ibrav,/;"	v	program:ibrav2cell
+ibrav	ibrav2cell.f90	/^  INTEGER :: ibrav$/;"	v	program:ibrav2cell
+ibrav	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,l, n1,n2,n3, ibrav$/;"	v	program:special_points
+ibrav	pwi2xsf.f90	/^      integer                                                           &$/;"	v	program:pwi2xsf
+ibrav2cell	cell2ibrav.f90	/^PROGRAM ibrav2cell$/;"	p
+ibrav2cell	ibrav2cell.f90	/^PROGRAM ibrav2cell$/;"	p
+ibrav2cell_x	scan_ibrav.py	/^ibrav2cell_x = argv[0].replace(myname,"ibrav2cell.x")$/;"	v
+ibrav_	kpoints.f90	/^  integer  ::  ibrav_,/;"	v	program:special_points
+ieq	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(/;"	v	program:special_points
+ierr	ev.f90	/^      INTEGER :: npar,npt,istat, ierr$/;"	v	program:ev
+iim	pwi2xsf.f90	/^     &     inat, iim,/;"	v	program:pwi2xsf
+iim_old	pwi2xsf.f90	/^     &     inat, iim, iim_old,/;"	v	program:pwi2xsf
+in_angstrom	ev.f90	/^      LOGICAL :: in_angstrom$/;"	v	program:ev
+inat	pwi2xsf.f90	/^     &     i, j, ipol,         &! dummies$/;"	v	program:pwi2xsf
+inp_num_of_images	pwi2xsf.f90	/^     &     num_of_images,      &! number of NEB images$/;"	v	program:pwi2xsf
+ios	cell2ibrav.f90	/^  INTEGER :: ibrav, ios$/;"	v	program:ibrav2cell
+ipol	pwi2xsf.f90	/^     &     i, j, ipol,/;"	v	program:pwi2xsf
+is_exe	scan_ibrav.py	/^def is_exe(fpath):$/;"	f
+isnan	scan_ibrav.py	/^  from numpy import isnan$/;"	i
+istat	ev.f90	/^      INTEGER :: npar,npt,istat,/;"	v	program:ev
+ityp	pwi2xsf.f90	/^      integer                                                           &$/;"	v	program:pwi2xsf
+j	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,/;"	v	program:special_points
+j	pwi2xsf.f90	/^     &     i, j,/;"	v	program:pwi2xsf
+k	kpoints.f90	/^  integer  ::  k(/;"	v	program:special_points
+keane	ev.f90	/^      FUNCTION keane(/;"	f
+kw	kpoints.f90	/^  integer  ::  k(3,nptx), kw(/;"	v	program:special_points
+l	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,l,/;"	v	program:special_points
+last_image	pwi2xsf.f90	/^     &     ltaucry, matches, last_image,/;"	v	program:pwi2xsf
+latgen_conventional	pwi2xsf.f90	/^      subroutine latgen_conventional /;"	s
+len	pwi2xsf.f90	/^     &     inat, iim, iim_old, &! counters$/;"	v	program:pwi2xsf
+line	pwi2xsf.f90	/^     &     calculation*80,     &! type of calculation$/;"	v	program:pwi2xsf
+ltaucry	pwi2xsf.f90	/^      logical                                                           &$/;"	v	program:pwi2xsf
+main	scan_ibrav.py	/^def main() :$/;"	f
+make_error	pwo2xsf.sh	/^function make_error(message,status) {$/;"	f
+make_namelist	scan_ibrav.py	/^def make_namelist(ibrav,p):$/;"	f
+matches	pwi2xsf.f90	/^      logical function matches /;"	f
+matches	pwi2xsf.f90	/^     &     ltaucry, matches,/;"	v	program:pwi2xsf
+maxatom	pwi2xsf.f90	/^     &     maxtyp,                                                      &$/;"	v	program:pwi2xsf
+maximage	pwi2xsf.f90	/^     &     maxatom,                                                     &$/;"	v	program:pwi2xsf
+maxtyp	pwi2xsf.f90	/^      integer                                                           &$/;"	v	program:pwi2xsf
+minimize	scan_ibrav.py	/^      from scipy.optimize import minimize$/;"	i
+myname	scan_ibrav.py	/^myname = basename(argv[0])$/;"	v
+n	kpoints.f90	/^  int/;"	v	program:special_points
+n1	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,l, n1,/;"	v	program:special_points
+n2	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,l, n1,n2,/;"	v	program:special_points
+n3	kpoints.f90	/^  integer  ::  k(3,nptx), kw(nptx), ieq(nptx), i,j,l, n1,n2,n3,/;"	v	program:special_points
+n6	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(3), nstart(3),n,n6,/;"	v	program:special_points
+nat	pwi2xsf.f90	/^     &     ibrav,              &! label for Bravais lattice$/;"	v	program:pwi2xsf
+new_dist	pwi2xsf.f90	/^     &     new_total_dist, new_dist /;"	v	program:pwi2xsf
+new_total_dist	pwi2xsf.f90	/^     &     old_total_dist, old_dist(maximage),&! old(=input) inter-image distances$/;"	v	program:pwi2xsf
+nf	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(3), nstart(3),n,n6,nf,/;"	v	program:special_points
+nk	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(3), nstart(3),n,n6,nf,nk,/;"	v	program:special_points
+nmax	kpoints.f90	/^  integer  ::  ibrav_, nmax(/;"	v	program:special_points
+nmaxpar	ev.f90	/^      INTEGER, PARAMETER:: nmaxpar=/;"	v	program:ev
+nmaxpt	ev.f90	/^      INTEGER, PARAMETER:: nmaxpar=4, nmaxpt=/;"	v	program:ev
+nmin	ev.f90	/^      INTEGER, PARAMETER:: nmaxpar=4, nmaxpt=100, nseek=10000, nmin=/;"	v	program:ev
+norm	scan_ibrav.py	/^  from numpy.linalg import norm$/;"	i
+norma	cif2qe.sh	/^function norma(x, y, z, str) {$/;"	f
+npar	ev.f90	/^      INTEGER :: npar,/;"	v	program:ev
+npt	ev.f90	/^      INTEGER :: npar,npt,/;"	v	program:ev
+nptot	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(3), nstart(3),n,n6,nf,nk,nptot$/;"	v	program:special_points
+nptx	kpoints.f90	/^  integer, parameter :: nptx=/;"	v	program:special_points
+nseek	ev.f90	/^      INTEGER, PARAMETER:: nmaxpar=4, nmaxpt=100, nseek=/;"	v	program:ev
+nshift	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(/;"	v	program:special_points
+nstart	kpoints.f90	/^  integer  ::  ibrav_, nmax(3), nshift(3), nstart(/;"	v	program:special_points
+ntyp	pwi2xsf.f90	/^     &     nat,                &! number of atoms$/;"	v	program:pwi2xsf
+num_of_images	pwi2xsf.f90	/^     &     ntyp,               &! number of pseudopotentials$/;"	v	program:pwi2xsf
+old_dist	pwi2xsf.f90	/^     &     old_total_dist, old_dist(/;"	v	program:pwi2xsf
+old_total_dist	pwi2xsf.f90	/^     &     cv( 3,3 ),          &! lattice vectors (CONVENTIONAL)$/;"	v	program:pwi2xsf
+omega	cell2ibrav.f90	/^  REAL(DP) :: a(3,3), omega,/;"	v	program:ibrav2cell
+omega	ibrav2cell.f90	/^  REAL(DP) :: at(3,3), omega,/;"	v	program:ibrav2cell
+omega	kpoints.f90	/^  real(dp) ::  celldm(6), xk(3,nptx), xkw(nptx), omega$/;"	v	program:special_points
+omega	pwi2xsf.f90	/^     &     celldm(6),          &! cell parameters$/;"	v	program:pwi2xsf
+os	scan_ibrav.py	/^    import os$/;"	i
+ounit	pwi2xsf.f90	/^     &     ityp,               &! type of PP$/;"	v	program:pwi2xsf
+par	ev.f90	/^      REAL(DP) :: par(/;"	v	program:ev
+parmax	ev.f90	/^      REAL(DP) :: par(nmaxpar), deltapar(nmaxpar), parmin(nmaxpar), &$/;"	v	program:ev
+parmin	ev.f90	/^      REAL(DP) :: par(nmaxpar), deltapar(nmaxpar), parmin(/;"	v	program:ev
+parseX	cif2qe.sh	/^function parseX(str, field) {$/;"	f
+permutations	scan_ibrav.py	/^def permutations(c):$/;"	f
+print_function	scan_ibrav.py	/^from __future__ import print_function$/;"	i
+pv	pwi2xsf.f90	/^     &     tau(3,maxatom,maximage),&! atomic coordinates$/;"	v	program:pwi2xsf
+pwi2xsf	pwi2xsf.f90	/^      program pwi2xsf$/;"	p
+pwoAnimCoor	pwo2xsf.sh	/^pwoAnimCoor() {$/;"	f
+pwoCheckPWSCFVersion	pwo2xsf.sh	/^pwoCheckPWSCFVersion() {$/;"	f
+pwoExit	pwo2xsf.sh	/^pwoExit() {$/;"	f
+pwoGetVersion	pwo2xsf.sh	/^pwoGetVersion() {$/;"	f
+pwoOptCoor	pwo2xsf.sh	/^pwoOptCoor() {$/;"	f
+pwoUsage	pwo2xsf.sh	/^pwoUsage() {$/;"	f
+read_atoms	pwi2xsf.f90	/^      subroutine read_atoms(/;"	s
+realpath	scan_ibrav.py	/^from os.path import realpath, basename$/;"	i
+recompute	scan_ibrav.py	/^def recompute(p, options):$/;"	f
+rotx	ibrav2cell.f90	/^ function rotx /;"	f	program:ibrav2cell
+rotz	ibrav2cell.f90	/^ function rotz /;"	f
+run_command	scan_ibrav.py	/^def run_command(executable_file, input_data):$/;"	f
+ruotaijk	kpoints.f90	/^subroutine ruotaijk(/;"	s
+search_K	cif2qe.sh	/^function search_K(str) {$/;"	f
+sflag	kpoints.f90	/^  logical  ::  aflag, sflag$/;"	v	program:special_points
+special_points	kpoints.f90	/^program special_points$/;"	p
+stdin	scan_ibrav.py	/^  from sys import argv, stdin$/;"	i
+string_length	pwi2xsf.f90	/^      INTEGER function string_length(/;"	f
+string_length	pwi2xsf.f90	/^     &     len, string_length /;"	v	program:pwi2xsf
+subprocess	scan_ibrav.py	/^    import subprocess$/;"	i
+system	ibrav2cell.f90	/^  NAMELIST \/system\//;"	n	program:ibrav2cell
+system	pwi2xsf.f90	/^      namelist\/system\//;"	n	program:pwi2xsf
+tau	pwi2xsf.f90	/^     &     dx, dy, dz,         &! auxiliary$/;"	v	program:pwi2xsf
+test_Var	cif2qe.sh	/^function test_Var(test_type) {$/;"	f
+v0	ev.f90	/^             parmax(nmaxpar), v0(/;"	v	program:ev
+w1	pwi2xsf.f90	/^     &     x,y,z,              &! Cartesian coordinates & weights$/;"	v	program:pwi2xsf
+w2	pwi2xsf.f90	/^     &     w1,w2,/;"	v	program:pwi2xsf
+write_XSF_header	pwi2xsf.f90	/^      subroutine write_XSF_header /;"	s
+write_evdata_xml	ev.f90	/^    SUBROUTINE write_evdata_xml /;"	s
+write_results	ev.f90	/^      SUBROUTINE write_results /;"	s	program:ev
+x	pwi2xsf.f90	/^      real*8                                                            &$/;"	v	program:pwi2xsf
+xk	kpoints.f90	/^  real(dp) ::  celldm(6), xk(/;"	v	program:special_points
+xkw	kpoints.f90	/^  real(dp) ::  celldm(6), xk(3,nptx), xkw(/;"	v	program:special_points
+y	pwi2xsf.f90	/^     &     x,y,/;"	v	program:pwi2xsf
+z	pwi2xsf.f90	/^     &     x,y,z,/;"	v	program:pwi2xsf

@@ -1,4 +1,4 @@
-  !                                                                            
+  !
   ! Copyright (C) 2010-2016 Samuel Ponce', Roxana Margine, Carla Verdi, Feliciano Giustino
   !                                                                            
   ! This file is distributed under the terms of the GNU General Public         
@@ -30,7 +30,6 @@
     USE mp_world,      ONLY : mpime
     USE io_global,     ONLY : ionode_id
     USE elph2,         ONLY : ibndmax, ibndmin, nkqtotf
-    USE transportcom,  ONLY : lower_bnd, upper_bnd
     USE constants_epw, ONLY : zero
     !
     IMPLICIT NONE
@@ -121,7 +120,6 @@
     USE mp_world,  ONLY : mpime, world_comm
     USE io_global, ONLY : ionode_id
     USE elph2,        ONLY : ibndmax, ibndmin, nkqtotf
-    USE transportcom, ONLY : lower_bnd, upper_bnd
     !
     IMPLICIT NONE
     !
@@ -147,8 +145,6 @@
     !! band index
     INTEGER :: idir
     !! Direction index
-    INTEGER :: nqtotf_read
-    !! Total number of q-point read
     INTEGER :: itemp
     !! Temperature index
     ! 
@@ -259,9 +255,9 @@
     ! 
     USE kinds,            ONLY : DP
     USE io_files,         ONLY : tmp_dir, prefix
-    USE io_epw,           ONLY : iufilibtev_sup, iunepmat, iunsparseq, iunsparsek, &
+    USE io_epw,           ONLY : iunepmat, iunsparseq, iunsparsek, &
                                  iunsparsei, iunsparsej, iunsparset, iunsparseqcb, &
-                                 iunsparsekcb, iunrestart, iunsparseicb, iunsparsejcb,&
+                                 iunsparsekcb, iunsparseicb, iunsparsejcb,&
                                  iunsparsetcb, iunepmatcb 
     USE mp_world,         ONLY : world_comm
 #if defined(__MPI)
@@ -1057,12 +1053,6 @@
     SUBROUTINE merge_read(nktotf, nqtotf_new, inv_tau_all_new)
     !----------------------------------------------------------------------------
     !
-#if defined(__SX6)
-#  define DIRECT_IO_FACTOR 1
-#else
-#  define DIRECT_IO_FACTOR 8 
-#endif
-    ! 
     USE kinds,     ONLY : DP
     USE io_global, ONLY : stdout
     USE elph2,     ONLY : ibndmax, ibndmin
@@ -1098,7 +1088,7 @@
     !! Length of the vector
     INTEGER(kind=8) :: unf_recl
     !! 
-    REAL(KIND=DP) :: aux ( nstemp * (ibndmax-ibndmin+1) * nktotf + 2 )
+    REAL(KIND=DP) :: aux ( nstemp * (ibndmax-ibndmin+1) * nktotf + 2 ), dummy
     !! Vector to store the array 
     CHARACTER (len=256) :: name1 
     ! 
@@ -1114,7 +1104,8 @@
         ltau_all = nstemp * (ibndmax-ibndmin+1) * nktotf +2
         !CALL diropn (iufiltau_all, 'tau_restart', ltau_all, exst)
         ! 
-        unf_recl = DIRECT_IO_FACTOR * int(ltau_all, kind=kind(unf_recl))
+        INQUIRE (IOLENGTH = unf_recl) dummy  
+        unf_recl = unf_recl * int(ltau_all, kind=kind(unf_recl))
         open (unit = iufiltau_all, file = restart_filq, iostat = ios, form ='unformatted', &
          status = 'unknown', access = 'direct', recl = unf_recl)
         !  

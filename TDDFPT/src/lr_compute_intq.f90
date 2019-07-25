@@ -1,5 +1,5 @@
 !
-! Copyright (C) 2001-2008 Quantum ESPRESSO group
+! Copyright (C) 2001-2019 Quantum ESPRESSO group
 ! This file is distributed under the terms of the
 ! GNU General Public License. See the file `License'
 ! in the root directory of the present distribution,
@@ -7,7 +7,7 @@
 !
 !
 !----------------------------------------------------------------------
-SUBROUTINE compute_intq
+SUBROUTINE lr_compute_intq
   !----------------------------------------------------------------------
   !
   !     This routine computes the contribution of the selfconsistent
@@ -20,8 +20,7 @@ SUBROUTINE compute_intq
   USE cell_base,            ONLY : omega
   USE uspp,                 ONLY : okvan
   USE uspp_param,           ONLY : upf, lmaxq, nh, nhm
-
-  USE lr_variables,              ONLY : intq
+  USE lr_variables,         ONLY : intq
   USE qpoint,               ONLY : xq, eigqts
 
   IMPLICIT NONE
@@ -34,13 +33,12 @@ SUBROUTINE compute_intq
   ! the values of q+G
   ! the spherical harmonics
 
-
   ! work space
   COMPLEX(DP) :: qgm(1), aux1
   REAL(DP)    :: qmod(1), zero(3,1), qg(3,1)
 
   IF (.NOT.okvan) RETURN
-  CALL start_clock ('compute_intq')
+  CALL start_clock ('lr_compute_intq')
 
   intq (:,:,:) = (0.D0, 0.0D0)
   ALLOCATE (ylmk0(1 , lmaxq * lmaxq))
@@ -50,7 +48,7 @@ SUBROUTINE compute_intq
   zero=0.0_DP
   CALL setqmod (1, xq, zero, qmod, qg)
   CALL ylmr2 (lmaxq * lmaxq, 1, qg, qmod, ylmk0)
-  qmod(1) = SQRT (qmod(1)  )
+  qmod(1) = SQRT (qmod(1))
 
   DO nt = 1, ntyp
      IF (upf(nt)%tvanp ) THEN
@@ -80,10 +78,10 @@ SUBROUTINE compute_intq
      ENDIF
   ENDDO
 
-  IF (noncolin) CALL set_intq_nc()
+  IF (noncolin) CALL lr_set_intq_nc()
 
   DEALLOCATE (ylmk0)
 
-  CALL stop_clock ('compute_intq')
+  CALL stop_clock ('lr_compute_intq')
   RETURN
-END SUBROUTINE compute_intq
+END SUBROUTINE lr_compute_intq
