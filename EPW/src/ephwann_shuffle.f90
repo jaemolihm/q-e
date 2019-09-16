@@ -506,6 +506,9 @@
     DO iq = 1, nqc
       !
       xxq = xqc (:, iq)
+! jmlim
+write(stdout, *) 'iq = ', iq
+write(stdout, *) 'xxq = ', xxq
       !
       ! we need the cu again for the k+q points, we generate the map here
       !

@@ -396,7 +396,9 @@
       IF (iverbosity == 3) THEN
         WRITE(linewidth_elself, '(a)') '#      ik       ibnd                 E(ibnd)      imode          Im(Sigma)(meV)'
       ELSE
-        WRITE(linewidth_elself, '(a)') '#      ik       ibnd                 E(ibnd)      Im(Sigma)(meV)'
+        !WRITE(linewidth_elself, '(a)') '#      ik       ibnd                 E(ibnd)      Im(Sigma)(meV)'
+        !jmlim
+        WRITE(linewidth_elself, '(a)') '#      ik       ibnd                 E(ibnd)      Im(Sigma)(meV)      Re(Sigma)(meV)'
       ENDIF
       ! 
       DO ik=1, nksqtotf
@@ -431,7 +433,10 @@
             WRITE(linewidth_elself,'(i9,2x)',advance='no') ik
             WRITE(linewidth_elself,'(i9,2x)',advance='no') ibndmin-1+ibnd
             WRITE(linewidth_elself,'(E22.14,2x)',advance='no') ryd2ev * ekk
-            WRITE(linewidth_elself,'(E22.14,2x)') ryd2mev*sigmai_all(ibnd,ik)
+            ! jmlim
+            !WRITE(linewidth_elself,'(E22.14,2x)') ryd2mev*sigmai_all(ibnd,ik)
+            WRITE(linewidth_elself,'(E22.14,2x)',advance='no') ryd2mev*sigmai_all(ibnd,ik)
+            WRITE(linewidth_elself,'(E22.14,2x)') ryd2mev*sigmar_all(ibnd,ik)
           ENDIF
           !
         ENDDO
