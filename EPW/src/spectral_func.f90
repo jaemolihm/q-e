@@ -112,6 +112,10 @@
   !
   real(kind=DP), allocatable :: xkf_all(:,:) , etf_all(:,:)
   integer :: reclen ! jml: save binary file
+  !
+  ! jmlim: optimization of the loop
+  REAL(kind=DP), ALLOCATABLE :: weight_r_arr(:,:)
+  REAL(kind=DP), ALLOCATABLE :: weight_i_arr(:,:)
   ! 
   ! SP: Define the inverse so that we can efficiently multiply instead of
   ! dividing
@@ -172,6 +176,10 @@
   !
   ! loop over all k points of the fine mesh
   !
+  ! jmlim optimization
+  ALLOCATE(weight_r_arr(nw_specfun, ibndmax-ibndmin+1))
+  ALLOCATE(weight_i_arr(nw_specfun, ibndmax-ibndmin+1))
+  !
   fermicount = 0 
   DO ik=1, nkf
     !
@@ -201,11 +209,38 @@
           g2_tmp = 0.0
         ENDIF           
         !
+        ! jmlim optimization
+        ! pre-compute the weight variables, which are independent of ibnd
+        DO jbnd = 1, ibndmax-ibndmin+1
+          !
+          !  the fermi occupation for k+q
+          ekq = etf (ibndmin-1+jbnd, ikq) - ef0
+          wgkq = wgauss( -ekq/eptemp, -99)  
+          !
+          DO iw = 1, nw_specfun
+            !
+            ww = wmin_specfun + dble (iw-1) * dw
+            !
+            weight_r_arr(iw, jbnd) = wqf(iq) * real (                            &
+              ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
+                ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
+            !
+            weight_i_arr(iw, jbnd) = wqf(iq) * aimag (                                           &
+              ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
+                ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
+            !
+          ENDDO !iw
+          !
+        ENDDO !jbnd
+        !
+        ! end pre-computing weight
+        !
         DO ibnd = 1, ibndmax-ibndmin+1
           !
           !  the energy of the electron at k (relative to Ef)
           ekk = etf (ibndmin-1+ibnd, ikk) - ef0
-          !  
+          !
+          !
           DO jbnd = 1, ibndmax-ibndmin+1
             !
             !  the fermi occupation for k+q
@@ -227,13 +262,8 @@
             !
             DO iw = 1, nw_specfun
               !
-              ww = wmin_specfun + dble (iw-1) * dw
-              !
-              weight = wqf(iq) * real (                                            &
-                ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
-                  ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
-              !
-              esigmar_all(ibnd,ik+lower_bnd-1,iw) = esigmar_all(ibnd,ik+lower_bnd-1,iw) + g2 * weight 
+              esigmar_all(ibnd,ik+lower_bnd-1,iw) = esigmar_all(ibnd,ik+lower_bnd-1,iw) &
+                                                  + g2 * weight_r_arr(iw, jbnd)
               ! 
 ! jml: ignore this correction (no Debye-Waller term in my model, anyway.)
 !              ! SP : Application of the sum rule
@@ -242,11 +272,8 @@
 !                  ( one - wgkq + wgq ) / ( -( ekq + wq ) - ci * degaussw ) ) )
 !              esigmar_all(ibnd,ik+lower_bnd-1,iw)=esigmar_all(ibnd,ik+lower_bnd-1,iw)-esigmar0
               !
-              weight = wqf(iq) * aimag (                                           &
-                ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
-                  ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
-              !
-              esigmai_all(ibnd,ik+lower_bnd-1,iw) = esigmai_all(ibnd,ik+lower_bnd-1,iw) + g2 * weight
+              esigmai_all(ibnd,ik+lower_bnd-1,iw) = esigmai_all(ibnd,ik+lower_bnd-1,iw) &
+                                                  + g2 * weight_i_arr(iw, jbnd)
               !
             ENDDO
             !

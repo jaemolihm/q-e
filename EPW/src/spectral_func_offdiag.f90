@@ -46,24 +46,24 @@
   implicit none
   !
   INTEGER, INTENT (in) :: iqq
-  !! Current q-point index in selecq  
+  !! Current q-point index in selecq
   INTEGER, INTENT (in) :: iq
-  !! Current q-point index  
+  !! Current q-point index
   INTEGER, INTENT (in) :: totq
   !! Total number of q-point in window
   complex(DP) :: cufkk_all(nbndsub, nbndsub, nkf)
   !! jmlim: electron eigenvector. To rotate self-energy to Wannier basis.
-  ! 
+  !
   ! Local variables
   !
   INTEGER :: iw
   !! Counter on the frequency
   INTEGER :: ik
-  !! Counter on the k-point index 
+  !! Counter on the k-point index
   INTEGER :: ikk
   !! k-point index
   INTEGER :: ikq
-  !! q-point index 
+  !! q-point index
   INTEGER :: ibnd
   !! Counter on bands
   INTEGER :: jbnd
@@ -73,12 +73,12 @@
   INTEGER :: fermicount
   !! Number of states on the Fermi surface
   INTEGER :: nksqtotf
-  !! Total number of k+q points 
+  !! Total number of k+q points
   INTEGER :: lower_bnd
   !! Lower bounds index after k or q paral
   INTEGER :: upper_bnd
   !! Upper bounds index after k or q paral
-  ! 
+  !
   REAL(kind=DP) :: g2
   !! Electron-phonon matrix elements squared in Ry^2
   REAL(kind=DP) :: ekk
@@ -94,8 +94,8 @@
   REAL(kind=DP) :: wgkq
   !! Fermi-Dirac occupation factor $f_{nk+q}(T)$
   REAL(kind=DP) :: weight
-  !! Self-energy factor 
-  !!$$ N_q \Re( \frac{f_{mk+q}(T) + n_{q\nu}(T)}{ \varepsilon_{nk} - \varepsilon_{mk+q} + \omega_{q\nu} - i\delta }) $$ 
+  !! Self-energy factor
+  !!$$ N_q \Re( \frac{f_{mk+q}(T) + n_{q\nu}(T)}{ \varepsilon_{nk} - \varepsilon_{mk+q} + \omega_{q\nu} - i\delta }) $$
   !!$$ + N_q \Re( \frac{1- f_{mk+q}(T) + n_{q\nu}(T)}{ \varepsilon_{nk} - \varepsilon_{mk+q} - \omega_{q\nu} - i\delta }) $$
   REAL(kind=DP) :: inv_wq
   !! $frac{1}{2\omega_{q\nu}}$ defined for efficiency reasons
@@ -104,16 +104,16 @@
   REAL(kind=DP) :: g2_tmp
   !! If the phonon frequency is too small discart g
   REAL(kind=DP) :: inv_degaussw
-  !! Inverse of the smearing for efficiency reasons  
+  !! Inverse of the smearing for efficiency reasons
   REAL(kind=DP) :: ww
   !! Current frequency
-  REAL(kind=DP) :: dw 
+  REAL(kind=DP) :: dw
   !! Frequency intervals
   real(kind=DP) :: specfun_sum, esigmar0
   real(kind=DP) :: fermi(nw_specfun)
   real(kind=DP), external :: efermig, dos_ef, wgauss
   !
-  ! variables for collecting data from all pools in parallel case 
+  ! variables for collecting data from all pools in parallel case
   !
   real(kind=DP), allocatable :: xkf_all(:,:) , etf_all(:,:)
   ! begin jmlim off-diagonal
@@ -132,15 +132,15 @@
   COMPLEX(DP), allocatable :: esigma_part(:,:,:,:)
   COMPLEX(DP), allocatable :: cufkk_all_all(:,:,:)
   COMPLEX(DP), allocatable :: ham_wannier(:,:)
-  COMPLEX(kind=DP) :: weight_complex
+  COMPLEX(kind=DP), ALLOCATABLE :: weight_arr(:,:)
   ! end jmlim off-diagonal
-  ! 
+  !
   ! SP: Define the inverse so that we can efficiently multiply instead of
   ! dividing
-  ! 
+  !
   inv_eptemp0 = 1.0/eptemp
   inv_degaussw = 1.0/degaussw
-  !   
+  !
   ! energy range and spacing for spectral function
   !
   dw = ( wmax_specfun - wmin_specfun ) / dble (nw_specfun-1)
@@ -167,12 +167,12 @@
   ELSE
     !
     ef0 = efermig(etf, nbndsub, nkqf, nelec, wkf, degaussw, ngaussw, 0, isk_dummy)
-    ! if some bands are skipped (nbndskip /= 0), nelec has already been recalculated 
+    ! if some bands are skipped (nbndskip /= 0), nelec has already been recalculated
     ! in ephwann_shuffle
     !
   ENDIF
   !
-  IF (iq == 1) THEN 
+  IF (iq == 1) THEN
     WRITE (stdout, 100) degaussw * ryd2ev, ngaussw
     WRITE (stdout,'(a)') ' '
   ENDIF
@@ -184,7 +184,7 @@
   ! find the bounds of k-dependent arrays in the parallel case in each pool
   CALL fkbounds( nksqtotf, lower_bnd, upper_bnd )
   !
-  ! SP: Sum rule added to conserve the number of electron. 
+  ! SP: Sum rule added to conserve the number of electron.
   IF (iq == 1) THEN
     WRITE (stdout,'(5x,a)') 'The sum rule to conserve the number of electron is enforced.'
     WRITE (stdout,'(5x,a)') 'The self energy is rescaled so that its real part is zero at the Fermi level.'
@@ -194,10 +194,13 @@
   !
   ! loop over all k points of the fine mesh
   !
+  ! jmlim optimization
+  ALLOCATE(weight_arr(nw_specfun, ibndmax-ibndmin+1))
+  !
   allocate(esigma_part(ibndmax-ibndmin+1, ibndmax-ibndmin+1, nkf, nw_specfun))
   esigma_part = czero
-
-  fermicount = 0 
+  !
+  fermicount = 0
   DO ik=1, nkf
 !    write(stdout, *) 'ik, iq', ik, iq
     !
@@ -225,58 +228,76 @@
           g2_tmp = 1.0
         ELSE
           g2_tmp = 0.0
-        ENDIF           
+        ENDIF
+        !
+        ! pre-compute weight, which are independent of ibnd
+        DO jbnd = 1, ibndmax-ibndmin+1
+          !
+          !  the fermi occupation for k+q
+          ekq = etf (ibndmin-1+jbnd, ikq) - ef0
+          wgkq = wgauss( -ekq/eptemp, -99)
+          !
+          DO iw = 1, nw_specfun
+            !
+            ww = wmin_specfun + dble (iw-1) * dw
+            !
+            ! jml: real and imaginary done at once
+            weight_arr(iw, jbnd) = wqf(iq) * (                                   &
+              ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
+                ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
+            !
+          ENDDO !iw
+          !
+        ENDDO !jbnd
+        !
+        ! end pre-computing weight
         !
         DO ibnd = 1, ibndmax-ibndmin+1
           DO ibnd2 = 1, ibndmax-ibndmin+1 ! off-diagonal
-          !
-          !  the energy of the electron at k (relative to Ef)
-          ekk = etf (ibndmin-1+ibnd, ikk) - ef0
-          !  
-          DO jbnd = 1, ibndmax-ibndmin+1
             !
-            !  the fermi occupation for k+q
-            ekq = etf (ibndmin-1+jbnd, ikq) - ef0
-            wgkq = wgauss( -ekq/eptemp, -99)  
+            !  the energy of the electron at k (relative to Ef)
+            ekk = etf (ibndmin-1+ibnd, ikk) - ef0
             !
-            ! here we take into account the zero-point sqrt(hbar/2M\omega)
-            ! with hbar = 1 and M already contained in the eigenmodes
-            ! g2 is Ry^2, wkf must already account for the spin factor
-            !
-            IF ( shortrange .AND. ( abs(xqf (1, iq))> eps8 .OR. abs(xqf (2, iq))> eps8 &
-               .OR. abs(xqf (3, iq))> eps8 )) THEN
-              ! SP: The abs has to be removed. Indeed the epf17 can be a pure imaginary 
-              !     number, in which case its square will be a negative number. 
-              ! g2 = REAL( (epf17 (jbnd, ibnd, imode, ik)**two)*inv_wq*g2_tmp )
-              g2 = REAL(epf17 (jbnd, ibnd, imode, ik) * epf17 (jbnd, ibnd2, imode, ik), DP) * inv_wq * g2_tmp
-              ! jmlim: is this correct?
-            ELSE
-              ! g2 = (abs(epf17 (jbnd, ibnd, imode, ik))**two)*inv_wq*g2_tmp
-              g2 = CONJG(epf17 (jbnd, ibnd, imode, ik)) * epf17 (jbnd, ibnd2, imode, ik) * inv_wq * g2_tmp
-            ENDIF
-            !
-            DO iw = 1, nw_specfun
+            DO jbnd = 1, ibndmax-ibndmin+1
               !
-              ww = wmin_specfun + dble (iw-1) * dw
+              !  the fermi occupation for k+q
+              ekq = etf (ibndmin-1+jbnd, ikq) - ef0
+              wgkq = wgauss( -ekq/eptemp, -99)
               !
-              ! jml: real and imaginary done at once
-              weight_complex = wqf(iq) * (                                                 &
-                ( (       wgkq + wgq ) / ( ww - ( ekq - wq ) - ci * degaussw )  +  &
-                  ( one - wgkq + wgq ) / ( ww - ( ekq + wq ) - ci * degaussw ) ) )
+              ! here we take into account the zero-point sqrt(hbar/2M\omega)
+              ! with hbar = 1 and M already contained in the eigenmodes
+              ! g2 is Ry^2, wkf must already account for the spin factor
               !
-              esigma_part(ibnd,ibnd2,ik,iw) = esigma_part(ibnd,ibnd2,ik,iw) + g2 * weight_complex 
-              ! 
-! jml: ignore this correction (no Debye-Waller term in my model, anyway.)
-!              ! SP : Application of the sum rule
-!              esigmar0 =  g2 *  wqf(iq) * real (                                   &
-!                ( (       wgkq + wgq ) / ( -( ekq - wq ) - ci * degaussw )  +  &
-!                  ( one - wgkq + wgq ) / ( -( ekq + wq ) - ci * degaussw ) ) )
-!              esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)=esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)-esigmar0
+              IF ( shortrange .AND. ( abs(xqf (1, iq))> eps8 .OR. abs(xqf (2, iq))> eps8 &
+                 .OR. abs(xqf (3, iq))> eps8 )) THEN
+                ! SP: The abs has to be removed. Indeed the epf17 can be a pure imaginary
+                !     number, in which case its square will be a negative number.
+                ! g2 = REAL( (epf17 (jbnd, ibnd, imode, ik)**two)*inv_wq*g2_tmp )
+                g2 = REAL(epf17 (jbnd, ibnd, imode, ik) &
+                        * epf17 (jbnd, ibnd2, imode, ik), DP) * inv_wq * g2_tmp
+                ! jmlim: is this correct?
+              ELSE
+                ! g2 = (abs(epf17 (jbnd, ibnd, imode, ik))**two)*inv_wq*g2_tmp
+                g2 = CONJG(epf17 (jbnd, ibnd, imode, ik)) &
+                   * epf17 (jbnd, ibnd2, imode, ik) * inv_wq * g2_tmp
+              ENDIF
               !
-            ENDDO
+              DO iw = 1, nw_specfun
+                !
+                esigma_part(ibnd,ibnd2,ik,iw) = esigma_part(ibnd,ibnd2,ik,iw) &
+                                              + g2 * weight_arr(iw, jbnd)
+                !
+  ! jml: ignore this correction (no Debye-Waller term in my model, anyway.)
+  !              ! SP : Application of the sum rule
+  !              esigmar0 =  g2 *  wqf(iq) * real (                                   &
+  !                ( (       wgkq + wgq ) / ( -( ekq - wq ) - ci * degaussw )  +  &
+  !                  ( one - wgkq + wgq ) / ( -( ekq + wq ) - ci * degaussw ) ) )
+  !              esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)=esigmar_all_offd(ibnd,ik+lower_bnd-1,iw)-esigmar0
+                !
+              ENDDO
+              !
+            ENDDO !jbnd
             !
-          ENDDO !jbnd
-          !
           ENDDO ! ibnd2
         ENDDO !ibnd
         !
@@ -353,13 +374,13 @@
     ! and constant matrix elements for dipole transitions)
     !
 !     IF (me_pool == 0) then
-!       OPEN(UNIT=iospectral,FILE='specfun_offdiag.elself') 
-! !      OPEN(UNIT=iospectral_sup,FILE='specfun_sup.elself') 
+!       OPEN(UNIT=iospectral,FILE='specfun_offdiag.elself')
+! !      OPEN(UNIT=iospectral_sup,FILE='specfun_sup.elself')
 !     ENDIF
 !     IF (me_pool == 0) then
 !       WRITE(iospectral, '(/2x,a/)') '#Electronic spectral function (meV)'
 !       WRITE(iospectral, '(/2x,a/)') '# jmlim: Include off-diagonal part of the self-energy'
-! !      WRITE(iospectral_sup, '(/2x,a/)') '#KS eigenenergies + real and im part of electronic self-energy (meV)' 
+! !      WRITE(iospectral_sup, '(/2x,a/)') '#KS eigenenergies + real and im part of electronic self-energy (meV)'
 !     ENDIF
 !     IF (me_pool == 0) then
 !       WRITE(iospectral, '(/2x,a/)') '#K-point    Energy[meV]     A(k,w)[meV^-1]'
@@ -386,7 +407,7 @@
 ! jml: do not write in stdout
 !      WRITE(stdout,'(/5x,"ik = ",i5," coord.: ", 3f12.7)') ik, xkf_all (:,ikk)
 !      WRITE(stdout,'(5x,a)') repeat('-',67)
-      
+      !
       ! ham_wannier = cufkk_all_all(:,:,ik).H @ diag(ekk) @ cufkk_all_all(:,:,ik)
       ham_wannier = czero
       do ibnd = 1, nbndsub
@@ -424,11 +445,11 @@
 
 
         ! jml: Note that esigma are in Wannier basis, not energy eigenbasis
-        
+        !
         ! jml: does this work?
         ! mat_temp(:,:) = mat_temp(:,:) - esigmar_all_offd(:,:,ik,iw) - ci * esigmai_all_offd(:,:,ik,iw)
-        
-
+        !
+        !
         DO ibnd=1, ibndmax-ibndmin+1
           DO ibnd2=1, ibndmax-ibndmin+1
             ! if (iw == 1) then
@@ -485,11 +506,11 @@
     !   !
     !   ! The spectral function should integrate to 1 for each k-point
     !   specfun_sum = 0.0
-    !   ! 
+    !   !
     !   DO iw=1, nw_specfun
     !     !
     !     ww = wmin_specfun + dble (iw-1) * dw
-    !     fermi(iw) = wgauss(-ww/eptemp, -99) 
+    !     fermi(iw) = wgauss(-ww/eptemp, -99)
     !     !WRITE(stdout,'(2x,i7,2x,f12.4,2x,e12.5)') ik, ryd2ev * ww, a_all_offd(iw,ik) / ryd2mev
     !     !
     !     specfun_sum = specfun_sum + a_all_offd(iw,ik)* fermi(iw) * dw !/ ryd2mev
@@ -551,7 +572,7 @@
 ! !          WRITE(stdout,'(2i9,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4)') ik,&
 ! !            ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all_offd(ibnd,ik,iw),&
 ! !            ryd2mev * esigmai_all_offd(ibnd,ik,iw)
-!           ! 
+!           !
 ! !          IF (me_pool == 0) &
 ! !          WRITE(iospectral_sup,'(2i9,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4,2x,f12.4)') ik,&
 ! !            ibndmin-1+ibnd, ryd2ev * ekk, ryd2ev * ww, ryd2mev * esigmar_all_offd(ibnd,ik,iw),&
